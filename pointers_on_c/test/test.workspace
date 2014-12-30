@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Workspace Name="test" Database="">
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes"/>
-    <WorkspaceConfiguration Name="Release" Selected="yes"/>
-  </BuildMatrix>
-</CodeLite_Workspace>
