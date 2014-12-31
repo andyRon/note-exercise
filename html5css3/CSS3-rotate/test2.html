@@ -1,0 +1,53 @@
+<!DOCTYPE html >
+<html >
+<head>
+
+</head>
+<body>
+<div class="container">
+	<div class="wrapper">
+		<img src="./images/poster01.jpg">
+	</div>
+</div>
+
+</div>
+
+<br>
+<br>
+<button id="button">开始寻找</button>
+<style>
+	body{
+		background-color: #bbb;
+	}
+	.container{
+		margin: 50px auto; 
+		text-align:center;
+
+	}
+	button{
+		width: 300px;
+		height: 50px;
+		font-size: 30px;
+	}
+	img{
+		width: 300px;
+		height: 300px;
+		border-radius: 150px;
+		-webkit-transition: width 800ms,height 800ms;
+	}
+	.test{
+		 width: 0px;
+		 height: 0px
+	}
+</style>
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript">
+$('#button').click(function(event) {
+	/* Act on the event */
+	$('img').toggleClass('test')
+
+});
+
+</script>
+</body>
+</html>
