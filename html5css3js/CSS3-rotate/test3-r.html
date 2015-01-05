@@ -1,0 +1,134 @@
+<!DOCTYPE html >
+<html >
+
+<head>
+<meta charset="utf8">
+<meta http-equip="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,maximum-scale=0.5">
+<style>
+body{background-color: #888}
+.wrapper{
+	position:relative;
+	left: 200px;
+	transform-perspective: 0;
+	-moz-perspective: 0; /* Firefox 4 */
+	-webkit-perspective: 0; /* Safari 和 Chrome */
+	-o-perspective: 0; /* Opera */
+
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d; /* Firefox 4 */
+	-webkit-transform-style: preserve-3d; /* Safari 和 Chrome */
+	-o-transform-style: preserve-3d; /* Opera */
+}
+img{
+	width: 500px;
+	height: 500px;
+	border-radius: 250px;
+
+}
+.a, .b {
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition:1.2s;
+	-webkit-transform-origin: 50% 0;
+	-webkit-backface-visibility:hidden;
+}
+.a {
+	transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+}
+
+.b {
+	transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+}
+
+.act .a {
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+.act .b {
+	transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+}
+a{
+	display: block;
+	width: 500px;
+	height: 50px;
+	font-size: 40px;
+
+}
+p{
+	margin-top:600px;
+	margin-left: 300px;
+	font-size: 50px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+	<img src="./images/12.jpg" class="a">
+	<img src="./images/14.jpg" class="b">
+</div>
+<a  id="test" href="javascript:void(0)" onselectstart="return false;">开始寻找</a>
+<p>12</p>
+</body>
+<script type="text/javascript" src="../jquery-2.1.1.js"></script>
+<script type="text/javascript">
+var images = [12,13,14,15,16];
+
+
+$(document).ready(function() {
+var a = 12,b = 14;
+	function reverse_img(){
+		var index =  Math.floor((Math.random()*images.length)); 
+		if($(".wrapper").hasClass('act')){
+			$(".wrapper").removeClass('act');
+			$(".b").attr({
+				'src': './images/'+images[index]+'.jpg'
+			});
+			b = images[index];
+			$("p").html(a);
+		}else{
+			$(".wrapper").addClass('act');
+			$(".a").attr({
+				'src': './images/'+images[index]+'.jpg'
+			});
+			a = images[index];
+			$("p").html(b);
+		}
+		x = setTimeout(reverse_img,800);
+	} 
+	
+	$("#test").get(0).addEventListener('touchstart',function(e){
+		x = setTimeout(reverse_img,0);
+		// console.log(e.originalEvent.type+':'+e.originalEvent.timeStamp);
+		console.log(e.type+':'+e.timeStamp+'---'+e.identifier)
+	},false)
+	$("#test").get(0).addEventListener('touchend',function(e){
+		clearTimeout(x);
+		console.log(e.type+':'+e.timeStamp)
+	},false)
+	$("#test").get(0).addEventListener('touchcancel',function(e){
+		clearTimeout(x);
+		console.log(e.type+':'+e.timeStamp)
+	},false)
+	$("#test").get(0).addEventListener('touchmove',function(e){
+
+		console.log(e.type+':'+e.timeStamp)
+	},false)
+
+
+});
+</script>
+
+</html >

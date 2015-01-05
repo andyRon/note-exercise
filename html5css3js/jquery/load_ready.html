@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="http://img.mukewang.com/down/540812440001e40e00000000.js" type="text/javascript"></script>
+<script src="http://img.mukewang.com/down/541f6ff70001a0a500000000.js" type="text/javascript"></script>
+<title>dom加载</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+show('观察脚本加载的顺序')
+
+document.addEventListener("DOMContentLoaded", function() {
+    show('DOMContentLoaded回调')
+}, false);
+
+window.addEventListener("load", function() {
+    show('load事件回调')
+}, false);
+
+
+show('脚本解析一')
+
+//测试加载
+$(function(){
+    show('脚本解析二')
+})
+
+show('脚本解析三')
+
+
+
+</script>
+</head>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<style type="text/css">
+body{
+	height: 1000px;
+}
+img{
+	width: 320px;
+	height: 210px;
+	margin-bottom: 250px;
+}
+#reflect1{
+	-webkit-box-reflect: below;
+}
+#reflect2{
+	-webkit-box-reflect: below 10px;
+}
+#reflect3{
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.1)));	/* 倒影消隐*/
+}
+#reflect4{
+		-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));	/* 倒影消隐 色彩过渡*/
+}
+</style>
+<body>
+<code>
+语法结构
+box-reflect：direction [offset] [mask-box-image]
+</code>
+<br><br>
+<img src="./img/gift.jpg" id="reflect1"/>
+<br><br>
+<img src="./img/gift.jpg" id="reflect2"/>
+<br><br>
+<img src="./img/gift.jpg" id="reflect3"/>
+
+<br><br>
+<img src="./img/gift.jpg" id="reflect4"/>
+
+
+
+
+</body>
