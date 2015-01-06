@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    const char *words[4] = {"dsafdvf","lidlscd","aqqeren","adfklluj"};
+    int wordCount = 4;
+    for (int i=0; i<wordCount; i++) {
+        NSLog(@"'%s' is '%lu' character long.", words[i], strlen(words[i]));
     }
     return 0;
 }
