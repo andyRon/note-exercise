@@ -47,3 +47,32 @@
 * `touch` `cp`(-p 保持时间，-R 复制目录，-l 复制成硬链接，-s 创建软连接) `mv` `rm` `mkdir` `rmdir`
 *  `stat` 查看文件信息
 *  `cat -n` `cat -b`
+### 更多bash shell 命令
+1. 监测程序  
+  + `ps`
+     * `ps -ef` 查看所有进程的完整形式
+     * `ps -l`	更多信息
+     * `ps -H`  简单的树状形式	
+  + 实时监测进程
+     - linux系统管理的要点在于*如何定义系统的高负载*
+     - `top`
+  + 结束进程
+  	 - xnix系统通过向运行的进程发送*进程信号*来已特定方式结束进程
+  	 - `kill -l` 可以查看linux上的进程信号，默认是15-TERM-尽可能终止，1-HUP-挂起，2-INT-中断等
+  	 - `kill -s HUP 3940` kill只能识别进程号，通过ps或top命令查看进程是否停止
+  	 - `killall http*` 可通过进程名，或者通配符。**当用root登陆时，注意**
+2. 监测磁盘空间
+  + 挂载存储媒体
+     - `mount` 提供四种信息：媒体的设备文件名，挂载点，文件系统类型，访问状态。如： `dev/sda1 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,noquota)`
+     - `mount -t vfat /dev/sdb1 /media/disk` 把设备/dev/sdb1以vfat文件系统挂载到/media/disk上
+     - `mount -t iso9660 -o loop test.iso /mnt` 把test.iso文件挂载到/mnt上，`-o loop`代表挂载一个文件
+     - `umount /mnt` 或 `umount test.iso` 卸载文件test.iso
+  - `df`
+  - `du -s 目录名` 查看目录的文件总大小
+3. 处理数据文件
+  - 排序数据
+  	  + `sort tmp.txt` 以文件每行的的字符排序显示
+  	  +  `sort -n tmp.txt` 把数字识别成字符而不是字符
+  	  +  `sort -t ':' -k 3 -n /etc/passwd` 对/etc/passwd的每行以：分隔，再议分隔后的第三个参数排序显示
+  	  +  `sort -sh | sort -nr` r是降序的意思
+  	  
