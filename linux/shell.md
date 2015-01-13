@@ -75,4 +75,7 @@
   	  +  `sort -n tmp.txt` 把数字识别成字符而不是字符
   	  +  `sort -t ':' -k 3 -n /etc/passwd` 对/etc/passwd的每行以：分隔，再议分隔后的第三个参数排序显示
   	  +  `sort -sh | sort -nr` r是降序的意思
+  - 搜索数据
+     + `grep RPC /etc/passwd`
+     + 
   	  
