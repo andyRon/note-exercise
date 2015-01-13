@@ -54,4 +54,22 @@
    - `dhclient eno16777736` 手动设定网卡亿dhcp协议去尝试取得ip
 
 2. 网络侦错与观察指令
-	  
+   - `ping` 两部主机沟通。ICMP封包（type 0,8），IP封包，TTL属性
+      + `ping -c 3 168.192.30.140` 发送3次包
+      + `ping`最简单功能是传送ICMP封包去要求对方主机回应是否存在于网络环境
+      + 测试某个网域中主机是否响应 ping.sh  
+	      		
+				#! /bin/bash
+				for siteip in $(seq 1 254)
+				do
+				        site="192.168.30.${siteip}"
+				        ping -c1 -W1 ${site} &> /dev/null
+				        if [ "$?" == "0" ]; then
+				                echo "$site is UP"
+				        else
+				                echo "$site is DOWN"
+				        fi
+				done
+      + 主机和待测主机在同一网域时，TTL是64，否则是255
+      + 用ping追踪路径中的最大MTU数值 `ping -c 2 -s 1000 -M do 192.168.30.212`
+      + 不同接口的MTU值是不同
