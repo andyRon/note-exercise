@@ -76,6 +76,36 @@
   	  +  `sort -t ':' -k 3 -n /etc/passwd` 对/etc/passwd的每行以：分隔，再议分隔后的第三个参数排序显示
   	  +  `sort -sh | sort -nr` r是降序的意思
   - 搜索数据
-     + `grep RPC /etc/passwd`
-     + 
-  	  
+     + `grep RPC /etc/passwd` 匹配/etc/passwd中 含有RPC的行
+     + `grep -v RPC /etc/passwd` 反向匹配
+     + `grep -n RPC /etc/passwd` 显示行号
+     + `grep -c RPC /etc/passwd` 显示多少行匹配
+     + `grep -e t -e f /etc/passwd` 匹配含有字符t或者f的行。类似的正则 `grep [tf] /etc/passwd`
+     + grep的两个衍生版本 `egrep` `fgrep`
+  - 压缩数据
+     + bzip2工具 .bz2
+         * `bzip2`
+         * `bzcat`
+         * `bunzip2`
+         * `bzip2recover`
+     + gzip 工具 .gz
+         * `gzip`
+         * `gzcat`
+         * `gunzip`
+     + zip工具 .zip
+     	 * `zip`
+     	 * `zipcloak`
+     	 * `zipnote`
+     	 * `zipsplit`
+     	 * `unzip`
+     + compress .Z 
+  - `tar`
+
+### linux环境变量
+1. 环境变量
+	+ 全局环境变量 `printenv`
+	+ `set` 查看全局环境变量和局部变量（不同shell中自定义的）
+	+ 全局变量是在设定该全局环境变量的进程创建的所有子进程中都是可见的。
+	+ `export` 导出局部变量变成全局的
+	+ `unset`  删除环境变量
+2. 定位系统环境变量  	  
