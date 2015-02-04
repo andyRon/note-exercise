@@ -200,7 +200,10 @@ func hasAnyMatches2(list:[Int], condition:Int->Bool)->Int{
 
 //println(hasAnyMatches2(numbers, lessThanTen2))
 
-sort([1,2,3,4,12,5])
+//sort([1,2,3,4,12,5])
+
+let explic : Double  = 80
+
 
 
 
