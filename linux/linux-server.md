@@ -54,4 +54,70 @@
    - `dhclient eno16777736` 手动设定网卡亿dhcp协议去尝试取得ip
 
 2. 网络侦错与观察指令
+<<<<<<< HEAD
 	 - 
+=======
+   - `ping` 两部主机沟通。ICMP封包（type 0,8），IP封包，TTL属性
+      + `ping -c 3 168.192.30.140` 发送3次包
+      + `ping`最简单功能是传送ICMP封包去要求对方主机回应是否存在于网络环境
+      + 测试某个网域中主机是否响应 ping.sh  
+	      		
+				#! /bin/bash
+				for siteip in $(seq 1 254)
+				do
+				        site="192.168.30.${siteip}"
+				        ping -c1 -W1 ${site} &> /dev/null
+				        if [ "$?" == "0" ]; then
+				                echo "$site is UP"
+				        else
+				                echo "$site is DOWN"
+				        fi
+				done
+      + 主机和待测主机在同一网域时，TTL是64，否则是255
+      + 用ping追踪路径中的最大MTU数值 `ping -c 2 -s 1000 -M do 192.168.30.212`
+      + 不同接口的MTU值是不同
+   - `traceroute` 两主机间各个节点分析
+	      > -n 主机名称  
+	      > -U 默认是UDP的port 33434  
+	      > -I 使用ICMP方式进行侦测  
+	      > -T TCP 默认port 80  
+	      > -w 限制时间  
+	      > -p 端口  
+	      > -i -g  
+      + `traceroute -n tw.yahoo.com`
+      +  回传星号的，代表该 node 可能设有某些防护措施，让我们发送的封包信息被丢弃所致。 因为我们是直接透过路由器转递封包，并没有进入路由器去取得路由器的使用资源，所以某些路由器仅支持封包转递， 并不会接受来自客户端的各项侦测.
+      + `traceroute -w 1 -n -T tw.yahoo.com`
+   - `netstat` 本机网络连接状况
+      + `netstat -rn` 路由表状态，类似`route -n`
+      + `netstat -an` 列出所有网络联机状态 。两部分（TCP/IP的网络接口部分，传统的Unix socket部分）
+      + 两个问题：目前开了多少port在等待客户端的联机？ 有多少联机已建立或产生问题？  
+      ![](./img/netstat.jpg)
+	  + 上图划线处表示目前putty客户端和虚拟机之间的网络链接
+	  + Client 端是随机取一个大于 1024 以上的port 进行联机，只有 root 可以启动小于 1024 以下的 port 
+	  + `/etc/services` 保存着port和number一一对应
+   - `host` `nslookup` 主机名与ip对应
+      + `host tw.yahoo.com` 根据`/etc/resolv.conf`中规定的DNS服务器查询主机ip，也可以指定dns服务器
+      + `host tw.yahoo.com 168.95.1.1`
+      + `nslookup www.google.com`
+      + `nslookup 168.95.1.1` 找出168.95.1.1的主机名
+      
+3. 远程联机指令与实时通讯软件
+   - telnet
+   - `ftp 192.168.30.30 44446`	ftp会使用两个port分别进行命令与数据的交流
+   - `lftp`
+   - `pidgin`
+4. 文字接口网页浏览
+   - `links` 文字浏览器 类似于`lynx`
+      + `links http://www.kernel.org`
+      + `links /usr/share/doc/HTML/index.html`
+      + `links -dump http://tw.yahoo.com > yahoo.html`
+   - `wget`
+   - `wget  http://www.kernel.org/pub/linux/kernel/v2.6/linux-2.6.39.tar.bz2`  通过http下载
+   - `/etc/wgetrc`
+5. 封包截取功能 ？？
+   - `tcpdump`
+   - `wireshark`
+   - `nc` `netcat`
+
+### linux网络侦错
+>>>>>>> 2d76a798bf95162a6b704edfcfd6b57d9152ed52

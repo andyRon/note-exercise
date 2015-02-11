@@ -1,0 +1,40 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,  maximum-scale=1" />
+<title>了解详情</title>
+
+<script type="text/javascript" src="../jquery/jquery-2.1.1.js"></script>
+<script>
+var audio = document.createElement("audio");
+        audio.src = "910.mp3";
+    var a = 1
+        audio.addEventListener('ended', function () {
+        	console.log(a)
+        	audio.playbackRate = a
+            if(a == 4) { return}
+            // Wait 500 milliseconds before next loop
+            setTimeout(function () { audio.play(); }, 0);
+            a = a+1
+        }, false);
+
+function test(){
+	audio.play(); 
+}
+	
+      
+
+    
+
+</script>
+</head>
+
+<body>
+<div sytle="size:100px" onclick="test()">sdfsdfs</div>
+
+</body>
+</html>
