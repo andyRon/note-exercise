@@ -91,6 +91,62 @@
 	+ Foundation	`uppercaseString()` `lowercaseString()`
 	+ Unicode ??
 
-- 集合类型（Collection Types）	
+- 集合类型（Collection Types）
+
+- 函数
+	+ Defining and Calling Functions
+		- parameters
+		- arguments
+	+ Function Parameters and Return Values
+		- Multiple Input Parameters
+		- Functions Without Parameters
+		- Functions Without Return Values
+			* 返回 `Void`(一个空的元组，`()`)	
+		- Functions with Multiple Return Values
+			* `func count(string: String)->(vowels:Int,consonants:Int,others:Int){}`
+	+ Function Parameter Names
+		- External Parameter Names
+				
+				func join(string s1:String, toString s2:String, withJoiner joiner:String)->String{
+					return s1 + joiner + s2
+				}
+				join(string:"hello",toString:"world",withJoiner:", ")
+		- Shorthand External Parameter Names (用`#`表示一个参数名同时作为局部和外部参数名)
+				
+				func containsCharacter(#string:String, #characterToFind:Character)->Bool{
+				}
+		- Default Parameter Values
+				
+				func join(withJoiner joiner:String=" ")->String{ }
+		- External Names for Parameters with Default Values
+		- 可变参数(Variadic Parameters)
+			+ 在变量类型名后面加入(...)	`func arith(numbers:Double...)->Double{ }`
+			+ 一个函数至多能有个可变参数，并且必须是参数表中得最后一个
+		- Constant and Variable Parameters
+		- 输入输出参数(In-Out Parameters) `inout`  `&`
+				
+				func swapTwoInts(inout a:Int, inout b:Int){
+    				let temporaryA = a
+    				a = b
+    				b = temporaryA
+				}
+				var someInt = 3
+				var anotherInt = 123
+				swapTwoInts(&someInt, &anotherInt)
+		
+	+ Function Types
+		- Using Function Types
+			+ `var mathFuction: (Int, Int) -> Int = addTwoInts`
+			+ `let anotherMathFunction = addTwoInts`(Swift可推断其函数类型)
+		- Function Types as Parameter Types
+		- Function Type as Return Types
+			
+				func chooseStepFunction(backwards:Bool)-> (Int)->Int{
+					return bacwards?stepBackward:stepForward
+				}
+	+ 嵌套函数(Nested Funcitons)	
+
+
+- 闭包(Closures)
    
         
