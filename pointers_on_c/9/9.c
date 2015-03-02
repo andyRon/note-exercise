@@ -24,5 +24,7 @@ main(){
     char string[20] = "abcdefABCD";
     char *ans;
     ans = strchr(string, 'd');
-    printf("%s",ans);
+    ans = strpbrk(string, "bfA");
+    ans = strstr(string, "fAB");
+    printf("%c",*ans);
 }
