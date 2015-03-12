@@ -3,5 +3,11 @@
 
 void
 main(){
-    putchar('a');
+//    putchar('a');
+    int a,b,c;
+//    b = scanf("%d is %d",&a,&c);
+//    printf("%d",b);
+    char *d,f,g;
+    scanf("%[dvg]",&d);
+    printf("vvv%s",d);
 }
