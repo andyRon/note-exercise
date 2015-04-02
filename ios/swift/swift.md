@@ -14,8 +14,10 @@
 - 控制流
 
 ### Swift教程
-- 基础部分
-   + 常量和变量
+1. 基础部分
+	> 类型安全的语言？  
+	
+   + 常量和变量  `let`	`var`
    + 类型标注(type annotation)   ： 
    + 常量与变量的命名  Unicode字符 开头有限制
    + 输出常量和变量
@@ -61,7 +63,7 @@
 		* Swift的可选类型可以让你暗示任意类型的值缺失，并不需要一个特殊值
 		* int? 可能包含Int值也可能不包含值
 		* if语句以及强制解析
-		* **nil**
+		* **nil**	swift中得nil与OjC是不同的
 		* 隐式解析可选类型
 	+ 断言(assertion) 
 		* 断言会结束代码运行并通过调试来找到值缺失的原因
@@ -148,5 +150,17 @@
 
 
 - 闭包(Closures)
+
+
+- 枚举（Enumerations）	一等类型（first-class）
+	+ 枚举语法
+		- 类型名以大写开头
+		
+				enum Planet{
+					case Mercury, Venus, Earth, Mars,Jupiter, Saturn, Uranus,Neptune
+				}
+	+ 匹配枚举值和switch语句
+	+ 相关值（Associated values）
+	+ 原始值（Raw Values）
    
         

@@ -36,3 +36,10 @@ while currentValue > 0{
     println("\(currentValue)...")
     currentValue = moveNearerToZero(currentValue)
 }
+
+
+//
+let names = ["Chris","Alex","Ewa","Barray","Daniella"]
+
+var reversed = sorted(names, {(s1:String,s2:String) -> Bool in return s1>s2})
+reversed
