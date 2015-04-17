@@ -11,3 +11,13 @@
 	- ab测试工具
 		+ `ab -n1000 -c100 http://www.baidu.com`
 		+ Requests per second(每秒的接受的请求数) , Time per request(每个请求的耗时) ,
+	- 少写代码，多用PHP自身功能
+	- php代码运行流程  
+		1. `*.php`通过zend逐行扫描生成zend自己能识别的语法
+		2. 解析成Opcode（PHP的缓冲服务都是缓存Opcode）
+		3. 执行Opcode，输出
+	- PHP内置函数的性能优劣
+		+ 多去了解PHP内置函数的时间复杂度
+		+ isset()	array_key_exists()
+	- 尽可能少用魔术函数
+		+ `time php test_magic.php`
