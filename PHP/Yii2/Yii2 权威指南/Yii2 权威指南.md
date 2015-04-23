@@ -82,3 +82,20 @@
 			* 触发 [[yii\base\Application::EVENT_AFTER_REQUEST|EVENT_AFTER_REQUEST]] 事件。
 			* 发送响应到终端用户.
 		4. 入口脚本接收应用主体传来的退出状态并完成请求的处理。
+
+- 应用组件
+	+ 应用组件只会在第一次访问时实例化
+	+ 引导启动组件：想在每个请求处理过程都实例化某个组件即便它不会被访问， 可以将该组件ID加入到应用主体的 [[yii\base\Application::bootstrap|bootstrap]] 属性中。
+	+ 核心应用组件
+		* yii\web\AssetManager ： 管理资源包和资源发布
+		* yii\web\ErrorHandler ： 处理 PHP 错误和异常
+		* yii\db\Connection
+		* yii\i18n\I18N ： 支持信息翻译和格式化
+		* yii\log\Dispatcher ： 管理日志对象
+		* yii\swiftmailer\Mailer ：  支持生成邮件结构并发送
+		* yii\web\Session 
+		* yii\web\User|user ： 代表认证登录用户信息
+		* yii\web\View ： 支持渲染视图
+		* yii\web\UrlManager
+		* yii\web\Request
+		* yii\web\Response
