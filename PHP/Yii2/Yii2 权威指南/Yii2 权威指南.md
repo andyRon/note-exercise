@@ -99,3 +99,29 @@
 		* yii\web\UrlManager
 		* yii\web\Request
 		* yii\web\Response
+- 控制器
+	+ 操作 控制器中以`action`开头的方法
+	+ 路由
+		* `ControllerID/ActionID`
+		* `ModuleID/ControllerID/ActionID` (模块下的控制器)
+	+ 控制器Id可包含子目录前缀
+	+ 内联操作 独立操作(`yii\base\Action`)
+	+ 跳转 ` return $this->redirect('http://example.com');`
+	+ 操作参数
+	
+- 视图
+	+ 视图中`$this`是`yii\web\View`
+	+ 视图中`$this->context`是当前控制器
+	+ 视图间共享数据 `$this->context`
+	+ **布局** 代表多个视图的公共部分
+		* $content变量代表当[[yii\base\Controller::render()]]控制器渲染方法调用时传递到布局的内容视图渲染结果
+		* 嵌套布局
+		* 使用数据块
+	+ 使用视图组件
+		* 设置页面标题	`<title><?= Html::encode($this->title) ?></title>`
+		* 注册Meta元标签	`$this->registerMetaTag(['name' => 'keywords', 'content' => 'yii, framework, php']);`
+		* 注册链接标签
+	+ 视图事件
+	+ 渲染静态页面	独立操作
+- 模型
+	
