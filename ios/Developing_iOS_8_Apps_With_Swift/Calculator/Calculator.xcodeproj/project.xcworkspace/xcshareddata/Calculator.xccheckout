@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FF94738D-2A78-496B-9BE1-116489501937</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Calculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>70A922618F52C4E3D19BACD0EF863707349167E4</key>
 		<string>github.com:andyRon/note-exercise.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/Developing_iOS_8_Apps_With_Swift/Calculator/Calculator.xcodeproj/project.xcworkspace</string>
+	<string>ios/Developing_iOS_8_Apps_With_Swift/Calculator/Calculator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>70A922618F52C4E3D19BACD0EF863707349167E4</key>
