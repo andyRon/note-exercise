@@ -22,9 +22,29 @@ class ViewController: UIViewController {
             display.text = digit
             useIsInTheMiddleOfTypingANumber = true
         }
-        
-        println("digit = \(digit)")
+//        println("digit = \(digit)")
     }
 
+    @IBAction func operate(sender: UIButton) {
+        
+    }
+    var operandStack: Array<Double> = Array<Double>()
+    @IBAction func enter() {
+        useIsInTheMiddleOfTypingANumber = false
+        operandStack.append(displayValue)
+        println("operandStack = \(operandStack)")
+    }
+    
+    var displayValue: Double {
+        get {
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            display.text = "\(newValue)"
+            useIsInTheMiddleOfTypingANumber = false
+            println("123")
+        }
+    }
+    
 }
 

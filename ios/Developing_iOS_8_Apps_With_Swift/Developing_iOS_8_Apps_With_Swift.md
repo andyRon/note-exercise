@@ -39,4 +39,14 @@
 		* 通过!对optional值unwrap，结果是为nil时程序crash，其他状况为对应的值（上面的情况就是string）  
 			![](img/optional2.png)
 		* 在swift中当一个对象初始化了，那么它的所有属性都必须初始化
+		
+
+### 2 
+- 1中得问题：UILabel后为啥是!,而不是？
+	* implicitly unwrapped optional  这类属性在创建时已经赋值，并且一直是赋值的  （sugar， 语法的甜头）
+- 在计算机中加入 return键 可从 edit->emoji&  中搜索想要的图标
+- 右击某个button可看到
+	![](img/right.png)
+	+ return按钮被两个控制器控制
+- **计算性属性**
 
