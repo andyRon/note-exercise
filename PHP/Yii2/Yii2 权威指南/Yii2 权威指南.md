@@ -1,3 +1,10 @@
+### 入门
+- 玩转database
+	+ **活动记录**(ActiveRecord) 	**数据访问对象**
+	+ Pagination 对象的作用   
+		1. 为 SQL 查询语句设置 offset 和 limit 从句 
+		2. 在视图中显示一个由页码列表组成的分页器
+
 ### 应用结构
 - 总览
 ![](./img/application-structure.png)
@@ -105,12 +112,18 @@
 		* `ControllerID/ActionID`
 		* `ModuleID/ControllerID/ActionID` (模块下的控制器)
 	+ 控制器Id可包含子目录前缀
+	+ 控制器部署	`[[yii\base\Application::controllerMap|controller map]] ` 强制控制器ID和类名对应
 	+ 内联操作 独立操作(`yii\base\Action`)
 	+ 跳转 ` return $this->redirect('http://example.com');`
 	+ 操作参数
 	
 - 视图
-	+ 视图中`$this`是`yii\web\View`
+	+ 视图中`$this`是`yii\web\View`. `Yii::$app->view`是它的实例
+	+ 视图渲染
+		* 控制器中渲染
+		* 视图中渲染	`<?= $this->render('_overview') ?>`
+		* 其他地方渲染 `echo \Yii::$app->view->renderFile('@app/views/site/license.php');`
+		
 	+ 视图中`$this->context`是当前控制器
 	+ 视图间共享数据 `$this->context`
 	+ **布局** 代表多个视图的公共部分
