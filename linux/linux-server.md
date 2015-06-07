@@ -1,4 +1,4 @@
-### linux常用网络指令
+ ### linux常用网络指令
 1. 网络参数设定命令
    - `/etc/sysconfig/network-scripts/`目录中各种配置脚本
    - `ifconfig`

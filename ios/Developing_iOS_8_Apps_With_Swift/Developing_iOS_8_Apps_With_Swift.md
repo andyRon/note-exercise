@@ -43,7 +43,8 @@
 
 ### 2 
 - 1中得问题：UILabel后为啥是!,而不是？
-	* implicitly unwrapped optional  这类属性在创建时已经赋值，并且一直是赋值的  （sugar， 语法的甜头）
+	* implicitly unwrapped optional(隐式)  这类属性在创建时已经	赋值，并且一直是赋值的  （sugar， 语法的甜头）
+	* 变量display(UILabel)在左侧视图被视图控制器加载时已经赋值
 - 在计算机中加入 return键 可从 edit->emoji&  中搜索想要的图标
 - 右击某个button可看到
 	![](img/right.png)
