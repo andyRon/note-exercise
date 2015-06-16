@@ -14,6 +14,11 @@ let floatval : Float = 4
 let label = "The width is"
 let width = 12
 let widthLabel = label + String(width)
+widthLabel.hashValue
+"a".hashValue
+"a".hashValue
+"a".generate()
+
 
 let appleSummary = "I have \(width) d d"
 
@@ -22,13 +27,27 @@ let hello = "hello \(floatval)"
 var shappingList = ["catfish","water"]
 shappingList[1] = "bottle of water"
 
-shappingList
+shappingList.append("df")
+shappingList.count
+shappingList.description
+appIsDaemon
+appleMenuFolderIconResource
+
+
+
+
 
 var occupations = [ "Malcolm":"Captain","Kaylee":"Mechanic"]
 occupations["Jayne"] = "Public Relations"
+occupations.keys
+occupations
+
+
 
 let emptyArray = [String]()
 let emptyDictionary = [String:Float]()
+
+
 
 shappingList = []
 occupations = [:]
@@ -52,6 +71,8 @@ var greeting = "Hello!"
 if let name = optionalName{
     greeting = "Hello,\(name)"
 }
+greeting
+
 
 let vegetable = "red pepper"
 switch vegetable{
@@ -92,6 +113,9 @@ func calculateStatistics(scores:[Int]) ->(min:Int,max:Int,sum:Int){
     }
     return (min,max,sum)
 }
+var aaa = calculateStatistics([1,2,4])
+
+
 
 func sumOf(numbers: Int...) -> Int{
     var sum = 0
