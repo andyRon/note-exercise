@@ -45,7 +45,8 @@
 				let aa = 3 + 0.14159
 				
    + 类型别名(*type aliases*) `typealias`  
-     `typealias AudioSample = UInt16;var maxAmplitudeFound = AudioSample.min`
+     `typealias AudioSample = UInt16;`  
+     `var maxAmplitudeFound = AudioSample.min`
    + 布尔值
    + 元组(**tuples**): 把多个值组合成一个复合值
    		* 元组内的值可以是任意类型，并不要求是相同类型
@@ -84,10 +85,11 @@
 	+ `string`	`NSString`(Foundation)
 	+ Unicode标量：`\u{n}`	n为任意的一到八位十六进制数
 	+ objectc中字符串是否修改：`NSString` `NSMutableString`
-	+ 字符串是值类型（Strings are value types）:字符串在进行常量、变量赋值操作或在函数/方法中传递时，会进行值拷贝。
+	+ 字符串是**值类型**（Strings are value types）:字符串在进行常量、变量赋值操作或在函数/方法中传递时，会进行值拷贝。
 	+ swift编译器会优化字符串的使用，*使实际的复制只发生在绝对必要的情况下*
 	+ `for in` 遍历字符串中得每一个字符
 	+ `countElements()` 计算字符数量 全局函数（注意与NSString的length属性的区别）
+	+ `countElements()` & `count()` ??
 	+ Swift中字符在一个字符串中并不一定占用相同的内存空间
 	+ `hasPrefix()`		`hasSuffix()`
 	+ Foundation	`uppercaseString()` `lowercaseString()`

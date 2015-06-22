@@ -15,6 +15,7 @@ let zhi3 = 0xc.3p0
 3.5e2
 0x2e2   //??
 0x2p2
+0x12
 
 0b10001
 0o21
@@ -79,7 +80,7 @@ for  we in letstring{
 
 let solostring: Character = "s"
 var test = "1d我"
-countElements(test)
+//countElements(test)
 test.append(solostring)
 //test.append("s")
 
@@ -95,7 +96,7 @@ letstring.unicodeScalars
 
 let dogString = "Dog!"
 for codeUnit in dogString.utf8{
-    print("\(codeUnit)")
+    println("\(codeUnit)")
 }
 
 

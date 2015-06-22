@@ -14,7 +14,7 @@ var reversed = sorted(names,backwards)
 names
 
 reversed = sorted(names,{(s1:String,s2:String)->Bool in return s1>s2})
-
+// {()-> in return }
 // 在内联闭包表达式中，函数和返回值类型都写在大括号内，而不是大括号外。
 //省略形式
 reversed = sorted(names,{s1,s2 in return s1>s2})
@@ -39,6 +39,7 @@ let strings = numbers.map(){
     }
     return output
 }
+strings
 // 变量参数 常量参数
 // 叹号可以用于强制解析（force-unwrap）存储在可选下标项中得String类型值
 
