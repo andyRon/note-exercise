@@ -17,7 +17,50 @@ a.isEmpty
 count(a)
 println("sadfa \(count(a)) adfsaf")
 //countElements(1231)
-"adfasf"
+"adfasf".hasSuffix("f")
+
+let dogstring = "dog!"
+var tmp = ""
+dogstring.utf8
+let dogface = "\u{1f436}"
+for uc in dogstring.utf8{
+    tmp += " \(uc)"
+}
+tmp
+tmp = ""
+for uc in dogface.utf8{
+    tmp += " \(uc)"
+}
+tmp
+let aa = "我们"
+tmp = ""
+for uc in aa.unicodeScalars{
+    tmp += " \(uc.value)"
+}
+tmp
+"\u{6211}"
+
+//12p2
+0x12p2
+
+let twothousand:UInt16 = 2_000
+twothousand
+let http400eorror = (400, "Not Found")
+http400eorror.0
+let (code, msg) = http400eorror
+code
+msg
+msg.toInt() //int?
+//if asdfs != nil{
+//    let yes = "fasdf"
+//}else{
+//    let no = "sdf"
+//}
+yes
+
+
+
+
 
 
 
