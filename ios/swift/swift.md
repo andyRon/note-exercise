@@ -78,19 +78,26 @@
 		* 断言会结束代码运行并通过调试来找到值缺失的原因
 		* `assert()`
 		* 何时使用断言：当条件可能为假时使用断言，但是最终一定要保证条件为真，这样你的代码才能继续运行。
-- 基本运算符
+2. 基本运算符
 	+ swift赋值符（=）不返回值
-	+ 溢出运算符 &+
+	+ **溢出运算符** &+
 	+ 可对浮点数求余	`8%2.5 //0.5`
-	+ 复合赋值(compound assignment operators)
+	+ 自增和自减	整形和浮点
+	+ 复合赋值(compound assignment operators) `+=`
+	+ 比较运算符 `==` `!=` `>=` `<=` `>` `<`  
+	  恒等和不恒等用来判断两个对象是否引用同一个对象实例
+	  
 	+ 三目运算符(ternary conditional operator)
 	+ 空合运算符(Nil Coalescing Operator)
-		* `a ?? b`  相当于  `a != nil ? a! : b`
+		* `a ?? b`  相当于  `a != nil ? a! : b`（a必需是可选类型）
 	+ 区间运算符
 		* `a...b`
 		* `a..<b`
-- 字符串和字符
-	+ `string`	`NSString`(Foundation)
+	+ 逻辑运算符
+	
+3. 字符串和字符
+	+ `String`	`NSString`(Foundation)
+	+ `Character` 字符类型只能有一个字符 `"a"`
 	+ Unicode标量：`\u{n}`	n为任意的一到八位十六进制数
 	+ objectc中字符串是否修改：`NSString` `NSMutableString`
 	+ 字符串是**值类型**（Strings are value types）:字符串在进行常量、变量赋值操作或在函数/方法中传递时，会进行值拷贝。
@@ -113,7 +120,28 @@
 			// " 25105 20204"
 			
 			
-- 集合类型（Collection Types）
+4. 集合类型（Collection Types）
+	+ 数组
+		- 存入数组之前的数据类型必需明确
+		- 一个数组中只能有一种数据类型
+		- `var shoppinglist:[String] = ["eggs", "Milk"]`
+		- `.append()` `shoppinglist += ["apple", "Butter"]`
+		- `shopplist[3...shopplist.count-1] = ["b", "c"]` (把数组从3位开始到最后的所有元素替换为"b", "c")
+		- 不能使用下标在数组尾巴添加新项
+		- 数组的最大索引一直都是count-1
+		- `shopplist.insert("asdf", atIndex:1)` (在1项前加元素“asdf”)
+		- `.removeAtIndex()` 移除某一项
+		- `.removeLast()`
+		- 数组的遍历
+			* `for item in []`
+			* 全局函数`enumerate()` 返回每个数组项的索引值和数据值组成的元组   
+			`for (index, value) in enumerate(shopplist) { }`
+		- 创建一个数组  
+		 `var  someint = [Int]()`  
+		 `var threee = [Double](count: 3, repeatedValue: 3.3)`
+			
+
+
 
 - 函数
 	+ Defining and Calling Functions
