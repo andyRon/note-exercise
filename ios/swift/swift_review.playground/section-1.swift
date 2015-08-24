@@ -15,6 +15,18 @@ let label = "The width is"
 let width = 12
 let widthLabel = label + String(width)
 
+
+
+
+widthLabel.hashValue
+"a".hashValue
+"a".hashValue
+"a".generate()
+"b".hashValue
+
+
+
+
 let appleSummary = "I have \(width) d d"
 
 let hello = "hello \(floatval)"
@@ -22,13 +34,40 @@ let hello = "hello \(floatval)"
 var shappingList = ["catfish","water"]
 shappingList[1] = "bottle of water"
 
-shappingList
+shappingList.append("df")
+shappingList.count
+shappingList.description
+appIsDaemon
+appleMenuFolderIconResource
+
+
+
+
 
 var occupations = [ "Malcolm":"Captain","Kaylee":"Mechanic"]
 occupations["Jayne"] = "Public Relations"
+occupations.keys
+occupations
+var tmp = ""
+
+for (k, v) in occupations{
+  tmp += k
+}
+
+for k in occupations.keys{
+    
+}
+for v in occupations.values{
+    
+}
+
+let dic = ["city":"xinghua", "shengfen":"jiangsu"]
+
 
 let emptyArray = [String]()
 let emptyDictionary = [String:Float]()
+
+
 
 shappingList = []
 occupations = [:]
@@ -44,6 +83,9 @@ for score in individualScores{
 }
 teamScore
 
+
+
+
 var optionalString: String? = "hello"
 optionalString = nil
 var optionalName: String? = "John Appleseed"
@@ -52,6 +94,8 @@ var greeting = "Hello!"
 if let name = optionalName{
     greeting = "Hello,\(name)"
 }
+greeting
+
 
 let vegetable = "red pepper"
 switch vegetable{
@@ -59,11 +103,13 @@ case "celery":
     let vegetableComment = "Add some raisins and make ants on a log."
 case "cucumber","watercress":
     let vegetableComment = "That would make a good tea sandwich"
-case let x where x.hasSuffix("pepper"):
-    let vegetableComment = "Is it a spicy \(x)?"
+case let a where a.hasSuffix("pepper"):
+    let vegetableComment = "Is it a spicy \(a)?"
 default:
     let vegetableComment = "Everything tastes good in soup."
 }
+
+
 
 //vegetableComment
 
@@ -92,6 +138,9 @@ func calculateStatistics(scores:[Int]) ->(min:Int,max:Int,sum:Int){
     }
     return (min,max,sum)
 }
+var aaa = calculateStatistics([1,2,4])
+
+
 
 func sumOf(numbers: Int...) -> Int{
     var sum = 0
@@ -180,10 +229,16 @@ class EquilateralTriangle: NamedShape{
         return "A equilateral triagle with sides of length \(sideLength)."
     }
 }
-var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
-triangle.perimeter
-triangle.perimeter = 9.9
-triangle.sideLength
+//var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+//triangle.perimeter
+//triangle.perimeter = 9.9
+//triangle.sideLength
+
+let t = EquilateralTriangle(sideLength:5.6,name:"my triangle")
+t.numberOfSides
+t.perimeter
+t.simpleDescription()
+
 
 
 class TriangleAndSquare {
@@ -288,6 +343,18 @@ case let .Result(sunrise, sunset):
 case let .Error(error):
     let serverResponse = "Failure... \(error)"
 }
+
+
+extension String {
+    var banana : String {
+//        let shortName = String(dropFirst(characters))
+        let shortName = "andy"
+        return "\(self) \(self) Bo B\(shortName) Banana Fana Fo F\(shortName)"
+    }
+}
+
+let bananaName = "Jimmy".banana
+
 
 
 

@@ -13,12 +13,14 @@
    + `[]` 定义数组和字典 （php中索引数组和关联数组）
 - 控制流
 
+
+
 ### Swift教程
 1. 基础部分
 	> 类型安全的语言？  
 	
-   + 常量和变量  `let`	`var`
-   + 类型标注(type annotation)   ： 
+   + 常量和变量  `let`	`var`， 只将需要改变的值设为变量
+   + 类型标注(type annotation)   `:` 
    + 常量与变量的命名  Unicode字符 开头有限制
    + 输出常量和变量
        * `println`与`print` 只是最后换不换行的差别。类似Cocoa中得`NSLog`
@@ -26,14 +28,17 @@
    + 注释	可以嵌套注释
    + 分号	在一行写多条独立语句时需要分号，其它情况不是必须的
    + 整数	`UInt8.max`	`Int` `UInt`(无符号类型)
-   + 浮点数
+   		* `Int`的长度与当前平台的原生字长度相同
+   		* 避免类型的数字之间的转换   		
+   + 浮点数 `Double` `Float` (swift推测类型时默认先是`Double`)
    + 类型安全(**type safe**)和类型推断(**type inference**)
    + 数值型字面量
    		* `0b`
    		* `0o`
    		* `0x`
-   		* 指数(exponent)
+   		* 指数(exponent)  `1.23e4`  `0xfp4` 
    		* 十六进制浮点数
+   		* `2_000_000`(只是增加可读性)
    + 数值型类型转换
         * 一般Int，只有在必要的时候才使用其他整数类型，比如要处理外部的长度明确的数据或者为了优化性能、内存占用等等。
         * 整数和浮点数的转换必须显示指定类型，而字面量可以直接相加
@@ -45,7 +50,8 @@
 				let aa = 3 + 0.14159
 				
    + 类型别名(*type aliases*) `typealias`  
-     `typealias AudioSample = UInt16;var maxAmplitudeFound = AudioSample.min`
+     `typealias AudioSample = UInt16;`  
+     `var maxAmplitudeFound = AudioSample.min`
    + 布尔值
    + 元组(**tuples**): 把多个值组合成一个复合值
    		* 元组内的值可以是任意类型，并不要求是相同类型
@@ -63,37 +69,79 @@
 		* Swift的可选类型可以让你暗示任意类型的值缺失，并不需要一个特殊值
 		* int? 可能包含Int值也可能不包含值
 		* if语句以及强制解析
-		* **nil**	swift中得nil与OjC是不同的
-		* 隐式解析可选类型
+		* **可选绑定** if while
+		* **nil**	
+		如果代码中又常量或变量需要处理缺失的情况，声明为对于的可选类型 `let some:Int? = 404`  
+		swift中得nil与OjC是不同的
+		* **隐式解析可选类型**
 	+ 断言(assertion) 
 		* 断言会结束代码运行并通过调试来找到值缺失的原因
 		* `assert()`
 		* 何时使用断言：当条件可能为假时使用断言，但是最终一定要保证条件为真，这样你的代码才能继续运行。
-- 基本运算符
+2. 基本运算符
 	+ swift赋值符（=）不返回值
-	+ 溢出运算符 &+
+	+ **溢出运算符** &+
 	+ 可对浮点数求余	`8%2.5 //0.5`
-	+ 复合赋值(compound assignment operators)
+	+ 自增和自减	整形和浮点
+	+ 复合赋值(compound assignment operators) `+=`
+	+ 比较运算符 `==` `!=` `>=` `<=` `>` `<`  
+	  恒等和不恒等用来判断两个对象是否引用同一个对象实例
+	  
 	+ 三目运算符(ternary conditional operator)
 	+ 空合运算符(Nil Coalescing Operator)
-		* `a ?? b`  相当于  `a != nil ? a! : b`
+		* `a ?? b`  相当于  `a != nil ? a! : b`（a必需是可选类型）
 	+ 区间运算符
 		* `a...b`
 		* `a..<b`
-- 字符串和字符
-	+ `string`	`NSString`(Foundation)
+	+ 逻辑运算符
+	
+3. 字符串和字符
+	+ `String`	`NSString`(Foundation)
+	+ `Character` 字符类型只能有一个字符 `"a"`
 	+ Unicode标量：`\u{n}`	n为任意的一到八位十六进制数
 	+ objectc中字符串是否修改：`NSString` `NSMutableString`
-	+ 字符串是值类型（Strings are value types）:字符串在进行常量、变量赋值操作或在函数/方法中传递时，会进行值拷贝。
+	+ 字符串是**值类型**（Strings are value types）:字符串在进行常量、变量赋值操作或在函数/方法中传递时，会进行值拷贝。
 	+ swift编译器会优化字符串的使用，*使实际的复制只发生在绝对必要的情况下*
 	+ `for in` 遍历字符串中得每一个字符
 	+ `countElements()` 计算字符数量 全局函数（注意与NSString的length属性的区别）
+	+ `countElements()` & `count()` ??
 	+ Swift中字符在一个字符串中并不一定占用相同的内存空间
-	+ `hasPrefix()`		`hasSuffix()`
-	+ Foundation	`uppercaseString()` `lowercaseString()`
+	+ `.hasPrefix()`		`.hasSuffix()`
+	+ Foundation	`.uppercaseString()` `.lowercaseString()`
 	+ Unicode ??
+	+ `.unicodeScalars` 得到unicode的十进制数
+	
+			let aa = "我们"
+			tmp = ""
+			for uc in aa.unicodeScalars{
+   	 			tmp += " \(uc.value)"
+			}
+			tmp
+			// " 25105 20204"
+			
+			
+4. 集合类型（Collection Types）
+	+ 数组
+		- 存入数组之前的数据类型必需明确
+		- 一个数组中只能有一种数据类型
+		- `var shoppinglist:[String] = ["eggs", "Milk"]`
+		- `.append()` `shoppinglist += ["apple", "Butter"]`
+		- `shopplist[3...shopplist.count-1] = ["b", "c"]` (把数组从3位开始到最后的所有元素替换为"b", "c")
+		- 不能使用下标在数组尾巴添加新项
+		- 数组的最大索引一直都是count-1
+		- `shopplist.insert("asdf", atIndex:1)` (在1项前加元素“asdf”)
+		- `.removeAtIndex()` 移除某一项
+		- `.removeLast()`
+		- 数组的遍历
+			* `for item in []`
+			* 全局函数`enumerate()` 返回每个数组项的索引值和数据值组成的元组   
+			`for (index, value) in enumerate(shopplist) { }`
+		- 创建一个数组  
+		 `var  someint = [Int]()`  
+		 `var threee = [Double](count: 3, repeatedValue: 3.3)`
+			
 
-- 集合类型（Collection Types）
+
 
 - 函数
 	+ Defining and Calling Functions
