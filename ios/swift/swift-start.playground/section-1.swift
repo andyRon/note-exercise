@@ -1,6 +1,6 @@
 // Playground - noun: a place where people can play
 
-println("hello,world")
+print("hello,world")
 
 let consant = 23
 var variable = 334
