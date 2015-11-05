@@ -139,11 +139,73 @@
 		- 创建一个数组  
 		 `var  someint = [Int]()`  
 		 `var threee = [Double](count: 3, repeatedValue: 3.3)`
-			
+	+ 字典
+		- 与数组区别*数据项没有具体顺序*
+		- `var airports:[String:String] = ["TYO":"Tokyo", "DUB":"Dublin"]`
+		- .count .isEmpty
+		- 字典可以通过下标添加新项 `airports["hongqiao"] = "shanghai"`
+		- `airports.updateValue("nanjing", forKey: "jichang")` 更新或设置
+ 		- `airports["jichang"] = nil`	 "jichang"被移除 或 `.removerValueForKey()`
+ 		- 字典遍历
+ 			* `for (code, name) in airports{}`
+ 			* `for code in airports.keys{}`
+ 		- 字典顺序是不固定的，遍历时会重新排序
+ 		- 创建字典
+ 			* `var namesIntegers = Dictionary<Int,String>()`
+			* 在已经知道字典信息类型后可以  `namesIntegers = [:]`
+	+ 集合的可变性
+		- 不可变数组
 
 
+5. 控制流
+	- 循环语句 For-in	区间(range),序列(sequence),集合(collection),系列(progression)
+		+ `for index in 1...5{}` (index是常量)
+		+ `for _ in 1...5{}`
+		+ `for v in array{}`
+		+ `for (k, v) in dic{}`
+		+ `for character in "hello"{}`
+	- 循环语句 For
+	- 循环语句 While do-while
+	- 条件语句 if  
+	- 条件语句 switch 适合条件复杂
+		+ 不存在隐式的贯穿（不需要break）
+		+ 每个case分支都必需包含至少一条语句
+		+ 一个case可以包含多个模式，用`,`隔开
+		+ 可匹配区间 `case 1...4`
+		+ 元组
+		
+				let somepoint = (1,1)
+				switch somepoint{
+				case (0,0):
+					//
+				case (_,0):
+					//
+				case (0,_):
+					//
+				case (-2...2, -2...2):
+					//
+				default:
+					//
+				}
+		+ swift允许多个case匹配同一个值，只会执行第一个被匹配的
+		+ **值绑定(Value Bindings)**
+		+ 使用`where`
+		
+				let sompoint = (1,-1)
+				switch sompoint {
+				case let(x,y) where x == y:
+    				println();		
+				case let(x,y) where x == -y:
+    				println();
+				case let(x,y):
+    				println()
+				}
+	- 控制转移语句
+		+ `continue`
 
-- 函数
+		
+		
+6. 函数
 	+ Defining and Calling Functions
 		- parameters
 		- arguments

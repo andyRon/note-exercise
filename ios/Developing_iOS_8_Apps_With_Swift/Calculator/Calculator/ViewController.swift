@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     @IBAction func enter() {
         useIsInTheMiddleOfTypingANumber = false
         operandStack.append(displayValue)
-        println("operandStack = \(operandStack)")
+        print("operandStack = \(operandStack)")
     }
     
     var displayValue: Double {
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         set {
             display.text = "\(newValue)"
             useIsInTheMiddleOfTypingANumber = false
-            println("123")
+            print("123")
         }
     }
     

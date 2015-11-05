@@ -80,6 +80,35 @@ var  someint = [Int]()
 someint = []
 var threee = [Double](count: 3, repeatedValue: 3.3)
 
+var airports:[String:String] = ["TYO":"Tokyo", "DUB":"Dublin"]
+airports.updateValue("nanjing", forKey: "jichang")
+airports["jichang"] = nil
+
+var namesIntegers = Dictionary<Int,String>()
+let gutishuzu = ["engss", "adfa"]
+
+let myarray = [1,2,3]
+let outterarray = [myarray,myarray]
+//outterarray[0][0] = 2000
+
+let sompoint = (1,-1)
+switch sompoint {
+case let(x,y) where x == y:
+    println();
+case let(x,y) where x == -y:
+    println();
+case let(x,y):
+    println()
+}
+
+func sayName(personName:String)->String{
+    
+    return personName+"!"
+}
+
+
+
+
 
 
 
