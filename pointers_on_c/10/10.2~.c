@@ -16,6 +16,8 @@ main(){
     Ex *px = &x;
     printf("%d\n",sizeof(x.d));
     printf("%d\n",px);
+    printf("%d\n",px+1);
+    printf("%d\n",sizeof(px->c.b));
 //    printf("%d\n",(int)(*px)+1);
 //    int *pi;
 //    pi = (int *)px;
@@ -25,4 +27,7 @@ main(){
 //    printf("%d\n",*(px->c.b+1));
 //    printf("%d\n",px->d);
     printf("%d\n",offsetof(Ex,b));
+
+    printf("%d\n",*px);
+    printf("%d\n",px->a);
 }
