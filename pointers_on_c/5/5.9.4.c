@@ -1,13 +1,25 @@
+#include <limits.h>
+#include <stdio.h>
+
 void set_bit( char bit_array[], unsigned bit_number );
 void clear_bit( char bit_array[], unsigned bit_number );
 void assign_bit( char bit_array[], unsigned bit_number, int value);
 int test_bit( char bit_array[], unsigned bit_number);
-
-
-#include <limits.h>
-
+/*
+分别通过二进制位数计算有几个字符和剩余几位
+*/
 unsigned character_offset( unsigned bit_number );
 unsigned bit_offset( unsigned bit_number );
+unsigned
+character_offset(unsigned bit_number){
+    return bit_number / CHAR_BIT;
+}
+unsigned
+bit_offset(unsigned bit_number){
+    return bit_number % CHAR_BIT;
+}
+
+
 
 void
 set_bit( char bit_array[], unsigned bit_number){
@@ -29,24 +41,10 @@ test_bit(char bit_array[], unsigned bit_number){
     return ( bit_array[character_offset(bit_number)] & 1<<bit_offset(bit_number)) != 0;
 }
 
-unsigned
-character_offset(unsigned bit_number){
-    return bit_number / CHAR_BIT;
-}
-unsigned
-bit_offset(unsigned bit_number){
-    return bit_number % CHAR_BIT;
-}
 
-#include <stdio.h>
-//????为啥会挂掉
+
 int main(){
-    char *a = "AA";
-    int b;
-    a[0] =  a[0] | (1<<1);
-    printf("%d", a[0]);
-    return 0;
-    set_bit(a, 1);
-
-    printf("%d", a);
+    char a[10] = "A";
+    set_bit(a,1);
+    printf("%d",a[0]);
 }
