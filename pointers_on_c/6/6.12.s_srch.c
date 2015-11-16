@@ -14,24 +14,23 @@ find_char(char **strings, char value){
     return FALSE;
 }
 #include <assert.h>
-int
-find_char2(char **strings, int value){
-    assert(stirns != NUll);
-
-    while(*strings != NULL){
-        while( **strings != '\0'){
-            if(*(*strings)++ == value)
-                return TRUE;
-        }
-        strings++;
-    }
-    return FALSE;
-}
+//int
+//find_char2(char **strings, int value){
+//    assert(stirns != NUll);
+//
+//    while(*strings != NULL){
+//        while( **strings != '\0'){
+//            if(*(*strings)++ == value)
+//                return TRUE;
+//        }
+//        strings++;
+//    }
+//    return FALSE;
+//}
 
 main(){
-char a[10];
-a[0] = "adfa";
-
-printf("%s",a[0]);
+char a[10] = "adfa";
+char *b[10] = {"adfasdf","cadf"};
+printf("%s",b[2]);
 
 }

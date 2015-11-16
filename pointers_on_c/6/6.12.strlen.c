@@ -9,7 +9,7 @@ strlen(char *string){
 
 main(){
 char *a = "adfa";
-printf("%d", a);
+//printf("%d", a);
 printf("%d", strlen(a));
 
 }
