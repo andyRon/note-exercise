@@ -1,0 +1,75 @@
+<script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+<script src="animo.min.js" type="text/javascript"></script>
+<link href="animate-animo.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.section{
+    margin: 10px 0;
+}    
+
+
+</style>
+
+<div class="section">
+<div id="demo1" style="height: 100px; width: 100px; background: rgb(52, 73, 94);" class=""></div>
+<br>
+<button class="button chunky" onclick="$('#demo1').animo({animation:'tada'});">Action!</button>
+</div>
+
+<div class="section">
+<div id="demo2" style="height: 100px; width: 100px; background: rgb(52, 73, 94);" class=""></div>
+<br>
+<button class="button chunky" onclick="$('#demo2').animo( { animation: ['tada', 'bounce'], duration: 2 } );">Action!</button>
+</div>
+
+<div class="section">
+<span id="demo3" style="height: 100px; width: 100px; margin-right: 20px; margin-left:100px; display: inline-block; background: rgb(52, 73, 94);" class=""></span>
+<span id="demo4" style="height: 100px; width: 100px; display: inline-block; background: rgb(52, 73, 94);" class=""></span>
+<br>
+<button class="button chunky" onclick="$('#demo3').animo( { animation: 'bounceInLeft', duration: 1 }, function() {
+    $('#demo4').animo( { animation: 'bounceInRight', duration: 5 } );
+});">Action!</button>
+</div>
+
+
+<div class="section">
+<h1 style="display:inline-block;font-size:24;color:#2c3e50;" id="demo-a">a</h1>
+<h1 style="display:inline-block;font-size:24;color:#1abc9c;" id="demo-n">n</h1>
+<h1 style="display:inline-block;font-size:24;color:#2980b9;" id="demo-i">i</h1>
+<h1 style="display:inline-block;font-size:24;color:#e74c3c;" id="demo-m">m</h1>
+<h1 style="display:inline-block;font-size:24;color:#8e44ad;" id="demo-o">o</h1>
+<br>
+<button class="button chunky" id="magic">Action!</button>
+</div>
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+    $("#magic").click(function(){
+
+        // Fading out
+        $('#demo-a').animo({animation: "fadeOutLeft", duration: 0.5, keep: true}, function() {
+            $('#demo-n').animo({animation: "fadeOutUp", duration: 0.5, keep: true}, function() {
+                $('#demo-i').animo({animation: "fadeOutDown", duration: 0.5, keep: true}, function() {
+                    $('#demo-m').animo({animation: "fadeOutLeft", duration: 0.5, keep: true}, function() {
+                        $('#demo-o').animo({animation: "fadeOutRight", duration: 0.5, keep: true}, doMagicIn()); // function to fade them back in
+                    });
+                });
+            });
+        });
+
+        // Fading in
+        $('#demo-a').animo({animation: "fadeInLeft", duration: 0.5}, function() {
+            $('#demo-n').animo({animation: "fadeInUp", duration: 0.5}, function() {
+                $('#demo-i').animo({animation: "fadeInDown", duration: 0.5}, function() {
+                    $('#demo-m').animo({animation: "fadeInLeft", duration: 0.5}, function() {
+                        $('#demo-o').animo({animation: "fadeInRight", duration: 0.5});
+                    });
+                });
+            });
+        });
+    })
+
+})
+
+
+</script>
