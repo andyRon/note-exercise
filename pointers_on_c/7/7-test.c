@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(void){
-		printf("hello");
-	
+		printf("%d\n",3.14);
+
 }
