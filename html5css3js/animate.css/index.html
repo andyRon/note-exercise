@@ -1,0 +1,26 @@
+<head>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="animate.css">
+</head>
+<style type="text/css">
+#content{
+    margin: 100px 300px;
+}    
+
+</style>
+<p id="content" class="animated fadeOutUp">AndyRon</p>
+<br>
+<button id="button">button</button>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#content").addClass("");
+        })
+        $('#content').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $("#content").addClass("animated slideInDown")
+        });
+    });
+
+
+
+</script>
