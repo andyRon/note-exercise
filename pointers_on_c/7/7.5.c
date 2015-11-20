@@ -10,6 +10,7 @@ binary_to_ascii( unsigned int value){
     if( quotient != 0)
         binary_to_ascii(quotient);
     putchar( value % 10 + '0');
+    putchar('\n');
 }
 
 void
