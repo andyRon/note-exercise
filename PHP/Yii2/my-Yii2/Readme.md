@@ -16,3 +16,7 @@
 
 	- 命名空间只是一个名字，一个类似于目录结构的的字符串,如：`yii\helpers\ArrayHelper`
 	- ?? composer
+	- Yii.php  BaseYii.php  classes.php
+
+4. base
+	1. 
