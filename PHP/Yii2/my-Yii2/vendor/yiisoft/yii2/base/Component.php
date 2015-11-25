@@ -114,14 +114,29 @@ class Component extends Object
     {
 
     }
-
+    /*
+    通过方法 [[behaviors()]] 添加行为 
+    */
     public function ensureBehaviors()
     {
 
     }
 
-    public function attachBehaviorInternal($name, $behavior)
+    private function attachBehaviorInternal($name, $behavior)
     {
-        
+        if (!($behavior instanceof Behavior)) {
+            $behavior = Yii::createObject($behavior);
+        }
+        if (is_int($name)) {
+            $behavior->attach($this);
+            $this->_behaviors[] = $behavior;
+        } else {
+            if (isset($this->_behaviors[$name])) {
+                $this->_behaviors[$name]->detach();
+            }
+            $behavior->attach($this);
+            $this->_behaviors[$name] = $behavior;
+        }
+        return $behavior;
     }
 }

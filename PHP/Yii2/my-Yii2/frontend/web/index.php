@@ -10,7 +10,16 @@ require(__DIR__."/../../vendor/yiisoft/yii2/Yii.php");
 
 $config =  require(__DIR__."/../../common/config/main.php");
 use yii\base\Object;
-print_r(new Object());die();
+
+class test extends Object
+{
+    private $a;
+    function geta(){
+        return 12;
+    }
+}
+$obj = new test();
+print_r($obj->a);die();
 
 $application = new yii\web\Application($config);
 $application->run();

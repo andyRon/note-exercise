@@ -69,7 +69,9 @@ class BaseYii
 
     public static function autoload($className)
     {
-
+        if(isset(static::$classMap[$className])){
+            include(static::$classMap[$className]);
+        }
     }
 
     public static function createObject($type, array $params = [])
@@ -133,7 +135,10 @@ class BaseYii
 
     public static function configure($object, $properties)
     {
-
+        foreach ($properties as $name => $value) {
+            $object->$name = $value;
+        }
+        return $object;
     }
 
     public static function getObjectVars($object)
