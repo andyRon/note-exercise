@@ -30,6 +30,6 @@ main(){
 
     int c;
     c = lookup_keyword("while",keyword,7);
-    printf("%d",c);
-
+    printf("%d\n", c);
+    printf("%d\n", sizeof(keyword));
 }
