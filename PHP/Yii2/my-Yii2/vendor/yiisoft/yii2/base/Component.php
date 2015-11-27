@@ -116,6 +116,8 @@ class Component extends Object
     }
     /*
     通过方法 [[behaviors()]] 添加行为 
+    只要涉及到类的属性、方法、事件这个函数都会被调用到
+    确保 behaviors() 中所描述的行为已经进行了绑定
     */
     public function ensureBehaviors()
     {
