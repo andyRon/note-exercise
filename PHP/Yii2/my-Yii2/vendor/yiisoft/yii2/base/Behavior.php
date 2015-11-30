@@ -2,7 +2,7 @@
 
 namespace yii\base;
 
-class Behavior extends Component 
+class Behavior extends Object 
 {
     // 代指 某个`Component` 
     public $owner;
