@@ -1,12 +1,15 @@
 #include <ctype.h>
 #include <stdio.h>
 
-void
+int
 main()
 {
 
 //    printf("%d\n", iscntrl(32));
 //    printf("%d\n", isspace(' '));
 //    printf("%d\n", isdigit(1));
-    printf("%d\n", ispunct(40));
+    // printf("%d\n", ispunct(40));
+    printf("%c\n", tolower(36));
+
+    return 0;
 }
