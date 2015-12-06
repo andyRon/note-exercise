@@ -24,6 +24,8 @@ class Module extends ServiceLocator
 
     public $controllerMap = [];
 
+    public $controllerNamespace;
+
     public $defaultRoute = 'default';
 
 
@@ -55,5 +57,15 @@ class Module extends ServiceLocator
         } else {
             Yii::$app->loadedModules[get_class($instance)] = $instance;
         }
+    }
+    
+    public function init()
+    {
+    	if ($this->controllerNamespace === null) {
+    		$class = get_class($this);
+    		if (($pos = strrpos($class, '\\')) !== false) {
+    			$this->controllerNamespace = substr($class, 0, $pos).'\\controllers';
+    		}
+    	}
     }
 }
