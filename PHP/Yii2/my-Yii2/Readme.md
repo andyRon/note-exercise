@@ -48,3 +48,5 @@
 		- 实现服务提供方、服务使用方完全的解耦，便于独立测试和代码跨框架复用。
 		- 当你第一次访问某组件时，yii\di\ServiceLocator 会通过该组件的注册信息创建一个该组件的实例，并返回它。
 	6. ?? yii\di\Container
+	7. yii\base\module
+	8. yii\base\application
