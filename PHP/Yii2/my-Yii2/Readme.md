@@ -50,3 +50,6 @@
 	6. ?? yii\di\Container
 	7. yii\base\module
 	8. yii\base\application
+
+
+- 数据库
