@@ -78,8 +78,34 @@ var step = StepCounter()
 
 step.totalSteps = 100
 
+struct SomeStruct {
+    static var storedTypeProperty = "property"
+    static var computedTypeProperty:Int{
+        return 123
+    }
+}
+enum SomeEnum {
+    static var storedTypeProperty = "property2"
+    static var computedTypeProperty:Int{
+        return 789
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "property3"
+    static var computedTypeProperty:Int{
+        return 789
+    }
+    class var overrideableComputedTypeProperty:Int{
+        return 567
+    }
+}
+print(SomeClass.computedTypeProperty)
 
-
+//SomeClass.computedTypeProperty = 444
+SomeClass.storedTypeProperty = "not property"
+print(SomeClass.storedTypeProperty)
+print(SomeStruct.storedTypeProperty)
+print(SomeEnum.storedTypeProperty)
 
 
 
