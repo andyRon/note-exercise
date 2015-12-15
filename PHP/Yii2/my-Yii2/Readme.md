@@ -53,3 +53,20 @@
 
 
 - 数据库
+
+
+
+
+
+
+### 问题
+-----------------
+
+  			'enableSchemaCache' => true,
+            // Duration of schema cache.
+            'schemaCacheDuration' => 3600,
+            // Name of the cache component used to store schema information
+            'schemaCache' => 'cache',
+----------------
+
+- yii2  RESTful  分页信息  ，就是在自己提供数据时怎么提高分页信息

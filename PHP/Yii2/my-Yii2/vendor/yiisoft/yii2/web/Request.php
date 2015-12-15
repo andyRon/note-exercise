@@ -153,60 +153,199 @@ class Request extends yii\base\Request
 
     public function getBodyParams()
     {
+        if ($this->_bodyParams === null) {
+            if (isset($_POST[$this->methodParm])) {
+                $this->_bodyParams = $_POST;
+                unset($this->_bodyParams[$this->methodParm]);
+                return $this->_bodyParams;
+            }
 
+            $contentType = $this->getContentType();
+            if (($pos = strpos($contentType, ':')) !== false) {
+                //e.g. text/plain;charset=UTF-8    
+                $contentType = substr($contentType, 0, $pos);
+            }
+
+            if (isset($this->parsers[$contentType])) {
+                $parser = Yii::createObject($this->parsers[$contentType]);
+                if (!($parser instanceof RequestParserInterface)) {
+                    throw new InvalidConfigException("The '$contentType' request parser is invalid. It must implement the yii\\web\\RequestParserInterface.");
+                }
+                $this->_bodyParams = $parser->parse($this->getRawBody(), $contentType);
+            } elseif (isset($this->parsers['*'])) {
+                $parser = Yii::createObject($this->parsers['*']);
+                if (!($parser instanceof RequestParserInterface)) {
+                    throw new InvalidConfigException("The fallback request parser is invalid. It must implement the yii\\web\\RequestParserInterface.");
+                }
+                $this->_bodyParams = $parser->parse($this->getRawBody(), $contentType);
+            } elseif ($this->getMethod() === 'POST') {
+                // PHP has already parsed the body so we have all params in $_POST
+                $this->_bodyParams = $_POST;
+            } else {
+                $this->_bodyParams = [];
+                mb_parse_str($this->getRawBody(), $this->_bodyParams);
+            }
+        }
+
+        return $this->_bodyParams;
     }
 
     public function setBodyParams($values)
     {
-
+        $this->_bodyParams = $values;
     }
 
-    public function getBodyparam($name, $defaultValue = null)
+    public function getBodyParam($name, $defaultValue = null)
+    {
+        $bodyParams = $this->getBodyParams();
+
+        return isset($bodyParams[$name]) ? $bodyParams[$name] : $defaultValue;
+    }
 
     public function post($name = null, $defaultValue = null)
+    {
+        if ($name === null) {
+            return $this->getBodyParams();
+        } else {
+            return $this->getBodyParam($name, $defaultValue);
+        }
+    }
 
     private $_queryParams;
+
     public function getQueryParams()
+    {
+        if ($this->_queryParams === null) {
+            return $_GET;
+        }
+        return $this->_queryParams;
+    }
+
     public function setQueryParams($values)
+    {
+        $this->_queryParams = $values;
+    }
 
     public function get($name = null, $defaultValue = null)
+    {
+        if ($name === null) {
+            return $this->getQueryParams();
+        } else {
+            return $this->getQueryParam($name, $defaultValue);
+        }
+    }
 
     public function getQueryParam($name, $defaultValue = null)
+    {
+        $queryParams = $this->getQueryParams();
+
+        return isset($queryParams[$name]) ? $queryParams[$name] : $defaultValue;
+    }
 
     private $_hostInfo;
 
     public function getHostInfo()
+    {
+        if ($this->_hostInfo === null) {
+            $secure = $this->getIsSecureConnection();
+            $http = $secure ? 'https' : 'http';
+            if (isset($_SERVER['HTTP_HOST'])) {
+                $this->_hostInfo = $http.'://'.$_SERVER['HTTP_HOST'];
+            } else {
+                $this->_hostInfo = $http.'://'.$_SERVER['SERVER_NAME'];
+                $port = $secure ? $this->getSecurePort() : $this->getPort();
+                if (($post !== 80 && !$secure) || ($post !== 443 && $secure)) {
+                    $this->_hostInfo .= ':'.$port;
+                }
+            }
+        }
+        return $this->_hostInfo;
+    }
 
     public function setHostInfo($value)
+    {
+        $this->_hostInfo = rtrim($value, '/');
+    }
+
+    private $_baseUrl;
 
     public function getBaseUrl()
+    {
+        if ($this->_baseUrl === null) {
+            $this->_baseUrl = rtrim(dirname($this->getScriptUrl()), '\\/');
+        }
+        return $this->_baseUrl;
+    }
 
     public function setBaseUrl($value)
+    {
+        $this->_baseUrl = $value;
+    }
 
     private $_scriptUrl;
 
     public function getScriptUrl()
+    {
+        if ($this->_scriptUrl === null) {
+            $scriptFile = $this->getScriptFile();
+            $scriptName = basename($scriptFile);
+            if (basename($_SERVER['SCRIPT_NAME']) === $scriptName) {
+                $this->_scriptUrl = $_SERVER['SCRIPT_NAME'];
+            } elseif (basename($_SERVER['PHP_SELF']) === $scriptName) {
+                $this->_scriptUrl = $_SERVER['PHP_SELF'];
+            } elseif (isset($_SERVER['ORIG_SCRIPT_NAME']) && basename($_SERVER['ORIG_SCRIPT_NAME']) === $scriptName) {
+                $this->_scriptUrl = $_SERVER['ORIG_SCRIPT_NAME'];
+            } elseif (($pos = strpos($_SERVER['PHP_SELF'], '/' . $scriptName)) !== false) {
+                $this->_scriptUrl = substr($_SERVER['SCRIPT_NAME'], 0, $pos) . '/' . $scriptName;
+            } elseif (!empty($_SERVER['DOCUMENT_ROOT']) && strpos($scriptFile, $_SERVER['DOCUMENT_ROOT']) === 0) {
+                $this->_scriptUrl = str_replace('\\', '/', str_replace($_SERVER['DOCUMENT_ROOT'], '', $scriptFile));
+            } else {
+                throw new InvalidConfigException('Unable to determine the entry script URL.');
+            }
+        }
+
+        return $this->_scriptUrl;
+    }
 
     public function setScriptUrl($value)
+    {
+        $this->_scriptUrl = '/' . trim($value, '/');
+    }
 
     private $_scriptFile;
 
     public function getScriptFile()
+    {
+        return isset($this->_scriptFile) ? $this->_scriptFile : $_SERVER['SCRIPT_FILENAME'];
+    }
 
-    public function setScriptUrl($value)
+    public function setScriptFile($value)
+    {
+        $this->_scriptFile = $value;
+    }
 
     public $_pathInfo;
-
+    // e.g. site/index
     public function getPathInfo()
+    {
+        if ($this->_pathInfo === null) {
+            $this->_pathInfo = $this->resolvePathInfo();
+        }
+
+        return $this->_pathInfo;
+    }
 
     public function setPathInfo($value)
+    {
+        $this->_pathInfo = ltrim($value, '/');
+    }
 
     protected function resovlePathInfo()
 
     public function getAbsoluteUrl()
 
     private $_url;
-
+    // e.g. /index.php/site/index
     public function getUrl()
 
     public function setUrl($value)
