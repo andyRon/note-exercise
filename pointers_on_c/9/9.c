@@ -21,10 +21,15 @@ main(){
 //    char *a = "efghi";
 //    printf("%s\n",strncat(str,a,2));
 
-    char string[20] = "abcdefABCD";
-    char *ans;
-    ans = strchr(string, 'd');
-    ans = strpbrk(string, "bfA");
-    ans = strstr(string, "fAB");
-    printf("%c",*ans);
+//    char string[20] = "abcdefABCD";
+//    char *ans;
+//    ans = strchr(string, 'd');
+//    ans = strpbrk(string, "bfA");
+//    ans = strstr(string, "fAB");
+//    printf("%c",*ans);
+
+    char message[] = "Original message";
+    strcpy(message, "Different");
+    char *p = message;
+    printf("%s", p+10);
 }

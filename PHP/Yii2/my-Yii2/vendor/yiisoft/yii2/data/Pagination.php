@@ -117,5 +117,21 @@ class Pagination extends Object implements Linkable
     }
 
     public function createUrl($page, $pageSize = null, $absolute = false)
-    
+    {
+        //...
+    }
+
+    public function getOffset()
+    {
+        $pageSize = $this->getPageSize();
+
+        return $pageSize < 1 ? 0 : $this->getPage() * $pageSize;
+    }
+
+    public function getLimit()
+
+    public function getLinks($absolute = false)
+
+    protected function getQueryParam($name, $defaultValue = null)
+
 }
