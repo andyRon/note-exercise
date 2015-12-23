@@ -14,11 +14,25 @@ int count_chars( char const *str, char const *chars){
     return count;
 }
 
+
+int count_chars_2( char const *str, char const *chars) {
+    int count = 0;
+
+    while((str = strpbrk(str, chars)) != 0) {
+        count++;
+        str++;
+    }
+
+    return count;
+}
+
+
+
 void
 main(){
     char *str="adbdb";
     char *chars = "b";
 //    printf("%d", strchr("abc", 0));
-    printf("%d", count_chars(str, chars));
+    printf("%d", count_chars_2(str, chars));
 
 }
