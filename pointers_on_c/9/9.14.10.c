@@ -4,30 +4,33 @@
 #include <ctype.h>
 
 int palindrome(char *string){
-    char *str;
-    *(str+strlen(string)) = 0;
-    int a = 0;
-    int i = strlen(string);
-    while(a<=i) {
-        if (*string == '\0') {
-            *str = '\0';
-        } else if(isalpha(*string)) {
-            if (isupper(*string)) {
-                *str = *string + 32;
-            } else {
-                *str = *string;
-            }
-            str++;
-        }
-        string++;
-        a++;
+    char *first = string;
+    char *end = string + strlen(string) - 1;
 
+    for(;first <= end;){
+        while(!isalpha(*first)) {
+            first++;
+        }
+        while(!isalpha(*end)) {
+            end--;
+        }
+        if (first > end)
+            return 2;
+        if (isupper(*first))
+            *first += 32;
+        if (isupper(*end))
+            *end += 32;
+//        printf("%d,%d\n", *first, *end);
+        if (*first != *end)
+            return 3;
+
+        first++;
+        end--;
     }
-    printf("%s\n", str);
-    return 0;
+    return 1;
 }
 
 void
 main(){
-    palindrome("adfx/., sdfa!#@dfa");
+    printf("%d", palindrome("ad237* fd1fd23 +-*a"));
 }
