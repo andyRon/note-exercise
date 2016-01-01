@@ -2,8 +2,8 @@
 //  ViewController.h
 //  Hello World
 //
-//  Created by andyron on 15/11/26.
-//  Copyright © 2015年 Apress. All rights reserved.
+//  Created by andyron on 15/12/27.
+//  Copyright © 2015年 andyron. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
