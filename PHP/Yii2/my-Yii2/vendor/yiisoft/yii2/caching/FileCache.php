@@ -90,6 +90,34 @@ class FileCahce extends Cache
 
     protected function getCacheFile($key)
     {
+        if ($this->directoryLevel > 0) {
+            $base = $this->cachePath;
+            for ($i = 0; $i < $this->directoryLevel; ++$i) {
+                if ($prefix = substr($key, $i+$i, 2) !== false) {
+                    $base .= DIRECTORY_SEPARATOR.$prefix;
+                }
+            }
+            
+            return $base. DIRECTORY_SEPARATOR . $key . $this->cacheFileSuffix; 
+        } else {
+            return $this->cachePath . DIRECTORY_SEPARATOR. $key. $this->cacheFileSuffix;
+        }
+    }
+    
+    protected function flushVlues()
+    {
+        $this->gc(true, false);
+        
+        return true;
+    } 
+    
+    public function gc($force = false, $expiredOnly = true)
+    {
+        
+    }
+    
+    protected function gcRecursive($path, $expiredOnly)
+    {
         
     }
 }

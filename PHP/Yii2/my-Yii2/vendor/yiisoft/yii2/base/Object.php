@@ -24,6 +24,9 @@ class Object
 
     }
 
+    /*
+     * 有成员变量的是不会调用 __get等魔术方法的，先遍历成员变量，然后再根据需求调用魔术方法
+     */
     public function __get($name)
     {
         $getter = 'get'.$name;
