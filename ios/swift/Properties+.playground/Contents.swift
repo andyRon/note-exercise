@@ -108,6 +108,21 @@ print(SomeStruct.storedTypeProperty)
 print(SomeEnum.storedTypeProperty)
 
 
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel:Int = 0  {
+        didSet {
+            if currentLevel > AudioChannel.thresholdLevel {
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel t> AudioChannel.maxInputLevelForAllChannels {
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+
+        }
+    }
+}
 
 
 
