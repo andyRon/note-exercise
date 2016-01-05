@@ -6,10 +6,10 @@ namespace yii\base;
 use Yii;
 
 
-abstract Application extends Module
+abstract class Application extends Module
 {
+    // 定义了两个事件，分别在处理请求的前后触发
     const EVENT_BEFORE_REQUEST = 'beforeRequest';
-
     const EVENT_AFTER_REQUEST = 'afterRequest'; 
 
     const STATE_BEGIN = 0;
@@ -174,7 +174,7 @@ abstract Application extends Module
                 echo "Error: no errorHandler component is configured.\n";
                 exit(1);
             }
-            $this->set('errorHandler', $config['component']['errorHandler']]);
+            $this->set('errorHandler', $config['component']['errorHandler']);
             unset($config['component']['errorHandler']);
             $this->getErrorHanler()->register();
         }

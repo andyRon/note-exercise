@@ -3,7 +3,7 @@
 namespace yii\base;
 
 
-class InvailCallException extends \BadMethodCallException
+class InvalidCallException extends \BadMethodCallException
 {
     public function getName()
     {

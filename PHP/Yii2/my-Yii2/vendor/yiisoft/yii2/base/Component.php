@@ -33,7 +33,7 @@ class Component extends Object
         if (method_exists($this, 'set'.$name)) {
             throw new InvalidCallException('Getting write-only property:'.get_class($this).'::'.$name);
         } else {
-            throw new UnknowPropertyException('Getting unknow property:'.get_class($this).'::'.$name);
+            throw new UnknownPropertyException('Getting unknow property:'.get_class($this).'::'.$name);
         }
     }
 
@@ -114,7 +114,7 @@ class Component extends Object
                 return call_user_func_array([$Object, $name], $parms);
             }
         }
-        throw new UnkonwMethodException('Calling unknow method:'.get_class($name).'::'.$name.'()')
+        throw new UnkonwMethodException('Calling unknow method:'.get_class($name).'::'.$name.'()');
     }
 
     public function __clone($name)
@@ -186,7 +186,13 @@ class Component extends Object
         $this->ensureBehaviors();
         return !empty($this->_events[$name]) || Event::hasHandlers($this, $name);
     }
-
+    /**
+     * 绑定事件
+     * @param unknown $name
+     * @param unknown $handlers
+     * @param string $data
+     * @param string $append
+     */
     public function on($name, $handlers, $data = null, $append = true)
     {
         $this->ensureBehaviors();
@@ -196,7 +202,12 @@ class Component extends Object
             array_unshift($this->_events[$name], [$handlers, $name]);
         }
     }
-
+    /**
+     * 解除事件
+     * @param unknown $name
+     * @param string $handlers
+     * @return boolean
+     */
     public function off($name, $handlers = null)
     {
         $this->ensureBehaviors();
@@ -211,7 +222,11 @@ class Component extends Object
         }
 
     }
-
+    /**
+     * 触发事件
+     * @param unknown $name
+     * @param EVENT $evnet
+     */
     public function trigger($name, EVENT $evnet = null)
     {
         //...
