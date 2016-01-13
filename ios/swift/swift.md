@@ -284,7 +284,7 @@
 	+ 计算属性  getter (setter, `newValue`)
 		* 只读计算属性
 		* 必须使用var关键字定义计算属性
-	+ 属性观察器
+	+ 属性观察器(property observer)
 		* 可以添加的： 
 			- 存储属性（除了延迟存储属性）
 			- **重写的计算属性**
@@ -298,6 +298,18 @@
 - 方法 
 
 	
-	 
+- 下标脚本(subscripts)
+
+- 继承(inheritance) 
+	+ base class
+	+ subclassing
+	+ overriding
+		* overriding: 子类可以为继承来的实例方法（instance method），类方法（class method），实例属性（instance property），或下标脚本（subscript）提供自己定制的实现（implementation）。
+		* 访问超类的方法，属性及下标脚本
+		* 重写方法
+		* 重写属性
+		* 重写属性的Getters和Setters
+		* 重写属性观察器（Property Observer）
+	+ 防止重写 `final`   final var, final func, final class func, 以及 final subscript	 
    
         
