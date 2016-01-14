@@ -311,5 +311,40 @@
 		* 重写属性的Getters和Setters
 		* 重写属性观察器（Property Observer）
 	+ 防止重写 `final`   final var, final func, final class func, 以及 final subscript	 
+- initialization(构造过程)
+	+ initializer  `init() {}` 不需要返回值	
+	+ 存储属性的初始赋值	  
+		类和结构体在创建实例时，必须为所有存储型属性设置合适的初始值。(构造器或定义时时直接设置)
+	+ 自定义构造过程
+		- 构造参数  
+		不同参数调用不同构造器  
+
+			struct Celsius {
+			    var temperatureInCelsius: Double
+			    init(fromFahrenheit fahrenheit: Double) {
+			        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+			    }
+			    init(fromKelvin kelvin: Double) {
+			        temperatureInCelsius = kelvin - 273.15
+			    }
+			}
+			let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+			// boilingPointOfWater.temperatureInCelsius 是 100.0
+			let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+			// freezingPointOfWater.temperatureInCelsius 是 0.0”
+		- 参数的内部名称和外部名称  
+			定义构造器时没有提供参数的外部名字，Swift 会为每个构造器的参数自动生成一个跟内部名字相同的外部名。
+		- 不带外部名的构造器参数  
+			`init(_ celsius: Double)`    => 	`Celsius(37.0)`
+		- 可选属性类型
+		
+		
+		
+
+
+-----------------
+值类型	类类型	引用类型 
+逆向建模
+	
    
         
