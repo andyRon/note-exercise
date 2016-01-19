@@ -1,16 +1,14 @@
 //
 //  ViewController.h
-//  3 Button Fun
+//  4 Control Fun
 //
-//  Created by andyron on 16/1/5.
+//  Created by andyron on 16/1/19.
 //  Copyright © 2016年 andyron. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-- (IBAction)buttonPressed:(UIButton *)sender;
 
 
 @end
