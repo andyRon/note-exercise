@@ -25,3 +25,9 @@
 - 服务端模块	server2.js
 - 进行请求的*路由*：查看HTTP请求，从中提取出请求的URL以及GET/POST参数。这些数据堵在request对象中  
 ![]("./img/url.jpg")
+
+
+# 再次学习
+[1](http://www.runoob.com/nodejs/nodejs-tutorial.html)  
+[2](https://nqdeng.github.io/7-days-nodejs/#1)  
+[3](http://www.nodebeginner.org/index-zh-cn.html)
