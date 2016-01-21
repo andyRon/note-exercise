@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *numberField;
 
 @end
 
@@ -24,4 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)textFieldDoneEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (IBAction)backgroundTap:(id)sender {
+    [self.nameField resignFirstResponder];
+    [self.numberField resignFirstResponder];
+}
 @end
