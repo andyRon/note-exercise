@@ -1,3 +1,7 @@
+-----
+[深入yii2](http://www.digpage.com/index.html)
+-----
+
 ### 属性
 
 1. **成员变量**  **属性**(yii\base\Object提供，就是通过__get,__set魔术方法)
