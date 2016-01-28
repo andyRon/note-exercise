@@ -41,7 +41,7 @@
     + `option + command + return`(View>Assistant Editor>Show Assistant Editor) 打开辅助编辑器
     + `Editor>Canvas>Show Bounds Rectangles`   显示控件边框
     + `Editor>Resovle Auto layout issues>Add Missing Constraints`  添加限制
-
+    + `Command+Shift+C` 打开控制台
 - 专有名词、概念等
     - iOS Human Interface Guidelines(HIG)
 
@@ -57,9 +57,21 @@
     - 操作方法(action method) or 操作
     - 
 4. 应用程序委托
-
+asv
 ### 4 
 Apply Retina 3.5-inch Form Factor
+
+
+### 5
+Horizontal Spacing  >>>   stack view  ？？
+pin  在编辑窗口右下角
+
+
+
+### 6 多视图应用
+
+
+
 
 http://developer.apple.com/library/ios/#samplecode/UICatalog/index.html
 
