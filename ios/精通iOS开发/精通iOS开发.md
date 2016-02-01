@@ -69,6 +69,21 @@ pin  在编辑窗口右下角
 
 
 ### 6 多视图应用
+1. 多视图应用的常见类型
+    1. 内容视图： 具有相应视图控制器的UIView或其子类
+    2. 标签栏应用（电话和时钟应用）    标签栏(Tab Bar)
+    3. 基于导航的应用（系统设置） **导航控制器**  **分割视图**(split view)
+    4. 工具栏应用（Safari）
+2. 多视图应用的体系结构
+
+3. 构建View Switch项目
+Empty Application模板消失了  [解决办法](http://jingyan.baidu.com/article/2a138328bd73f2074b134f6d.html)
+Cocoa class 
+
+报错 ， 模拟机一直黑屏vrs
+
+### 7 分页栏与选取器
+
 
 
 
