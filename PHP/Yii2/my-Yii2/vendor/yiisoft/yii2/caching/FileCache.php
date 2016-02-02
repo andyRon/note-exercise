@@ -113,11 +113,35 @@ class FileCahce extends Cache
     
     public function gc($force = false, $expiredOnly = true)
     {
-        
+        if ($force || mt_rand(0, 1000000) < $this->gcProbability) {
+            $this->gcRecursive($this->cachePath, $expiredOnly);
+        }
     }
     
     protected function gcRecursive($path, $expiredOnly)
     {
-        
+        if (($handle = opendir($path)) !== false) {
+            while (($file = readdir($handle)) !== false) {
+                if ($file[0] === '.') {
+                    continue;
+                }
+                $fullPath = $path . DIRECTORY_SEPARATOR . $file;
+                if (is_dir($fullPath)) {
+                    $this->gcRecursive($fullPath, $expiredOnly);
+                    if (!$expiredOnly) {
+                        if (!@rmdir($fullPath)) {
+                            $error = error_get_last();
+                            Yii::warning("Unable to remove directory '{$fullPath}': {$error['message']}", __METHOD__);
+                        }
+                    }
+                } elseif (!$expiredOnly || $expiredOnly && @filemtime($fullPath) < time()) {
+                    if (!@unlink($fullPath)) {
+                        $error = error_get_last();
+                        Yii::warning("Unable to remove file '{$fullPath}': {$error['message']}", __METHOD__);
+                    }
+                }
+            }
+            closedir($handle);
+        }
     }
 }
