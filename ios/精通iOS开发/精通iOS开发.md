@@ -90,6 +90,18 @@ Cocoa class
 - ？？命令栏提示` Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?` [解决](http://blog.csdn.net/jiajiayouba/article/details/41678101)  主要是没有第一启动界面引起的，
 - `NSDateFormatter` 定制日期格式
 
+ **picker view**(选择器视图，选择器)  
+ 1. Pickers应用程序
+    - 日期选择器
+    - 单滚轮选取器
+    - 多滚轮选取器
+    - 包含依赖滚轮的选取器
+    - 包含图像的自定义选取器
+ 2. 委托和数据源
+ 3. 创建Pickers应用程序
+    - 创建视图控制器  
+     根控制器  `UITabBarController`
+ 4. 
 5. 实现单滚轮选取器 
     - 数据来源：
         1. 静态列表
