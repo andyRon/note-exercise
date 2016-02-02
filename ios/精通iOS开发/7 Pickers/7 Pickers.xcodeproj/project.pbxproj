@@ -14,6 +14,11 @@
 		EF71B7C41C5EFB5A005268D2 /* __PickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7C31C5EFB5A005268D2 /* __PickersTests.m */; };
 		EF71B7CF1C5EFB5A005268D2 /* __PickersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7CE1C5EFB5A005268D2 /* __PickersUITests.m */; };
 		EF71B7DE1C5EFC92005268D2 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7DD1C5EFC92005268D2 /* DatePickerViewController.m */; };
+		EF71B7E11C5EFE5C005268D2 /* SingleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7E01C5EFE5C005268D2 /* SingleComponentPickerViewController.m */; };
+		EF71B7E41C5EFE8D005268D2 /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7E31C5EFE8D005268D2 /* DoubleComponentPickerViewController.m */; };
+		EF71B7E71C5EFECB005268D2 /* DependentComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7E61C5EFECB005268D2 /* DependentComponentPickerViewController.m */; };
+		EF71B7EA1C5EFEED005268D2 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF71B7E91C5EFEED005268D2 /* CustomPickerViewController.m */; };
+		EF71B7EC1C5EFF40005268D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF71B7EB1C5EFF40005268D2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,15 @@
 		EF71B7D01C5EFB5A005268D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF71B7DC1C5EFC92005268D2 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		EF71B7DD1C5EFC92005268D2 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		EF71B7DF1C5EFE5C005268D2 /* SingleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleComponentPickerViewController.h; sourceTree = "<group>"; };
+		EF71B7E01C5EFE5C005268D2 /* SingleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleComponentPickerViewController.m; sourceTree = "<group>"; };
+		EF71B7E21C5EFE8D005268D2 /* DoubleComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleComponentPickerViewController.h; sourceTree = "<group>"; };
+		EF71B7E31C5EFE8D005268D2 /* DoubleComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleComponentPickerViewController.m; sourceTree = "<group>"; };
+		EF71B7E51C5EFECB005268D2 /* DependentComponentPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependentComponentPickerViewController.h; sourceTree = "<group>"; };
+		EF71B7E61C5EFECB005268D2 /* DependentComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponentPickerViewController.m; sourceTree = "<group>"; };
+		EF71B7E81C5EFEED005268D2 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
+		EF71B7E91C5EFEED005268D2 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
+		EF71B7EB1C5EFF40005268D2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +121,15 @@
 				EF71B7AF1C5EFB5A005268D2 /* Supporting Files */,
 				EF71B7DC1C5EFC92005268D2 /* DatePickerViewController.h */,
 				EF71B7DD1C5EFC92005268D2 /* DatePickerViewController.m */,
+				EF71B7E81C5EFEED005268D2 /* CustomPickerViewController.h */,
+				EF71B7E91C5EFEED005268D2 /* CustomPickerViewController.m */,
+				EF71B7EB1C5EFF40005268D2 /* Main.storyboard */,
+				EF71B7DF1C5EFE5C005268D2 /* SingleComponentPickerViewController.h */,
+				EF71B7E01C5EFE5C005268D2 /* SingleComponentPickerViewController.m */,
+				EF71B7E21C5EFE8D005268D2 /* DoubleComponentPickerViewController.h */,
+				EF71B7E31C5EFE8D005268D2 /* DoubleComponentPickerViewController.m */,
+				EF71B7E51C5EFECB005268D2 /* DependentComponentPickerViewController.h */,
+				EF71B7E61C5EFECB005268D2 /* DependentComponentPickerViewController.m */,
 			);
 			path = "7 Pickers";
 			sourceTree = "<group>";
@@ -204,6 +227,7 @@
 				TargetAttributes = {
 					EF71B7AB1C5EFB5A005268D2 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = ZHNA975N38;
 					};
 					EF71B7BE1C5EFB5A005268D2 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -240,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF71B7EC1C5EFF40005268D2 /* Main.storyboard in Resources */,
 				EF71B7B61C5EFB5A005268D2 /* Assets.xcassets in Resources */,
 				EF71B7B91C5EFB5A005268D2 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -268,7 +293,11 @@
 			files = (
 				EF71B7B41C5EFB5A005268D2 /* AppDelegate.m in Sources */,
 				EF71B7DE1C5EFC92005268D2 /* DatePickerViewController.m in Sources */,
+				EF71B7E11C5EFE5C005268D2 /* SingleComponentPickerViewController.m in Sources */,
+				EF71B7E41C5EFE8D005268D2 /* DoubleComponentPickerViewController.m in Sources */,
+				EF71B7E71C5EFECB005268D2 /* DependentComponentPickerViewController.m in Sources */,
 				EF71B7B11C5EFB5A005268D2 /* main.m in Sources */,
+				EF71B7EA1C5EFEED005268D2 /* CustomPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "7 Pickers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Pickers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "7 Pickers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Pickers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -77,16 +77,35 @@ pin  在编辑窗口右下角
 2. 多视图应用的体系结构
 
 3. 构建View Switch项目
-Empty Application模板消失了  [解决办法](http://jingyan.baidu.com/article/2a138328bd73f2074b134f6d.html)
+Empty Application模板消失了  [解决办法1](http://jingyan.baidu.com/article/2a138328bd73f2074b134f6d.html)  
+解决办法2
+https://github.com/featherJ/Empty-Application-For-Xcode-7
+复制 `Empty Application.xctemplate` 到目录`{Xcode.app}/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application/` 中
 Cocoa class 
 
 报错 ， 模拟机一直黑屏vrs
 
 ### 7 分页栏与选取器
+- ？？`no code sigining identities found`
+- ？？命令栏提示` Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?` [解决](http://blog.csdn.net/jiajiayouba/article/details/41678101)  主要是没有第一启动界面引起的，
+- `NSDateFormatter` 定制日期格式
+
+5. 实现单滚轮选取器 
+    - 数据来源：
+        1. 静态列表
+        2. 文件或URL载入
+        3. 动态组合或计算得到
 
 
 
 
+
+### 参考
+- [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
+### 进阶知识
+- [RunLoop](http://www.cocoachina.com/ios/20150601/11970.html)
+- Core text [1](http://www.cocoachina.com/industry/20140521/8504.html)
+- AVFoundation [1](http://www.cocoachina.com/ios/20150528/11966.html)
 
 http://developer.apple.com/library/ios/#samplecode/UICatalog/index.html
 
