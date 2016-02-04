@@ -77,10 +77,87 @@
 		+ `[Circle new]`	发送new消息
 		+ **软件实体应该对扩展开放，而对修改关闭。**	  ---- 开放/关闭原则(Bertrand Meyer)
 		
-### 继承
+### 4 继承(inheritance)
+1. 为何使用继承
+	- **UML**(Unified Modeling Language, 统一建模语言) 是一种用图表来表示类、类的内容以及它们之间关系。
+2. 继承的语法格式
+	- 只能继承一个
+	- 只有代码精简，bug才无处藏身
+	- 相关术语
+		+ refactoring (重构)
+		+ superclass
+		+ parent class
+		+ subclass
+		+ child class
+		+ override
+3. 继承的工作机制
+	- 方法调度
+	- 实例变量  
+		+ **polymorphism**(多态性)
+		+ self
+		
+4. 重写方法
+
+### 5 复合(composition)
+1. 什么是复合
+2. 自定义NSLog()
+
+### 6 源文件组织
+1. 拆分接口和实现
+	- 接口部分(.h)：类的@interface指令、公共struct定义、enum常量、#defines和extern全局变量等。
+	- 实现部分(.m): 类的@implementation指令、全局变量的定义、私有struct等。
+	- 复杂的项目可以拥有多个目标，它们源文件的配置各不相同，构建规则也不同
+	- 群组关系仅仅是有Xcode负责管理的一项奇妙的功能
+2. 拆分Car程序
+	- `#import` 带尖号的是导入系统文件(只读)
+	
+3. 使用跨文件依赖关系
+	- dependency
+	- `@class` 是告诉编译器：“这是一个类，只会通过指针来引用它，不需要关注此类的更多信息”
+	- 编译器需要先知道所有关于超类的信息才能成功地为其子类编译@interface部分
+	
+	
+### 7 
+
+
+1. code completion
+	+ 符号的意义
+		* P -- 协议
+		* M -- 成员方法
+		* C -- 类
+		* K -- 枚举 、常量
+		* V -- 成员变量
+		* T -- typedef类型
+		* G -- 全局变量
+		* f -- 函数	
+
+5 检查程序
+	- detatips 只在debug时
+	
+	
+5. 调试 
+	- caveman debugging(暴力测试)
+	- xcode调试器
+		+ GDB
+		+ LLDB
+	- GUI程序 vs 命令行
+	
+### 8 Foundation Kit
+
+3. 一些有用的数据类型
+	- `NSRange`
+	- 几何数据类型（CG前缀） **Core Graphics框架**提供  
+		`CGPoint`  `CGSize`  `CGRect`  `CGPointMake()`  `CGSizeMake()`  `CGRectMake()`
+
+4. 字符串  
+	
+	
+
+
 		
 		
 		
 
 ### 补充
-"/Users/andyron/myfield/github/note-exercise/ios/OC/Objective-C基础教程/3/3.2.2 Shapes-Object/3.2.2 Shapes-Object/main.m:11:20: Must explicitly describe intended ownership of an object array parameterd"  (http://blog.csdn.net/gogler/article/details/29877001)
+- "/Users/andyron/myfield/github/note-exercise/ios/OC/Objective-C基础教程/3/3.2.2 Shapes-Object/3.2.2 Shapes-Object/main.m:11:20: Must explicitly describe intended ownership of an object array parameterd"  (http://blog.csdn.net/gogler/article/details/29877001) 
+ Automatic Reference Counting 变为No
