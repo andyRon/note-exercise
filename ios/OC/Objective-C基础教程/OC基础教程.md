@@ -142,7 +142,7 @@
 		+ LLDB
 	- GUI程序 vs 命令行
 	
-### 8 Foundation Kit
+### 8 Foundation Kit *
 
 3. 一些有用的数据类型
 	- `NSRange`
@@ -152,7 +152,59 @@
 4. 字符串  
 	
 	
+### 9 内存管理 *
 
+1. 对象生命周期  
+	诞生 （alloc或new）  
+	生成 （接受消息并执行操作）  
+	交友 （通过复合以及向方法传递参数）  
+	死去 （被释放）  
+	- reference counting / retain counting(保留计数)
+		+ `- (id) retain;`
+		+ `- (oneway void) release;`
+		+ `- (NSUInteger) retainCount;`
+		+ 一般不直接调用`dealloc`方法；
+	- object ownership
+	- 访问方法中的保留和释放
+	— 自动释放池
+		+ 弄清楚什么时候不再使用一个对象并不容易
+	- 所有对象放入池中
+		+ autorelease pool(自动释放池)   `@autoreleasepool`  `NSAutoreleasePool` 
+	- autorelease pool的销毁时间
+	- autorelease pool的工作流程
+2. Cocoa的内存管理规则
+	
+3. 异常
+
+
+### 10 对象初始化  
+  `[[类名 alloc] init]`  分配 后 初始化  
+  
+1. 分配对象  
+	alloc方法顺便将分配的内存全部初始化为0   
+	- 初始化对象
+	- 编写初始化方法
+	- 初始化时要做什么  
+		**lazy evaluation** 惰性求值
+2. 便利初始化函数
+	- `- (id) init;`  
+	`NSString *emptyString = [[NSString alloc] init];`
+	- `- (id) initWithFormat: (NSString *) format, ...;`
+	- `initWithContentsOfFile:encoding:error:`
+	
+
+### 11 属性
+1. 使用属性值
+	- `@property` 预编译指令的作用是自动声明属性的setter和getter方法
+	- `@synthesize` 创建了该属性的访问代码 
+2. 属性扩展
+	- `@property (nonatomic, assign, atomic)`  
+	- `@dynamic`
+	- `@property (getter=isHidden) BOOL hidden;`
+	- 特性不支持需要接收额外参数的方法
+	
+### 12 类别
+	
 
 		
 		
@@ -161,3 +213,8 @@
 ### 补充
 - "/Users/andyron/myfield/github/note-exercise/ios/OC/Objective-C基础教程/3/3.2.2 Shapes-Object/3.2.2 Shapes-Object/main.m:11:20: Must explicitly describe intended ownership of an object array parameterd"  (http://blog.csdn.net/gogler/article/details/29877001) 
  Automatic Reference Counting 变为No
+ 
+ 
+ - `'retain Count' is unavailable: not available in automatic reference counting mode`   解决方法同上
+ 
+ - 比较  initwithformat stringwithformat
