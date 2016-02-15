@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P9h-MI-ua1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P9h-MI-ua1">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Double-->
@@ -16,7 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="Md7-aQ-4jk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Double" image="Double" id="dhv-I8-UIp"/>
@@ -36,7 +35,6 @@
                     <view key="view" contentMode="scaleToFill" id="Xdd-La-juW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="Dependent" id="mV9-HF-zoo"/>
@@ -56,7 +54,6 @@
                     <view key="view" contentMode="scaleToFill" id="y36-nT-jc8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="Custom" id="RvL-O0-jdN"/>
@@ -79,7 +76,6 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Z5-Bk-IPa">
                                 <rect key="frame" x="59" y="28" width="600" height="216"/>
-                                <animations/>
                                 <connections>
                                     <outlet property="dataSource" destination="hP9-cO-iup" id="w64-2W-eKw"/>
                                     <outlet property="delegate" destination="hP9-cO-iup" id="nec-MK-gRx"/>
@@ -87,14 +83,12 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMG-TH-IM3">
                                 <rect key="frame" x="337" y="327" width="44" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Select"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BMw-eN-k4F" eventType="touchUpInside" id="jBY-CU-1S7"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Single" image="singleicon" id="LSy-aN-wJr"/>
@@ -120,7 +114,6 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bsX-Zx-ufd">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
-                                <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="476003626.574866">
                                     <!--2016-02-01 07:13:46 +0000-->
                                 </date>
@@ -133,14 +126,12 @@
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abe-4B-0PR">
                                 <rect key="frame" x="278" y="285" width="44" height="30"/>
-                                <animations/>
                                 <state key="normal" title="Select"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="8Xh-61-Car" eventType="touchUpInside" id="SuT-OX-FtO"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bsX-Zx-ufd" firstAttribute="leading" secondItem="QTB-vD-XPa" secondAttribute="leading" id="5Jn-KY-gTD"/>
@@ -166,7 +157,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4IG-SC-4ks">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

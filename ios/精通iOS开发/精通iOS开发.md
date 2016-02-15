@@ -7,7 +7,7 @@
 - Xcode 结构
     1. toolbar
         * 活动视图(activity view)   中间
-        * 右侧  用于切换
+        * 右侧(左边三个)  用于切换
             + standard editor
             + assistant editor
             + version editor
@@ -42,6 +42,7 @@
     + `Editor>Canvas>Show Bounds Rectangles`   显示控件边框
     + `Editor>Resovle Auto layout issues>Add Missing Constraints`  添加限制
     + `Command+Shift+C` 打开控制台
+    + `command＋shift＋O` 打开（搜索）头文件
 - 专有名词、概念等
     - iOS Human Interface Guidelines(HIG)
 
@@ -51,15 +52,20 @@
 1. MVC方法
     - 尽量不要包含哪些可能被认为属于多个分类的功能
 3. 视图控制器
-    - 应用程序委托(application delegate)
+    - 应用程序委托(application delegate, AppDelegate.h, AppDelegate.m)
     - 输出接口(outlet)  
         `IBOutlet`(告诉Xcode，这个属性会与nib文件中的对象关联)
-    - 操作方法(action method) or 操作
-    - 
+    - 操作方法(action method) or 操作  `IBAction`
 4. 应用程序委托
-asv
-### 4 
-Apply Retina 3.5-inch Form Factor
+    - **委托(delegate)**：负责为其他对象处理特定任务的对象
+    - 每个iOS应用程序都有且仅有一个UIApplication实例，它负责应用程序的运行循环，以及处理应用程序级的功能(比如把输入信息分发给恰当的控制器类)。
+    - 
+### 4 更丰富的用户界面
+2. 活跃控件、静态控件和被动控件
+    - 大多数控件都支持被动模式，并且所有控件都支持静态或者不可见模式。
+    - 如果一个控件可以触发多个操作方法，可能会导致应用出现意料之外的行为。
+
+    Apply Retina 3.5-inch Form Factor
 
 
 ### 5
@@ -85,7 +91,7 @@ Cocoa class
 
 报错 ， 模拟机一直黑屏vrs
 
-### 7 分页栏与选取器
+### 7 分页栏与选取器 *
 - ？？`no code sigining identities found`
 - ？？命令栏提示` Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?` [解决](http://blog.csdn.net/jiajiayouba/article/details/41678101)  主要是没有第一启动界面引起的，
 - `NSDateFormatter` 定制日期格式
@@ -109,10 +115,12 @@ Cocoa class
         3. 动态组合或计算得到
 
 
+### 8 表视图简介
 
 
 
-### 参考
+
+### 参考,问题
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
 ### 进阶知识
 - [RunLoop](http://www.cocoachina.com/ios/20150601/11970.html)
@@ -123,3 +131,6 @@ http://developer.apple.com/library/ios/#samplecode/UICatalog/index.html
 
 http://learncocoa.org
 http://forum.learncocoa.org 
+
+- 为什么最近的xcode的storyboard变成了正方形的？
+  选中viewcontroller，去掉 **Use Size Classes**

@@ -67,7 +67,7 @@
 		+ **infix notation**(中缀符)  
 			`[circle setFillColor: kRedColor]` 表示调用带一个参数的方法
 		+ 如果方法使用参数，则需要冒号，否则不需要冒号
-		+ 提倡@end语言后添加注释来注明类的名称s
+		+ 提倡@end语言后添加注释来注明类的名称
 	2. `@implementation` 定义类的公共接口
 		+ @implementation中定义那些在@interface中没有声明过的方法
 		+ OC中不存在真正的私有方法
@@ -225,10 +225,21 @@
 	- `NSNetServiceBrowserDelegateMethods`
 
 
-### 协议
+### 13 协议
+1. 正式协议
+2. 复制 *
+
+### 14 代码块和并发性
+
+### 15 AppKit
+
+### 16 UIKit
+
+### 17 文件加载与保存
+
+### 18 键/值编码
 
 
-		
 		
 		
 

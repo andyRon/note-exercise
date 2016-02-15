@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface iTunesFinder : NSObject <NSNetServiceBrowserDelegate>
+@interface iTunesFinder : NSObject <NSNetServiceBrowserDelegate
+//, NSCopying, NSCoding
+>
 
 @end
