@@ -124,6 +124,31 @@ Cocoa class
 
 
 
+### 9 导航控制器和表视图
+1. 导航控制器 
+2. 一个简单的字体浏览器：Fonts
+    - Fonts应用的基础框架
+        + `General > Deplyment Info > Main Interface`
+3. 
+
+4.  报错卡在*
+2016-02-17 15:50:23.209 Fonts[29296:1936992] -[FavoritesList copyWithZone:]: unrecognized selector sent to instance 0x7fa7d155f060
+2016-02-17 15:50:23.213 Fonts[29296:1936992] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[FavoritesList copyWithZone:]: unrecognized selector sent to instance 0x7fa7d155f060'
+5. 第一个
+
+
+### 10 集合视图
+
+
+
+### 11 iPad开发注意事项
+
+
+
+
+
+
+
 ### 参考,问题
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
 
@@ -152,4 +177,13 @@ storyboard是多个xib文件集合的描述文件，也采用xml格式。
 
 - 直接复制文件到项目中没有用，因为要建立索引，所以要拖到xcode
 
+- [xcode 把Single View Application变为Empty Application](http://jingyan.baidu.com/article/2a138328bd73f2074b134f6d.html)
 
+- [ Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?
+](http://blog.csdn.net/jiajiayouba/article/details/41678101)
+
+- **Crash文件**
+
+- [Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?
+]
+**Is Initial View Controller**
