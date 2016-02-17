@@ -117,11 +117,16 @@ Cocoa class
 
 ### 8 表视图简介
 
+3. 定制表视图单元
+
+
+    - 3.2  `command+N` -> `OS X Source - Cocoa Class`
 
 
 
 ### 参考,问题
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
+
 ### 进阶知识
 - [RunLoop](http://www.cocoachina.com/ios/20150601/11970.html)
 - Core text [1](http://www.cocoachina.com/industry/20140521/8504.html)
@@ -134,3 +139,17 @@ http://forum.learncocoa.org
 
 - 为什么最近的xcode的storyboard变成了正方形的？
   选中viewcontroller，去掉 **Use Size Classes**
+
+- 使用关联检查器把委托和数据源设置为 **File's Owner** ?
+- nib xib storyboard
+    nib是3.0版本以前的产物，在终端下我们可以看到，NIB其实是一个文件夹，里面有可执行的二进制文件；
+xib是一个基于xml的描述文件，可以实现可视化编程。
+无论nib也好，xib也好，最终在执行UIViewController生命周期函数loadView之前，都会转化成可执行的nib文件。
+
+storyboard是多个xib文件集合的描述文件，也采用xml格式。
+那么storyboard与xib比较，区别在于：
+一个工程中可以有多个xib文件，一个xib文件对应着一个视图控制器和多个视图。而使用storyboard时，一个工程只需要一个主storyboard文件就可以了。因此，在包含多个视图控制器的情况下，采用storyboard管理比较方便，而且storyboard还可以描述界面之间的导航关系。
+
+- 直接复制文件到项目中没有用，因为要建立索引，所以要拖到xcode
+
+
