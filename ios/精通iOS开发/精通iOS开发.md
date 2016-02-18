@@ -143,13 +143,21 @@ Cocoa class
 
 ### 11 iPad开发注意事项
 
+1. 分割视图(横向)和浮动窗口(纵向)
 
+2. 显示总统信息
+    - ？？ msterview选择总统，DetailView中的text不变化？w
+
+3. 创建浮动窗口
 
 
 
 
 
 ### 参考,问题
+- **triggered segues**
+- ?? `_`  与 `self`
+
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
 
 ### 进阶知识
