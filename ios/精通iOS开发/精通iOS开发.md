@@ -59,7 +59,8 @@
 4. 应用程序委托
     - **委托(delegate)**：负责为其他对象处理特定任务的对象
     - 每个iOS应用程序都有且仅有一个UIApplication实例，它负责应用程序的运行循环，以及处理应用程序级的功能(比如把输入信息分发给恰当的控制器类)。
-    - 
+
+
 ### 4 更丰富的用户界面
 2. 活跃控件、静态控件和被动控件
     - 大多数控件都支持被动模式，并且所有控件都支持静态或者不可见模式。
@@ -151,12 +152,40 @@ Cocoa class
 3. 创建浮动窗口
 
 
+### 12 应用设置及用户默认设置  
+`NSUserDefaults`
+`沉浸式应用`
+
+
+**Utility Application**
+
+### 13 数据持久化基础知识
+- iphone 模拟器在mac上的具体地址
+`/Library/Application Support/iPhone Simulator/`
+
+`/Users/username/Library/Application Support/iPhone Simulator/`
+
+2. 文件保存方案
+
+
 
 
 
 ### 参考,问题
 - **triggered segues**
 - ?? `_`  与 `self`
+- Size Class 的作用是将不同尺寸的屏幕进行分类处理，而最后进行布局管理的还是Autolayout。
+- 界面构建器  
+蓝色引导线   
+蓝色实线  约束   
+橙色实线  
+红色辅助线
+- 
+创建视图的同时给出其相对于父视图的“对齐方式与缩放系数”(autoresizingMask)
+自动布局（Auto Layout）与布局约束（Layout Constraint）
+any regular compat
+
+
 
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
 
