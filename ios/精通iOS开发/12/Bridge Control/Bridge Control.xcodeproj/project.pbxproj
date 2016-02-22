@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF21274B1C7AACA7009853E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21274A1C7AACA7009853E7 /* main.m */; };
+		EF21274E1C7AACA7009853E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21274D1C7AACA7009853E7 /* AppDelegate.m */; };
+		EF2127511C7AACA7009853E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2127501C7AACA7009853E7 /* ViewController.m */; };
+		EF2127541C7AACA7009853E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2127521C7AACA7009853E7 /* Main.storyboard */; };
+		EF2127561C7AACA7009853E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2127551C7AACA7009853E7 /* Assets.xcassets */; };
+		EF2127591C7AACA7009853E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2127571C7AACA7009853E7 /* LaunchScreen.storyboard */; };
+		EF2127641C7AACA7009853E7 /* Bridge_ControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2127631C7AACA7009853E7 /* Bridge_ControlTests.m */; };
+		EF21276F1C7AACA7009853E7 /* Bridge_ControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21276E1C7AACA7009853E7 /* Bridge_ControlUITests.m */; };
+		EF21277E1C7AACD4009853E7 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF21277D1C7AACD4009853E7 /* FlipsideViewController.m */; };
+		EF2127801C7AB068009853E7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EF21277F1C7AB068009853E7 /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF2127601C7AACA7009853E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF21273E1C7AACA7009853E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF2127451C7AACA7009853E7;
+			remoteInfo = "Bridge Control";
+		};
+		EF21276B1C7AACA7009853E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF21273E1C7AACA7009853E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF2127451C7AACA7009853E7;
+			remoteInfo = "Bridge Control";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF2127461C7AACA7009853E7 /* Bridge Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bridge Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF21274A1C7AACA7009853E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF21274C1C7AACA7009853E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF21274D1C7AACA7009853E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF21274F1C7AACA7009853E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF2127501C7AACA7009853E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF2127531C7AACA7009853E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF2127551C7AACA7009853E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF2127581C7AACA7009853E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF21275A1C7AACA7009853E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF21275F1C7AACA7009853E7 /* Bridge ControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bridge ControlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2127631C7AACA7009853E7 /* Bridge_ControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge_ControlTests.m; sourceTree = "<group>"; };
+		EF2127651C7AACA7009853E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF21276A1C7AACA7009853E7 /* Bridge ControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bridge ControlUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF21276E1C7AACA7009853E7 /* Bridge_ControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bridge_ControlUITests.m; sourceTree = "<group>"; };
+		EF2127701C7AACA7009853E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF21277C1C7AACD4009853E7 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		EF21277D1C7AACD4009853E7 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		EF21277F1C7AB068009853E7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF2127431C7AACA7009853E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF21275C1C7AACA7009853E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2127671C7AACA7009853E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF21273D1C7AACA7009853E7 = {
+			isa = PBXGroup;
+			children = (
+				EF2127481C7AACA7009853E7 /* Bridge Control */,
+				EF2127621C7AACA7009853E7 /* Bridge ControlTests */,
+				EF21276D1C7AACA7009853E7 /* Bridge ControlUITests */,
+				EF2127471C7AACA7009853E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF2127471C7AACA7009853E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF2127461C7AACA7009853E7 /* Bridge Control.app */,
+				EF21275F1C7AACA7009853E7 /* Bridge ControlTests.xctest */,
+				EF21276A1C7AACA7009853E7 /* Bridge ControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF2127481C7AACA7009853E7 /* Bridge Control */ = {
+			isa = PBXGroup;
+			children = (
+				EF21274C1C7AACA7009853E7 /* AppDelegate.h */,
+				EF21274D1C7AACA7009853E7 /* AppDelegate.m */,
+				EF21274F1C7AACA7009853E7 /* ViewController.h */,
+				EF2127501C7AACA7009853E7 /* ViewController.m */,
+				EF2127521C7AACA7009853E7 /* Main.storyboard */,
+				EF2127551C7AACA7009853E7 /* Assets.xcassets */,
+				EF2127571C7AACA7009853E7 /* LaunchScreen.storyboard */,
+				EF21275A1C7AACA7009853E7 /* Info.plist */,
+				EF2127491C7AACA7009853E7 /* Supporting Files */,
+				EF21277C1C7AACD4009853E7 /* FlipsideViewController.h */,
+				EF21277D1C7AACD4009853E7 /* FlipsideViewController.m */,
+				EF21277F1C7AB068009853E7 /* Settings.bundle */,
+			);
+			path = "Bridge Control";
+			sourceTree = "<group>";
+		};
+		EF2127491C7AACA7009853E7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF21274A1C7AACA7009853E7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2127621C7AACA7009853E7 /* Bridge ControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF2127631C7AACA7009853E7 /* Bridge_ControlTests.m */,
+				EF2127651C7AACA7009853E7 /* Info.plist */,
+			);
+			path = "Bridge ControlTests";
+			sourceTree = "<group>";
+		};
+		EF21276D1C7AACA7009853E7 /* Bridge ControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF21276E1C7AACA7009853E7 /* Bridge_ControlUITests.m */,
+				EF2127701C7AACA7009853E7 /* Info.plist */,
+			);
+			path = "Bridge ControlUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF2127451C7AACA7009853E7 /* Bridge Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2127731C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge Control" */;
+			buildPhases = (
+				EF2127421C7AACA7009853E7 /* Sources */,
+				EF2127431C7AACA7009853E7 /* Frameworks */,
+				EF2127441C7AACA7009853E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bridge Control";
+			productName = "Bridge Control";
+			productReference = EF2127461C7AACA7009853E7 /* Bridge Control.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF21275E1C7AACA7009853E7 /* Bridge ControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2127761C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge ControlTests" */;
+			buildPhases = (
+				EF21275B1C7AACA7009853E7 /* Sources */,
+				EF21275C1C7AACA7009853E7 /* Frameworks */,
+				EF21275D1C7AACA7009853E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF2127611C7AACA7009853E7 /* PBXTargetDependency */,
+			);
+			name = "Bridge ControlTests";
+			productName = "Bridge ControlTests";
+			productReference = EF21275F1C7AACA7009853E7 /* Bridge ControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF2127691C7AACA7009853E7 /* Bridge ControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2127791C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge ControlUITests" */;
+			buildPhases = (
+				EF2127661C7AACA7009853E7 /* Sources */,
+				EF2127671C7AACA7009853E7 /* Frameworks */,
+				EF2127681C7AACA7009853E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF21276C1C7AACA7009853E7 /* PBXTargetDependency */,
+			);
+			name = "Bridge ControlUITests";
+			productName = "Bridge ControlUITests";
+			productReference = EF21276A1C7AACA7009853E7 /* Bridge ControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF21273E1C7AACA7009853E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = andyron;
+				TargetAttributes = {
+					EF2127451C7AACA7009853E7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ZHNA975N38;
+					};
+					EF21275E1C7AACA7009853E7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EF2127451C7AACA7009853E7;
+					};
+					EF2127691C7AACA7009853E7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EF2127451C7AACA7009853E7;
+					};
+				};
+			};
+			buildConfigurationList = EF2127411C7AACA7009853E7 /* Build configuration list for PBXProject "Bridge Control" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF21273D1C7AACA7009853E7;
+			productRefGroup = EF2127471C7AACA7009853E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF2127451C7AACA7009853E7 /* Bridge Control */,
+				EF21275E1C7AACA7009853E7 /* Bridge ControlTests */,
+				EF2127691C7AACA7009853E7 /* Bridge ControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF2127441C7AACA7009853E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2127801C7AB068009853E7 /* Settings.bundle in Resources */,
+				EF2127591C7AACA7009853E7 /* LaunchScreen.storyboard in Resources */,
+				EF2127561C7AACA7009853E7 /* Assets.xcassets in Resources */,
+				EF2127541C7AACA7009853E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF21275D1C7AACA7009853E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2127681C7AACA7009853E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF2127421C7AACA7009853E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2127511C7AACA7009853E7 /* ViewController.m in Sources */,
+				EF21274E1C7AACA7009853E7 /* AppDelegate.m in Sources */,
+				EF21277E1C7AACD4009853E7 /* FlipsideViewController.m in Sources */,
+				EF21274B1C7AACA7009853E7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF21275B1C7AACA7009853E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2127641C7AACA7009853E7 /* Bridge_ControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2127661C7AACA7009853E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF21276F1C7AACA7009853E7 /* Bridge_ControlUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF2127611C7AACA7009853E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF2127451C7AACA7009853E7 /* Bridge Control */;
+			targetProxy = EF2127601C7AACA7009853E7 /* PBXContainerItemProxy */;
+		};
+		EF21276C1C7AACA7009853E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF2127451C7AACA7009853E7 /* Bridge Control */;
+			targetProxy = EF21276B1C7AACA7009853E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF2127521C7AACA7009853E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2127531C7AACA7009853E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF2127571C7AACA7009853E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2127581C7AACA7009853E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF2127711C7AACA7009853E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF2127721C7AACA7009853E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF2127741C7AACA7009853E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Bridge Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF2127751C7AACA7009853E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Bridge Control/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF2127771C7AACA7009853E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bridge ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bridge Control.app/Bridge Control";
+			};
+			name = Debug;
+		};
+		EF2127781C7AACA7009853E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Bridge ControlTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-ControlTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bridge Control.app/Bridge Control";
+			};
+			name = Release;
+		};
+		EF21277A1C7AACA7009853E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bridge ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bridge Control";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EF21277B1C7AACA7009853E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Bridge ControlUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.Bridge-ControlUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Bridge Control";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF2127411C7AACA7009853E7 /* Build configuration list for PBXProject "Bridge Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2127711C7AACA7009853E7 /* Debug */,
+				EF2127721C7AACA7009853E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF2127731C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2127741C7AACA7009853E7 /* Debug */,
+				EF2127751C7AACA7009853E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF2127761C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge ControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2127771C7AACA7009853E7 /* Debug */,
+				EF2127781C7AACA7009853E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF2127791C7AACA7009853E7 /* Build configuration list for PBXNativeTarget "Bridge ControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF21277A1C7AACA7009853E7 /* Debug */,
+				EF21277B1C7AACA7009853E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF21273E1C7AACA7009853E7 /* Project object */;
+}
