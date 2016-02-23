@@ -34,20 +34,23 @@
 - (IBAction)textFieldDoneEditing:(id)sender {
     [sender resignFirstResponder];
 }
-
+// 点击其他地方，注销两个文本的焦点状态，隐藏键盘
 - (IBAction)backgroundTap:(id)sender {
     [self.nameField resignFirstResponder];
     [self.numberField resignFirstResponder];
 }
+// Slider值变化时调用
 - (IBAction)sliderChanged:(UISlider *)sender {
     int progress = lroundf(sender.value);
     self.sliderLabel.text = [NSString stringWithFormat:@"%d", progress];
 }
+// Switch值变化时调用
 - (IBAction)switchChanged:(UISwitch *)sender {
     BOOL setting = sender.isOn;
     [self.leftSwitch setOn:setting animated:YES];
     [self.rightSwitch setOn:setting animated:YES];
 }
+// Segmented Control值变化时调用
 - (IBAction)toggleControls:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
         self.leftSwitch.hidden = NO;
@@ -59,6 +62,7 @@
         self.dosomethingButton.hidden = NO;
     }
 }
+// Button 按下时调用
 - (IBAction)buttonPressed:(id)sender {
 //    UIAlertController *actionSheet = [[UIAlertController alloc] initWithNibName]
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Are you sure?" delegate:self cancelButtonTitle:@"No Way!" destructiveButtonTitle:@"Yes, I'm Sure!" otherButtonTitles:nil];

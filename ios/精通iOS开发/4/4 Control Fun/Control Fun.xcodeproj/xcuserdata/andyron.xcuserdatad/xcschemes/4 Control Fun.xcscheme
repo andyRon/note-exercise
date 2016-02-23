@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFA2BB4B1C4E3F43007ED64E"
-               BuildableName = "4 Control Fun.app"
-               BlueprintName = "4 Control Fun"
-               ReferencedContainer = "container:4 Control Fun.xcodeproj">
+               BuildableName = "Control Fun.app"
+               BlueprintName = "Control Fun"
+               ReferencedContainer = "container:Control Fun.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFA2BB641C4E3F44007ED64E"
-               BuildableName = "4 Control FunTests.xctest"
-               BlueprintName = "4 Control FunTests"
-               ReferencedContainer = "container:4 Control Fun.xcodeproj">
+               BuildableName = "Control Fun.xctest"
+               BlueprintName = "Control FunTests"
+               ReferencedContainer = "container:Control Fun.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFA2BB6F1C4E3F44007ED64E"
-               BuildableName = "4 Control FunUITests.xctest"
-               BlueprintName = "4 Control FunUITests"
-               ReferencedContainer = "container:4 Control Fun.xcodeproj">
+               BuildableName = "Control Fun.xctest"
+               BlueprintName = "Control FunUITests"
+               ReferencedContainer = "container:Control Fun.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFA2BB4B1C4E3F43007ED64E"
-            BuildableName = "4 Control Fun.app"
-            BlueprintName = "4 Control Fun"
-            ReferencedContainer = "container:4 Control Fun.xcodeproj">
+            BuildableName = "Control Fun.app"
+            BlueprintName = "Control Fun"
+            ReferencedContainer = "container:Control Fun.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFA2BB4B1C4E3F43007ED64E"
-            BuildableName = "4 Control Fun.app"
-            BlueprintName = "4 Control Fun"
-            ReferencedContainer = "container:4 Control Fun.xcodeproj">
+            BuildableName = "Control Fun.app"
+            BlueprintName = "Control Fun"
+            ReferencedContainer = "container:Control Fun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFA2BB4B1C4E3F43007ED64E"
-            BuildableName = "4 Control Fun.app"
-            BlueprintName = "4 Control Fun"
-            ReferencedContainer = "container:4 Control Fun.xcodeproj">
+            BuildableName = "Control Fun.app"
+            BlueprintName = "Control Fun"
+            ReferencedContainer = "container:Control Fun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

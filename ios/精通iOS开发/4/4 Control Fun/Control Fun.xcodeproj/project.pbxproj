@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EFA2BB4C1C4E3F43007ED64E /* 4 Control Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "4 Control Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA2BB4C1C4E3F43007ED64E /* Control Fun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Control Fun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA2BB501C4E3F44007ED64E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFA2BB521C4E3F44007ED64E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFA2BB531C4E3F44007ED64E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		EFA2BB5B1C4E3F44007ED64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFA2BB5E1C4E3F44007ED64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFA2BB601C4E3F44007ED64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFA2BB651C4E3F44007ED64E /* 4 Control FunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4 Control FunTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA2BB651C4E3F44007ED64E /* Control Fun.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Control Fun.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA2BB691C4E3F44007ED64E /* __Control_FunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Control_FunTests.m; sourceTree = "<group>"; };
 		EFA2BB6B1C4E3F44007ED64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFA2BB701C4E3F44007ED64E /* 4 Control FunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "4 Control FunUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA2BB701C4E3F44007ED64E /* Control Fun.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Control Fun.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA2BB741C4E3F44007ED64E /* __Control_FunUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Control_FunUITests.m; sourceTree = "<group>"; };
 		EFA2BB761C4E3F44007ED64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,9 +81,9 @@
 		EFA2BB431C4E3F43007ED64E = {
 			isa = PBXGroup;
 			children = (
-				EFA2BB4E1C4E3F43007ED64E /* 4 Control Fun */,
-				EFA2BB681C4E3F44007ED64E /* 4 Control FunTests */,
-				EFA2BB731C4E3F44007ED64E /* 4 Control FunUITests */,
+				EFA2BB4E1C4E3F43007ED64E /* Control Fun */,
+				EFA2BB681C4E3F44007ED64E /* Control FunTests */,
+				EFA2BB731C4E3F44007ED64E /* Control FunUITests */,
 				EFA2BB4D1C4E3F43007ED64E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +91,14 @@
 		EFA2BB4D1C4E3F43007ED64E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EFA2BB4C1C4E3F43007ED64E /* 4 Control Fun.app */,
-				EFA2BB651C4E3F44007ED64E /* 4 Control FunTests.xctest */,
-				EFA2BB701C4E3F44007ED64E /* 4 Control FunUITests.xctest */,
+				EFA2BB4C1C4E3F43007ED64E /* Control Fun.app */,
+				EFA2BB651C4E3F44007ED64E /* Control Fun.xctest */,
+				EFA2BB701C4E3F44007ED64E /* Control Fun.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EFA2BB4E1C4E3F43007ED64E /* 4 Control Fun */ = {
+		EFA2BB4E1C4E3F43007ED64E /* Control Fun */ = {
 			isa = PBXGroup;
 			children = (
 				EFA2BB521C4E3F44007ED64E /* AppDelegate.h */,
@@ -111,6 +111,7 @@
 				EFA2BB601C4E3F44007ED64E /* Info.plist */,
 				EFA2BB4F1C4E3F43007ED64E /* Supporting Files */,
 			);
+			name = "Control Fun";
 			path = "4 Control Fun";
 			sourceTree = "<group>";
 		};
@@ -122,30 +123,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EFA2BB681C4E3F44007ED64E /* 4 Control FunTests */ = {
+		EFA2BB681C4E3F44007ED64E /* Control FunTests */ = {
 			isa = PBXGroup;
 			children = (
 				EFA2BB691C4E3F44007ED64E /* __Control_FunTests.m */,
 				EFA2BB6B1C4E3F44007ED64E /* Info.plist */,
 			);
+			name = "Control FunTests";
 			path = "4 Control FunTests";
 			sourceTree = "<group>";
 		};
-		EFA2BB731C4E3F44007ED64E /* 4 Control FunUITests */ = {
+		EFA2BB731C4E3F44007ED64E /* Control FunUITests */ = {
 			isa = PBXGroup;
 			children = (
 				EFA2BB741C4E3F44007ED64E /* __Control_FunUITests.m */,
 				EFA2BB761C4E3F44007ED64E /* Info.plist */,
 			);
+			name = "Control FunUITests";
 			path = "4 Control FunUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EFA2BB4B1C4E3F43007ED64E /* 4 Control Fun */ = {
+		EFA2BB4B1C4E3F43007ED64E /* Control Fun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFA2BB791C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control Fun" */;
+			buildConfigurationList = EFA2BB791C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control Fun" */;
 			buildPhases = (
 				EFA2BB481C4E3F43007ED64E /* Sources */,
 				EFA2BB491C4E3F43007ED64E /* Frameworks */,
@@ -155,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "4 Control Fun";
+			name = "Control Fun";
 			productName = "4 Control Fun";
-			productReference = EFA2BB4C1C4E3F43007ED64E /* 4 Control Fun.app */;
+			productReference = EFA2BB4C1C4E3F43007ED64E /* Control Fun.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EFA2BB641C4E3F44007ED64E /* 4 Control FunTests */ = {
+		EFA2BB641C4E3F44007ED64E /* Control FunTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFA2BB7C1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control FunTests" */;
+			buildConfigurationList = EFA2BB7C1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control FunTests" */;
 			buildPhases = (
 				EFA2BB611C4E3F44007ED64E /* Sources */,
 				EFA2BB621C4E3F44007ED64E /* Frameworks */,
@@ -173,14 +176,14 @@
 			dependencies = (
 				EFA2BB671C4E3F44007ED64E /* PBXTargetDependency */,
 			);
-			name = "4 Control FunTests";
+			name = "Control FunTests";
 			productName = "4 Control FunTests";
-			productReference = EFA2BB651C4E3F44007ED64E /* 4 Control FunTests.xctest */;
+			productReference = EFA2BB651C4E3F44007ED64E /* Control Fun.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EFA2BB6F1C4E3F44007ED64E /* 4 Control FunUITests */ = {
+		EFA2BB6F1C4E3F44007ED64E /* Control FunUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFA2BB7F1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control FunUITests" */;
+			buildConfigurationList = EFA2BB7F1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control FunUITests" */;
 			buildPhases = (
 				EFA2BB6C1C4E3F44007ED64E /* Sources */,
 				EFA2BB6D1C4E3F44007ED64E /* Frameworks */,
@@ -191,9 +194,9 @@
 			dependencies = (
 				EFA2BB721C4E3F44007ED64E /* PBXTargetDependency */,
 			);
-			name = "4 Control FunUITests";
+			name = "Control FunUITests";
 			productName = "4 Control FunUITests";
-			productReference = EFA2BB701C4E3F44007ED64E /* 4 Control FunUITests.xctest */;
+			productReference = EFA2BB701C4E3F44007ED64E /* Control Fun.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EFA2BB471C4E3F43007ED64E /* Build configuration list for PBXProject "4 Control Fun" */;
+			buildConfigurationList = EFA2BB471C4E3F43007ED64E /* Build configuration list for PBXProject "Control Fun" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFA2BB4B1C4E3F43007ED64E /* 4 Control Fun */,
-				EFA2BB641C4E3F44007ED64E /* 4 Control FunTests */,
-				EFA2BB6F1C4E3F44007ED64E /* 4 Control FunUITests */,
+				EFA2BB4B1C4E3F43007ED64E /* Control Fun */,
+				EFA2BB641C4E3F44007ED64E /* Control FunTests */,
+				EFA2BB6F1C4E3F44007ED64E /* Control FunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,12 +300,12 @@
 /* Begin PBXTargetDependency section */
 		EFA2BB671C4E3F44007ED64E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EFA2BB4B1C4E3F43007ED64E /* 4 Control Fun */;
+			target = EFA2BB4B1C4E3F43007ED64E /* Control Fun */;
 			targetProxy = EFA2BB661C4E3F44007ED64E /* PBXContainerItemProxy */;
 		};
 		EFA2BB721C4E3F44007ED64E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EFA2BB4B1C4E3F43007ED64E /* 4 Control Fun */;
+			target = EFA2BB4B1C4E3F43007ED64E /* Control Fun */;
 			targetProxy = EFA2BB711C4E3F44007ED64E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -414,7 +417,7 @@
 				INFOPLIST_FILE = "4 Control Fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-Fun";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Control Fun";
 			};
 			name = Debug;
 		};
@@ -425,7 +428,7 @@
 				INFOPLIST_FILE = "4 Control Fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-Fun";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Control Fun";
 			};
 			name = Release;
 		};
@@ -436,8 +439,8 @@
 				INFOPLIST_FILE = "4 Control FunTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-FunTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4 Control Fun.app/4 Control Fun";
+				PRODUCT_NAME = "Control Fun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Control Fun.app/Control Fun";
 			};
 			name = Debug;
 		};
@@ -448,8 +451,8 @@
 				INFOPLIST_FILE = "4 Control FunTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-FunTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/4 Control Fun.app/4 Control Fun";
+				PRODUCT_NAME = "Control Fun";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Control Fun.app/Control Fun";
 			};
 			name = Release;
 		};
@@ -459,7 +462,7 @@
 				INFOPLIST_FILE = "4 Control FunUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-FunUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Control Fun";
 				TEST_TARGET_NAME = "4 Control Fun";
 				USES_XCTRUNNER = YES;
 			};
@@ -471,7 +474,7 @@
 				INFOPLIST_FILE = "4 Control FunUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyron.--Control-FunUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Control Fun";
 				TEST_TARGET_NAME = "4 Control Fun";
 				USES_XCTRUNNER = YES;
 			};
@@ -480,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EFA2BB471C4E3F43007ED64E /* Build configuration list for PBXProject "4 Control Fun" */ = {
+		EFA2BB471C4E3F43007ED64E /* Build configuration list for PBXProject "Control Fun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFA2BB771C4E3F44007ED64E /* Debug */,
@@ -489,29 +492,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFA2BB791C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control Fun" */ = {
+		EFA2BB791C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control Fun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFA2BB7A1C4E3F44007ED64E /* Debug */,
 				EFA2BB7B1C4E3F44007ED64E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		EFA2BB7C1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control FunTests" */ = {
+		EFA2BB7C1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control FunTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFA2BB7D1C4E3F44007ED64E /* Debug */,
 				EFA2BB7E1C4E3F44007ED64E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		EFA2BB7F1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "4 Control FunUITests" */ = {
+		EFA2BB7F1C4E3F44007ED64E /* Build configuration list for PBXNativeTarget "Control FunUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFA2BB801C4E3F44007ED64E /* Debug */,
 				EFA2BB811C4E3F44007ED64E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

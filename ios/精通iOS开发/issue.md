@@ -11,7 +11,7 @@ IOS欢迎界面
 蓝色引导线   
 蓝色实线  约束   
 橙色实线  
-红色辅助线
+红色辅助线(调整视图大小时，按住option)  查看视图的距离四周的长度
 - 创建视图的同时给出其相对于父视图的“对齐方式与缩放系数”(autoresizingMask)
 自动布局（Auto Layout）与布局约束（Layout Constraint）
 any regular compat
