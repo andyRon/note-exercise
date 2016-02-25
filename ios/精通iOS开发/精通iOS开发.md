@@ -59,8 +59,11 @@
     + `Editor>Resovle Auto layout issues>Add Missing Constraints`  添加限制
     + `Command+Shift+C` 打开控制台
     + `command＋shift＋O` 打开（搜索）头文件
+    + `control+command+Up` 对应文件的切换
+    + `Command + Shift + 0`  文档界面
 - 专有名词、概念等
     - iOS Human Interface Guidelines(HIG)
+    - **第一响应者** ：当前正在与用户进行交互的控件
 
 
 ### 3 实现基本交互
@@ -94,7 +97,30 @@
     - `command+=`(Editor>Size to Fit Content)   UIImageView大小与图片大小相适应
     - 图像视图的属性
     - 添加文本框
+
+5. 关闭键盘
+    - `Did End On Exit` 事件(按下文本键盘上的Done时触发)
+    - **container view**(容器视图) 
+    - **子类其实是父类的一个更加具体的版本**
+    - 最好在应用程序编译之前就在界面构建器中创建好整套的约束
     Apply Retina 3.5-inch Form Factor
+
+6. 实现开关、按钮和分段控件
+    - `Slider Label`的`Clears Graphics Context` 要勾上
+    - `viewDidLoad`在app加载完分镜的视图之后，显示在屏幕上之前执行
+    - 
+7. 美化按钮
+    - 可拉伸图像
+    - 控件状态
+        Normal  
+        Highlighted  
+        Disabled  
+        Selected
+8. 实现分段控件的操作方法
+9. 实现操作表单和警告视图
+    - **action sheet**(操作表单)  **UIActionSheetDelegate**
+    - **alert**(警告视图) 
+    - **modal view**(模态视图) 用户必须先作出选择后才能继续
 
 
 ### 5

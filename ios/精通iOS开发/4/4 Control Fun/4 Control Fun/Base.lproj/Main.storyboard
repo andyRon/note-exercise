@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="no"/>
                                 <connections>
-                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="fsB-Ap-ZMZ"/>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="ffe-X5-2CZ"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O23-KG-WhE">
@@ -94,9 +94,9 @@
                                     <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="g1t-F7-jAo"/>
                                 </connections>
                             </switch>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgW-PC-u3o">
-                                <rect key="frame" x="20" y="508" width="560" height="54"/>
-                                <state key="normal" title="Do Something" backgroundImage="whiteButton"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgW-PC-u3o">
+                                <rect key="frame" x="20" y="507" width="560" height="53"/>
+                                <state key="normal" title="Do Something"/>
                                 <state key="highlighted" backgroundImage="blueButton"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGQ-KI-M56"/>
@@ -113,10 +113,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9IM-vR-0Pq" secondAttribute="bottom" constant="221" id="5GK-Ej-GGa"/>
                             <constraint firstItem="Hys-OY-WL0" firstAttribute="top" secondItem="O23-KG-WhE" secondAttribute="top" id="5lP-G3-fD8"/>
                             <constraint firstItem="IB2-mQ-PpR" firstAttribute="top" secondItem="O23-KG-WhE" secondAttribute="bottom" constant="27" id="6m8-p5-D9b"/>
-                            <constraint firstItem="499-Nl-DdN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CDy-lx-qF7"/>
                             <constraint firstItem="Hys-OY-WL0" firstAttribute="leading" secondItem="O23-KG-WhE" secondAttribute="trailing" constant="16" id="EDT-0n-f44"/>
                             <constraint firstItem="kNS-ej-1pd" firstAttribute="top" secondItem="48d-He-asH" secondAttribute="bottom" constant="53" id="Eau-32-xHu"/>
                             <constraint firstItem="O23-KG-WhE" firstAttribute="leading" secondItem="IB2-mQ-PpR" secondAttribute="leading" id="EoS-Kc-nsc"/>
+                            <constraint firstItem="kNS-ej-1pd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FD7-7w-MRg"/>
                             <constraint firstItem="kgW-PC-u3o" firstAttribute="top" secondItem="48d-He-asH" secondAttribute="bottom" constant="54" id="GHg-bG-sXb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kNS-ej-1pd" secondAttribute="bottom" constant="62" id="Hge-hz-Iln"/>
                             <constraint firstItem="9IM-vR-0Pq" firstAttribute="centerY" secondItem="aYY-Cz-YaZ" secondAttribute="centerY" id="Hor-yF-3Hy"/>
@@ -124,17 +124,17 @@
                             <constraint firstItem="499-Nl-DdN" firstAttribute="centerX" secondItem="48d-He-asH" secondAttribute="centerX" id="Lw4-DO-SGJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgW-PC-u3o" secondAttribute="bottom" constant="38" id="Neb-P1-EPU"/>
                             <constraint firstItem="48d-He-asH" firstAttribute="trailing" secondItem="S8c-zM-Kdl" secondAttribute="trailing" id="PTM-Z8-ER5"/>
+                            <constraint firstItem="Hys-OY-WL0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QBW-UN-fan"/>
                             <constraint firstItem="48d-He-asH" firstAttribute="leading" secondItem="kNS-ej-1pd" secondAttribute="leading" id="RXQ-FX-xEY"/>
-                            <constraint firstItem="9IM-vR-0Pq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="XvH-gk-Vwn"/>
                             <constraint firstItem="499-Nl-DdN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="Ykm-81-nbA"/>
                             <constraint firstItem="kgW-PC-u3o" firstAttribute="trailing" secondItem="S8c-zM-Kdl" secondAttribute="trailing" id="a35-Ty-Bqr"/>
                             <constraint firstItem="kNS-ej-1pd" firstAttribute="leading" secondItem="kgW-PC-u3o" secondAttribute="leading" id="eBw-te-gpI"/>
-                            <constraint firstItem="O23-KG-WhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="lPp-RI-NaN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aYY-Cz-YaZ" secondAttribute="bottom" constant="216" id="o7O-lY-cfe"/>
-                            <constraint firstItem="kS1-O0-YdD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pW5-Tk-MY5"/>
+                            <constraint firstItem="O23-KG-WhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="re4-EZ-eLq"/>
                             <constraint firstItem="aYY-Cz-YaZ" firstAttribute="leading" secondItem="9IM-vR-0Pq" secondAttribute="trailing" constant="34" id="uhP-M5-sCr"/>
                             <constraint firstItem="48d-He-asH" firstAttribute="trailing" secondItem="aYY-Cz-YaZ" secondAttribute="trailing" id="uuu-iA-m25"/>
                             <constraint firstItem="Hys-OY-WL0" firstAttribute="trailing" secondItem="kS1-O0-YdD" secondAttribute="trailing" id="wZA-4S-tWb"/>
+                            <constraint firstItem="9IM-vR-0Pq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="waj-a4-mpb"/>
                             <constraint firstItem="S8c-zM-Kdl" firstAttribute="top" secondItem="kNS-ej-1pd" secondAttribute="top" id="wfA-Jo-NeO"/>
                         </constraints>
                         <connections>
@@ -152,12 +152,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69" y="104"/>
+            <point key="canvasLocation" x="-135" y="84"/>
         </scene>
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
         <image name="blueButton" width="29" height="37"/>
-        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>
