@@ -16,6 +16,8 @@ IOS欢迎界面
 自动布局（Auto Layout）与布局约束（Layout Constraint）
 any regular compat
 
+- Can't find keyplane that supports type 4 for keyboard iPhone-PortraitTruffle-NumberPad; using 675849259_PortraitTruffle_iPhone-Simple-Pad_Default
+模拟机键盘问题 command+k
 
 
 - [Debug Your app](http://www.cocoachina.com/ios/20141128/10358.html)
