@@ -31,4 +31,24 @@
     +  orange lines   means not match(the current postion and at runtime) constraint导致
 - Creating Adaptive Layouts
     + **Size Classes**
-    + 
+    + Create the iPhone Landscape Layout**
+...
+
+### 6 Multiview Applications 
+- Common Types of Multiview Apps
+    + **tab bar**   the bottom of the Phone or Music application
+    + **toolbar**   main Safari view
+    + **navigation bar**  the top of Music application(MY Music)
+    + `UIKit`  `UITabBarController`  `UINavigationController`
+- The Architecture of a Multiview Application 
+    + **The Root Controller**
+- Building View Switcher
+    + ` ViewController.swift` > `Switching ViewController.swift`
+    + 把view controller 的**Class**改为**Switching ViewController**
+    + 添加`BlueViewController.swift`和`YellowViewController.swift`
+    + Building a View with a Toolbar
+    + Linking the Toolbar Button to the View Controller
+
+
+
+
