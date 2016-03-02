@@ -200,6 +200,7 @@
 				case let(x,y):
     				println()
 				}
+		+ switch语句必须穷举所有情况
 	- 控制转移语句
 		+ `continue`
 
@@ -338,8 +339,17 @@
 			`init(_ celsius: Double)`    => 	`Celsius(37.0)`
 		- 可选属性类型
 		
-		
-		
+- Protocols
+	+ 属性的语法  
+	
+			protocol SomeProtocol {
+				var mustBeSettable : Int { get set }
+				var doesNotNeedToBeSettable: Int { get }
+			}
+
+- Generics
+
+- Access Control 	
 
 
 -----------------
