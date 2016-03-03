@@ -48,7 +48,18 @@
     + 添加`BlueViewController.swift`和`YellowViewController.swift`
     + Building a View with a Toolbar
     + Linking the Toolbar Button to the View Controller
-
+    + Writing the Root View Controller
+        * **Lazy loading**
+    + Implementing the Content Views
+        1. 从Object Library 拖出 **View Controller**. 在*Identity Inspector*中修改class为*BlueViewController*,并填写*Storyboard ID*为**Blue**(与代码中对应).  
+        *storyboard中的箭头是指默认scene，当然这个箭头是可以移动的*   
+        2. 在*Attributes Inspector*中修改*background*为蓝色(随意).
+        3. 添加button在正中央  Press Me ，添加constraints,Touch Up Inside  blueButtonPressed
+        4. 改变button的 **Text Color**
+        5.  重复
+    + Animating the Transition
+        
+        
 
 
 
