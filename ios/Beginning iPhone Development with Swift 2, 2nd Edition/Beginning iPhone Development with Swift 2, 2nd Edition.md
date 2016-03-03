@@ -58,7 +58,37 @@
         4. 改变button的 **Text Color**
         5.  重复
     + Animating the Transition
-        
+
+### 7 Tab Bars and Pickers 
+
+- The Pickers Application
+    1. Date picker
+    2. Single-component picker
+    3. Multicomponent picker
+    4. Picker with dependent components
+    5. Custom picker with images
+- Delegates and Data Sources
+    + date picker 不能只是从对象库中拖出，还要有代理和数据源
+- Creating the Pickers Application 
+    1. create Pickers
+    2. 在Pickers文件夹中创建五个新view控制器  
+    DatePickerViewController  
+    SingleComponentPickerViewController  DoubleComponentPickerViewController   DependentComponentPickerViewController  CustomPickerViewController
+    3. Creating the Tab Bar Controller
+        + 修改viewController的基类为`UITabBarController` 
+        + 删除storyboard原本的view controller，添加**Tab Bar Controller**
+        + 选择roo controller： **Tab Bar Controller** 勾上 **Is Initial View Controller** ；class 改为 ViewController
+        + 添加图片
+        + 修改child view controllers 的 tab bar item 的 title和Image
+        + adding three more view controllers;     
+        并关联：Control-drag from the tab bar controller to your new view controller(注意是从tab bar controller向新的托)  view controllers from the **Relationship Segue**
+        分别修改title和image
+        + 链接五个scene到对应的viewController
+- Implementing the Date Picker
+
+- Implementing the Single-Component Picker 
+
+- Implementing a Multicomponent Picker 
         
 
 
