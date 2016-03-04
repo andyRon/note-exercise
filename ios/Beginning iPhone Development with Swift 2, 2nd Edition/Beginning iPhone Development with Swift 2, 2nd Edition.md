@@ -88,7 +88,20 @@
 
 - Implementing the Single-Component Picker 
 
-- Implementing a Multicomponent Picker 
+- Implementing a Multicomponent Picker
+
+- Implementing Dependent Components 
+    + 添加数据源和代理
+    + 添加一些属性
+    + build the content view  与之前的类似   
+    dependentPicker  onButtonPressed  Auto Layout constraints
+    + statedictionary.plist
+
+- Creating a Simple Game with a Custom Picker 
+    + 消除**User Interaction Enabled**这个选项使用户不能控制picker
+
+### 8 Introduction to Table Views
+
         
 
 

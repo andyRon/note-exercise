@@ -17,6 +17,9 @@
 		EF3233191C88206E00F2417B /* DoubleComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3233181C88206E00F2417B /* DoubleComponentPickerViewController.swift */; };
 		EF32331B1C88209A00F2417B /* DependentComponentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32331A1C88209A00F2417B /* DependentComponentPickerViewController.swift */; };
 		EF32331D1C8820B600F2417B /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF32331C1C8820B600F2417B /* CustomPickerViewController.swift */; };
+		EF3D3F351C8938080005E3FA /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF3D3F341C8938080005E3FA /* statedictionary.plist */; };
+		EF3D3F381C8967150005E3FA /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF3D3F361C8967150005E3FA /* crunch.wav */; };
+		EF3D3F391C8967150005E3FA /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF3D3F371C8967150005E3FA /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		EF3233181C88206E00F2417B /* DoubleComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleComponentPickerViewController.swift; sourceTree = "<group>"; };
 		EF32331A1C88209A00F2417B /* DependentComponentPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependentComponentPickerViewController.swift; sourceTree = "<group>"; };
 		EF32331C1C8820B600F2417B /* CustomPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
+		EF3D3F341C8938080005E3FA /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = "../../../../../../../../Downloads/书籍等/Beginning iPhone Development with Swift 2, 2nd Edition Example Source Code/07 - Picker Data/statedictionary.plist"; sourceTree = "<group>"; };
+		EF3D3F361C8967150005E3FA /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = crunch.wav; path = "../../../../../../../../Downloads/书籍等/Beginning iPhone Development with Swift 2, 2nd Edition Example Source Code/07 - Picker Sounds/crunch.wav"; sourceTree = "<group>"; };
+		EF3D3F371C8967150005E3FA /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "../../../../../../../../Downloads/书籍等/Beginning iPhone Development with Swift 2, 2nd Edition Example Source Code/07 - Picker Sounds/win.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		EF3233011C881E9A00F2417B /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				EF3D3F341C8938080005E3FA /* statedictionary.plist */,
 				EF3233021C881E9A00F2417B /* AppDelegate.swift */,
 				EF3233041C881E9A00F2417B /* ViewController.swift */,
 				EF3233061C881E9A00F2417B /* Main.storyboard */,
@@ -74,6 +81,8 @@
 				EF3233161C88205200F2417B /* SingleComponentPickerViewController.swift */,
 				EF3233181C88206E00F2417B /* DoubleComponentPickerViewController.swift */,
 				EF32331A1C88209A00F2417B /* DependentComponentPickerViewController.swift */,
+				EF3D3F361C8967150005E3FA /* crunch.wav */,
+				EF3D3F371C8967150005E3FA /* win.wav */,
 				EF32331C1C8820B600F2417B /* CustomPickerViewController.swift */,
 			);
 			path = Pickers;
@@ -137,8 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3D3F381C8967150005E3FA /* crunch.wav in Resources */,
 				EF32330D1C881E9A00F2417B /* LaunchScreen.storyboard in Resources */,
 				EF32330A1C881E9A00F2417B /* Assets.xcassets in Resources */,
+				EF3D3F391C8967150005E3FA /* win.wav in Resources */,
+				EF3D3F351C8938080005E3FA /* statedictionary.plist in Resources */,
 				EF3233081C881E9A00F2417B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +318,7 @@
 				EF3233131C881E9A00F2417B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

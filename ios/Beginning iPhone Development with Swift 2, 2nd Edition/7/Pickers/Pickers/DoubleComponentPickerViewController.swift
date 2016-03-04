@@ -53,5 +53,23 @@ class DoubleComponentPickerViewController: UIViewController, UIPickerViewDelegat
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }
-    
+    // picker视图中列(column)的数目
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    // the number of rows(一行有多少元素)
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == breadComponent {
+            return breadTypes.count
+        } else {
+            return fillingTypes.count
+        }
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == breadComponent {
+            return breadTypes[row]
+        } else {
+            return fillingTypes[row]
+        }
+    }
 }
