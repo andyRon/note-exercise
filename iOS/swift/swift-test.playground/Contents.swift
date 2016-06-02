@@ -61,7 +61,11 @@ arr
 arr.removeAtIndex(1)
 arr
 arr.removeLast()
-arr
+str2
+for (k, v) in str2.characters.enumerate() {
+    print("\(k):\(v)")
+}
+for (k, v) in
 
 
 
