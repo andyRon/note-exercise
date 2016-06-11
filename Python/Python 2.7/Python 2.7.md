@@ -42,9 +42,39 @@
             ![](../img/1.1.png)  
             浏览网页的时候，服务器会把动态生成的Unicode内容转换为UTF-8再传输到浏览器：  
             ![](../img/1.2.png)  
-        + Python的字符串
+        + Python的字符串*
             - `ord('A')`  `chr(65)`
-            - 
+            - `len()`
+
+        + 格式化
+            - 类似于C语言 ： `'Hi, %s, you have $%d.' % ('Michael', 1000000)`
+    - 使用list和tuple
+        + list
+            * `classmates = ['Michael', 'Bob', 'Tracy']`
+            * `classmates[-1]`
+            * `classmates.append('Adam')`
+            * `classmates.insert(1, 'Jack')`
+            * `classmates.pop()`    `classmates.pop(1)`
+        + tuple tuple一旦初始化就不能修改
+            - 只有1个元素的tuple定义时必须加一个逗号,，来消除歧义 `t = (2)`
+            - 在tuple中放入list，这样看上去就能修改tuple  `tt = ("a", "b", [4,5,9])`
+    - 条件判断和循环
+        + `if elif else`
+        + `for x in ...`
+        + `range()`
+        + raw_input()读取的内容永远以字符串的形式返回
+    - 使用dict和set
+        + dict 
+
+                d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+                d['Michael']
+                d.get('Thomas')     # None
+                d.get('Thomas', -1) # -1
+                d.pop('Bob')
+
+        + 和list比较，dict有以下几个特点：
+            * 查找和插入的速度极快，不会随着key的增加而增加；
+            * 需要占用大量的内存，内存浪费多。
 
 
 
