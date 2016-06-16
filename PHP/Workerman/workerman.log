@@ -1,0 +1,20 @@
+2016-06-13 01:03:46 pid:5713 Workerman[start.php] start in DAEMON mode
+2016-06-13 01:05:02 pid:5725 Workerman[start.php] status 
+2016-06-13 01:10:42 pid:5739 Workerman[ws_test.php] start in DEBUG mode
+2016-06-13 01:15:13 pid:5753 Workerman[ws_test.php] start in DEBUG mode
+2016-06-13 01:15:23 pid:5755 Workerman[ws_test.php] start in DEBUG mode
+2016-06-13 01:19:36 pid:5755 Workerman[ws_test.php] Stopping ...
+2016-06-13 01:19:36 pid:5755 Workerman[ws_test.php] has been stopped
+2016-06-13 01:19:46 pid:5775 Workerman[tcp_test.php] start in DEBUG mode
+2016-06-13 20:08:19 pid:7053 Workerman[http_test.php] start in DEBUG mode
+2016-06-13 20:13:31 pid:7053 Workerman[http_test.php] Stopping ...
+2016-06-13 20:13:31 pid:7053 Workerman[http_test.php] has been stopped
+2016-06-13 20:14:10 pid:7080 Workerman[ws_test.php] start in DEBUG mode
+2016-06-13 20:14:36 pid:7081 Workerman[ws_test.php] start in DEBUG mode
+2016-06-13 20:17:02 pid:7081 Workerman[ws_test.php] Stopping ...
+2016-06-13 20:17:03 pid:7081 Workerman[ws_test.php] has been stopped
+2016-06-13 20:23:04 pid:7103 Workerman[start.php] status 
+2016-06-13 20:23:04 pid:7103 Workerman[start.php] not run
+2016-06-13 20:39:44 pid:7118 Workerman[./SimpleChat/start.php] start in DEBUG mode
+2016-06-16 17:44:22 pid:7118 Workerman[start.php] Stopping ...
+2016-06-16 17:44:22 pid:7118 Workerman[start.php] has been stopped
