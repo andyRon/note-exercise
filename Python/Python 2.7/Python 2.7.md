@@ -103,4 +103,41 @@
             * 当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。
             * 当不按顺序提供部分默认参数时，需要把参数名写上
             * 默认参数必须指向不变对象
+        + 可变参数(tuple)
+            ``` python
+                def calc(*numbers):
+                    sum = 0
+                    for n in numbers:
+                        sum = sum + n * n
+                    return sum
+            ```
+            `*numbers` 表示接受到的是一个tuple
+        + 关键字参数(dict)
+
+                def person(name, age, **other):
+                print 'name:', name, 'age:', age, 'other:', other
+
+                person('andy', 25, location="shanghai", weight="70")
+
+                kw = {'city': 'Beijing', 'job': 'Engineer'}
+                person('Jack', 24, **kw)
+
+        + 参数组合
+            * 顺序必须是：必选参数、默认参数、可变参数和关键字参数。
+
+            ````python
+                def func(a, b, c=0, *args, **kw):
+                    print 'a:', a, 'b:', b, 'c:', c, 'args:', args, 'kw:', kw 
+
+                func(1, 3, 4, 5, 6, 23)
+                func(1, 3, 4, 5, 6, ab=23)
+                args = (12, 5, 6, 7)
+                kw = {"key1": 90, 'x': 999}
+                func(*args, **kw)
+            ````
+            * 对于任意函数，都可以通过类似func(*args, **kw)的形式调用它，无论它的参数是如何定义的。
+    - 递归函数
+
+
+
 

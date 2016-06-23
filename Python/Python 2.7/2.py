@@ -30,4 +30,30 @@ def power(x, n=2):
 
 	return s
 
-print power(2, 5)
+# print power(2, 5)
+
+def calc(*numbers):
+	sum = 0
+	for n in numbers:
+		sum = sum + n*n
+	return sum
+
+# print calc(1,2,4,5)
+
+def person(name, age, **other):
+	print 'name:', name, 'age:', age, 'other:', other
+
+# person('andy', 25, location="shanghai", weight="70")
+
+kw = {'city': 'Beijing', 'job': 'Engineer'}
+# person('Jack', 24, **kw)
+
+
+def func(a, b, c=0, *args, **kw):
+	print 'a:', a, 'b:', b, 'c:', c, 'args:', args, 'kw:', kw 
+
+func(1, 3, 4, 5, 6, 23)
+func(1, 3, 4, 5, 6, ab=23)
+args = (12, 5, 6, 7)
+kw = {"key1": 90, 'x': 999}
+func(*args, **kw)
