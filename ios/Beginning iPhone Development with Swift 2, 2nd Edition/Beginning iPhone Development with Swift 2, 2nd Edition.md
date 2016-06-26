@@ -102,7 +102,17 @@
 
 ### 8 Introduction to Table Views
 
-        
+- Tabel View Basics
+    + `UITableView`, `UITableViewCell`, `UITableViewDelegate`, `UITableViewDataSource`   
+    + 一个`UITableViewCell`中可以放许多数据    
+    + Grouped and Plain Tables
+    + Implementing a Simple Table
+        * create new project 
+        * drag a Table View to View window
+        * add Constraints
+        * makes controller class both the data source and delegate
+        * 
+    
 
 
 
