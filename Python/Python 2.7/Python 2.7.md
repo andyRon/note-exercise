@@ -162,7 +162,26 @@
         + `[x * x for x in range(1, 11) if x % 2 == 0]`  =>  `[4, 16, 36, 64, 100]`
         + `m + n for m in 'ABC' for n in 'XYZ']`  =>   `['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']`
         + `[d for d in os.listdir('.')]` 列出当前目录下文件和目录
-    
+    - 生成器Generator(保存的是算法)
+        + 例子
+        ```python
+        g = (x*x for x in range(10))
+        for n in g:
+            print n 
+        ````
+        + 如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator
+        + 函数是顺序执行，遇到return语句或者最后一行函数语句就返回。而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行
+
+
+### 4 函数式编程
+    - 高阶函数
+        + 既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。
+        + 编写高阶函数，就是让函数的参数能够接收别的函数。
+    - map/reduce  （MapReduce: Simplified Data Processing on Large Clusters)[]
+        + map()函数接收两个参数，一个是函数，一个是序列，map将传入的函数依次作用到序列的每个元素，并把结果作为新的list返回。
+        + reduce把一个函数作用在一个序列[x1, x2, x3...]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是：  `reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)`
+
+
 
 
 
