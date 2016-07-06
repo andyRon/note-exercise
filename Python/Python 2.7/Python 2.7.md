@@ -177,13 +177,60 @@
     - 高阶函数
         + 既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。
         + 编写高阶函数，就是让函数的参数能够接收别的函数。
-    - map/reduce  （MapReduce: Simplified Data Processing on Large Clusters)[]
-        + map()函数接收两个参数，一个是函数，一个是序列，map将传入的函数依次作用到序列的每个元素，并把结果作为新的list返回。
-        + reduce把一个函数作用在一个序列[x1, x2, x3...]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是：    
-        `reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)`
-        
+        + map/reduce  （MapReduce: Simplified Data Processing on Large Clusters)[]
+            * map()函数接收两个参数，一个是函数，一个是序列，map将传入的函数依次作用到序列的每个元素，并把结果作为新的list返回。
+            * reduce把一个函数作用在一个序列[x1, x2, x3...]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算，其效果就是：    
+            `reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)`
+        + filter  filter()函数接收两个参数，一个是函数，一个是序列,把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。
+        + sorted
+            * 排序也是在程序中经常用到的算法。无论使用冒泡排序还是快速排序，排序的核心是比较两个元素的大小。如果是数字，我们可以直接比较，但如果是字符串或者两个dict呢？直接比较数学上的大小是没有意义的，因此，比较的过程必须通过函数抽象出来。通常规定，对于两个元素x和y，如果认为x < y，则返回-1，如果认为x == y，则返回0，如果认为x > y，则返回1，这样，排序算法就不用关心具体的比较过程，而是根据比较结果直接排序。
+    - 返回函数
+    - 匿名函数(lambda)
+        + 只能有一个表达式，不用写return，返回值就是该表达式的结果
+    - 装饰器**
+        + 在代码运行期间动态增加功能的方式，称之为“装饰器”（Decorator）。
+        + `__name__`
+    - 偏函数（Partial function）
+        + `functools.partial`的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数，调用这个新函数会更简单。
 
+### 5 模块
+    - 一个.py文件就称之为一个模块（Module）
+        + [内置函数](https://docs.python.org/2/library/functions.html)
+        + 为了避免模块名冲突，Python又引入了按目录来组织模块的方法，称为**包（Package）**
+        + 每一个包目录下面都必须有一个`__init__.py`的文件
+    - **别名**
 
+            try:
+                import cStringIO as StringIO
+            except ImportError: # 导入失败会捕获到ImportError
+                import StringIO
+
+            try:
+                import json # python >= 2.6
+            except ImportError:
+                import simplejson as json # python <= 2.5
+
+    - 作用域
+    - 安装第三方模块
+        + 在Python中，安装第三方模块，是通过setuptools这个工具完成的。Python有两个封装了setuptools的包管理工具：easy_install和pip。
+            * mac中自带 `easy_install`, 
+            * mac 安装 `pip`: `sudo easy_install pip`
+            * 第三方库都会在Python官方 [网站](https://pypi.python.org/pypi) 上注册
+            * 安装 `pillow`(代替`PIL`)：`sudo pip install pillow`
+            * 使用 [github](https://github.com/python-pillow/Pillow) [中文文档](http://pillow-cn.readthedocs.io/zh_CN/latest/index.html)
+
+                    from PIL import Image
+                    im = Image.open("/Users/andyron/Downloads/bash.jpg")  #录取要是完整路径
+                    im.size
+                    im.mode
+                    im.format 
+                    im.show()       # 以临时文件打开
+
+        + 模块搜索路径
+
+                import sys
+                sys.path
+                sys.path.append()
 
 
 

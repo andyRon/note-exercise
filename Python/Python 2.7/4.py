@@ -1,3 +1,4 @@
+#coding=utf-8
 
 def fn(x):
 	return x*x
@@ -47,4 +48,108 @@ def pro(l):
 	return reduce(lambda x,y: x*y, l)
 
 
-print pro([2,5,5,6])
+# print pro([2,5,5,6])
+
+def is_odd(i):
+	return i % 2 == 1
+
+# print filter(is_odd, [1,2,3,4,5,6,7])
+
+def is_sushu(n):
+	i = 2
+	while i < n:
+		if n % i == 0:
+			return False
+		i = i + 1
+
+	return True
+# print filter(is_sushu, range(100)[1:])
+
+def cmp_ignore_case(s1, s2):
+	u1 = s1.upper()
+	u2 = s2.upper()
+	if (u1 > u2):
+		return 1;
+	if (u1 < u2):
+		return -1;
+	return 0;
+
+# print sorted(['Dfc', 'dfc', 'adb', 'aDBf', 'Afcd'], cmp_ignore_case)
+
+#当 f1,f2,f3执行时，他们的共同参数i的值都是3
+def count():
+    fs = []
+    for i in range(1, 4):
+        def f():
+             return i*i
+        fs.append(f)
+    return fs
+
+# f1, f2, f3 = count()
+
+# print f1(), f2(), f3()
+
+def count_v2():
+	fs = []
+	for i in range(1, 4):
+		def f(j):
+			def k():
+				return j*j
+			return k
+		fs.append(f(i))
+	return fs
+
+# f1, f2, f3 = count_v2()
+
+# print f1(), f2(), f3()
+
+def log(func):
+    def wrapper(*args, **kw):
+        print 'call %s():' % func.__name__
+        return func(*args, **kw)
+    return wrapper
+
+@log		# 把@log放到now()函数的定义处，相当于执行了语句：`now = log(now)`
+def now():
+    print '2013-12-25'
+
+# now()
+
+def log_v2(text):
+	def decorator(func):
+		def wrapper(*args, **kw):
+			print '%s %s():' % (text, func.__name__)
+			return func(*args, **kw)
+		return wrapper
+	return decorator
+
+@log_v2('execute')		# 相当于执行了语句: `now_v2 = log_v2('execute')(now_v2)`
+def now_v2():
+	print '2016-07-06 16:52:12'
+
+# now_v2()
+
+
+import functools
+
+# print int('123', base=16)
+
+def int2(x):
+	return int(x, base=2)
+
+# print int2("101010110")
+
+int2_v2 = functools.partial(int, base=2)
+
+# print int2_v2("10111")
+
+# print max(5,6,7, [10,12])
+
+max2 = functools.partial(max, 10)
+
+# print max2(5, 6, 7)
+
+
+
+
+
