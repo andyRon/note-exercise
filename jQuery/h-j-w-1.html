@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+</head>
+<body>
+    <a href="http://jquery.com/" id="test">jQuery</a>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script>
+ 
+//     window.onload = function() {
+ 
+//     alert( "welcome" );
+ 
+// };
+// $( document ).ready(function() {
+ 
+//     $( "a" ).click(function( event ) {
+ 
+//         alert( "Thanks for visiting!" );
+ 
+//     });
+ 
+// });
+$( document ).ready(function() {
+ 
+  //   $( "a" ).click(function( event ) {
+ 
+  //       alert( "As you can see, the link no longer took you to jquery.com" );
+ 	// console.log(event)
+  //       event.preventDefault();
+ 
+  //   });
+ 
+ // 	$( "a" ).click(function( event ) {
+ 
+	//     event.preventDefault();
+	 
+	//     $( this ).hide( "slow" );
+ 
+	// });
+	$( "a" ).click(function( event ) {
+ 
+	    event.preventDefault();
+	 
+		$.get("http://www.baidu.com", function(e){
+			console.log(e)
+		}) 
+	});
+});
+ 
+    </script>
+</body>
+</html>

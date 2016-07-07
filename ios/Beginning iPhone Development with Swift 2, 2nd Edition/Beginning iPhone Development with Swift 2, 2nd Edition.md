@@ -111,6 +111,8 @@
         * drag a Table View to View window
         * add Constraints
         * makes controller class both the data source and delegate
+        * writing the controller
+        * adding the image
         * 
     
 

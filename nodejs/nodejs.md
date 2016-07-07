@@ -31,3 +31,44 @@
 [1](http://www.runoob.com/nodejs/nodejs-tutorial.html)  
 [2](https://nqdeng.github.io/7-days-nodejs/#1)  
 [3](http://www.nodebeginner.org/index-zh-cn.html)
+
+
+
+
+
+----------
+
+### npm的使用 
+    - 安装包
+        npm install express          # 本地安装
+        npm install express -g   # 全局安装
+
+        + 本地安装
+            1. 将安装包放在 ./node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。
+            2. 可以通过 require() 来引入本地安装的包。
+        + 全局安装
+            1. 将安装包放在 /usr/local 下或者你 node 的安装目录。  /usr/local/lib/node_modules/npm
+            2. 可以直接在命令行里使用。
+    - 查看安装的包
+
+        + npm ls -g
+        + npm ls 
+    - 卸载模块
+        + npm uninstall express
+    - 更新模块
+        + npm update express
+
+    - 搜索模块(第一次有点慢)
+        + npm search express
+
+
+    - registry
+        npm update 命令怎么知道模块是否有最新版呢？ 向 https://registry.npmjs.org/ 查询
+        查看react版本信息 https://registry.npmjs.org/react    https://registry.npmjs.org/react/v0.14.6 
+        或者 `npm view react`  
+        - 结果中 dist.tarball 是该版本压缩包的网址， npm install和npm update都是通过这中方式安装模块
+
+    - 缓存目录
+
+
+    http://www.ruanyifeng.com/blog/2016/01/npm-install.html
