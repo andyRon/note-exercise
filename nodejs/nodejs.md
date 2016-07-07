@@ -24,7 +24,7 @@
 - 大部分服务器都会在你访问 http://localhost:8888 /时尝试读取 http://localhost:8888/favicon.ico
 - 服务端模块	server2.js
 - 进行请求的*路由*：查看HTTP请求，从中提取出请求的URL以及GET/POST参数。这些数据堵在request对象中  
-![]("./img/url.jpg")
+![](img/url.jpg)
 
 
 # 再次学习
