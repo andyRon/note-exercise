@@ -179,6 +179,7 @@ AMD是"Asynchronous Module Definition"的缩写，意思就是"异步模块定�
 			    "class": "new",
 			    href: "foo.html"
 			});  
+	+ Working with Selections 	Getter & Setter
 	+ Manipulating Attributes
 		
 			// Manipulating a single attribute.
@@ -201,3 +202,4 @@ AMD是"Asynchronous Module Definition"的缩写，意思就是"异步模块定�
 			$( "#myDiv a:first" ).attr( "href", function( idx, href ) {
 			    return "/new/" + href;
 			});
+	+ jQuery Object 

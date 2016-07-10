@@ -113,7 +113,35 @@
         * makes controller class both the data source and delegate
         * writing the controller
         * adding the image
-        * 
+        * using table view  cell styles
+            - `UITableViewCellStyle`
+            - `Image`  `Text label` `Detail text label`
+        * Setting the Indent Level (设置缩进风格)
+        * Handling row selection （操作row的选择）
+        * Changing the Font Size and Row Height
+    + Customizing Table View Cells （改造Table View Cells）
+        - 三个方法
+            * 加载一个子UITableViewCell
+            * 载入一个 nib 文件
+            * 载入一个 storyboard 
+        - Adding Subviews to the Table View Cell
+            * 创建新项目Table Cells
+            * main.storyboard  添加 `Table View`
+            * `dataSource` `delegate` 到 `View Controller`
+            * constraints
+        - Creating a UITableViewCell Subclass
+            * Adding New Cells 
+                + 创建新文件 `Cocoa Touch Class`, 
+                + 在 NameAndColorCell.swift 中添加 两个属性和接口
+                        class NameAndColorCell: UITableViewCell {
+                        var name: String = ""
+                        var color: String = ""
+                        var nameLabel: UILabel!
+                        var colorLabel: UILabel!
+                + init
+            * Implementing the Controller's Code ??
+        - Loading a UITableViewCell from a Nib
+        
     
 
 
