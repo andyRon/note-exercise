@@ -42,5 +42,35 @@ case .QRCode(let s):
     print("QRCode: \(s)")
 }
 
+enum ASCIIControlCharacter: Character {
+    case Tab = "\t"
+    case LineFeed = "\n"
+    case CarriageReturn = "\r"
+}
+
+enum Planet2:Int {
+    case Mercury = 1, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
+}
+Planet2.Earth.rawValue
+
+enum CompassPoint2:String {
+    case North, South, East, West
+}
+CompassPoint2.North.rawValue
+
+let possiblePlanet = Planet2(rawValue: 6)
+possiblePlanet?.rawValue
+
+let positionToFind = 9
+if let somePlanet = Planet2(rawValue: positionToFind) {
+    switch somePlanet {
+    case .Earth:
+        print("地球安全")
+    default:
+        print("这个星球不适合人类居住")
+    }
+} else {
+    print("不是一个星球")
+}
 
 
