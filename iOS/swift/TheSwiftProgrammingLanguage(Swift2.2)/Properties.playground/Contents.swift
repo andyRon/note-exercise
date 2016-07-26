@@ -62,3 +62,106 @@ struct Rect {
         }
     }
 }
+var square = Rect(origin: Point(x:0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+let initalSquareCenter = square.center
+square.center = Point(x: 15.0, y: 15.0)
+square.origin.x
+struct Rect2 {
+    var origin = Point()
+    var size = Size()
+    var center:Point {
+        get{
+            let centerX = origin.x + (size.width/2)
+            let centerY = origin.y + (size.height/2)
+            return Point(x: centerX, y: centerY)
+        }
+        set{
+            origin.x = newValue.x - (size.width/2)
+            origin.y = newValue.y - (size.height/2)
+        }
+    }
+}
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width*height*depth
+    }
+}
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps){
+            print("设置新的totalSteps为\(newTotalSteps)")
+        }
+        didSet{
+            if totalSteps > oldValue {
+                print("增加了 \(totalSteps - oldValue)")
+            }
+        }
+    }
+}
+var step = StepCounter()
+step.totalSteps = 2
+
+var test:Int = 0 {
+willSet(new){
+    print("12")
+}
+didSet{
+    print("old: \(oldValue), new: \(test)")
+}
+}
+
+test = 3
+
+struct  SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty:Int {
+        return 1
+    }
+}
+enum SomeEnum {
+    static var storedTypeProperty = "Some value enum"
+    static var computedTypeProperty: Int {
+        return 2
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value class"
+    static var computedTypeProperty: Int {
+        return 3
+    }
+    class var overrideableComputedTypeProperty:Int {
+        return 4
+    }
+}
+
+var test2 = SomeClass()
+SomeClass.storedTypeProperty
+//test.storedTypeProperty
+
+
+struct AudioChannel {
+    static let thresholdLevel = 10
+    static var maxInputLevelForAllChannels = 0
+    var currentLevel:Int = 0 {
+        didSet{
+            if currentLevel > AudioChannel.thresholdLevel {
+                currentLevel = AudioChannel.thresholdLevel
+            }
+            if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                AudioChannel.maxInputLevelForAllChannels = currentLevel
+            }
+        }
+    }
+}
+var leftChannel = AudioChannel()
+var rightChannel = AudioChannel()
+
+leftChannel.currentLevel = 5
+AudioChannel.maxInputLevelForAllChannels
+
+rightChannel.currentLevel = 12
+AudioChannel.maxInputLevelForAllChannels
+
+
