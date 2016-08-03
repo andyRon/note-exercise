@@ -1,10 +1,20 @@
-import CoreData
+//
+//  FavoritesList.swift
+//  Fonts
+//
+//  Created by andyron on 16/8/3.
+//  Copyright © 2016年 andyron. All rights reserved.
+//
+
+import Foundation
+import UIKit
 
 class FavoritesList {
     static let sharedFavoritesList = FavoritesList()
     private(set) var favorites:[String]
     
     init(){
+        // 读取用户设置，初始化favorites
         let defaults = NSUserDefaults.standardUserDefaults()
         let storedFavorites = defaults.objectForKey("favorites") as? [String]
         favorites = storedFavorites != nil ? storedFavorites! : []
@@ -28,15 +38,4 @@ class FavoritesList {
         defaults.setObject(favorites, forKey: "favorites")
         defaults.synchronize()
     }
-
-
 }
-
-FavoritesList.sharedFavoritesList.favorites.append("g")
-
-var f = FavoritesList.sharedFavoritesList
-f.favorites
-f.addFavorites("a")
-f.favorites
-
-
