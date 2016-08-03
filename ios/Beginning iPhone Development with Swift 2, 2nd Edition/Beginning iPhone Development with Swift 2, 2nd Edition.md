@@ -142,7 +142,32 @@
             * Implementing the Controller's Code ??
         - Loading a UITableViewCell from a Nib
         
-    
 
+### 9 Navigation Controllers and Table Views
+- Navigation Controller Basics
+    + Stacky Goodness
+    + A Stack of Controllers
+    + Fonts: A Simple Font Browser
+        * Meet the Subcontrollers
+            - The Font List Controller  
+            - The Font Sizes View Controller
+            - The Font Info View Controller
+        * The Fonts Application’s Skeleto
+            - Setting up the Navigation Controller  
+                `UINavigationController`:管理 view controllers 的 stack
+
+                + 选择 Main.storyboard
+                + 删除 basic view controller ，使storyboard为空
+                + 拖动 `UINavigation Controller` 到编辑区（实际得到两个：UINavigation Controller, Root View Controller）
+                + 选中左边的`UINavigation Controller`, 打开**the Attributes Inspector** 勾选 **Is Initial View Controller**, 让应用启动时调用这个控制器
+                + 修改 `Root View Controller ` 的 title 为 `Fonts`.
+                也要修改`Navigation Item`的 Title为`Fonts`?
+            - Keeping Track of Favorites
+                + 建立新文件 "FavoritesList.swift"
+    + Creating the Root View Controller
+    
+    + Initial Storyboard Setup
+    
+    + First Subcontroller: The Font List View
 
 
