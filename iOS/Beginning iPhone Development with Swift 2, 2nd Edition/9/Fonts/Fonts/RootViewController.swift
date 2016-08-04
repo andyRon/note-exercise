@@ -30,6 +30,7 @@ class RootViewController: UITableViewController {
         cellPointSize = preferredTableViewFont.pointSize
         favoritesList = FavoritesList.sharedFavoritesList
         tableView.estimatedRowHeight = cellPointSize
+        
     }
     
     //    override func didReceiveMemoryWarning() {
@@ -80,5 +81,23 @@ class RootViewController: UITableViewController {
         }
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
+        let listVC = segue.destinationViewController as! FontListViewController
+        if indexPath.section == 0 {
+            // Font names list
+            let familyName = familyNames[indexPath.row]
+            listVC.fontNames =
+                (UIFont.fontNamesForFamilyName(familyName) as [String]).sort()
+            listVC.navigationItem.title = familyName
+            listVC.showsFavorites = false
+        } else {
+            // Favorites list
+            listVC.fontNames = favoritesList.favorites
+            listVC.navigationItem.title = "Favorites"
+            listVC.showsFavorites = true
+        }
+    }
 }

@@ -13,6 +13,9 @@
 		EF1412D71D51C71900C133AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1412D61D51C71900C133AC /* Assets.xcassets */; };
 		EF1412DA1D51C71900C133AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1412D81D51C71900C133AC /* LaunchScreen.storyboard */; };
 		EFB7A2461D5205730009E62B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7A2451D5205730009E62B /* RootViewController.swift */; };
+		EFB7A2481D52532E0009E62B /* FontListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7A2471D52532E0009E62B /* FontListViewController.swift */; };
+		EFB7A24A1D532D870009E62B /* FontSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7A2491D532D870009E62B /* FontSizesViewController.swift */; };
+		EFB7A24C1D5333DD0009E62B /* FontInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB7A24B1D5333DD0009E62B /* FontInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		EF1412D91D51C71900C133AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF1412DB1D51C71900C133AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFB7A2451D5205730009E62B /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		EFB7A2471D52532E0009E62B /* FontListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontListViewController.swift; sourceTree = "<group>"; };
+		EFB7A2491D532D870009E62B /* FontSizesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontSizesViewController.swift; sourceTree = "<group>"; };
+		EFB7A24B1D5333DD0009E62B /* FontInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				EF1412DB1D51C71900C133AC /* Info.plist */,
 				EF13A1871D51D5C500FF2B58 /* FavoritesList.swift */,
 				EFB7A2451D5205730009E62B /* RootViewController.swift */,
+				EFB7A2471D52532E0009E62B /* FontListViewController.swift */,
+				EFB7A2491D532D870009E62B /* FontSizesViewController.swift */,
+				EFB7A24B1D5333DD0009E62B /* FontInfoViewController.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB7A24A1D532D870009E62B /* FontSizesViewController.swift in Sources */,
 				EF1412D01D51C71900C133AC /* AppDelegate.swift in Sources */,
+				EFB7A2481D52532E0009E62B /* FontListViewController.swift in Sources */,
+				EFB7A24C1D5333DD0009E62B /* FontInfoViewController.swift in Sources */,
 				EFB7A2461D5205730009E62B /* RootViewController.swift in Sources */,
 				EF13A1881D51D5C500FF2B58 /* FavoritesList.swift in Sources */,
 			);
