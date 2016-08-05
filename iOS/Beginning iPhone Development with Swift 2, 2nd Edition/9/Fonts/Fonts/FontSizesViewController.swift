@@ -29,11 +29,11 @@ class FontSizesViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+// 不去除这个view会不显示
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return FontSizesViewController.pointSizes.count

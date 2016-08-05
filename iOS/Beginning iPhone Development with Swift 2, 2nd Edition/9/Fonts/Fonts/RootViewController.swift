@@ -77,7 +77,7 @@ class RootViewController: UITableViewController {
             cell.detailTextLabel?.text = familyNames[indexPath.row]
             return cell
         } else {
-            return tableView.dequeueReusableCellWithIdentifier(RootViewController.familyCell, forIndexPath: indexPath)
+            return tableView.dequeueReusableCellWithIdentifier(RootViewController.favoritesCell, forIndexPath: indexPath)
         }
     }
     
