@@ -220,6 +220,11 @@
     + 勾选** Is Initial View Controller **
 - Defining Custom Cells 
     
+- Configuring the View Controller 
+
+- Providing Contetnt Cells
+
+- Making the Layout Flow
 
         
                 

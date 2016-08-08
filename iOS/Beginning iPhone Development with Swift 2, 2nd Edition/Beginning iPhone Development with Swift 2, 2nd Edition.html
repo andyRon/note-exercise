@@ -1018,7 +1018,7 @@ body .markdown-body
 <ul>
 <li><strong>Update Frames</strong>  <strong>Size to Fit Content</strong></li>
 <li><em>correct runtime locations</em> <strong>Resolve Auto Layout Issues</strong></li>
-<li>Simulator  Window&gt;Scale</li>
+<li>Simulator  Window>Scale</li>
 <li>Previewing Layout   <strong>Preview Assistant</strong></li>
 </ul>
 <h3 id="4"><a name="user-content-4" href="#4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4</h3>
@@ -1075,7 +1075,7 @@ body .markdown-body
 </ul>
 </li>
 <li>Building View Switcher<ul>
-<li><code>ViewController.swift</code> &gt; <code>Switching ViewController.swift</code></li>
+<li><code>ViewController.swift</code> > <code>Switching ViewController.swift</code></li>
 <li>把view controller 的<strong>Class</strong>改为<strong>Switching ViewController</strong></li>
 <li>添加<code>BlueViewController.swift</code>和<code>YellowViewController.swift</code></li>
 <li>Building a View with a Toolbar</li>
@@ -1114,16 +1114,16 @@ body .markdown-body
 <li>Creating the Pickers Application <ol>
 <li>create Pickers</li>
 <li>在Pickers文件夹中创建五个新view控制器<br />
-DatePickerViewController<br />
-SingleComponentPickerViewController  DoubleComponentPickerViewController   DependentComponentPickerViewController  CustomPickerViewController</li>
+    DatePickerViewController<br />
+    SingleComponentPickerViewController  DoubleComponentPickerViewController   DependentComponentPickerViewController  CustomPickerViewController</li>
 <li>Creating the Tab Bar Controller<ul>
 <li>修改viewController的基类为<code>UITabBarController</code> </li>
 <li>删除storyboard原本的view controller，添加<strong>Tab Bar Controller</strong></li>
 <li>选择roo controller： <strong>Tab Bar Controller</strong> 勾上 <strong>Is Initial View Controller</strong> ；class 改为 ViewController</li>
 <li>添加图片</li>
 <li>修改child view controllers 的 tab bar item 的 title和Image</li>
-<li>adding three more view controllers;   <br />
-并关联：Control-drag from the tab bar controller to your new view controller(注意是从tab bar controller向新的托)  view controllers from the <strong>Relationship Segue</strong><br />
+<li>adding three more view controllers;<br />
+    并关联：Control-drag from the tab bar controller to your new view controller(注意是从tab bar controller向新的托)  view controllers from the <strong>Relationship Segue</strong><br />
 分别修改title和image</li>
 <li>链接五个scene到对应的viewController</li>
 </ul>
@@ -1134,7 +1134,7 @@ SingleComponentPickerViewController  DoubleComponentPickerViewController   Depen
 <p>Implementing the Date Picker</p>
 </li>
 <li>
-<p>Implementing the Single-Component Picker </p>
+<p>Implementing the Single-Component Picker</p>
 </li>
 <li>
 <p>Implementing a Multicomponent Picker</p>
@@ -1144,8 +1144,8 @@ SingleComponentPickerViewController  DoubleComponentPickerViewController   Depen
 <ul>
 <li>添加数据源和代理</li>
 <li>添加一些属性</li>
-<li>build the content view  与之前的类似 <br />
-dependentPicker  onButtonPressed  Auto Layout constraints</li>
+<li>build the content view  与之前的类似<br />
+    dependentPicker  onButtonPressed  Auto Layout constraints</li>
 <li>statedictionary.plist</li>
 </ul>
 </li>
@@ -1167,9 +1167,166 @@ dependentPicker  onButtonPressed  Auto Layout constraints</li>
 <li>drag a Table View to View window</li>
 <li>add Constraints</li>
 <li>makes controller class both the data source and delegate</li>
-<li></li>
+<li>writing the controller</li>
+<li>adding the image</li>
+<li>using table view  cell styles<ul>
+<li><code>UITableViewCellStyle</code></li>
+<li><code>Image</code>  <code>Text label</code> <code>Detail text label</code></li>
+</ul>
+</li>
+<li>Setting the Indent Level (设置缩进风格)</li>
+<li>Handling row selection （操作row的选择）</li>
+<li>Changing the Font Size and Row Height</li>
+</ul>
+</li>
+<li>Customizing Table View Cells （改造Table View Cells）<ul>
+<li>三个方法<ul>
+<li>加载一个子UITableViewCell</li>
+<li>载入一个 nib 文件</li>
+<li>载入一个 storyboard </li>
+</ul>
+</li>
+<li>Adding Subviews to the Table View Cell<ul>
+<li>创建新项目Table Cells</li>
+<li>main.storyboard  添加 <code>Table View</code></li>
+<li><code>dataSource</code> <code>delegate</code> 到 <code>View Controller</code></li>
+<li>constraints</li>
+</ul>
+</li>
+<li>Creating a UITableViewCell Subclass<ul>
+<li>Adding New Cells <ul>
+<li>创建新文件 <code>Cocoa Touch Class</code>, </li>
+<li>在 NameAndColorCell.swift 中添加 两个属性和接口<br />
+        class NameAndColorCell: UITableViewCell {<br />
+        var name: String = &ldquo;&rdquo;<br />
+        var color: String = &ldquo;&rdquo;<br />
+        var nameLabel: UILabel!<br />
+        var colorLabel: UILabel!</li>
+<li>init</li>
+</ul>
+</li>
+<li>Implementing the Controller&rsquo;s Code ??</li>
+</ul>
+</li>
+<li>Loading a UITableViewCell from a Nib</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="9-navigation-controllers-and-table-views"><a name="user-content-9-navigation-controllers-and-table-views" href="#9-navigation-controllers-and-table-views" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9 Navigation Controllers and Table Views</h3>
+<ul>
+<li>
+<p>Navigation Controller Basics<br />
+    &gt; the child view controllers of a <code>UINavigationController are organized in a stack</code> </p>
+<ul>
+<li>Stacky Goodness<br />
+<strong>last in, first out.</strong> </li>
+<li>A Stack of Controllers</li>
+<li>
+<p>Fonts: A Simple Font Browser</p>
+<ul>
+<li>Meet the Subcontrollers<ul>
+<li>The Font List Controller  </li>
+<li>The Font Sizes View Controller</li>
+<li>The Font Info View Controller</li>
+</ul>
+</li>
+<li>
+<p>The Fonts Application’s Skeleton</p>
+<ul>
+<li>
+<p>Setting up the Navigation Controller<br />
+<code>UINavigationController</code>:管理 view controllers 的 stack</p>
+<ul>
+<li>选择 Main.storyboard</li>
+<li>删除 basic view controller ，使storyboard为空</li>
+<li>拖动 <code>UINavigation Controller</code> 到编辑区（实际得到两个：UINavigation Controller, Root View Controller）</li>
+<li>选中左边的<code>UINavigation Controller</code>, 打开<strong>the Attributes Inspector</strong> 勾选 <strong>Is Initial View Controller</strong>, 让应用启动时调用这个控制器</li>
+<li>修改 <code>Root View Controller</code> 的 title 为 <code>Fonts</code>.<br />
+也要修改<code>Navigation Item</code>的 Title为<code>Fonts</code>?<br />
+            - Keeping Track of Favorites</li>
+<li>建立新文件 &ldquo;FavoritesList.swift&rdquo;<ul>
+<li>Creating the Root View Controller</li>
+<li>Initial Storyboard Setup</li>
+<li>First Subcontroller: The Font List View<ul>
+<li>Storyboarding the Font List<ul>
+<li>添加一个新的 <code>Table View Controller</code> 到 <code>Main.storyboard</code>的编辑区</li>
+<li>选择这个新的table view controller,通过身份检查器设置<strong>class</strong>为<strong>FontListViewController</strong></li>
+<li>选择新的table view controller下的<code>Table View Cell</code>, 修改<strong>Style</strong>为<em>Subtitle</em>, <strong>Identifier</strong>为<em>FontName</em>, <strong>Accessory</strong>为<em>Detail Disclosure</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="-control-dragging-cell-fontlistviewcontroller"><a name="user-content--control-dragging-cell-fontlistviewcontroller" href="#-control-dragging-cell-fontlistviewcontroller" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Control-dragging 两个cell到 <code>FontListViewController</code></h2>
+<pre><code>    * Making the Root View Controller Prepare for Segues
++ Creating the Font Sizes View Controller
+    * Storyboarding the Font Sizes View Controller
+</code></pre>
+<ul>
+<li>Control-drag <code>FontListViewController</code>中的cell到 <code>FontListViewController</code>, 弹出菜单选择 <strong>Selection Segue</strong> 的 <strong>show</strong><br />
+        * Making the Font List View Controller Prepare for Segues<ul>
+<li>Creating the Font Info View Controller</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Storyboarding the Font Info View Controller</p>
+<ul>
+<li>添加 <code>View Controller</code> <strong>class</strong> 为 <code>FontInfoViewController</code></li>
+<li>添加 3个<code>label</code>, 1个<code>swithc</code>, 1个<code>slider</code></li>
+<li>修改上面的<code>label</code>的 <strong>Lines</strong> 为 0;修改另外两个<code>label</code>为 <code>right-align</code>;修改<code>slider</code>的<strong>Minimum</strong>为1, <strong>Maximum</strong>为200</li>
+<li>选中<code>FontInfoViewController</code>，打开连接检查器。</li>
+<li>关联 <code>Outlets</code><br />
+    拖动<code>fontSampleLabel</code>到上面的<code>label</code><br />
+    拖动<code>fontSizeLabel</code>到下面右边<code>label</code><br />
+    拖动<code>favoriteSwitch</code><br />
+    拖动<code>fontSizeSlider</code></li>
+<li>关联 <code>Actions</code><br />
+    拖动<code>slideFontSize</code> 弹出菜单选中<strong>Value Changed</strong><br />
+    拖动<code>toggleFavorite</code> 弹出菜单选中<strong>Value Changed</strong> </li>
+<li>创建过渡或&rdquo;转场&rdquo;(segue) <br />
+    Control-drag <code>Font List View Controller</code>里的table cell 到 <code>FontSizesViewController</code>, 弹出菜单选择 <strong>Accessory Action</strong> 的 <strong>show</strong><br />
+    修改<code>Font List View Controller</code>到<code>Font Sizes View Controller</code>的segue的<strong>Identifier</strong>为<strong>f</strong> <br />
+    修改<code>Font List View Controller</code>到<code>Font Info View Controller</code>的segue的<strong>Identifier</strong>为<strong>ShowFontInfo</strong> </li>
+</ul>
+</li>
+<li>
+<p>Setting Up Constraints</p>
+<ul>
+<li>给上面的label增加3 Constraints</li>
+</ul>
+</li>
+<li>
+<p>Adapting the Font List View Controller for Multiple Segues</p>
+</li>
+<li>My Favorite Fonts<br />
+    ?? 运行报错 the Font Info View Controller 应该是这个问题<ul>
+<li>Table View Niceties</li>
+</ul>
+</li>
+<li>Implementing Swipe-to-Delete</li>
+<li>Implementing Drag-to-Reorder</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-collection-view-and-stack-view"><a name="user-content-10-collection-view-and-stack-view" href="#10-collection-view-and-stack-view" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10 Collection View and Stack View</h3>
+<ul>
+<li>Creating the DialogViewer Project <ul>
+<li>建立单页项目 <strong>DialogViewer</strong></li>
+<li>修改 <code>ViewController</code> 的父类为 <code>UICollectionViewController</code></li>
+<li>选中<code>Main.storyboard</code>, 删除 <code>View Controller</code>, 添加 <code>Collection View Controller</code></li>
+<li>修改<code>Collection View Controller</code>的 <strong>Class</strong> 为 <strong>ViewController</strong> </li>
+<li>勾选<strong> Is Initial View Controller </strong></li>
+</ul>
+</li>
+<li>Defining Custom Cells </li>
 </ul></article></body></html>
