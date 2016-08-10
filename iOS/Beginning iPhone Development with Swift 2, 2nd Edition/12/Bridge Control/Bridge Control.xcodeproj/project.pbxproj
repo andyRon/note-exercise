@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF4286CB1D59AA130037D0BC /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4286CA1D59AA130037D0BC /* HeaderCell.swift */; };
-		EFEBF4641D548E20009AEC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBF4631D548E20009AEC09 /* AppDelegate.swift */; };
-		EFEBF4661D548E20009AEC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBF4651D548E20009AEC09 /* ViewController.swift */; };
-		EFEBF4691D548E20009AEC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEBF4671D548E20009AEC09 /* Main.storyboard */; };
-		EFEBF46B1D548E20009AEC09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEBF46A1D548E20009AEC09 /* Assets.xcassets */; };
-		EFEBF46E1D548E20009AEC09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEBF46C1D548E20009AEC09 /* LaunchScreen.storyboard */; };
-		EFEBF4761D5494EC009AEC09 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEBF4751D5494EC009AEC09 /* ContentCell.swift */; };
+		EFF157FD1D5B31A900D0AC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF157FC1D5B31A900D0AC50 /* AppDelegate.swift */; };
+		EFF157FF1D5B31A900D0AC50 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF157FE1D5B31A900D0AC50 /* FirstViewController.swift */; };
+		EFF158011D5B31A900D0AC50 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF158001D5B31A900D0AC50 /* SecondViewController.swift */; };
+		EFF158041D5B31A900D0AC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF158021D5B31A900D0AC50 /* Main.storyboard */; };
+		EFF158061D5B31A900D0AC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFF158051D5B31A900D0AC50 /* Assets.xcassets */; };
+		EFF158091D5B31A900D0AC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF158071D5B31A900D0AC50 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EF4286CA1D59AA130037D0BC /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		EFEBF4601D548E20009AEC09 /* DialogViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DialogViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFEBF4631D548E20009AEC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFEBF4651D548E20009AEC09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EFEBF4681D548E20009AEC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EFEBF46A1D548E20009AEC09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EFEBF46D1D548E20009AEC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EFEBF46F1D548E20009AEC09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFEBF4751D5494EC009AEC09 /* ContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		EFF157F91D5B31A900D0AC50 /* Bridge Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bridge Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF157FC1D5B31A900D0AC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFF157FE1D5B31A900D0AC50 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		EFF158001D5B31A900D0AC50 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		EFF158031D5B31A900D0AC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFF158051D5B31A900D0AC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFF158081D5B31A900D0AC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFF1580A1D5B31A900D0AC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EFEBF45D1D548E20009AEC09 /* Frameworks */ = {
+		EFF157F61D5B31A900D0AC50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EFEBF4571D548E20009AEC09 = {
+		EFF157F01D5B31A900D0AC50 = {
 			isa = PBXGroup;
 			children = (
-				EFEBF4621D548E20009AEC09 /* DialogViewer */,
-				EFEBF4611D548E20009AEC09 /* Products */,
+				EFF157FB1D5B31A900D0AC50 /* Bridge Control */,
+				EFF157FA1D5B31A900D0AC50 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EFEBF4611D548E20009AEC09 /* Products */ = {
+		EFF157FA1D5B31A900D0AC50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EFEBF4601D548E20009AEC09 /* DialogViewer.app */,
+				EFF157F91D5B31A900D0AC50 /* Bridge Control.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EFEBF4621D548E20009AEC09 /* DialogViewer */ = {
+		EFF157FB1D5B31A900D0AC50 /* Bridge Control */ = {
 			isa = PBXGroup;
 			children = (
-				EFEBF4631D548E20009AEC09 /* AppDelegate.swift */,
-				EFEBF4651D548E20009AEC09 /* ViewController.swift */,
-				EFEBF4671D548E20009AEC09 /* Main.storyboard */,
-				EFEBF46A1D548E20009AEC09 /* Assets.xcassets */,
-				EFEBF46C1D548E20009AEC09 /* LaunchScreen.storyboard */,
-				EFEBF46F1D548E20009AEC09 /* Info.plist */,
-				EFEBF4751D5494EC009AEC09 /* ContentCell.swift */,
-				EF4286CA1D59AA130037D0BC /* HeaderCell.swift */,
+				EFF157FC1D5B31A900D0AC50 /* AppDelegate.swift */,
+				EFF157FE1D5B31A900D0AC50 /* FirstViewController.swift */,
+				EFF158001D5B31A900D0AC50 /* SecondViewController.swift */,
+				EFF158021D5B31A900D0AC50 /* Main.storyboard */,
+				EFF158051D5B31A900D0AC50 /* Assets.xcassets */,
+				EFF158071D5B31A900D0AC50 /* LaunchScreen.storyboard */,
+				EFF1580A1D5B31A900D0AC50 /* Info.plist */,
 			);
-			path = DialogViewer;
+			path = "Bridge Control";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EFEBF45F1D548E20009AEC09 /* DialogViewer */ = {
+		EFF157F81D5B31A900D0AC50 /* Bridge Control */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFEBF4721D548E20009AEC09 /* Build configuration list for PBXNativeTarget "DialogViewer" */;
+			buildConfigurationList = EFF1580D1D5B31A900D0AC50 /* Build configuration list for PBXNativeTarget "Bridge Control" */;
 			buildPhases = (
-				EFEBF45C1D548E20009AEC09 /* Sources */,
-				EFEBF45D1D548E20009AEC09 /* Frameworks */,
-				EFEBF45E1D548E20009AEC09 /* Resources */,
+				EFF157F51D5B31A900D0AC50 /* Sources */,
+				EFF157F61D5B31A900D0AC50 /* Frameworks */,
+				EFF157F71D5B31A900D0AC50 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DialogViewer;
-			productName = DialogViewer;
-			productReference = EFEBF4601D548E20009AEC09 /* DialogViewer.app */;
+			name = "Bridge Control";
+			productName = "Bridge Control";
+			productReference = EFF157F91D5B31A900D0AC50 /* Bridge Control.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EFEBF4581D548E20009AEC09 /* Project object */ = {
+		EFF157F11D5B31A900D0AC50 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = andyron;
 				TargetAttributes = {
-					EFEBF45F1D548E20009AEC09 = {
+					EFF157F81D5B31A900D0AC50 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = EFEBF45B1D548E20009AEC09 /* Build configuration list for PBXProject "DialogViewer" */;
+			buildConfigurationList = EFF157F41D5B31A900D0AC50 /* Build configuration list for PBXProject "Bridge Control" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,56 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = EFEBF4571D548E20009AEC09;
-			productRefGroup = EFEBF4611D548E20009AEC09 /* Products */;
+			mainGroup = EFF157F01D5B31A900D0AC50;
+			productRefGroup = EFF157FA1D5B31A900D0AC50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFEBF45F1D548E20009AEC09 /* DialogViewer */,
+				EFF157F81D5B31A900D0AC50 /* Bridge Control */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EFEBF45E1D548E20009AEC09 /* Resources */ = {
+		EFF157F71D5B31A900D0AC50 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEBF46E1D548E20009AEC09 /* LaunchScreen.storyboard in Resources */,
-				EFEBF46B1D548E20009AEC09 /* Assets.xcassets in Resources */,
-				EFEBF4691D548E20009AEC09 /* Main.storyboard in Resources */,
+				EFF158091D5B31A900D0AC50 /* LaunchScreen.storyboard in Resources */,
+				EFF158061D5B31A900D0AC50 /* Assets.xcassets in Resources */,
+				EFF158041D5B31A900D0AC50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EFEBF45C1D548E20009AEC09 /* Sources */ = {
+		EFF157F51D5B31A900D0AC50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4286CB1D59AA130037D0BC /* HeaderCell.swift in Sources */,
-				EFEBF4761D5494EC009AEC09 /* ContentCell.swift in Sources */,
-				EFEBF4661D548E20009AEC09 /* ViewController.swift in Sources */,
-				EFEBF4641D548E20009AEC09 /* AppDelegate.swift in Sources */,
+				EFF158011D5B31A900D0AC50 /* SecondViewController.swift in Sources */,
+				EFF157FD1D5B31A900D0AC50 /* AppDelegate.swift in Sources */,
+				EFF157FF1D5B31A900D0AC50 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EFEBF4671D548E20009AEC09 /* Main.storyboard */ = {
+		EFF158021D5B31A900D0AC50 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EFEBF4681D548E20009AEC09 /* Base */,
+				EFF158031D5B31A900D0AC50 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		EFEBF46C1D548E20009AEC09 /* LaunchScreen.storyboard */ = {
+		EFF158071D5B31A900D0AC50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EFEBF46D1D548E20009AEC09 /* Base */,
+				EFF158081D5B31A900D0AC50 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EFEBF4701D548E20009AEC09 /* Debug */ = {
+		EFF1580B1D5B31A900D0AC50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		EFEBF4711D548E20009AEC09 /* Release */ = {
+		EFF1580C1D5B31A900D0AC50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,24 +251,24 @@
 			};
 			name = Release;
 		};
-		EFEBF4731D548E20009AEC09 /* Debug */ = {
+		EFF1580E1D5B31A900D0AC50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DialogViewer/Info.plist;
+				INFOPLIST_FILE = "Bridge Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.DialogViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.Bridge-Control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		EFEBF4741D548E20009AEC09 /* Release */ = {
+		EFF1580F1D5B31A900D0AC50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DialogViewer/Info.plist;
+				INFOPLIST_FILE = "Bridge Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.DialogViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.Bridge-Control";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -280,25 +276,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EFEBF45B1D548E20009AEC09 /* Build configuration list for PBXProject "DialogViewer" */ = {
+		EFF157F41D5B31A900D0AC50 /* Build configuration list for PBXProject "Bridge Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFEBF4701D548E20009AEC09 /* Debug */,
-				EFEBF4711D548E20009AEC09 /* Release */,
+				EFF1580B1D5B31A900D0AC50 /* Debug */,
+				EFF1580C1D5B31A900D0AC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFEBF4721D548E20009AEC09 /* Build configuration list for PBXNativeTarget "DialogViewer" */ = {
+		EFF1580D1D5B31A900D0AC50 /* Build configuration list for PBXNativeTarget "Bridge Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFEBF4731D548E20009AEC09 /* Debug */,
-				EFEBF4741D548E20009AEC09 /* Release */,
+				EFF1580E1D5B31A900D0AC50 /* Debug */,
+				EFF1580F1D5B31A900D0AC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EFEBF4581D548E20009AEC09 /* Project object */;
+	rootObject = EFF157F11D5B31A900D0AC50 /* Project object */;
 }

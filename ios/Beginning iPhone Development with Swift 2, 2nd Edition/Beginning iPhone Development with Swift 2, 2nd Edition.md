@@ -226,6 +226,17 @@
 
 - Making the Layout Flow
 
+- Providing Header Views 
+
+- Working with UIStackView 
+
+
+### 11 Using Split Views and Popovers
+
+
+### 12 Applicatoin Settings and User Defaults
+    
+
         
                 
             
