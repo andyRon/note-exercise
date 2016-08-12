@@ -13,6 +13,7 @@
 		EFF158041D5B31A900D0AC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF158021D5B31A900D0AC50 /* Main.storyboard */; };
 		EFF158061D5B31A900D0AC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFF158051D5B31A900D0AC50 /* Assets.xcassets */; };
 		EFF158091D5B31A900D0AC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFF158071D5B31A900D0AC50 /* LaunchScreen.storyboard */; };
+		EFF158111D5C138200D0AC50 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF158101D5C138200D0AC50 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EFF158051D5B31A900D0AC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFF158081D5B31A900D0AC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFF1580A1D5B31A900D0AC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF158101D5C138200D0AC50 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EFF158051D5B31A900D0AC50 /* Assets.xcassets */,
 				EFF158071D5B31A900D0AC50 /* LaunchScreen.storyboard */,
 				EFF1580A1D5B31A900D0AC50 /* Info.plist */,
+				EFF158101D5C138200D0AC50 /* Settings.bundle */,
 			);
 			path = "Bridge Control";
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF158111D5C138200D0AC50 /* Settings.bundle in Resources */,
 				EFF158091D5B31A900D0AC50 /* LaunchScreen.storyboard in Resources */,
 				EFF158061D5B31A900D0AC50 /* Assets.xcassets in Resources */,
 				EFF158041D5B31A900D0AC50 /* Main.storyboard in Resources */,

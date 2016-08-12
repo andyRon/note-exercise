@@ -10,21 +10,29 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Group</string>
+			<string>General Info</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Name</string>
+			<string>Commanding Officer </string>
 			<key>Key</key>
-			<string>name_preference</string>
-			<key>DefaultValue</key>
-			<string></string>
+			<string>officer</string>
+			<key>AutocapitalizationType</key>
+			<string>Words</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Authorization Code</string>
+			<key>Key</key>
+			<string>authorizationCode</string>
 			<key>IsSecure</key>
-			<false/>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
+			<true/>
 			<key>AutocapitalizationType</key>
 			<string>None</string>
 			<key>AutocorrectionType</key>
@@ -32,29 +40,41 @@
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
+			<string>PSMultiValueSpecifier</string>
+			<key>Titles</key>
+			<array>
+				<string>Ensign</string>
+				<string>Lieutenant</string>
+				<string> Lieutenant Commander</string>
+				<string>Commander</string>
+				<string>Captain</string>
+				<string>Commodore</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Ensign</string>
+				<string>Lieutenant</string>
+				<string> Lieutenant Commander</string>
+				<string>Commander</string>
+				<string>Captain</string>
+				<string>Commodore</string>
+			</array>
 			<key>Title</key>
-			<string>Enabled</string>
+			<string>Rank</string>
 			<key>Key</key>
-			<string>enabled_preference</string>
+			<string>rank</string>
 			<key>DefaultValue</key>
-			<true/>
+			<string>Ensign</string>
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSSliderSpecifier</string>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Warp Drive</string>
 			<key>Key</key>
-			<string>slider_preference</string>
+			<string>warp</string>
 			<key>DefaultValue</key>
-			<real>0.5</real>
-			<key>MinimumValue</key>
-			<integer>0</integer>
-			<key>MaximumValue</key>
-			<integer>1</integer>
-			<key>MinimumValueImage</key>
-			<string></string>
-			<key>MaximumValueImage</key>
-			<string></string>
+			<true/>
 		</dict>
 	</array>
 </dict>
