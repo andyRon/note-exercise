@@ -226,6 +226,7 @@
                     im.format 
                     im.show()       # 以临时文件打开
 
+            * 其他系统 `sudo apt-get install python-pip` `sudo apt-get install python-pip`    
         + 模块搜索路径
 
                 import sys
@@ -260,6 +261,18 @@
 ### 7 面向对象高级编程
 
 
+
+
+
+
+
+
+-------------
+### linux等系统安装 pip
+    - `wget https://bootstrap.pypa.io/get-pip.py`  下载 文件
+    - `sudo python get-pip.py`
+### 安装
+    - `sudo pip install requests`
 
 
 
