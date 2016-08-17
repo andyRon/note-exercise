@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Code.xcscheme</key>
+		<key>TextFieldTextView-Code.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>Code2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>LabelButton.xcscheme</key>
+		<key>TextFieldTextView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EF42869E1D594FD40037D0BC</key>
+		<key>EF04796E1D652846002E7D92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF4286B71D5950E40037D0BC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EF8DCE0B1D63E0D9009EE99A</key>
+		<key>EF0479871D652B8D002E7D92</key>
 		<dict>
 			<key>primary</key>
 			<true/>

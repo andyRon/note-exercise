@@ -15,3 +15,33 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
 
 
 ### 3 
+
+
+
+
+总结
+-------------------------------
+### iOS相关类
+AppDelegate UIResponder <Pr>UIApplicationDelegate
+ViewController UIViewController UINavigationController UITabBarController UIPageViewController UISplitViewController UIPopoverController
+
+UIView  
+    UIWindow
+    UILabel
+    UITableViewCell
+    UIScrollView    
+        UITableView UITextView UICollectionView
+    UIPickerView
+    UIProgressView
+    UIActivityIndicatorView
+    UIImageView
+    UITabBar 
+    UIToolBar
+    UIControl   
+        UIButton UIDatePicker UIPageControl UISegmentedControl UITextField UISlider UISwitch 
+    UINavigationBar
+    UIActionSheet
+    UIAlertView
+    UIWebView   WKWebView WebView
+        WKNavigationDelegate 
+

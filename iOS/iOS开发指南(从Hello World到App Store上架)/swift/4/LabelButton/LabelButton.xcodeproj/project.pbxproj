@@ -12,11 +12,11 @@
 		EF4286A81D594FD40037D0BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A61D594FD40037D0BC /* Main.storyboard */; };
 		EF4286AA1D594FD40037D0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286A91D594FD40037D0BC /* Assets.xcassets */; };
 		EF4286AD1D594FD40037D0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4286AB1D594FD40037D0BC /* LaunchScreen.storyboard */; };
-		EF4286BB1D5950E40037D0BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4286BA1D5950E40037D0BC /* AppDelegate.swift */; };
-		EF4286BD1D5950E40037D0BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4286BC1D5950E40037D0BC /* ViewController.swift */; };
-		EF4286C01D5950E40037D0BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4286BE1D5950E40037D0BC /* Main.storyboard */; };
-		EF4286C21D5950E40037D0BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4286C11D5950E40037D0BC /* Assets.xcassets */; };
-		EF4286C51D5950E40037D0BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4286C31D5950E40037D0BC /* LaunchScreen.storyboard */; };
+		EF8DCE0F1D63E0D9009EE99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DCE0E1D63E0D9009EE99A /* AppDelegate.swift */; };
+		EF8DCE111D63E0D9009EE99A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DCE101D63E0D9009EE99A /* ViewController.swift */; };
+		EF8DCE141D63E0D9009EE99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8DCE121D63E0D9009EE99A /* Main.storyboard */; };
+		EF8DCE161D63E0D9009EE99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8DCE151D63E0D9009EE99A /* Assets.xcassets */; };
+		EF8DCE191D63E0D9009EE99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8DCE171D63E0D9009EE99A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,13 @@
 		EF4286AC1D594FD40037D0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4286AE1D594FD40037D0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4286B81D5950E40037D0BC /* Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF4286BA1D5950E40037D0BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF4286BC1D5950E40037D0BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF4286BF1D5950E40037D0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EF4286C11D5950E40037D0BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF4286C41D5950E40037D0BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EF4286C61D5950E40037D0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8DCE0C1D63E0D9009EE99A /* Code2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8DCE0E1D63E0D9009EE99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF8DCE101D63E0D9009EE99A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF8DCE131D63E0D9009EE99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF8DCE151D63E0D9009EE99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF8DCE181D63E0D9009EE99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF8DCE1A1D63E0D9009EE99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EF8DCE091D63E0D9009EE99A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4286A11D594FD40037D0BC /* LabelButton */,
-				EF4286B91D5950E40037D0BC /* Code */,
+				EF8DCE0D1D63E0D9009EE99A /* Code2 */,
 				EF4286A01D594FD40037D0BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +76,7 @@
 			children = (
 				EF42869F1D594FD40037D0BC /* LabelButton.app */,
 				EF4286B81D5950E40037D0BC /* Code.app */,
+				EF8DCE0C1D63E0D9009EE99A /* Code2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,17 +94,17 @@
 			path = LabelButton;
 			sourceTree = "<group>";
 		};
-		EF4286B91D5950E40037D0BC /* Code */ = {
+		EF8DCE0D1D63E0D9009EE99A /* Code2 */ = {
 			isa = PBXGroup;
 			children = (
-				EF4286BA1D5950E40037D0BC /* AppDelegate.swift */,
-				EF4286BC1D5950E40037D0BC /* ViewController.swift */,
-				EF4286BE1D5950E40037D0BC /* Main.storyboard */,
-				EF4286C11D5950E40037D0BC /* Assets.xcassets */,
-				EF4286C31D5950E40037D0BC /* LaunchScreen.storyboard */,
-				EF4286C61D5950E40037D0BC /* Info.plist */,
+				EF8DCE0E1D63E0D9009EE99A /* AppDelegate.swift */,
+				EF8DCE101D63E0D9009EE99A /* ViewController.swift */,
+				EF8DCE121D63E0D9009EE99A /* Main.storyboard */,
+				EF8DCE151D63E0D9009EE99A /* Assets.xcassets */,
+				EF8DCE171D63E0D9009EE99A /* LaunchScreen.storyboard */,
+				EF8DCE1A1D63E0D9009EE99A /* Info.plist */,
 			);
-			path = Code;
+			path = Code2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +144,23 @@
 			productReference = EF4286B81D5950E40037D0BC /* Code.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EF8DCE0B1D63E0D9009EE99A /* Code2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8DCE1B1D63E0D9009EE99A /* Build configuration list for PBXNativeTarget "Code2" */;
+			buildPhases = (
+				EF8DCE081D63E0D9009EE99A /* Sources */,
+				EF8DCE091D63E0D9009EE99A /* Frameworks */,
+				EF8DCE0A1D63E0D9009EE99A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Code2;
+			productName = Code2;
+			productReference = EF8DCE0C1D63E0D9009EE99A /* Code2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +175,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					EF4286B71D5950E40037D0BC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					EF8DCE0B1D63E0D9009EE99A = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -168,6 +197,7 @@
 			targets = (
 				EF42869E1D594FD40037D0BC /* LabelButton */,
 				EF4286B71D5950E40037D0BC /* Code */,
+				EF8DCE0B1D63E0D9009EE99A /* Code2 */,
 			);
 		};
 /* End PBXProject section */
@@ -187,9 +217,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4286C51D5950E40037D0BC /* LaunchScreen.storyboard in Resources */,
-				EF4286C21D5950E40037D0BC /* Assets.xcassets in Resources */,
-				EF4286C01D5950E40037D0BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8DCE0A1D63E0D9009EE99A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8DCE191D63E0D9009EE99A /* LaunchScreen.storyboard in Resources */,
+				EF8DCE161D63E0D9009EE99A /* Assets.xcassets in Resources */,
+				EF8DCE141D63E0D9009EE99A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +246,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4286BD1D5950E40037D0BC /* ViewController.swift in Sources */,
-				EF4286BB1D5950E40037D0BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8DCE081D63E0D9009EE99A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8DCE111D63E0D9009EE99A /* ViewController.swift in Sources */,
+				EF8DCE0F1D63E0D9009EE99A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,18 +277,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		EF4286BE1D5950E40037D0BC /* Main.storyboard */ = {
+		EF8DCE121D63E0D9009EE99A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EF4286BF1D5950E40037D0BC /* Base */,
+				EF8DCE131D63E0D9009EE99A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		EF4286C31D5950E40037D0BC /* LaunchScreen.storyboard */ = {
+		EF8DCE171D63E0D9009EE99A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EF4286C41D5950E40037D0BC /* Base */,
+				EF8DCE181D63E0D9009EE99A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -381,6 +425,28 @@
 			};
 			name = Release;
 		};
+		EF8DCE1C1D63E0D9009EE99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Code2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.Code2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF8DCE1D1D63E0D9009EE99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Code2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.Code2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -400,6 +466,7 @@
 				EF4286B31D594FD40037D0BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF4286C71D5950E40037D0BC /* Build configuration list for PBXNativeTarget "Code" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +475,16 @@
 				EF4286C91D5950E40037D0BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8DCE1B1D63E0D9009EE99A /* Build configuration list for PBXNativeTarget "Code2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8DCE1C1D63E0D9009EE99A /* Debug */,
+				EF8DCE1D1D63E0D9009EE99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
