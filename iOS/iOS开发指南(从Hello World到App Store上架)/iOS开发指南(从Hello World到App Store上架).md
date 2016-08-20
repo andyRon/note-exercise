@@ -45,3 +45,8 @@ UIView
     UIWebView   WKWebView WebView
         WKNavigationDelegate 
 
+
+
+### 错误记录 
+- `Selector("testLoadData:")` 这种参数字符串中的冒号不能忘
+
