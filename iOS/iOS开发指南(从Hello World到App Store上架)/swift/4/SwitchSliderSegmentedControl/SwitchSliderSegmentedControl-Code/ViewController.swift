@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var rightSwitch: UISwitch!
     var sliderValue: UILabel!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -45,14 +46,77 @@ class ViewController: UIViewController {
         
         self.view.addSubview(self.rightSwitch)
         
+        //3. segmentControl
+        let segments = ["Right", "Left"]
+        let segmentedControl = UISegmentedControl(items: segments)
+        
+        let scWidth: CGFloat = 220
+        let scHeight: CGFloat = 29
+        let scTopView: CGFloat = 186
+        frame = CGRectMake((screen.size.width - scWidth)/2, scTopView, scWidth, scHeight)
+        segmentedControl.frame = frame
+        
+        segmentedControl.addTarget(self, action: Selector("touchDown:"), forControlEvents: .ValueChanged)
+        
+        self.view.addSubview(segmentedControl)
+        
+        //4. slider
+        let sliderWidth: CGFloat = 300
+        let sliderHeight: CGFloat = 31
+        let sliderTopView: CGFloat = 298
+        frame = CGRectMake((screen.size.width - sliderWidth)/2, sliderTopView, sliderWidth, sliderHeight)
+        let slider = UISlider(frame: frame)
+        
+        slider.maximumValue = 100
+        slider.minimumValue = 0
+        slider.value = 50
+        
+        slider.addTarget(self, action: "sliderValueChange:", forControlEvents: .ValueChanged)
+        self.view.addSubview(slider)
+        
+        //5 添加"SliderValue"标签
+        let labelSliderValueSpace: CGFloat = 30
+        frame = CGRectMake(slider.frame.origin.x, slider.frame.origin.y - labelSliderValueSpace, 103, 21)
+        let labelSliderValue = UILabel(frame: frame)
+        
+        labelSliderValue.text = "SliderValue:"
+        self.view.addSubview(labelSliderValue)
+        
+        //6 添加sliderValue标签
+        frame = CGRectMake(labelSliderValue.frame.origin.x + 120, labelSliderValue.frame.origin.y, 50, 21)
+        self.sliderValue = UILabel(frame: frame)
+        self.sliderValue.text = "50"
+        self.view.addSubview(self.sliderValue)
         
     }
     
     func switchValueChanged(sender: AnyObject) {
-        var withSwitch = sender as! UISwitch
-        var setting = withSwitch.on
+        let withSwitch = sender as! UISwitch
+        let setting = withSwitch.on
         self.leftSwitch.setOn(setting, animated: true)
         self.rightSwitch.setOn(setting, animated: true)
+    }
+    
+    func touchDown(sender: AnyObject) {
+        let segmentControl = sender as! UISegmentedControl
+        
+        NSLog("选择的段: %li", segmentControl.selectedSegmentIndex)
+        
+        if (self.leftSwitch.hidden == true) {
+            self.rightSwitch.hidden = false
+            self.leftSwitch.hidden = false
+        } else {
+            self.leftSwitch.hidden = true
+            self.rightSwitch.hidden = true
+        }
+    }
+    
+    func sliderValueChange(sender: AnyObject) {
+        let slider = sender as! UISlider
+        let progressAsInt = Int(slider.value)
+        let newText = NSString(format: "%d", progressAsInt)
+        self.sliderValue.text = newText as String
+        
     }
     
     override func didReceiveMemoryWarning() {
