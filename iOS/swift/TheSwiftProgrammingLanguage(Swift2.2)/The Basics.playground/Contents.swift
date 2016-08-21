@@ -83,6 +83,16 @@ do {
 //let age = -2
 //assert(age >= 0, "A person's age cannot be less than zero")
 
+print(cc, c,separator: "|",terminator: "!!")
+
+12.34e3
+0x12.34p3
+0xC.3p0
+
+0x12
+
+4 + 3.123
+
 
 
 

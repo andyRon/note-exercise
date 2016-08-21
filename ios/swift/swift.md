@@ -1,4 +1,4 @@
-### swift 开始
+## swift 开始
 - `println("hello,swift")` 不需要每次都引入单独的库
 - 简单值
   + `let` `var`
@@ -15,15 +15,19 @@
 
 
 
-### Swift教程
-1. 基础部分
+## Swift教程
+### 1. 基础部分
 	> 类型安全的语言？  
 	
    + 常量和变量  `let`	`var`， 只将需要改变的值设为变量
    + 类型标注(type annotation)   `:` 
    + 常量与变量的命名  Unicode字符 开头有限制
+   		* 常量与变量名不能包含数学符号,箭头,保留的(或者非法的)Unicode 码位,连线与制表符
+   		* 一旦你将常量或者变量声明为确定的类型,你就不能使用相同的名字再次进行声明,或者改变其存储的值的类型。同时,你也不能将常量与变量进行互转
+   		* 反引号包围来使用保留关键字		 
    + 输出常量和变量
        * `println`与`print` 只是最后换不换行的差别。类似Cocoa中得`NSLog`
+       * `print(_:separator:terminator:) `
        * 字符串插值（**string interpolation**） `\()` 可以包含常量、变量、字面量和表达式。 括号中不能包含非转义双引号（"）和反斜杠(\\),回车或换行符
    + 注释	可以嵌套注释
    + 分号	在一行写多条独立语句时需要分号，其它情况不是必须的
@@ -36,12 +40,13 @@
    		* `0b`
    		* `0o`
    		* `0x`
-   		* 指数(exponent)  `1.23e4`  `0xfp4` 
+   		* 指数(exponent)  十进制:`1.23e4`, 十六进制:`0xfp4` 
    		* 十六进制浮点数
    		* `2_000_000`(只是增加可读性)
+   		* `let hexadecimalDouble = 0xC.3p0 // 12+(3/16)` p0不能去掉，十六进制的浮点数必须带指数
    + 数值型类型转换
         * 一般Int，只有在必要的时候才使用其他整数类型，比如要处理外部的长度明确的数据或者为了优化性能、内存占用等等。
-        * 整数和浮点数的转换必须显示指定类型，而字面量可以直接相加
+        * 整数和浮点数的转换必须显示指定类型，而字面量可以直接相加(`3 + 0.14159`, 因为数字字面量本身没有明确的类型。它们的类型只在编译器需要求值的时候被推测。)
         
         		let three = 3
 				let pointOneFourOneFiveNine = 0.14159
@@ -69,19 +74,30 @@
 		* Swift的可选类型可以让你暗示任意类型的值缺失，并不需要一个特殊值
 		* int? 可能包含Int值也可能不包含值
 		* if语句以及强制解析
+			- 使用 if 语句和 nil 比较来判断一个可选值是否包含值
+			- `!`
 		* **可选绑定** if while
+			
+				if let actualNumber = Int(possibleNumber) {
+				} else {
+				}
+
+				- *如果 返回的可选   包含一个值,创建一个叫做   的新常量并将可选包含 的值赋给它。*
 		* **nil**	
 		如果代码中又常量或变量需要处理缺失的情况，声明为对于的可选类型 `let some:Int? = 404`  
 		swift中得nil与OjC是不同的
 		* **隐式解析可选类型**
+	+ 错误处理???
 	+ 断言(assertion) 
 		* 断言会结束代码运行并通过调试来找到值缺失的原因
 		* `assert()`
 		* 何时使用断言：当条件可能为假时使用断言，但是最终一定要保证条件为真，这样你的代码才能继续运行。
-2. 基本运算符
+	
+### 2. 基本运算符
 	+ swift赋值符（=）不返回值
-	+ **溢出运算符** &+
-	+ 可对浮点数求余	`8%2.5 //0.5`
+	+ **溢出运算符** &+	**Swift 默认情况下不允许在数值运算中出现溢出情况**
+	+ 可对浮点数求余	`8%2.5 //0.5`   
+		**a = (b × 倍数) + 余数** (倍数是整数，可以使负数)
 	+ 自增和自减	整形和浮点
 	+ 复合赋值(compound assignment operators) `+=`
 	+ 比较运算符 `==` `!=` `>=` `<=` `>` `<`  
@@ -89,13 +105,14 @@
 	  
 	+ 三目运算符(ternary conditional operator)
 	+ 空合运算符(Nil Coalescing Operator)
-		* `a ?? b`  相当于  `a != nil ? a! : b`（a必需是可选类型）
+		* `a ?? b`  相当于  `a != nil ? a! : b`（a必需是可选类型）(?? 前后要空格)
 	+ 区间运算符
 		* `a...b`
 		* `a..<b`
 	+ 逻辑运算符
+
 	
-3. 字符串和字符
+## 3. 字符串和字符
 	+ `String`	`NSString`(Foundation)
 	+ `Character` 字符类型只能有一个字符 `"a"`
 	+ Unicode标量：`\u{n}`	n为任意的一到八位十六进制数
@@ -108,7 +125,10 @@
 	+ Swift中字符在一个字符串中并不一定占用相同的内存空间
 	+ `.hasPrefix()`		`.hasSuffix()`
 	+ Foundation	`.uppercaseString()` `.lowercaseString()`
-	+ Unicode ??
+	+ Unicode 
+		* Unicode 标量(Unicode Scalars)
+		* 字符串字面量的特殊字符 (Special Characters in String Literals)
+		* 可扩展的字形群集(Extended Grapheme Clusters)
 	+ `.unicodeScalars` 得到unicode的十进制数
 	
 			let aa = "我们"
@@ -207,35 +227,50 @@
 		
 		
 6. 函数
-	+ Defining and Calling Functions
-		- parameters
-		- arguments
-	+ Function Parameters and Return Values
-		- Multiple Input Parameters
-		- Functions Without Parameters
-		- Functions Without Return Values
+	+ 函数类型	参数值类型 返回值类型
+	+ 函数定义与调用(Defining and Calling Functions)
+		- 参数 parameters
+		- 实参 arguments
+		- 函数定义：函数做什么,它期望接收什么和执行结束时它返回的结果是什么
+		- 
+	+ 函数参数与返回值(Function Parameters and Return Values)
+		- 多重输入参数(Multiple Input Parameters)
+		- 多参量函数(Functions With Multiple Parameters)  区别是不同的类型的参数？？  
+			**当调用超过一个参数的函数时,第一个参数后的参数根据其对应的参数名称标记**
+		- 无参函数(Functions Without Parameters)
+		- 无返回值函数(Functions Without Return Values)
 			* 返回 `Void`(一个空的元组，`()`)	
-		- Functions with Multiple Return Values
+		- 多重返回值函数(Functions with Multiple Return Values)
 			* `func count(string: String)->(vowels:Int,consonants:Int,others:Int){}`
-	+ Function Parameter Names
-		- External Parameter Names
+			* **元组的成员不需要在函数中返回时命名,因为它们的名字已经在函数返回类型中有了定义**
+			* **注意: 可选元组类型如 (Int,Int)? 与元组包含可选属性如 (Int?,Int?) 是不同的.**
+	+ 函数参数名称(Function Parameter Names)
+		- **外部参数名**(External Parameter Names)
+		- **本地参数名**(local parameter name)  
+			*外部参数名用来标记传递给函数调用的参数,本地参数名在实现函数的时候使用.*  
+			*一般情况下,第一个参数省略其外部参数名,第二个以后的参数使用其本地参数名作为自己的外部参数名.所有参数 需要有不同的本地参数名,但可以共享相同的外部参数名*  
+			*如果你提供了外部参数名,那么函数在被调用时,必须使用外部参数名。*  
+			*使用外部参数名可以使得函数可以用一句话表达清楚,并且使得函数体内部可读,能表达出函数的明确意图.*  
+			*如果你不想为第二个及后续的参数设置参数名,用一个下划线(_)代替一个明确地参数名.*
 				
 				func join(string s1:String, toString s2:String, withJoiner joiner:String)->String{
 					return s1 + joiner + s2
 				}
 				join(string:"hello",toString:"world",withJoiner:", ")
-		- Shorthand External Parameter Names (用`#`表示一个参数名同时作为局部和外部参数名)
+		<!-- - Shorthand External Parameter Names (用`#`表示一个参数名同时作为局部和外部参数名)
 				
 				func containsCharacter(#string:String, #characterToFind:Character)->Bool{
-				}
-		- Default Parameter Values
+				} -->
+		- 默认参数值(Default Parameter Values)
 				
 				func join(withJoiner joiner:String=" ")->String{ }
 		- External Names for Parameters with Default Values
 		- 可变参数(Variadic Parameters)
 			+ 在变量类型名后面加入(...)	`func arith(numbers:Double...)->Double{ }`
-			+ 一个函数至多能有个可变参数，并且必须是参数表中得最后一个
-		- Constant and Variable Parameters
+			+ 传入可变参数的值在函数体内当做这个类型的一个数组
+			+ 一个函数至多能有一个可变参数，并且必须是参数表中得最后一个
+		- 常量参数和变量参数(Constant and Variable Parameters)
+			+ 函数参数默认是常量。试图在函数体中更改参数值将会导致编译错误。
 		- 输入输出参数(In-Out Parameters) `inout`  `&`
 				
 				func swapTwoInts(inout a:Int, inout b:Int){
@@ -246,18 +281,23 @@
 				var someInt = 3
 				var anotherInt = 123
 				swapTwoInts(&someInt, &anotherInt)
+
+			+ 想要一个函数可以修改参数的值,并且想要在这些 修改在函数调用结束后仍然存在
+			+ 传入的参数作为输入输出参数时,需要在参数前加 & 符
+			+ *输入输出参数是函数对函数体外产生影响的另一种方式。*
 		
-	+ Function Types
+	+ 函数类型(Function Types)
 		- Using Function Types
 			+ `var mathFuction: (Int, Int) -> Int = addTwoInts`
 			+ `let anotherMathFunction = addTwoInts`(Swift可推断其函数类型)
-		- Function Types as Parameter Types
-		- Function Type as Return Types
+		- 函数类型作为参数类型(Function Types as Parameter Types)
+		- 函数类型作为返回类型(Function Type as Return Types)
 			
 				func chooseStepFunction(backwards:Bool)-> (Int)->Int{
 					return bacwards?stepBackward:stepForward
 				}
 	+ 嵌套函数(Nested Funcitons)	
+		- 一个封闭函数也可以返回它的某一个嵌套函数,使得这个函数可以在其他域中被使用。
 
 
 - 闭包(Closures)

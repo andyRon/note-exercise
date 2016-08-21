@@ -64,3 +64,13 @@ func getScore(){
 
 //getScore()
 
+func defaultParam(dp: Int = 1) {
+    print(dp);
+}
+defaultParam()
+//defaultParam(12)
+
+func `func`() {
+    
+}
+`func`()

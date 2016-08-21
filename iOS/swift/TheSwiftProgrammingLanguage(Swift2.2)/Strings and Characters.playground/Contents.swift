@@ -76,3 +76,10 @@ var dogString = "Dog??"
 for codeUint in dogString.utf8 {
     print("\(codeUint)", terminator:" ")
 }
+
+tmp 
+for c in dogString.unicodeScalars {
+    do
+}
+
+
