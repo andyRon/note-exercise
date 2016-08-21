@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UploadDownload" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uLe-Fc-Rvy">
+                                <rect key="frame" x="282" y="59" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-TG-8i5">
+                                <rect key="frame" x="275" y="133" width="50" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="startMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4J-cP-R5k"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-Z3-G26">
+                                <rect key="frame" x="225" y="299" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="gvI-Ku-CTY"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qW-7w-cR9">
+                                <rect key="frame" x="266" y="349" width="69" height="30"/>
+                                <state key="normal" title="Donwload"/>
+                                <connections>
+                                    <action selector="downloadProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6W-ob-y9N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4cW-Z3-G26" firstAttribute="centerX" secondItem="2qW-7w-cR9" secondAttribute="centerX" id="IA3-4b-bxX"/>
+                            <constraint firstItem="4cW-Z3-G26" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Im1-23-Hyz"/>
+                            <constraint firstItem="2qW-7w-cR9" firstAttribute="top" secondItem="4cW-Z3-G26" secondAttribute="bottom" constant="48" id="OLP-BG-iBg"/>
+                            <constraint firstItem="8gD-TG-8i5" firstAttribute="top" secondItem="uLe-Fc-Rvy" secondAttribute="bottom" constant="37" id="P6G-2m-zMP"/>
+                            <constraint firstItem="uLe-Fc-Rvy" firstAttribute="centerX" secondItem="8gD-TG-8i5" secondAttribute="centerX" id="Q6x-qN-Fik"/>
+                            <constraint firstItem="8gD-TG-8i5" firstAttribute="centerX" secondItem="4cW-Z3-G26" secondAttribute="centerX" id="g40-En-7kb"/>
+                            <constraint firstItem="uLe-Fc-Rvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kQV-Wm-E5T"/>
+                            <constraint firstItem="uLe-Fc-Rvy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="q8e-VR-QvR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="uLe-Fc-Rvy" id="FYs-cZ-IJt"/>
+                        <outlet property="progressView" destination="4cW-Z3-G26" id="B4k-tr-mGE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="334"/>
+        </scene>
+    </scenes>
+</document>

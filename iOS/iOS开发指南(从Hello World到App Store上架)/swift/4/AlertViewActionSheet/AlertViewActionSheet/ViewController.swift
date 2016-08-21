@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         buttonAlertView.frame = CGRectMake((screen.size.width - buttonAlertViewWidth)/2, buttonAlertViewTopView, buttonAlertViewWidth, buttonAlertViewHeight)
         buttonAlertView.addTarget(self, action: Selector("testAlertView:"), forControlEvents: .TouchUpInside)
         
+//        buttonAlertView.contentEdgeInsets = UIEdgeInsets()
+        buttonAlertView.layer.borderWidth = 1.0
+        buttonAlertView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
+        
         self.view.addSubview(buttonAlertView)
         
         // ActionSheet
