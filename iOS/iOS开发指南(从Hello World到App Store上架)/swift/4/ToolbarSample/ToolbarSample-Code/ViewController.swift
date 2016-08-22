@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let toolbarHeight: CGFloat = 44
         
         // toolbar
-        let toolbar = UIToolbar(frame: CGRectMake(0, screen.size.height - toolbarHeight, screen.size.height, screen.size.height))
+        let toolbar = UIToolbar(frame: CGRectMake(0, screen.size.height - toolbarHeight, screen.size.width, toolbarHeight))
         let saveButtonItem = UIBarButtonItem(barButtonSystemItem: .Save, target: self, action: Selector("save:"))
         
         let openButtonItem = UIBarButtonItem(title: "Open", style: .Plain, target: self, action: Selector("open:"))
