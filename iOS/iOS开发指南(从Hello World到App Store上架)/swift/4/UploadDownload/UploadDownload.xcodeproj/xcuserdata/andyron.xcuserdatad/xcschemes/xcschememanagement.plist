@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>UploadDownload-Code.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>UploadDownload.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EF2D1BAA1D6A70890045B511</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EFE4AEED1D692B7400339AC6</key>
 		<dict>
 			<key>primary</key>

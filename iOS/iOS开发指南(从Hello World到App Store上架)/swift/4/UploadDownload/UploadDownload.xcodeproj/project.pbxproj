@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2D1BAE1D6A70890045B511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D1BAD1D6A70890045B511 /* AppDelegate.swift */; };
+		EF2D1BB51D6A70890045B511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2D1BB41D6A70890045B511 /* Assets.xcassets */; };
+		EF2D1BB81D6A70890045B511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2D1BB61D6A70890045B511 /* LaunchScreen.storyboard */; };
+		EF2D1BBE1D6A70A50045B511 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D1BBD1D6A70A50045B511 /* ViewController.swift */; };
 		EFE4AEF21D692B7400339AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4AEF11D692B7400339AC6 /* AppDelegate.swift */; };
 		EFE4AEF41D692B7400339AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4AEF31D692B7400339AC6 /* ViewController.swift */; };
 		EFE4AEF71D692B7400339AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE4AEF51D692B7400339AC6 /* Main.storyboard */; };
@@ -15,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2D1BAB1D6A70890045B511 /* UploadDownload-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UploadDownload-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2D1BAD1D6A70890045B511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF2D1BB41D6A70890045B511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF2D1BB71D6A70890045B511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF2D1BB91D6A70890045B511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2D1BBD1D6A70A50045B511 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFE4AEEE1D692B7400339AC6 /* UploadDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE4AEF11D692B7400339AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFE4AEF31D692B7400339AC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +35,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF2D1BA81D6A70890045B511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFE4AEEB1D692B7400339AC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +52,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2D1BAC1D6A70890045B511 /* UploadDownload-Code */ = {
+			isa = PBXGroup;
+			children = (
+				EF2D1BAD1D6A70890045B511 /* AppDelegate.swift */,
+				EF2D1BB41D6A70890045B511 /* Assets.xcassets */,
+				EF2D1BB61D6A70890045B511 /* LaunchScreen.storyboard */,
+				EF2D1BB91D6A70890045B511 /* Info.plist */,
+				EF2D1BBD1D6A70A50045B511 /* ViewController.swift */,
+			);
+			path = "UploadDownload-Code";
+			sourceTree = "<group>";
+		};
 		EFE4AEE51D692B7400339AC6 = {
 			isa = PBXGroup;
 			children = (
 				EFE4AEF01D692B7400339AC6 /* UploadDownload */,
+				EF2D1BAC1D6A70890045B511 /* UploadDownload-Code */,
 				EFE4AEEF1D692B7400339AC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				EFE4AEEE1D692B7400339AC6 /* UploadDownload.app */,
+				EF2D1BAB1D6A70890045B511 /* UploadDownload-Code.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +98,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EF2D1BAA1D6A70890045B511 /* UploadDownload-Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2D1BBC1D6A70890045B511 /* Build configuration list for PBXNativeTarget "UploadDownload-Code" */;
+			buildPhases = (
+				EF2D1BA71D6A70890045B511 /* Sources */,
+				EF2D1BA81D6A70890045B511 /* Frameworks */,
+				EF2D1BA91D6A70890045B511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UploadDownload-Code";
+			productName = "UploadDownload-Code";
+			productReference = EF2D1BAB1D6A70890045B511 /* UploadDownload-Code.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EFE4AEED1D692B7400339AC6 /* UploadDownload */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFE4AF001D692B7400339AC6 /* Build configuration list for PBXNativeTarget "UploadDownload" */;
@@ -94,6 +142,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = andyron;
 				TargetAttributes = {
+					EF2D1BAA1D6A70890045B511 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					EFE4AEED1D692B7400339AC6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -113,11 +164,21 @@
 			projectRoot = "";
 			targets = (
 				EFE4AEED1D692B7400339AC6 /* UploadDownload */,
+				EF2D1BAA1D6A70890045B511 /* UploadDownload-Code */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EF2D1BA91D6A70890045B511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2D1BB81D6A70890045B511 /* LaunchScreen.storyboard in Resources */,
+				EF2D1BB51D6A70890045B511 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFE4AEEC1D692B7400339AC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +192,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF2D1BA71D6A70890045B511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2D1BBE1D6A70A50045B511 /* ViewController.swift in Sources */,
+				EF2D1BAE1D6A70890045B511 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EFE4AEEA1D692B7400339AC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +213,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EF2D1BB61D6A70890045B511 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2D1BB71D6A70890045B511 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		EFE4AEF51D692B7400339AC6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -162,6 +240,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EF2D1BBA1D6A70890045B511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UploadDownload-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.UploadDownload-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF2D1BBB1D6A70890045B511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "UploadDownload-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.UploadDownload-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EFE4AEFE1D692B7400339AC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -272,6 +372,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EF2D1BBC1D6A70890045B511 /* Build configuration list for PBXNativeTarget "UploadDownload-Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2D1BBA1D6A70890045B511 /* Debug */,
+				EF2D1BBB1D6A70890045B511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EFE4AEE91D692B7400339AC6 /* Build configuration list for PBXProject "UploadDownload" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -288,6 +396,7 @@
 				EFE4AF021D692B7400339AC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
