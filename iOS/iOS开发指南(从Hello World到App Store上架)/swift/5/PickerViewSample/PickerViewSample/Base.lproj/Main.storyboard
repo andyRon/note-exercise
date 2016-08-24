@@ -19,6 +19,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wc-S4-z93">
                                 <rect key="frame" x="0.0" y="15" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sdv-bM-JAh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gpL-KH-aDG"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D49-vh-DPZ">
                                 <rect key="frame" x="279" y="289" width="42" height="21"/>
