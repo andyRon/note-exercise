@@ -29,6 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     //MARK: -- UICollectionViewDataSource
+    // 总共多少节（行）
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         let num = self.events.count % COL_NUM
         if (num == 0) {
@@ -37,11 +38,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return self.events.count / COL_NUM + 1
         }
     }
-    
+    // 一节（一行）的列数
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return COL_NUM
     }
-    
+    // 为某一个单元格提供显示数据
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellIdentifier", forIndexPath: indexPath) as! EventCollectionView
         

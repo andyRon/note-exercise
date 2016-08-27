@@ -22,6 +22,20 @@
 		EF51457A1D6D16FA008BD4B4 /* canoe-sprint.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF5145711D6D16FA008BD4B4 /* canoe-sprint.gif */; };
 		EF51457B1D6D16FA008BD4B4 /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF5145721D6D16FA008BD4B4 /* events.plist */; };
 		EF51457D1D6D18EF008BD4B4 /* EventCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51457C1D6D18EF008BD4B4 /* EventCollectionView.swift */; };
+		EFE76F041D71149F007960C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE76F031D71149F007960C2 /* AppDelegate.swift */; };
+		EFE76F0B1D71149F007960C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F0A1D71149F007960C2 /* Assets.xcassets */; };
+		EFE76F0E1D71149F007960C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F0C1D71149F007960C2 /* LaunchScreen.storyboard */; };
+		EFE76F141D71165F007960C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE76F131D71165F007960C2 /* ViewController.swift */; };
+		EFE76F181D713D9D007960C2 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE76F171D713D9D007960C2 /* EventCollectionViewCell.swift */; };
+		EFE76F231D713EE3007960C2 /* archery.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1A1D713EE3007960C2 /* archery.gif */; };
+		EFE76F241D713EE3007960C2 /* athletics.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1B1D713EE3007960C2 /* athletics.gif */; };
+		EFE76F251D713EE3007960C2 /* badminton.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1C1D713EE3007960C2 /* badminton.gif */; };
+		EFE76F261D713EE3007960C2 /* basketball.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1D1D713EE3007960C2 /* basketball.gif */; };
+		EFE76F271D713EE3007960C2 /* beach-volleyball.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1E1D713EE3007960C2 /* beach-volleyball.gif */; };
+		EFE76F281D713EE3007960C2 /* boxing.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F1F1D713EE3007960C2 /* boxing.gif */; };
+		EFE76F291D713EE3007960C2 /* canoe-slalom.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F201D713EE3007960C2 /* canoe-slalom.gif */; };
+		EFE76F2A1D713EE3007960C2 /* canoe-sprint.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F211D713EE3007960C2 /* canoe-sprint.gif */; };
+		EFE76F2B1D713EE3007960C2 /* events.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFE76F221D713EE3007960C2 /* events.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +56,33 @@
 		EF5145711D6D16FA008BD4B4 /* canoe-sprint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "canoe-sprint.gif"; sourceTree = "<group>"; };
 		EF5145721D6D16FA008BD4B4 /* events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 		EF51457C1D6D18EF008BD4B4 /* EventCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionView.swift; sourceTree = "<group>"; };
+		EFE76F011D71149F007960C2 /* CollectionViewSample-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CollectionViewSample-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE76F031D71149F007960C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFE76F0A1D71149F007960C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFE76F0D1D71149F007960C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFE76F0F1D71149F007960C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE76F131D71165F007960C2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFE76F171D713D9D007960C2 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFE76F1A1D713EE3007960C2 /* archery.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = archery.gif; sourceTree = "<group>"; };
+		EFE76F1B1D713EE3007960C2 /* athletics.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = athletics.gif; sourceTree = "<group>"; };
+		EFE76F1C1D713EE3007960C2 /* badminton.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = badminton.gif; sourceTree = "<group>"; };
+		EFE76F1D1D713EE3007960C2 /* basketball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = basketball.gif; sourceTree = "<group>"; };
+		EFE76F1E1D713EE3007960C2 /* beach-volleyball.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "beach-volleyball.gif"; sourceTree = "<group>"; };
+		EFE76F1F1D713EE3007960C2 /* boxing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = boxing.gif; sourceTree = "<group>"; };
+		EFE76F201D713EE3007960C2 /* canoe-slalom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "canoe-slalom.gif"; sourceTree = "<group>"; };
+		EFE76F211D713EE3007960C2 /* canoe-sprint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "canoe-sprint.gif"; sourceTree = "<group>"; };
+		EFE76F221D713EE3007960C2 /* events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = events.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF5145511D6D16A8008BD4B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE76EFE1D71149F007960C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5145561D6D16A8008BD4B4 /* CollectionViewSimple */,
+				EFE76F021D71149F007960C2 /* CollectionViewSample-Code */,
 				EF5145551D6D16A8008BD4B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5145541D6D16A8008BD4B4 /* CollectionViewSimple.app */,
+				EFE76F011D71149F007960C2 /* CollectionViewSample-Code.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +141,36 @@
 			path = Olympics_Pic;
 			sourceTree = "<group>";
 		};
+		EFE76F021D71149F007960C2 /* CollectionViewSample-Code */ = {
+			isa = PBXGroup;
+			children = (
+				EFE76F191D713EE3007960C2 /* Olympics_Pic */,
+				EFE76F031D71149F007960C2 /* AppDelegate.swift */,
+				EFE76F0A1D71149F007960C2 /* Assets.xcassets */,
+				EFE76F0C1D71149F007960C2 /* LaunchScreen.storyboard */,
+				EFE76F0F1D71149F007960C2 /* Info.plist */,
+				EFE76F131D71165F007960C2 /* ViewController.swift */,
+				EFE76F171D713D9D007960C2 /* EventCollectionViewCell.swift */,
+			);
+			path = "CollectionViewSample-Code";
+			sourceTree = "<group>";
+		};
+		EFE76F191D713EE3007960C2 /* Olympics_Pic */ = {
+			isa = PBXGroup;
+			children = (
+				EFE76F1A1D713EE3007960C2 /* archery.gif */,
+				EFE76F1B1D713EE3007960C2 /* athletics.gif */,
+				EFE76F1C1D713EE3007960C2 /* badminton.gif */,
+				EFE76F1D1D713EE3007960C2 /* basketball.gif */,
+				EFE76F1E1D713EE3007960C2 /* beach-volleyball.gif */,
+				EFE76F1F1D713EE3007960C2 /* boxing.gif */,
+				EFE76F201D713EE3007960C2 /* canoe-slalom.gif */,
+				EFE76F211D713EE3007960C2 /* canoe-sprint.gif */,
+				EFE76F221D713EE3007960C2 /* events.plist */,
+			);
+			path = Olympics_Pic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +191,23 @@
 			productReference = EF5145541D6D16A8008BD4B4 /* CollectionViewSimple.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EFE76F001D71149F007960C2 /* CollectionViewSample-Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFE76F121D71149F007960C2 /* Build configuration list for PBXNativeTarget "CollectionViewSample-Code" */;
+			buildPhases = (
+				EFE76EFD1D71149F007960C2 /* Sources */,
+				EFE76EFE1D71149F007960C2 /* Frameworks */,
+				EFE76EFF1D71149F007960C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CollectionViewSample-Code";
+			productName = "CollectionViewSample-Code";
+			productReference = EFE76F011D71149F007960C2 /* CollectionViewSample-Code.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -133,6 +219,9 @@
 				ORGANIZATIONNAME = andyron;
 				TargetAttributes = {
 					EF5145531D6D16A8008BD4B4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					EFE76F001D71149F007960C2 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -151,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				EF5145531D6D16A8008BD4B4 /* CollectionViewSimple */,
+				EFE76F001D71149F007960C2 /* CollectionViewSample-Code */,
 			);
 		};
 /* End PBXProject section */
@@ -175,6 +265,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFE76EFF1D71149F007960C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE76F291D713EE3007960C2 /* canoe-slalom.gif in Resources */,
+				EFE76F2A1D713EE3007960C2 /* canoe-sprint.gif in Resources */,
+				EFE76F271D713EE3007960C2 /* beach-volleyball.gif in Resources */,
+				EFE76F0E1D71149F007960C2 /* LaunchScreen.storyboard in Resources */,
+				EFE76F251D713EE3007960C2 /* badminton.gif in Resources */,
+				EFE76F0B1D71149F007960C2 /* Assets.xcassets in Resources */,
+				EFE76F2B1D713EE3007960C2 /* events.plist in Resources */,
+				EFE76F261D713EE3007960C2 /* basketball.gif in Resources */,
+				EFE76F281D713EE3007960C2 /* boxing.gif in Resources */,
+				EFE76F241D713EE3007960C2 /* athletics.gif in Resources */,
+				EFE76F231D713EE3007960C2 /* archery.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -185,6 +293,16 @@
 				EF51455A1D6D16A8008BD4B4 /* ViewController.swift in Sources */,
 				EF5145581D6D16A8008BD4B4 /* AppDelegate.swift in Sources */,
 				EF51457D1D6D18EF008BD4B4 /* EventCollectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFE76EFD1D71149F007960C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFE76F141D71165F007960C2 /* ViewController.swift in Sources */,
+				EFE76F181D713D9D007960C2 /* EventCollectionViewCell.swift in Sources */,
+				EFE76F041D71149F007960C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +321,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF5145611D6D16A8008BD4B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFE76F0C1D71149F007960C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFE76F0D1D71149F007960C2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -317,6 +443,28 @@
 			};
 			name = Release;
 		};
+		EFE76F101D71149F007960C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CollectionViewSample-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.CollectionViewSample-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFE76F111D71149F007960C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "CollectionViewSample-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.CollectionViewSample-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +482,15 @@
 			buildConfigurations = (
 				EF5145671D6D16A8008BD4B4 /* Debug */,
 				EF5145681D6D16A8008BD4B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFE76F121D71149F007960C2 /* Build configuration list for PBXNativeTarget "CollectionViewSample-Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFE76F101D71149F007960C2 /* Debug */,
+				EFE76F111D71149F007960C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
