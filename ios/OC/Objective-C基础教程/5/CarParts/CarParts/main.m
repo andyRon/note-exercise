@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <Cocoa/Cocoa.h>
 
 @interface Tire : NSObject
 @end //Tire 轮胎

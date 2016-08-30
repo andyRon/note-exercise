@@ -45,7 +45,7 @@
     return self;
     
 }
-
+// 建立连接后调用（nib文件中对象地址添加到AppDelegate的实例变量中）
 - (void) awakeFromNib
 {
      NSLog(@"awake: text %@ / result %@", _textField, _resultsField);

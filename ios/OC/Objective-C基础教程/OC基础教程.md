@@ -4,6 +4,7 @@
 2. NeXT公司 -> NextSTEP(OC开发的用户界面工具包) -> 更名为COcoa
 ### 2.对C的扩展
 1. .m代表message
+2. 头文件包含结构体、符号常量和函数原型等元素的声明
 2. `#import`类似于`#include`，`#import`可保证头文件只被包含一次
 3. 框架：一种把头文件、库、图片、声音等内容聚集在一个独立单元中的集合体。
 	- 如Cocoa,Carbon,QuickTime,OpenGL
@@ -11,7 +12,7 @@
 	- 每一个框架都有一个主头文件，它包含了框架内所有的头文件。
 	- Foundation的头文件 1MB 14000行 100多文件 。通过`#import <Foundation/Foundation.h>` 就获得了整个集合
 	- Xcode使用预编译头文件（一种经过压缩的，摘要形式的头文件）来加快读取速度。
-	- `/System/Library/Frameworks/Foundation.framework/Header/`
+	- `/System/Library/Frameworks/Foundation.framework/Headers/`
 4. NSLog()和@"字符串"
 	- `NS`前缀是NextSTEP
 	- `NSLog()`类似于`printf()`	
@@ -45,11 +46,8 @@
 		+ `id`是一种泛型，可以用来引用任何类型的对象(id实际上是一个指向结构体的指针)b
 		+ 方括号在OC中其他意义：用于通知某个对象该去做什么。`[shape draw];`表示通知shape对象执行draw操作
 		+ **发送消息**（调用方法）：通知对象执行某种操作
-		+ 类是一种能够实例化成对象的结构体		
-		
-		
-	
-		
+		+ 类是一种能够实例化成对象的结构体	
+		+ 如果在运行时改变某个类，则该类的所有对象自动继承这些变化		
 3. 有关术语
 	- class
 	- object
@@ -60,16 +58,47 @@
 	- interface
 	- implementation
 4. OC中的OOP
+		
+			```oc
+			@interface Circle : NSObject
+			{
+			    @private
+			    ShapeColor fillColor;
+			    ShapeRect bounds;
+			}
+			- (void) setFillColor: (ShapeColor) fillColor;
+			- (void) setBounds: (ShapeRect) bounds;
+			- (void) draw;
+
+			@end  //Circle
+			@implementation Circle
+			- (void) setFillColor:(ShapeColor) c
+			{
+			    fillColor = c;
+			}
+
+			- (void) setBounds:(ShapeRect) b
+			{
+			    bounds = b;
+			}
+
+			- (void) draw
+			{
+			    NSLog(@"drawing a Circle at (%d %d %d %d) in %@", bounds.x, bounds.y, bounds.width, bounds.height, colorName(fillColor));
+			}
+			@end
+			```
 	1. `@interface`	OC编译器需要一些有关类的信息（）
-		+ **instance variable**(实例变量)   
-			**method declaration**(方法声明)
+		+ `@` 可以看成是对C语言的扩展
+		+ **instance variable**(实例变量) ： `@interface`下的花括号中
+		+ **method declaration**(方法声明)
 		+ `-` 是区分函数原型(没有)与方法声明
-		+ **infix notation**(中缀符)  
+		+ **infix notation**(中缀符) ： *方法的名称及其参数都是合在一起的*   
 			`[circle setFillColor: kRedColor]` 表示调用带一个参数的方法
 		+ 如果方法使用参数，则需要冒号，否则不需要冒号
 		+ 提倡@end语言后添加注释来注明类的名称
 	2. `@implementation` 定义类的公共接口
-		+ @implementation中定义那些在@interface中没有声明过的方法
+		+ @implementation中定义那些在@interface中声明过和没有声明过的方法
 		+ OC中不存在真正的私有方法
 	3. 实例化对象
 		+ **instantiation**
@@ -81,8 +110,9 @@
 1. 为何使用继承
 	- **UML**(Unified Modeling Language, 统一建模语言) 是一种用图表来表示类、类的内容以及它们之间关系。
 2. 继承的语法格式
-	- 只能继承一个
+	- **只能继承一个**
 	- 只有代码精简，bug才无处藏身
+	- 没有声明实例变量时可以省略花括号
 	- 相关术语
 		+ refactoring (重构)
 		+ superclass
@@ -97,10 +127,22 @@
 		+ self
 		
 4. 重写方法
+	- **super**
+		+ 调用继承的方法可以确保获得方法实现的所有特性
 
 ### 5 复合(composition)
-1. 什么是复合
+1. 什么是复合 对象间的组合（类中中包括类） 
+		```
+		@interface Car : NSObject
+		{
+		    Engine *engine;
+		    Tire *tires[4];
+		}
+		* (void)print;
+		@end //Car
+		```
 2. 自定义NSLog()
+3. 存取方法
 
 ### 6 源文件组织
 1. 拆分接口和实现
@@ -112,10 +154,10 @@
 	- `#import` 带尖号的是导入系统文件(只读)
 	
 3. 使用跨文件依赖关系
-	- dependency
+	- **dependency**
 	- `@class` 是告诉编译器：“这是一个类，只会通过指针来引用它，不需要关注此类的更多信息”
 	- 编译器需要先知道所有关于超类的信息才能成功地为其子类编译@interface部分
-	
+// ???	
 	
 ### 7 
 
@@ -231,11 +273,28 @@
 
 ### 14 代码块和并发性
 
-### 15 AppKit
+### 15 AppKit (Mac)
 
-### 16 UIKit
+6. 在加载nib文件时（MainMenu.nib会在应用程序启动时自动加载，也可以创建自己的nib文件并手动加载它们），存储在nib中的对象都会被重新创建。这意味着会在后台执行alloc和init方法。所以，当应用程序启动时，会分配并初始化一个AppDelegete实例。在执行init方法期间，所有IBOutlet实例变量都是nil.只有在生成了nib文件中的所有对象（包括窗口、文本框以及按钮）后，所有连接才算完成。
+一旦建立了所有连接（nib文件中对象地址添加到AppDelegate的实例变量中），就会向创建的每个对象发送消息awakeFromNib。
+
+### 16 UIKit (iOS)
+- 为啥iOS比Mac多了ViewController？
+
 
 ### 17 文件加载与保存
+	- 属性列表(property list, plist)  
+		+ `NSArray` `NSDictionary` `NSString` `NSNumber` `NSData` `NSData`
+		+ NSDate 
+		+ NSData
+
+
+	- 编码对象
+		+ 无法总是将对象信息表示为属性列表类
+		+ Cocoa具备一种将对象转换成某种格式并保存到磁盘中机制
+		+ 编码与解码(encoding and decoding) / 序列化与反序列化(serialization and deserialization)
+		+ 对象被存储到nib文件中（NSWindow和NSTextField对象都被序列化并保存到磁盘中）
+
 
 ### 18 键/值编码
 
@@ -251,3 +310,11 @@
  - `'retain Count' is unavailable: not available in automatic reference counting mode`   解决方法同上
  
  - 比较  initwithformat stringwithformat
+ - Xcode快捷键
+ 	command+D 复制视图
+ 	command+shift+c 	打开控制台
+	
+
+
+
+

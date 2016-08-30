@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UILabel *resultsField;
+- (IBAction)uppercase;
+- (IBAction)lowercase;
+
 
 @end
 
