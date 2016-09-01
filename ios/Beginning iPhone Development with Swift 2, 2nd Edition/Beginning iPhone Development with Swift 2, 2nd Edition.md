@@ -237,7 +237,73 @@
 ### 12 Applicatoin Settings and User Defaults
     
 
+### 13 Basic Data Persistence
         
+ - 应用的沙盒
+    + `~/Library/Developer/CoreSimulator/Devices/`
+    + `data/Containers/Data/Application`
+    + `~/Library/Developer/CoreSimulator/Devices/*guid*/data/Containers/Data/Application/*guid*/`  
+        * `Documents/` 用户能看到，iTunes文件传到这里
+        * `Library/`
+        * `tmp/`
+    
+    + 得到`Documents/`和`Library/`目录: `NSFileManager`类的`URLsForDirectory(_:inDomains:)`方法获得 `[NSURL]`  
+        两个参数都是枚举值：`NSSearchPathDirectory`, `NSSearchPathDomainMask`
+    
+
+            ```
+            let urls = NSFileManager.defaultManager().URLsForDirectory(
+                            .DocumentDirectory, inDomains: .UserDomainMask)
+            ```
+
+    + 得到`tmp/`目录
+
+        ```
+        let tempDirPath = NSTemporaryDirectory()
+        let tempDirUrl = NSURL(fileURLWithPath: tempDirPath)
+        let tempFileUrl = tempDirUrl.URLByAppendingPathComponent("tempFile.txt")
+        ```
+
+- 文件存储策略
+    + 单文件 每一次改动，都需要把所有数据读取到内存中
+    + 多文件 增加了应用的复杂度
+
+- Property Lists  
+    属性列表方便构建，并且可以swift和OC相互使用
+    + Property List 序列化 
+        * 虽然任何对象都可以序列化，但一般只是序列化集合类型的对象：  
+            - Array or NSArray
+            - NSMutableArray
+            - Dictionary or NSDictionary
+            - NSMutableDictionary
+            - NSData 
+            - NSMutableData
+            - String or NSString 
+            - NSMutableString 
+            - NSNumber 
+            - NSDate 
+        * `writeToURL(_:atomically:) `  `writeToFile(_:atomically:)`
+    + The First Version of the Persistence Application
+        * 当应用退到后台时，调用applicationWillResignActive:把textFiled中的数据保存下来
+    + Archiving Model Objects
+        * easily write complex objects to a file and then read them back in
+        * archive objects completely
+        * 实现 ` NSCoding protocol` 的类，获得基本的归档——把对象和数据存储在磁盘上，和分配——在不同进程和线程之间复制对象和其他数据
+
+
+
+
                 
-            
+          
+
+
+
+
+
+
+
+
+
+
+
 

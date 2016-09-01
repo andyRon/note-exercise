@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Bridge Control
+//  SQLite Persistence
 //
-//  Created by andyron on 16/8/10.
+//  Created by andyron on 16/9/1.
 //  Copyright © 2016年 andyron. All rights reserved.
 //
 
@@ -16,26 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        let urls = NSFileManager.defaultManager().URLsForDirectory(
-//            .DocumentDirectory, inDomains: .UserDomainMask)
-//
-//        if let documentUrl = urls.first {
-//            print(documentUrl)
-//        }
-        let urls2 = NSFileManager.defaultManager().URLsForDirectory(
-            .LibraryDirectory, inDomains: [.UserDomainMask, .NetworkDomainMask])
-        print(urls2)
-        
-//        let tempDirPath = NSTemporaryDirectory()
-//        
-//        print(tempDirPath)
-//        let tempDirUrl = NSURL(fileURLWithPath: tempDirPath)
-//        print(tempDirUrl)
-//        let tempFileUrl = tempDirUrl.URLByAppendingPathComponent("tempFile.txt")
-//        print(tempFileUrl)
-        
-        
         return true
     }
 
