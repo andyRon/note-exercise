@@ -85,6 +85,8 @@ class ViewController: UIViewController {
     
     func dataFilePath() -> String {
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+//        print( urls.first!.URLByAppendingPathComponent("data.plist"))
+//        print( urls.first!.URLByAppendingPathComponent("data.plist").path!);
         return urls.first!.URLByAppendingPathComponent("data.plist").path!
     }
     override func didReceiveMemoryWarning() {

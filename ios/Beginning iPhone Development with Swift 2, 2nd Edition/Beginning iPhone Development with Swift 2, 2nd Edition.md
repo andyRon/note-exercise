@@ -285,10 +285,21 @@
         * `writeToURL(_:atomically:) `  `writeToFile(_:atomically:)`
     + The First Version of the Persistence Application
         * 当应用退到后台时，调用applicationWillResignActive:把textFiled中的数据保存下来
-    + Archiving Model Objects
-        * easily write complex objects to a file and then read them back in
-        * archive objects completely
-        * 实现 ` NSCoding protocol` 的类，获得基本的归档——把对象和数据存储在磁盘上，和分配——在不同进程和线程之间复制对象和其他数据
+- Archiving Model Objects
+    + easily write complex objects to a file and then read them back in
+    + archive objects completely
+    + 实现 ` NSCoding protocol` 的类，获得基本的归档——把对象和数据存储在磁盘上，和分配——在不同进程和线程之间复制对象和其他数据
+    + 与propertylist的一点区别 
+        * plist存的是XMl文件，一般以.plist结尾。archiving存的是二进制文件，一般以.archive结尾 
+
+- SQLite3
+ 
+    + 连接到SQLite3库 
+        * SQLite Persistence target  >  Build Phases  >  Link Binary With Libraries
+
+
+- Core Data
+        
 
 
 
