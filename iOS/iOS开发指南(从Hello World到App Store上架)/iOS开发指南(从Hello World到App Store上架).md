@@ -60,6 +60,13 @@ UIView
 ---- 
 erro: Error Domain=NSURLErrorDomain Code=-1022 "The resource could not be loaded because the App Transport Security policy requires the use of a secure connection." UserInfo={_WKRecoveryAttempterErrorKey=<WKReloadFrameErrorRecoveryAttempter: 0x15754c580>, NSErrorFailingURLStringKey=http://51work6.com/, NSErrorFailingURLKey=http://51work6.com/, NSUnderlyingError=0x15755fa30 {Error Domain=kCFErrorDomainCFNetwork Code=-1022 "The resource could not be loaded because the App Transport Security policy requires the use of a secure connection." UserInfo={NSErrorFailingURLStringKey=http://51work6.com/, NSLocalizedDescription=The resource could not be loaded because the App Transport Security policy requires the use of a secure connection., NSErrorFailingURLKey=http://51work6.com/}}, NSLocalizedDescription=The resource could not be loaded because the App Transport Security policy requires the use of a secure connection.}
 -----
+- 在StoryBoard中没有一个view controller设置了Initial Scene。
+``````
+2016-09-02 08:05:57.276 CustomeCell[2440:1456324] Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?
+``````
+**IS Initial View Controller** 勾选
+
+
 
 ### 疑问
 1. 项目
