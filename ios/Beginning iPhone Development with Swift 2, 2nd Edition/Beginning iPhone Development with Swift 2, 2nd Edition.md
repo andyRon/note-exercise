@@ -300,8 +300,26 @@
 
 - Core Data
 
-### 16 Drawing with Core Graphics 
+### 16 Drawing with Core Graphics   
+**Core Graphics**  **Quartz** 
+[官方文档](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007533-SW1)
 
+
+
+- The Quartz 2D Approach to Drawing
+    + Quartz 2D’s Graphics Contexts
+        * **stroke color**  **fill color** 
+    
+    + The Coordinate System 坐标系
+    + Specifying Colors 不同的颜色模式
+    + Drawing Images in Context
+    + Drawing Shapes: Polygons, Lines, and Curves
+    + Quartz 2D Tool Sampler: Patterns, Gradients, and Dash Patterns
+
+- The QuartzFun Application
+    + Setting Up the QuartzFun Application
+    + Adding Quartz 2D Drawing Code
+    + Optimizing the QuartzFun Application ??
         
 
 
