@@ -1,0 +1,3 @@
+Textures are shared images used to render sprites. Always use textures whenever you need to apply the same image to multiple sprites. Usually you create textures by loading image files stored in your app bundle. However, SpriteKit can also create textures for you at runtime from other sources, including Core Graphics images or even by rendering a node tree into a texture.
+A texture atlas is a group of related textures that are used together in your game. 
+ For example,
