@@ -320,6 +320,21 @@
     + Setting Up the QuartzFun Application
     + Adding Quartz 2D Drawing Code
     + Optimizing the QuartzFun Application ??
+
+### 17 Getting Started with SpriteKit
+**Core Graphics** focused on drawing graphics using a painter’s model
+**Core Animation** focused on animating attributes of GUI elements
+**SpriteKit** video games
+
+- Player Movement  
+ `SKNode`  `SKLabelNode`  `SKSpriteNode`
+- Creating Your Enemies
+- 让敌人进入画面
+- 开始射击
+ **physics engine**: a software components that keeps track of multiple physical objects
+ **graphics engine**    
+ **physics categories** 
+ 
         
 
 

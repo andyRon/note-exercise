@@ -25,6 +25,12 @@ class GameViewController: UIViewController {
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            /*
+             SKSceneScaleMode.AspectFill    保持宽高比例填充(可能有一部分消失)
+             SKSceneScaleMode.Fill  全部填充到屏幕（会有点挤)
+             SKSceneScaleMode.AspectFit 保持宽高比例，且保持所有元素显示，结果可能是a letter-box view
+             SKSceneScaleMode.ResizeFill 原始尺寸显示
+            */
             
             skView.presentScene(scene)
         }
