@@ -334,7 +334,13 @@
  **physics engine**: a software components that keeps track of multiple physical objects
  **graphics engine**    
  **physics categories** 
- 
+
+
+
+ - A Sound Is Worth a Thousand Pictures 
+
+### 18 Taps, Touches, and Gestures(点击，触摸，手势)
+
         
 
 
