@@ -340,9 +340,24 @@
  - A Sound Is Worth a Thousand Pictures 
 
 ### 18 Taps, Touches, and Gestures(点击，触摸，手势)
+- 
+- The Swipes Application
+- Detecting Multiple Taps  
+- Detecting Pinch and Rotation  
+- Defining Custom Gestures（自定义手势）
+**CheckPlease**
 
-        
+[3D touch](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/index.html)
 
+
+### 19 Where Am I? Finding Your Way with Core Location and Map Kit
+
+ GPS是英文Global Positioning System（全球定位系统）
+A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系统的性能。通过移动通信运营基站它可以快速地定位，广泛用于含有GPS功能的手机上
+
+> GPS
+> ID Location
+> Wi-Fi Positioning Service(WPS)
 
 
 
