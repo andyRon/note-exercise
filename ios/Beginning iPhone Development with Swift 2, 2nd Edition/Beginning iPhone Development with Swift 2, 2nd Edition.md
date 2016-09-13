@@ -359,6 +359,11 @@ A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系�
 > ID Location
 > Wi-Fi Positioning Service(WPS)
 
+项目 **WhereAmI** 的视图有问题???
+
+
+### 20 Whee! Gyro and Accelerometer!
+
 
 
                 
