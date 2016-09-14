@@ -374,7 +374,8 @@ A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系�
 
 ### 21 The Camera and Photo Library
 
-
+- Xcode 8 兼容 swift 2.3
+*Build Setting* > *Use Legacy Swift Language Version* 改成 Yes
 
 
 ----------
