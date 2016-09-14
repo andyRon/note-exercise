@@ -365,6 +365,23 @@ A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系�
 ### 20 Whee! Gyro and Accelerometer!
 
 
+- Gyroscope and Attitude Results
+    * **yaw** 代表手机绕z轴转动的弧度（-3.14 ~ +3.14）
+    * **Pitch** 代表手机绕x轴的转动的弧度，手机头向上为正，向下为负(-1.5 ~ +1.5)
+    * **Roll** y轴
+
+- Accelerometer Results
+
+### 21 The Camera and Photo Library
+
+
+
+
+----------
+### 问题
+- could not find developer disk image
+
+
 
                 
           
