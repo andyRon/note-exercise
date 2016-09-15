@@ -24,6 +24,10 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
         * 分组表视图
     + 索引列、选择列、搜索栏
 
+- 6.4 添加搜索栏 
+    + 搜索栏通过`UISearchController`代码实现，其他部分通过Interface Builder实现
+    + `NSPredicate`   SQL HQL(Hibernate Query Language)
+
 
 
 总结

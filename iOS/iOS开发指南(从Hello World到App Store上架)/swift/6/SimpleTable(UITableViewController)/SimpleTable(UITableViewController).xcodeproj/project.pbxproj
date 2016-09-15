@@ -358,6 +358,7 @@
 				TargetAttributes = {
 					EFFE019C1D7283D400251B93 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZHNA975N38;
 					};
 					EFFE01F81D72860800251B93 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -609,10 +610,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZHNA975N38;
 				INFOPLIST_FILE = "SimpleTable(UITableViewController)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.SimpleTable-UITableViewController-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -620,10 +623,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZHNA975N38;
 				INFOPLIST_FILE = "SimpleTable(UITableViewController)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.SimpleTable-UITableViewController-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -668,6 +673,7 @@
 				EFFE01B11D7283D400251B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFFE02081D72860800251B93 /* Build configuration list for PBXNativeTarget "SimpleTable(UITableViewController)-Code" */ = {
 			isa = XCConfigurationList;
@@ -676,6 +682,7 @@
 				EFFE020A1D72860800251B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
