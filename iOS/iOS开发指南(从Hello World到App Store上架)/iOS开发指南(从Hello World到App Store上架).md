@@ -28,6 +28,8 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     + 搜索栏通过`UISearchController`代码实现，其他部分通过Interface Builder实现
     + ??? `NSPredicate`   SQL HQL(Hibernate Query Language)
 
+- 6.6 StaticTable项目的 login按钮的不能关联方法??? (疑：swift，xcode的版本问题)
+
 
 
 总结
