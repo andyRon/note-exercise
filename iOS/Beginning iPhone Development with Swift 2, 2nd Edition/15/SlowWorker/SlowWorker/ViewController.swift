@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         print("Completed in \(endTime.timeIntervalSinceDate(startTime)) seconds")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,6 +55,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /*
+     
+     let startTime = NSDate()
+     self.resultsTextView.text = ""
+     let fetchedData = self.fetchSomethingFromServer()
+     let processedData = self.processData(fetchedData)
+     let firstResult = self.calculateFirstResult(processedData)
+     let secondResult = self.calculateSecondResult(processedData)
+     let resultsSummary = "First: [\(firstResult)]\nSecond: [\(secondResult)]"
+     self.resultsTextView.text = resultsSummary
+     let endTime = NSDate()
+     print("Completed in \(endTime.timeIntervalSinceDate(startTime)) seconds")
+     */
 
 
 }

@@ -302,6 +302,11 @@
 
 
 ### 15 Grand Central Dispatch, Background Processing, and You
+
+- Threading Basics 
+**critical section** 
+
+
 ### 16 Drawing with Core Graphics   
 **Core Graphics**  **Quartz** 
 [官方文档](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007533-SW1)

@@ -22,7 +22,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-Io-PEY">
                                 <state key="normal" title="Start Working"/>
                                 <connections>
-                                    <action selector="doWorkWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w34-Z6-i7q"/>
+                                    <action selector="doWork:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TsZ-GI-6nP"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rjB-qg-qSu">
