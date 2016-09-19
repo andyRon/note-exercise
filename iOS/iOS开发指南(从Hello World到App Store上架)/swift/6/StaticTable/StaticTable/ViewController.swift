@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var txtUserName: UITextField! 
     @IBOutlet weak var txtPwd: UITextField!
     
     /*
