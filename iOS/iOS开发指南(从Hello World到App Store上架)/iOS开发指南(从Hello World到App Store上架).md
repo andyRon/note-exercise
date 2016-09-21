@@ -38,6 +38,12 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
 尺寸检查器 > Autoresizing      设置固定边距
 - Auto Layout 布局
     + 传统布局只能设置视屏与屏幕的上下左右边距，不能设置屏幕中视图之间的距离
+    + Constant是约束值；Priority是约束等级
+- iOS9 堆视图 StatckView
+- iOS屏幕的多样性
+
+
+
 
 
 总结

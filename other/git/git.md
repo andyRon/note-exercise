@@ -3,3 +3,12 @@
 http://marklodato.github.io/visual-git-guide/index-zh-cn.html
 
 http://learngitbranching.js.org/
+
+
+## git简易教程
+### 简介
+- 分布式版本控制的每个节点都是完整仓库
+
+commit 了才能保存改动
+
+
