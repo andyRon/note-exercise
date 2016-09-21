@@ -259,7 +259,12 @@
             * 类似__xxx__的属性和方法在Python中都是有特殊用途的.如，`str`类型中有 `__len__`方法，就可以 `len('ABC')` 或 'ABC'.__len__(), 并且这里的 'ABC'必须是`str`
             * `getattr()` `setattr()` `hasattr()`
 ### 7 面向对象高级编程
-
+    - 使用__slots__
+        + 动态绑定
+        + 定义class的时候，定义一个特殊的__slots__变量，来限制该class能添加的属性(仅对当前类起作用，对继承的子类是不起作用的)
+    - 使用@property(限制属性)
+        + 装饰器
+        + getter setter
 
 
 
