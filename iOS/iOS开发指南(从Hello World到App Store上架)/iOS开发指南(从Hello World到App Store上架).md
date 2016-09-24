@@ -14,7 +14,11 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
 - 应用生命周期 
 
 
-### 3 
+### 3 Cocoa Touch 框架与构建应用界面
+
+### 4 UIView与视图
+
+### 5 委托协议、数据源协议、与高级视图
 
 ### 6 表视图
 - 概述
@@ -41,8 +45,21 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     + Constant是约束值；Priority是约束等级
 - iOS9 堆视图 StatckView
 - iOS屏幕的多样性
-
-
+    `UIDevice`
+- Size Class 与 iOS多屏幕适配(>=iOS8) xCode8修改这个操作（？？？）
+    + Size Class 不能通过代码编程管理，只能通过IB使用
+- 资源目录与图片资源适配
+    - assets.xcassets, images.xcassets 不同版本的不同名字
+    
+### 8 视图控制器与导航模式
+- 8.1 概述
+    + 导航模式
+        * 平铺导航模式    天气预报应用
+        * 标签导航模式    时钟应用
+        * 树形结构导航模式  邮件应用 
+- 8.2 模态视图 
+> 临时放弃主线转到次要任务，然后在回主线
+- “模态”：必须响应处理。 **模态视图控制器** 
 
 
 
@@ -90,6 +107,7 @@ erro: Error Domain=NSURLErrorDomain Code=-1022 "The resource could not be loaded
 
 ### 疑问
 1. 项目
+2. Interface Builder支持在tvOS上的Dark Interface Style中自定义UI元素以及通过辅助编辑器进行预览。这个特性在新的XIB和Storyboard文件默认开启。对于现有文件可以在Identity查看器上勾选 “Use Trait Variations” 开启。
 
 
 
