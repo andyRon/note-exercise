@@ -23,8 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if !UIImagePickerController.isSourceTypeAvailable(
-            UIImagePickerControllerSourceType.Camera) {
+        // 判断是iOS设备是不有照相机， 没有照相机就隐藏拍摄按钮
+        if !UIImagePickerController.isSourceTypeAvailable(.Camera) {
             takePictureButton.hidden = true
         }
     }
@@ -105,6 +105,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    //##MARK -- UIImagePickerControllerDelegate
+    // 当用户成功拍摄照片、视频，或者在媒体库选择后调用
     func imagePickerController(picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         lastChosenMediaType = info[UIImagePickerControllerMediaType] as? String
@@ -112,12 +114,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if mediaType == kUTTypeImage as NSString {
                 image = info[UIImagePickerControllerEditedImage] as? UIImage
             } else if mediaType == kUTTypeMovie as NSString {
-                movieURL = info[UIImagePickerControllerMediaURL] as? NSURL
+                movieURL = info[UIImagePickerControllerEditedImage] as? NSURL
             }
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
-    
+    // 取消选择时调用
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.dismissViewControllerAnimated(true, completion:nil)
     }

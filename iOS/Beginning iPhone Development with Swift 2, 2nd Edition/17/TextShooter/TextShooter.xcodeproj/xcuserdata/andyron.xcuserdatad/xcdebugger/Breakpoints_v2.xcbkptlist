@@ -16,7 +16,7 @@
             startingLineNumber = "77"
             endingLineNumber = "77"
             landmarkName = "init(coder:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +32,7 @@
             startingLineNumber = "80"
             endingLineNumber = "80"
             landmarkName = "init(coder:)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,7 @@
             startingLineNumber = "129"
             endingLineNumber = "129"
             landmarkName = "spawnEnemies()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,7 +64,7 @@
             startingLineNumber = "136"
             endingLineNumber = "136"
             landmarkName = "spawnEnemies()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,7 +80,7 @@
             startingLineNumber = "157"
             endingLineNumber = "157"
             landmarkName = "updateEnemies()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

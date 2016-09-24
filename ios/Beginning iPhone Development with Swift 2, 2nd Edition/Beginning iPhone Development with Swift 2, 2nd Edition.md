@@ -384,20 +384,73 @@ A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系�
 - Accelerometer Results
 
 ### 21 The Camera and Photo Library
+iPhone, iPad, iPod都有内置的相机和**Photos**应用用来管理照片和视频，应用也可访问和存储这些媒体到我们的设备中。
+- **Image Picker**  和  **UIImagePickerController**
+图片采集器现在既可以管理图片也可以管理视频，当然也可以使用照相机。图片采集器也可以让用户做一些基础
+的编辑操作，如缩放、剪辑、修饰视频等。这些行为都在 `UIImagePickerController`中实现。
+    * `UIImagePickerController.isSourceTypeAvailable(.Camera)` 用来, 
+        + `UIImagePickerControllerSourceType.Camera`  是表示资源来自照相机  
+         `.photoLibrary`  
+         `.SavedPhotosAlbum`
+    * `UIImagePickerControllerCameraDevice` 选择摄像头
+    * `UIImagePickerControllerDelegate`协议的两个方法
+        + ` imagePickerController(_:didFinishPickingMediaWithInfo:)`: 当用户成功拍摄照片、视频，或者在媒体库选择后调用
+            - 第二个参数是个字典，字典中包括已经选择的图片和视频，可能包括编辑信息，编辑前的媒体和编辑后的媒体。可能的key值：  
+        
+            // info dictionary keys
+            public let UIImagePickerControllerMediaType: String // an NSString (UTI, i.e. kUTTypeImage)
+            public let UIImagePickerControllerOriginalImage: String // a UIImage
+            public let UIImagePickerControllerEditedImage: String // a UIImage
+            public let UIImagePickerControllerCropRect: String // an NSValue (CGRect)
+            public let UIImagePickerControllerMediaURL: String // an NSURL
+            
 
-- Xcode 8 兼容 swift 2.3
-*Build Setting* > *Use Legacy Swift Language Version* 改成 Yes
+        +  `imagePickerControllerDidCancel(:)` 取消选择时调用
+
+    * 构建项目
+        + sva **Camera**
+        + 添加协议、接口
+
+
+
+
 
 
 ----------
 ### 问题
 - could not find developer disk image
+- Xcode 8 兼容 swift 2.3
+*Build Setting* > *Use Legacy Swift Language Version* 改成 Yes
+- xcode #MARK 
+#pragma mark - 
+#import
 
-
-
+#pragma mark – 的“-”后面不能有空格。
+如果你的标志没有出现在弹出菜单中，比如没有分隔线出现，请在Xcode菜单 “Preferences..”中的 “Code Sense”选项取消选中”Sort list alphabetically”即可。
+#pragma mark纯粹是Xcode的工具，对程式一点影响都没有，是为了提高程序员阅读代码的格式。
                 
           
 
+- optional 
+```
+public protocol UIImagePickerControllerDelegate : NSObjectProtocol {
+    
+    @available(iOS 2.0, *)
+    optional public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    @available(iOS 2.0, *)
+    optional public func imagePickerControllerDidCancel(picker: UIImagePickerController)
+}
+```
+表示这个方法不是必须实现
+
+- E enum
+Ex  extension
+P property
+Pr protocol
+S strut
+f function
+M method
+![](./img/2016-09-23-1.png)
 
 
 
