@@ -60,6 +60,8 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
 - 8.2 模态视图 
 > 临时放弃主线转到次要任务，然后在回主线
 - “模态”：必须响应处理。 **模态视图控制器** 
+- IB实现
+    + *Editor -> Embed -> Navigation Controller*, 形成了一个与原视图控制器关联的 导航控制器。 如果直接拖进去应该怎么操作？ 
 
 
 
@@ -108,6 +110,7 @@ erro: Error Domain=NSURLErrorDomain Code=-1022 "The resource could not be loaded
 ### 疑问
 1. 项目
 2. Interface Builder支持在tvOS上的Dark Interface Style中自定义UI元素以及通过辅助编辑器进行预览。这个特性在新的XIB和Storyboard文件默认开启。对于现有文件可以在Identity查看器上勾选 “Use Trait Variations” 开启。
+3. IB 中的 segue  统计
 
 
 
