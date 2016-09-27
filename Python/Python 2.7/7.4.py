@@ -50,4 +50,50 @@ class Fib2(object):
             a, b = b, a + b
         return a
 f = Fib2()
-print f[100]
+# print f[100]
+
+class Fib3(object):
+    def __getitem__(self, n):
+        if isinstance(n, int):
+            a, b = 1, 1
+            for x in range(n):
+                a, b = b, a + b
+            return a
+        if isinstance(n, slice):
+            start = n.start
+            stop = n.stop
+            a, b = 1, 1
+            L = []
+            for x in range(stop):
+                if x >= start:
+                    L.append(a)
+                a, b = b, a + b
+            return L
+
+f = Fib3()
+# print f[1:11]
+
+class Student4(object):
+    def __getattr__(self, attr):
+        if attr == 'age':
+            return lambda: 28
+        if attr == 'weight':
+            return 70
+
+s = Student4()
+# print s.age()
+# print s.weight
+# print s.name    # None
+
+class Chain(object):
+
+    def __init__(self, path=''):
+        self._path = path
+
+    def __getattr__(self, path):
+        return Chain('%s/%s' % (self._path, path))
+
+    def __str__(self):
+        return self._path
+# print Chain().status
+# print Chain().status.user.timeline.list

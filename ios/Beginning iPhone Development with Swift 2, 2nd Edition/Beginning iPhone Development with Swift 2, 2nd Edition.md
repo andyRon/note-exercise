@@ -1,6 +1,14 @@
+### 1 欢迎到swift丛林
 
-
+### 2 Hello World
+1. 新建项目：**New > Project**(command+shift+N)
+2. 选择 **iOS > Application > Single View Application**
+    ![Single View Application](./img/2016-09-27-14-18-42.png)
+3. 填写相关参数
 ### 3.
+
+
+
 
 - **Update Frames**  **Size to Fit Content**
 - *correct runtime locations* **Resolve Auto Layout Issues**
@@ -11,7 +19,7 @@
 
 - Implementing the Image View and Text Field
 	+ a tint color
-	+ Opaque  Alpha
+	+ Opaque  Alphaπ
 	+ Clip Subviews
 	+ **Add Missing Constraints**  便捷的加constraints
 	+
@@ -452,6 +460,14 @@ f function
 M method
 ![](./img/2016-09-23-1.png)
 
+- xcode 中使用git (http://www.cocoachina.com/ios/20140524/8536.html)
+svn
+
+- XCode 项目配置说明
+选择项目时，中间编辑区叫做**Project editor**
+https://help.apple.com/xcode/mac/8.0/index.html?localePath=en.lproj#/devb3575be3e
+
+info.plist 就是**Project editor**中所有修改信息的总和？？
 
 
 

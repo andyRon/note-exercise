@@ -61,6 +61,7 @@
     + `command＋shift＋O` 打开（搜索）头文件
     + `control+command+Up` 对应文件的切换
     + `Command + Shift + 0`  文档界面
+    + `command+B` build app
 - 专有名词、概念等
     - iOS Human Interface Guidelines(HIG)
     - **第一响应者** ：当前正在与用户进行交互的控件

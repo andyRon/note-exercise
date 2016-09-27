@@ -272,8 +272,9 @@
         + `__repr__` : 直接显示时调用
         + `__iter__` : 如果一个类想被用于for ... in循环，类似list或tuple那样，就必须实现一个__iter__()方法，该方法返回一个迭代对象，然后，Python的for循环就会不断调用该迭代对象的next()方法拿到循环的下一个值，直到遇到StopIteration错误时退出循环。
         + `__getitem__` : 直接作为list时调用
-        + `__getattr__` : 
-
+        + `__getattr__` : 当调用不存在的属性或方法是调用
+        + `__call__`
+        + [更多定制](https://docs.python.org/2/reference/datamodel.html#special-method-names)
 
 
 
