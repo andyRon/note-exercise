@@ -24,8 +24,6 @@ class ViewController: UIViewController {
         styledText.setAttributes(attributes, range: nameRange);
         
         statusLabel.attributedText = styledText
-        
-
     }
 
 

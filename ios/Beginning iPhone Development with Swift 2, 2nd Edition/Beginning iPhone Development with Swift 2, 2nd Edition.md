@@ -5,24 +5,64 @@
 2. 选择 **iOS > Application > Single View Application**
     ![Single View Application](./img/2016-09-27-14-18-42.png)
 3. 填写相关参数
-### 3.
 
-
-
+### 3 Handling Basic Interaction
+`NSAttributedString`
+- MVC 范例
+- 理解**Outlets**, **Actions** 
+- 创建项目**Button Fun** 
+    1. 创建 **Single View Application** 
+    2. 清理 `ViewController`
 
 - **Update Frames**  **Size to Fit Content**
 - *correct runtime locations* **Resolve Auto Layout Issues**
 - Simulator  Window\>Scale
 - Previewing Layout   **Preview Assistant**
 
-### 4
+### 4 More User Interface Fun
+- Active, Static, Passive
+    + 界面的控制有三个基本的模式：活动，静止，被动
+    + `UIControl`
+    + iOS和Mac中控制的不同
 
-- Implementing the Image View and Text Field
-	+ a tint color
-	+ Opaque  Alphaπ
-	+ Clip Subviews
-	+ **Add Missing Constraints**  便捷的加constraints
-	+
+- 创建应用**Control Fun**
+    1. 添加 `Image View`
+    2. 改变`Image View`的**Content Model**属性从*Scale To Fill*到*Center*，用图片的原始尺寸（不要压缩或拉伸）
+    3. 选中`Image View`，**Command+=**（**Editor -> Size to Fit Content** ）;使`Image View`的大小适应于图片的大小
+    4. 重新拖动`Image View`到合适位置
+    5. 选中`Image View`，添加**Horizontal Center in Container**
+    6. 设置`Image View`的`View`节的属性（由于`UIImageView`是`UIView`的子类，这边的`View`节属性是共有的）
+        + **Content Mode**
+        + **Semantic** 语法属性就是文字开始的方向 `semanticContentAttribute `
+        + **Tag** 整数，运行时不能改变，方便写程序是区分调用
+        + **Interaction**   
+            **Interaction**  
+            **Interaction**  
+        + **Alpha**
+        + **Background**
+        + **Tint**
+        + **Drawing**
+    7. 添加两个`Text Fields`和两个`Label`
+    8. 添加Constraints
+    9. 创建链接接口
+    10. 关闭键盘
+        + 当按键盘return或done时,`Text Field`注销掉FirstResponder(键盘就会隐藏)，`Text Field`的`Did End On Exit`事件
+            
+                @IBAction func textFieldDoneEditing(sender: UITextField) {
+                    sender.resignFirstResponder()
+                }
+
+        + 触摸背景关闭键盘
+            * 拖动`Tap Gesture Recognizer`进入container view
+            * Control-drag `Tap Gesture Recognizer` 到 ViewController.swift得到Action，同时注销两个Text Field的FirstResponder
+    11. 添加`Slider`和`Label` 
+        + Actions Outlets
+    12. Switches, Button, and Segmented Control
+        + 添加`Segmented Control`
+        + 添加两个`Switch`, Actions Outlets
+        + 添加 **Segmented Control** 按钮
+    
+
 
 ### 5 Rotation and Adaptive Layout
 - The Mechanics of Rotation
@@ -469,7 +509,11 @@ https://help.apple.com/xcode/mac/8.0/index.html?localePath=en.lproj#/devb3575be3
 
 info.plist 就是**Project editor**中所有修改信息的总和？？
 
+- Xcode8 Previewing Layout ??
 
+- xcode工程目录里面，有时你会发现2个不同颜色的文件夹，一种是蓝色的(叫folder)，一种是黄色的(叫group)，最常见的是黄色的。group一般只在你的工程中是文件夹的形式，但是在本地的目录中还是以散乱的形式放在一起的，除非你是从外部以整个文件夹的形式引用进来的。folder只能作为资源，整个引用进项目，不能编译代码，也就是说，以folder形式引用进来的文件，是不会被放入编译文件列表里面的。
+
+- xcode interface builder 不同线的意义
 
 
 
