@@ -275,6 +275,15 @@
         + `__getattr__` : 当调用不存在的属性或方法是调用
         + `__call__`
         + [更多定制](https://docs.python.org/2/reference/datamodel.html#special-method-names)
+    - 使用元类
+        + `type()`
+        + metaclass
+### 8 错误、调试和测试
+    - 错误 
+        + `try...except...finally...`   可以跨越多层
+        + [`BaseException`](https://docs.python.org/2/library/exceptions.html#exception-hierarchy)
+        + 调用堆栈
+        + 记录错误  `logging`模块
 
 
 
