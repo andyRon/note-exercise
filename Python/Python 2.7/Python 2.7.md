@@ -326,7 +326,54 @@
         + 写文件  write().当写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘
         + with  as 
     - 操作文件和目录
-    
+        + `os`模块   
+            * `os.name`  # posix : linux, Unix, Mac OS; nt: window
+            * `os.uname()` 系统详细信息(非window)
+        + 环境变量 
+            * `os.environ`  所有环境变量的dict
+            * `os.getenv("PATH")`  获取某个环境变量
+        + 操作文件和目录
+            * ` os.path.abspath('.')`  查看当前目录的绝对路径
+            * `os.path.join('/Users/michael', 'testdir')` 生成当前系统下的需要的目录完整字符串
+            * `os.mkdir('/Users/michael/testdir')`
+            * `os.rmdir('/Users/michael/testdir')`
+            * `os.path.split('/Users/michael/testdir/file.txt')` 
+                # ('/Users/michael/testdir', 'file.txt')
+            * `os.path.splitext('/path/to/file.txt')`
+                # ('/path/to/file', '.txt')
+            * `os.rename('test.txt', 'test.py')`    对文件重命名
+            * `os.remove('test.py')` 
+            * `shutil.copyfile(src, dst)`   复制文件 
+            * `os.listdir('.')`     当前目录下文件和目录名的dict
+            * `os.path.isdir(x)`   
+            * `os.path.isfile(x)`
+            * `os.path.realpath(x)` 
+    - 序列化
+        + 把变量从内存中变成可存储或传输的过程。 pickling, serialization, marshalling, flattening
+        + `cPickle` `pickle`  
+
+                try:
+                    import cPickle as pickle
+                except ImportError:
+                    import pickle
+
+            * pickle.dumps()方法把任意对象序列化成一个str
+            * pickle.dump()直接把对象序列化后写入一个file-like Object：
+
+                d = dict(name='Bob', age=20, score=88)
+                f = open("dump.txt", 'wb')
+                pickle.dump(d, f)
+                f.close()
+
+            * 用pickle.load()方法从一个file-like Object中直接反序列化出对象
+
+                f = open("dump.txt", 'rb')
+                d = pickle.load(f)
+                f.close()
+
+                print d
+            * 只能用于Python，不同版本的Python彼此都不兼容
+        + JSON 
 
 
 -------------
@@ -337,6 +384,15 @@
     - `sudo pip install requests`
 ### 记录
     - Python格式化中如何使用%
+    - Python 获得命令行参数  
+    脚本名：    sys.argv[0]
+参数1：     sys.argv[1]
+参数2：     sys.argv[2]
+    - # 字符串匹配
+$ python -m timeit "'hello'.index('llo')"
+1000000 loops, best of 3: 0.214 usec per loop
+- 命令直接运行 `python -c  "print 'hello'.index('llo')"`
+- 运行系统shell命令 `python -c "import os; os.system('ls')"` 或 `os.system('ls')`
 
 
 
