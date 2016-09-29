@@ -63,6 +63,9 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     + IB实现
         * *Editor -> Embed -> Navigation Controller*, 形成了一个与原视图控制器关联的 导航控制器。 如果直接拖进去应该怎么操作？ 
 - 8.3 平铺导航      没有从属关系
+    - 基于分屏导航的实现
+    - 基于电子书导航的实现
+- 8.4 标签导航 
 
 
 

@@ -284,9 +284,49 @@
         + [`BaseException`](https://docs.python.org/2/library/exceptions.html#exception-hierarchy)
         + 调用堆栈
         + 记录错误  `logging`模块
+        + 抛出错误  `raise`
+            * 只有在必要的时候才定义我们自己的错误类型。如果可以选择Python已有的内置的错误类型（比如ValueError，TypeError），尽量使用Python内置的错误类型。
+            * raise语句如果不带参数，就会把当前错误原样抛出。
+    - 调式 
+        + 直接用`print`
+        + 断言 `assert`      可以关闭断言 `python -O err.py`
+        + `logging`
+            * `debug` `info` `warning` `error` 级别由低到高，级别设置的越高低级别的信息就不会显示（如`logging.basicConfig(level=logging.INFO)`, 就不会显示debug信息）
+            * 一条语句可以同时输出到不同的地方，比如console和文件。
+        + pdb  调试器，让程序以单步方式运行
+            * `python -m pdb err.py`
+            * `l` 来查看代码
+            * `n` 下一步
+            * `p 变量名` 查看变量值
+            * `q` 退出
+        + pdb.set_trace() 
+            * 只需要import pdb，然后，在可能出错的地方放一个pdb.set_trace()，就可以设置一个断点，运行到此处暂停并进入pdb调式环境
+        + IDE   PyCharm
+    - 单元测试
+        + “测试驱动开发”（TDD：Test-Driven Development）
+        + 单元测试是用来对一个模块、一个函数或者一个类来进行正确性检验的测试工作。
 
 
+    - 文档测试
 
+
+### 9 IO编程
+>同步IO  CPU等着
+>异步IO  CPU不等待      回调模式    轮询模式
+
+    - 文件读写
+        + open()
+        + read()
+        + readline()
+        + readlines()
+        + **file-like Object**: 像open()函数返回的这种有个read()方法的对象,也可以是内存的字节流，网络流，自定义流等等。
+        + `StringIO`
+        + 二进制文件 `f = open('test.jpg', 'rb')`
+        + 字符编码 `codecs`模块
+        + 写文件  write().当写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用close()方法时，操作系统才保证把没有写入的数据全部写入磁盘
+        + with  as 
+    - 操作文件和目录
+    
 
 
 -------------
@@ -295,6 +335,8 @@
     - `sudo python get-pip.py`
 ### 安装
     - `sudo pip install requests`
+### 记录
+    - Python格式化中如何使用%
 
 
 
