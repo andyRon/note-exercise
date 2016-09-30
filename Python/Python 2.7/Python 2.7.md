@@ -375,6 +375,44 @@
             * 只能用于Python，不同版本的Python彼此都不兼容
         + JSON 
 
+# 10 进程和线程
+    - 概述
+        + 表面上看，每个任务都是交替执行的，但是，由于CPU的执行速度实在是太快了，我们感觉就像所有任务都在同时执行一样。
+        + 对于操作系统来说，一个任务就是一个进程（Process）
+        + 进程内的这些“子任务”称为线程（Thread）
+        + 多任务的实现有3种方式
+            * 多进程模式
+            * 多线程模式
+            * 多进程+多线程模式
+        + 线程是最小的执行单元，而进程由至少一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。
+        + 多进程和多线程的程序涉及到同步、数据共享的问题，编写起来更复杂。
+    - 多进程
+    ？？ ImportError: No module named multiprocession
+
+
+# 11 正则表达式
+    - 基础
+        * `\d`
+        * `\w`
+        * `\s`
+        * . 任意一个字符  * 任意个数字符   + 至少一个字符  ? 0或1个字符  
+        * {n} {n,m}
+        * []
+        * A|B 
+        * ^ $
+        * 
+
+# 12 常用内建模块
+    - collections
+        + namedtuple    `namedtuple('名称', [属性list])`
+        + deque     对list高效实现插入和删除操作的双向列表，适合用于队列和栈
+        + defaultdict   给dict中没有的key一个默认值
+        + OrderedDict   保持dict中key的顺序 ???
+        + Counter
+    - base64
+        + Base64是一种用64个字符来表示任意二进制数据的方法
+
+    - struct 
 
 -------------
 ### linux等系统安装 pip
@@ -393,6 +431,12 @@ $ python -m timeit "'hello'.index('llo')"
 1000000 loops, best of 3: 0.214 usec per loop
 - 命令直接运行 `python -c  "print 'hello'.index('llo')"`
 - 运行系统shell命令 `python -c "import os; os.system('ls')"` 或 `os.system('ls')`
+- 字符串前缀 u和r的区别
+在python2里面，u表示unicode string，类型是unicode, 没有u表示byte string，类型是 str。
+在python3里面，所有字符串都是unicode string, u前缀没有特殊含义了。
+
+r都表示raw string. 与特殊字符的escape规则有关，一般用在正则表达式里面。
+r和u可以搭配使用，例如ur"abc"。
 
 
 
