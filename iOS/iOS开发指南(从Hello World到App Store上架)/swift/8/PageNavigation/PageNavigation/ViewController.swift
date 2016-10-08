@@ -86,22 +86,27 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    
+    
+    func pageViewController(pageViewController: UIPageViewController, spineLocationForInterfaceOrientation orientation: UIInterfaceOrientation) -> UIPageViewControllerSpineLocation {
         self.pageViewController.doubleSided = false
-//        return .Min
-
+        return .Min
     }
     
-    func pageViewControllerSupportedInterfaceOrientations(pageViewController: UIPageViewController) -> UIInterfaceOrientationMask {
-        if completed = false {
-            if directionForward == .After
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        if completed == false {
+            if directionForward == .After {
                 pageIndex -= 1
+            }
+            if directionForward == .Before {
+                pageIndex += 1
+                
+            }
         }
         
-        if directionForward == .Before {
-            prageContill.py
-            
-        }
+        
+        
     }
     
 

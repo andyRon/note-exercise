@@ -4,7 +4,7 @@ Python学习
 
 ### [廖雪峰-Python 2.7教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
 
-
+### https://github.com/lanbing510/DouBanSpider
 
 -------
 
@@ -25,3 +25,11 @@ python setup.py install
 
 四、 方法4：pip 方式 
 
+### 进制转换
+    - 其他进制转十进制
+        + `int('100', 2)` # 4  二进制数'100'转换为十进制(加引号，因为二进制是一个字符串)
+        + `int('4', 8)`   # 4 
+        + `int('a', 16)`    # 10  
+    - `bin()`
+    - `oct()`
+    - `hex()`

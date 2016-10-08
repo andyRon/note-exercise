@@ -412,7 +412,30 @@
     - base64
         + Base64是一种用64个字符来表示任意二进制数据的方法
 
-    - struct 
+    - [struct](https://docs.python.org/2/library/struct.html#format-characters) ???
+
+
+    - hashlib
+        + 摘要算法又称哈希算法、散列算法（如MD5，SHA1等等）： 它通过一个函数，把任意长度的数据转换为一个长度固定的数据串（通常用16进制的字符串表示）。 **单向函数**
+        + 碰撞： 任何摘要算法都是把无限多的数据集合映射到一个有限的集合中
+        + 摘要算法在很多地方都有广泛的应用。要注意摘要算法不是加密算法，不能用于加密（因为无法通过摘要反推明文），只能用于防篡改，但是它的单向计算特性决定了可以在不存储明文口令的情况下验证用户口令
+
+    - itertools
+        + `count()`
+        + `cycle()`
+        + `repeat()`
+        + `takewhile()`
+        + `chain()`
+        + `groupby()`
+        + `imap()`
+        + `ifilter()`
+
+    - XML
+
+    - HTMLParser
+
+
+
 
 -------------
 ### linux等系统安装 pip
