@@ -66,6 +66,7 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     - 基于分屏导航的实现
     - 基于电子书导航的实现
 - 8.4 标签导航 
+    + **Tabbed Application**模板
 
 
 
