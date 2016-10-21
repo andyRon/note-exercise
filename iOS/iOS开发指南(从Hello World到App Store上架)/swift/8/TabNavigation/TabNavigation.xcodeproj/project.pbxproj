@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF08C1771DB9408600248D68 /* HeiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1761DB9408600248D68 /* HeiViewController.swift */; };
+		EF08C1791DB9409600248D68 /* JiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1781DB9409600248D68 /* JiViewController.swift */; };
+		EF08C17B1DB940A600248D68 /* LiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C17A1DB940A600248D68 /* LiaoViewController.swift */; };
+		EF08C1861DB9421900248D68 /* Hei.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C17D1DB9421900248D68 /* Hei.png */; };
+		EF08C1871DB9421900248D68 /* Hei@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C17E1DB9421900248D68 /* Hei@2x.png */; };
+		EF08C1881DB9421900248D68 /* Hei@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C17F1DB9421900248D68 /* Hei@3x.png */; };
+		EF08C1891DB9421900248D68 /* Ji.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1801DB9421900248D68 /* Ji.png */; };
+		EF08C18A1DB9421900248D68 /* Ji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1811DB9421900248D68 /* Ji@2x.png */; };
+		EF08C18B1DB9421900248D68 /* Ji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1821DB9421900248D68 /* Ji@3x.png */; };
+		EF08C18C1DB9421900248D68 /* Liao.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1831DB9421900248D68 /* Liao.png */; };
+		EF08C18D1DB9421900248D68 /* Liao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1841DB9421900248D68 /* Liao@2x.png */; };
+		EF08C18E1DB9421900248D68 /* Liao@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1851DB9421900248D68 /* Liao@3x.png */; };
 		EFED99311DB30BD900813A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED99301DB30BD900813A4B /* AppDelegate.swift */; };
-		EFED99331DB30BD900813A4B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED99321DB30BD900813A4B /* FirstViewController.swift */; };
-		EFED99351DB30BD900813A4B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED99341DB30BD900813A4B /* SecondViewController.swift */; };
 		EFED99381DB30BD900813A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED99361DB30BD900813A4B /* Main.storyboard */; };
 		EFED993A1DB30BD900813A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED99391DB30BD900813A4B /* Assets.xcassets */; };
 		EFED993D1DB30BD900813A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED993B1DB30BD900813A4B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF08C1761DB9408600248D68 /* HeiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeiViewController.swift; sourceTree = "<group>"; };
+		EF08C1781DB9409600248D68 /* JiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiViewController.swift; sourceTree = "<group>"; };
+		EF08C17A1DB940A600248D68 /* LiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiaoViewController.swift; path = Assets.xcassets/LiaoViewController.swift; sourceTree = "<group>"; };
+		EF08C17D1DB9421900248D68 /* Hei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hei.png; sourceTree = "<group>"; };
+		EF08C17E1DB9421900248D68 /* Hei@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hei@2x.png"; sourceTree = "<group>"; };
+		EF08C17F1DB9421900248D68 /* Hei@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hei@3x.png"; sourceTree = "<group>"; };
+		EF08C1801DB9421900248D68 /* Ji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ji.png; sourceTree = "<group>"; };
+		EF08C1811DB9421900248D68 /* Ji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ji@2x.png"; sourceTree = "<group>"; };
+		EF08C1821DB9421900248D68 /* Ji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ji@3x.png"; sourceTree = "<group>"; };
+		EF08C1831DB9421900248D68 /* Liao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Liao.png; sourceTree = "<group>"; };
+		EF08C1841DB9421900248D68 /* Liao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liao@2x.png"; sourceTree = "<group>"; };
+		EF08C1851DB9421900248D68 /* Liao@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liao@3x.png"; sourceTree = "<group>"; };
 		EFED992D1DB30BD900813A4B /* TabNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED99301DB30BD900813A4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFED99321DB30BD900813A4B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		EFED99341DB30BD900813A4B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		EFED99371DB30BD900813A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFED99391DB30BD900813A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFED993C1DB30BD900813A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF08C17C1DB9421900248D68 /* tabicons */ = {
+			isa = PBXGroup;
+			children = (
+				EF08C17D1DB9421900248D68 /* Hei.png */,
+				EF08C17E1DB9421900248D68 /* Hei@2x.png */,
+				EF08C17F1DB9421900248D68 /* Hei@3x.png */,
+				EF08C1801DB9421900248D68 /* Ji.png */,
+				EF08C1811DB9421900248D68 /* Ji@2x.png */,
+				EF08C1821DB9421900248D68 /* Ji@3x.png */,
+				EF08C1831DB9421900248D68 /* Liao.png */,
+				EF08C1841DB9421900248D68 /* Liao@2x.png */,
+				EF08C1851DB9421900248D68 /* Liao@3x.png */,
+			);
+			path = tabicons;
+			sourceTree = "<group>";
+		};
 		EFED99241DB30BD900813A4B = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +92,15 @@
 		EFED992F1DB30BD900813A4B /* TabNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				EF08C17C1DB9421900248D68 /* tabicons */,
 				EFED99301DB30BD900813A4B /* AppDelegate.swift */,
-				EFED99321DB30BD900813A4B /* FirstViewController.swift */,
-				EFED99341DB30BD900813A4B /* SecondViewController.swift */,
 				EFED99361DB30BD900813A4B /* Main.storyboard */,
 				EFED99391DB30BD900813A4B /* Assets.xcassets */,
 				EFED993B1DB30BD900813A4B /* LaunchScreen.storyboard */,
 				EFED993E1DB30BD900813A4B /* Info.plist */,
+				EF08C1761DB9408600248D68 /* HeiViewController.swift */,
+				EF08C1781DB9409600248D68 /* JiViewController.swift */,
+				EF08C17A1DB940A600248D68 /* LiaoViewController.swift */,
 			);
 			path = TabNavigation;
 			sourceTree = "<group>";
@@ -127,8 +165,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF08C1861DB9421900248D68 /* Hei.png in Resources */,
+				EF08C18A1DB9421900248D68 /* Ji@2x.png in Resources */,
+				EF08C18E1DB9421900248D68 /* Liao@3x.png in Resources */,
+				EF08C18C1DB9421900248D68 /* Liao.png in Resources */,
+				EF08C1891DB9421900248D68 /* Ji.png in Resources */,
+				EF08C1871DB9421900248D68 /* Hei@2x.png in Resources */,
+				EF08C18B1DB9421900248D68 /* Ji@3x.png in Resources */,
+				EF08C18D1DB9421900248D68 /* Liao@2x.png in Resources */,
 				EFED993D1DB30BD900813A4B /* LaunchScreen.storyboard in Resources */,
 				EFED993A1DB30BD900813A4B /* Assets.xcassets in Resources */,
+				EF08C1881DB9421900248D68 /* Hei@3x.png in Resources */,
 				EFED99381DB30BD900813A4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,9 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFED99351DB30BD900813A4B /* SecondViewController.swift in Sources */,
 				EFED99311DB30BD900813A4B /* AppDelegate.swift in Sources */,
-				EFED99331DB30BD900813A4B /* FirstViewController.swift in Sources */,
+				EF08C1791DB9409600248D68 /* JiViewController.swift in Sources */,
+				EF08C1771DB9408600248D68 /* HeiViewController.swift in Sources */,
+				EF08C17B1DB940A600248D68 /* LiaoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +354,7 @@
 				EFED99431DB30BD900813A4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
