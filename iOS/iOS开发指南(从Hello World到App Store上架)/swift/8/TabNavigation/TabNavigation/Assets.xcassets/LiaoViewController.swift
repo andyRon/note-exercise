@@ -12,7 +12,7 @@ class LiaoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("this LiaoViewController")
         // Do any additional setup after loading the view.
     }
 

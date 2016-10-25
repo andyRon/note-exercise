@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF08C19C1DBC5E6D00248D68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C19B1DBC5E6D00248D68 /* AppDelegate.swift */; };
+		EF08C1A51DBC5E6D00248D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1A41DBC5E6D00248D68 /* Assets.xcassets */; };
+		EF08C1A81DBC5E6D00248D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1A61DBC5E6D00248D68 /* LaunchScreen.storyboard */; };
+		EF08C1B01DBC5F2800248D68 /* HeiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1AF1DBC5F2800248D68 /* HeiViewController.swift */; };
+		EF08C1B21DBC5F3E00248D68 /* JiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1B11DBC5F3E00248D68 /* JiViewController.swift */; };
+		EF08C1B41DBC5F4700248D68 /* LiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1B31DBC5F4700248D68 /* LiaoViewController.swift */; };
+		EF08C1BA1DBC660A00248D68 /* JiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1B91DBC660A00248D68 /* JiViewController.xib */; };
+		EF08C1BC1DBC66C500248D68 /* LiaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1BB1DBC66C500248D68 /* LiaoViewController.xib */; };
+		EF08C1BE1DBC670000248D68 /* HeiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1BD1DBC670000248D68 /* HeiViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF08C1981DBC5E6D00248D68 /* TabNavigation-Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabNavigation-Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF08C19B1DBC5E6D00248D68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF08C1A41DBC5E6D00248D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF08C1A71DBC5E6D00248D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF08C1A91DBC5E6D00248D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF08C1AF1DBC5F2800248D68 /* HeiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeiViewController.swift; sourceTree = "<group>"; };
+		EF08C1B11DBC5F3E00248D68 /* JiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiViewController.swift; sourceTree = "<group>"; };
+		EF08C1B31DBC5F4700248D68 /* LiaoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiaoViewController.swift; sourceTree = "<group>"; };
+		EF08C1B91DBC660A00248D68 /* JiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JiViewController.xib; sourceTree = "<group>"; };
+		EF08C1BB1DBC66C500248D68 /* LiaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiaoViewController.xib; sourceTree = "<group>"; };
+		EF08C1BD1DBC670000248D68 /* HeiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeiViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF08C1951DBC5E6D00248D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF08C18F1DBC5E6D00248D68 = {
+			isa = PBXGroup;
+			children = (
+				EF08C19A1DBC5E6D00248D68 /* TabNavigation-Code */,
+				EF08C1991DBC5E6D00248D68 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF08C1991DBC5E6D00248D68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF08C1981DBC5E6D00248D68 /* TabNavigation-Code.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF08C19A1DBC5E6D00248D68 /* TabNavigation-Code */ = {
+			isa = PBXGroup;
+			children = (
+				EF08C19B1DBC5E6D00248D68 /* AppDelegate.swift */,
+				EF08C1B11DBC5F3E00248D68 /* JiViewController.swift */,
+				EF08C1B91DBC660A00248D68 /* JiViewController.xib */,
+				EF08C1B31DBC5F4700248D68 /* LiaoViewController.swift */,
+				EF08C1BB1DBC66C500248D68 /* LiaoViewController.xib */,
+				EF08C1AF1DBC5F2800248D68 /* HeiViewController.swift */,
+				EF08C1BD1DBC670000248D68 /* HeiViewController.xib */,
+				EF08C1A41DBC5E6D00248D68 /* Assets.xcassets */,
+				EF08C1A61DBC5E6D00248D68 /* LaunchScreen.storyboard */,
+				EF08C1A91DBC5E6D00248D68 /* Info.plist */,
+			);
+			path = "TabNavigation-Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF08C1971DBC5E6D00248D68 /* TabNavigation-Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF08C1AC1DBC5E6D00248D68 /* Build configuration list for PBXNativeTarget "TabNavigation-Code" */;
+			buildPhases = (
+				EF08C1941DBC5E6D00248D68 /* Sources */,
+				EF08C1951DBC5E6D00248D68 /* Frameworks */,
+				EF08C1961DBC5E6D00248D68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TabNavigation-Code";
+			productName = "TabNavigation-Code";
+			productReference = EF08C1981DBC5E6D00248D68 /* TabNavigation-Code.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF08C1901DBC5E6D00248D68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = andyron;
+				TargetAttributes = {
+					EF08C1971DBC5E6D00248D68 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZHNA975N38;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF08C1931DBC5E6D00248D68 /* Build configuration list for PBXProject "TabNavigation-Code" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF08C18F1DBC5E6D00248D68;
+			productRefGroup = EF08C1991DBC5E6D00248D68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF08C1971DBC5E6D00248D68 /* TabNavigation-Code */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF08C1961DBC5E6D00248D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF08C1BE1DBC670000248D68 /* HeiViewController.xib in Resources */,
+				EF08C1BA1DBC660A00248D68 /* JiViewController.xib in Resources */,
+				EF08C1A81DBC5E6D00248D68 /* LaunchScreen.storyboard in Resources */,
+				EF08C1A51DBC5E6D00248D68 /* Assets.xcassets in Resources */,
+				EF08C1BC1DBC66C500248D68 /* LiaoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF08C1941DBC5E6D00248D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF08C19C1DBC5E6D00248D68 /* AppDelegate.swift in Sources */,
+				EF08C1B21DBC5F3E00248D68 /* JiViewController.swift in Sources */,
+				EF08C1B01DBC5F2800248D68 /* HeiViewController.swift in Sources */,
+				EF08C1B41DBC5F4700248D68 /* LiaoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF08C1A61DBC5E6D00248D68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF08C1A71DBC5E6D00248D68 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF08C1AA1DBC5E6D00248D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF08C1AB1DBC5E6D00248D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF08C1AD1DBC5E6D00248D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZHNA975N38;
+				INFOPLIST_FILE = "TabNavigation-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.TabNavigation-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		EF08C1AE1DBC5E6D00248D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZHNA975N38;
+				INFOPLIST_FILE = "TabNavigation-Code/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.TabNavigation-Code";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF08C1931DBC5E6D00248D68 /* Build configuration list for PBXProject "TabNavigation-Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF08C1AA1DBC5E6D00248D68 /* Debug */,
+				EF08C1AB1DBC5E6D00248D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF08C1AC1DBC5E6D00248D68 /* Build configuration list for PBXNativeTarget "TabNavigation-Code" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF08C1AD1DBC5E6D00248D68 /* Debug */,
+				EF08C1AE1DBC5E6D00248D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF08C1901DBC5E6D00248D68 /* Project object */;
+}

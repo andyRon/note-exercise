@@ -12,7 +12,9 @@ class JiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("this JiViewController")
+        print(self.storyboard)
+        print(self)
         // Do any additional setup after loading the view.
     }
 

@@ -12,7 +12,7 @@ class HeiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("this HeiViewController")
         // Do any additional setup after loading the view.
     }
 
