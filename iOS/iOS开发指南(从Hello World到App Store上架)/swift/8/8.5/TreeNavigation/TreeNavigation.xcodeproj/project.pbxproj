@@ -12,6 +12,9 @@
 		EF08C1F31DBC738A00248D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1F21DBC738A00248D68 /* Assets.xcassets */; };
 		EF08C1F61DBC738A00248D68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF08C1F41DBC738A00248D68 /* LaunchScreen.storyboard */; };
 		EF08C1FE1DBC74D800248D68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08C1FD1DBC74D800248D68 /* ViewController.swift */; };
+		EF38A13C1DBFA93300860E10 /* provinces_cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF38A13B1DBFA93300860E10 /* provinces_cities.plist */; };
+		EF38A1401DBFAC3300860E10 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38A13F1DBFAC3300860E10 /* CitiesViewController.swift */; };
+		EF38A1421DBFAFC200860E10 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38A1411DBFAFC200860E10 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		EF08C1F51DBC738A00248D68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF08C1F71DBC738A00248D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF08C1FD1DBC74D800248D68 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF38A13B1DBFA93300860E10 /* provinces_cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = provinces_cities.plist; sourceTree = "<group>"; };
+		EF38A13F1DBFAC3300860E10 /* CitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		EF38A1411DBFAFC200860E10 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 		EF08C1EA1DBC738A00248D68 /* TreeNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				EF38A13B1DBFA93300860E10 /* provinces_cities.plist */,
 				EF08C1EB1DBC738A00248D68 /* AppDelegate.swift */,
 				EF08C1FD1DBC74D800248D68 /* ViewController.swift */,
+				EF38A13F1DBFAC3300860E10 /* CitiesViewController.swift */,
+				EF38A1411DBFAFC200860E10 /* DetailViewController.swift */,
 				EF08C1EF1DBC738A00248D68 /* Main.storyboard */,
 				EF08C1F21DBC738A00248D68 /* Assets.xcassets */,
 				EF08C1F41DBC738A00248D68 /* LaunchScreen.storyboard */,
@@ -125,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF08C1F61DBC738A00248D68 /* LaunchScreen.storyboard in Resources */,
+				EF38A13C1DBFA93300860E10 /* provinces_cities.plist in Resources */,
 				EF08C1F31DBC738A00248D68 /* Assets.xcassets in Resources */,
 				EF08C1F11DBC738A00248D68 /* Main.storyboard in Resources */,
 			);
@@ -137,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF38A1401DBFAC3300860E10 /* CitiesViewController.swift in Sources */,
 				EF08C1FE1DBC74D800248D68 /* ViewController.swift in Sources */,
 				EF08C1EC1DBC738A00248D68 /* AppDelegate.swift in Sources */,
+				EF38A1421DBFAFC200860E10 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.TreeNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -279,7 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.andyron.TreeNavigation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -302,6 +314,7 @@
 				EF08C1FC1DBC738A00248D68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
