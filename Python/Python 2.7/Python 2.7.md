@@ -469,6 +469,11 @@
     收邮件时，MUA和MDA使用的协议有两种：POP：Post Office Protocol，目前版本是3，俗称POP3；IMAP：Internet Message Access Protocol，目前版本是4，优点是不但能取邮件，还可以直接操作MDA上存储的邮件，比如从收件箱移到垃圾箱，等等。
 
 
+### 17 访问数据库
+    - 使用SQLite
+        + Python内置了SQLite3
+
+
 
 
 -------------

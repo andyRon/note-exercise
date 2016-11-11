@@ -1,0 +1,13 @@
+{
+    "require": {
+        "google/apiclient": "1.0.*@beta",
+        "guzzlehttp/guzzle": "~4.0",
+        "doctrine/dbal": "~2.4"
+    },
+
+    "autoload": {
+        "classmap": [
+            "my_library"
+        ]
+    }
+}
