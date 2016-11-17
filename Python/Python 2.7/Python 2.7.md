@@ -484,6 +484,14 @@
         + 浏览器就是依靠Content-Type来判断响应的内容是网页还是图片，是视频还是音乐。浏览器并不靠URL来判断响应的内容
     - WSGI接口
         + 需要一个统一的接口，让我们专心用Python编写Web业务。WSGI：Web Server Gateway Interface。
+        + wsgiref   Python内置了的WSGI服务器
+    - 使用Web框架
+        + 有了Web框架，我们在编写Web应用时，注意力就从WSGI处理函数转移到URL+对应的处理函数，这样，编写Web App就更加简单了。
+        + 在编写URL处理函数时，除了配置URL外，从HTTP请求拿到用户数据也是非常重要的。Web框架都提供了自己的API来实现这些功能。Flask通过request.form['name']来获取表单的内容。
+    - 使用模板
+
+### 协程
+
 
 
 
