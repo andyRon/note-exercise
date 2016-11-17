@@ -472,6 +472,18 @@
 ### 17 访问数据库
     - 使用SQLite
         + Python内置了SQLite3
+    - 使用MySQL
+        + 由于Python的DB-API定义都是通用的，所以，操作MySQL的数据库代码和SQLite类似。
+        + 通常我们在连接MySQL时传入use_unicode=True，让MySQL的DB-API始终返回Unicode
+    - 使用SQLAlchemy(ORM框架)
+        + 由于关系数据库的多个表还可以用外键实现一对多、多对多等关联，相应地，ORM框架也可以提供两个对象之间的一对多、多对多等功能。
+
+
+### Web开发
+    - HTTP协议简介
+        + 浏览器就是依靠Content-Type来判断响应的内容是网页还是图片，是视频还是音乐。浏览器并不靠URL来判断响应的内容
+    - WSGI接口
+        + 需要一个统一的接口，让我们专心用Python编写Web业务。WSGI：Web Server Gateway Interface。
 
 
 
