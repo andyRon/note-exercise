@@ -76,6 +76,25 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     + 缺点：怎样导航进来的，就要怎样原路返回
 
 
+### 9 iPad应用开发 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 总结
 -------------------------------
@@ -116,6 +135,9 @@ erro: Error Domain=NSURLErrorDomain Code=-1022 "The resource could not be loaded
 2016-09-02 08:05:57.276 CustomeCell[2440:1456324] Failed to instantiate the default view controller for UIMainStoryboardFile 'Main' - perhaps the designated entry point is not set?
 ``````
 **IS Initial View Controller** 勾选
+
+
+
 
 
 

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIBarButtonItem.appearance().tintColor = UIColor.white
     
     UIButton.appearance().tintColor = UIColor.white
+    
+    
     
     return true
   }

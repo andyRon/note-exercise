@@ -464,6 +464,16 @@ iPhone, iPad, iPod都有内置的相机和**Photos**应用用来管理照片和�
 
 
 
+
+
+
+
+
+
+
+
+
+
 ----------
 ### 问题
 - could not find developer disk image
