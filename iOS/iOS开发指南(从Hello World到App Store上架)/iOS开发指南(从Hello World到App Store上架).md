@@ -79,6 +79,17 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
 ### 9 iPad应用开发 
 
 
+### 10 iOS常用设计模式
+
+- 10.3 观察者模式
+    + 在软件系统中，一个对象状态的改变也会连带影响其他很多对象的状态发生改变。能够实现这一需求的设计方案有很多，但能够做到复用性强且对象之间匿名通信的，观察者模式是其中最合适的一个。
+    + 实现原理
+    + 在Cocoa Touch框架中，观察者模式具体应用 —— 通知（notification）机制和KVO(Key-Value Observing)机制
+    + 通知机制 
+        * 广播通知(broadcast notification)、本地通知(local notification)、推送通知(push notification)
+        * 
+
+
 
 
 

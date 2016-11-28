@@ -53,7 +53,16 @@ Out[8]:
     - 对象后的句点显示方法和属性，框，不能左右键选择
     - 默认不显示下划线开头的方法和属性，输入_后再按tab就会显示（主要是避免显示太多东西）
     - 自动完成文件路径，在字符串中也是可以
-3. 内省
+3. 对象内省 (object introspection)
+    - `?`
+    - 函数或方法的`docstring`
+    - `??` 显示函数的源代码（如果可能）
+    - `np.*load*?` 通配符（*）与？一起用
+4. `%run ipython_script_test.py` 在IPython环境中运行Python文件 
+    - `%run argv.py 1 "argv2"`
+    - `%run -i argv.py`  脚本（argv.py）能够使用之前IPython中的定义的变量
+    - **Ctrl-C**  KeyboradInterrupt
+    - 
 
 
 
