@@ -61,7 +61,7 @@ Out[8]:
 4. `%run ipython_script_test.py` 在IPython环境中运行Python文件 
     - `%run argv.py 1 "argv2"`
     - `%run -i argv.py`  脚本（argv.py）能够使用之前IPython中的定义的变量
-    - **Ctrl-C**  KeyboradInterrupt
+    - **Ctrl-C**  KeyboradInterrupt  中断正在执行的代码
     - 
 
 

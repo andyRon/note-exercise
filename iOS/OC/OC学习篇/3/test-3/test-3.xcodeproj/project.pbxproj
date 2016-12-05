@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF7A15411DF029B00060740E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15401DF029B00060740E /* AppDelegate.m */; };
+		EF7A15441DF029B00060740E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15431DF029B00060740E /* main.m */; };
+		EF7A15461DF029B00060740E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF7A15451DF029B00060740E /* Assets.xcassets */; };
+		EF7A15491DF029B00060740E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF7A15471DF029B00060740E /* MainMenu.xib */; };
+		EF7A15521DF029D30060740E /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15511DF029D30060740E /* Car.m */; };
+		EF7A15561DF02ED70060740E /* Taxi.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15551DF02ED70060740E /* Taxi.m */; };
+		EF7A15591DF034E50060740E /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15581DF034E50060740E /* Printer.m */; };
+		EF7A155C1DF035260060740E /* WhitePrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A155B1DF035260060740E /* WhitePrinter.m */; };
+		EF7A155F1DF035590060740E /* BlackPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A155E1DF035590060740E /* BlackPrinter.m */; };
+		EF7A15621DF0359A0060740E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = EF7A15611DF0359A0060740E /* Person.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF7A153C1DF029B00060740E /* test-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7A153F1DF029B00060740E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF7A15401DF029B00060740E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF7A15431DF029B00060740E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF7A15451DF029B00060740E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF7A15481DF029B00060740E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EF7A154A1DF029B00060740E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7A15501DF029D30060740E /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		EF7A15511DF029D30060740E /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		EF7A15541DF02ED70060740E /* Taxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Taxi.h; path = ../Taxi.h; sourceTree = "<group>"; };
+		EF7A15551DF02ED70060740E /* Taxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Taxi.m; path = ../Taxi.m; sourceTree = "<group>"; };
+		EF7A15571DF034E50060740E /* Printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Printer.h; sourceTree = "<group>"; };
+		EF7A15581DF034E50060740E /* Printer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Printer.m; sourceTree = "<group>"; };
+		EF7A155A1DF035260060740E /* WhitePrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhitePrinter.h; sourceTree = "<group>"; };
+		EF7A155B1DF035260060740E /* WhitePrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhitePrinter.m; sourceTree = "<group>"; };
+		EF7A155D1DF035590060740E /* BlackPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackPrinter.h; sourceTree = "<group>"; };
+		EF7A155E1DF035590060740E /* BlackPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackPrinter.m; sourceTree = "<group>"; };
+		EF7A15601DF0359A0060740E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		EF7A15611DF0359A0060740E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7A15391DF029B00060740E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7A15331DF029B00060740E = {
+			isa = PBXGroup;
+			children = (
+				EF7A153E1DF029B00060740E /* test-3 */,
+				EF7A153D1DF029B00060740E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7A153D1DF029B00060740E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7A153C1DF029B00060740E /* test-3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7A153E1DF029B00060740E /* test-3 */ = {
+			isa = PBXGroup;
+			children = (
+				EF7A153F1DF029B00060740E /* AppDelegate.h */,
+				EF7A15501DF029D30060740E /* Car.h */,
+				EF7A15511DF029D30060740E /* Car.m */,
+				EF7A15541DF02ED70060740E /* Taxi.h */,
+				EF7A15551DF02ED70060740E /* Taxi.m */,
+				EF7A15571DF034E50060740E /* Printer.h */,
+				EF7A15581DF034E50060740E /* Printer.m */,
+				EF7A155A1DF035260060740E /* WhitePrinter.h */,
+				EF7A155B1DF035260060740E /* WhitePrinter.m */,
+				EF7A155D1DF035590060740E /* BlackPrinter.h */,
+				EF7A155E1DF035590060740E /* BlackPrinter.m */,
+				EF7A15601DF0359A0060740E /* Person.h */,
+				EF7A15611DF0359A0060740E /* Person.m */,
+				EF7A15401DF029B00060740E /* AppDelegate.m */,
+				EF7A15451DF029B00060740E /* Assets.xcassets */,
+				EF7A15471DF029B00060740E /* MainMenu.xib */,
+				EF7A154A1DF029B00060740E /* Info.plist */,
+				EF7A15421DF029B00060740E /* Supporting Files */,
+			);
+			path = "test-3";
+			sourceTree = "<group>";
+		};
+		EF7A15421DF029B00060740E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF7A15431DF029B00060740E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7A153B1DF029B00060740E /* test-3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7A154D1DF029B00060740E /* Build configuration list for PBXNativeTarget "test-3" */;
+			buildPhases = (
+				EF7A15381DF029B00060740E /* Sources */,
+				EF7A15391DF029B00060740E /* Frameworks */,
+				EF7A153A1DF029B00060740E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "test-3";
+			productName = "test-3";
+			productReference = EF7A153C1DF029B00060740E /* test-3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7A15341DF029B00060740E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = andyron;
+				TargetAttributes = {
+					EF7A153B1DF029B00060740E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZHNA975N38;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EF7A15371DF029B00060740E /* Build configuration list for PBXProject "test-3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7A15331DF029B00060740E;
+			productRefGroup = EF7A153D1DF029B00060740E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7A153B1DF029B00060740E /* test-3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF7A153A1DF029B00060740E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7A15461DF029B00060740E /* Assets.xcassets in Resources */,
+				EF7A15491DF029B00060740E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7A15381DF029B00060740E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7A155C1DF035260060740E /* WhitePrinter.m in Sources */,
+				EF7A15521DF029D30060740E /* Car.m in Sources */,
+				EF7A15621DF0359A0060740E /* Person.m in Sources */,
+				EF7A15441DF029B00060740E /* main.m in Sources */,
+				EF7A15591DF034E50060740E /* Printer.m in Sources */,
+				EF7A15411DF029B00060740E /* AppDelegate.m in Sources */,
+				EF7A15561DF02ED70060740E /* Taxi.m in Sources */,
+				EF7A155F1DF035590060740E /* BlackPrinter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7A15471DF029B00060740E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7A15481DF029B00060740E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7A154B1DF029B00060740E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF7A154C1DF029B00060740E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF7A154E1DF029B00060740E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZHNA975N38;
+				INFOPLIST_FILE = "test-3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.test-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF7A154F1DF029B00060740E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZHNA975N38;
+				INFOPLIST_FILE = "test-3/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.andyron.test-3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7A15371DF029B00060740E /* Build configuration list for PBXProject "test-3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7A154B1DF029B00060740E /* Debug */,
+				EF7A154C1DF029B00060740E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7A154D1DF029B00060740E /* Build configuration list for PBXNativeTarget "test-3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7A154E1DF029B00060740E /* Debug */,
+				EF7A154F1DF029B00060740E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7A15341DF029B00060740E /* Project object */;
+}
