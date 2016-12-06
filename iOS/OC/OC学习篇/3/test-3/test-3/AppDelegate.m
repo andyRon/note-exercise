@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "Car.h"
 #import "Taxi.h"
+#import "WhitePrinter.h"
+#import "BlackPrinter.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +26,16 @@
 //    NSLog(@"%@", [Car init]);
     
 //    [[Taxi alloc] printTrick];
+    Person *person = [[Person alloc] init];
+    
+    WhitePrinter *whitePrinter = [[WhitePrinter alloc] init];
+    BlackPrinter *blackPrinter = [[BlackPrinter alloc] init];
+    
+    [person doPrinter:whitePrinter];
+    
+    [person doPrinter:blackPrinter];
+    
+
     
 }
 

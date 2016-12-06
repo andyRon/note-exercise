@@ -20,4 +20,40 @@
         - OC中的方法是没有修饰符的概念的，一般都是公开访问的，即public的怎么做到让OC中的一个方法不能被外界访问呢？  
             + 只需要在.m文件中实现这个方法，不要在头文件中进行定义，说白了就是：该方法有实现，没定义，这样外界在导入头文件的时候，是没有这个方法的，但是这个方法我们可以在自己的.m文件中进行使用。
     * 继承
-    * 多态   **定义类型和实际类型，一般是基于接口的形式实现的** 
+    * 多态   **定义类型和实际类型，一般是基于接口的形式实现的**
+
+4. @class关键字的作用以及#include和#import的区别
+5. 类目的概念和使用
+    * Java和OC是单继承的，不允许多继承
+    * 类目的文件名的格式："需要添加类目的类名+类目的名称"
+    * 如果在添加的类目中重新定义了类中的已有的方法，那么类目中的方法会被覆盖，和类的继承差不多，但是这里有一点需要注意，这里是不能使用super关键字去调用NSString的intValue方法的，所以intValue覆盖了NSString类中的intValue方法之后，NSString类中的intValue方法原先的功能就没有了，这个得注意一下。
+    * 一个类是可以定义多个类目的。而且类目的作用可以沿袭到子类，就是父类的类目中的方法子类依然可以使用super关键字进行调用的。
+    * `NSArray` 中的类目 
+
+        ```
+        @interface NSArray<ObjectType> (NSExtendedArray)
+
+        @interface NSArray<ObjectType> (NSArrayCreation)
+        ```
+
+6. 协议的概念和用法
+    - OC中的协议就是相当于Java中的接口(抽象类). 协议就是定义了一组方法，然后让其他类去实现.
+    - 定义协议格式： 定义协议的关键字是@protocol,同时协议也是可以继承父协议的
+
+    ```
+    @protocol  协议名  <父协议>
+    定义方法
+    @required：这个表示这个方法是其他类必须实现的，也是默认的值
+    @optional：这个表示这个方法对于其他类实现是可选的
+    @end
+    ```
+    - 使用： 直接在继承类(NSObject)后面 <协议名>即可
+
+    ```
+    @interface Student : NSObject <WithProtocol>  
+    ```
+
+    - `#pragma mark - ruleProtocol`  标记后面的方法都是协议中的方法 方便浏览
+    - `#warning` 
+
+7. 代理模式 http://blog.csdn.net/jiangwei0910410003/article/details/41777627

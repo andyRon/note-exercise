@@ -62,7 +62,47 @@ Out[8]:
     - `%run argv.py 1 "argv2"`
     - `%run -i argv.py`  脚本（argv.py）能够使用之前IPython中的定义的变量
     - **Ctrl-C**  KeyboradInterrupt  中断正在执行的代码
-    - 
+5. 执行剪贴板中的代码
+
+    ```
+x = 5
+y = 7
+if x >= 5:
+    x +=1 
+    y = 8
+    ```
+
+    - %paste 
+    - $cpaste **Ctrl-C**终止
+6. IPython与编辑器和IDE之间的交互
+7. 键盘快捷键
+8. 异常和跟踪
+    - `%xmode`
+9. 魔术命令 (以%为前缀)
+    - 魔术命令可以看做是IPython中的命令行程序，它们也有“命令行选项”，可通过`?`查看
+    - `%timeit`  检测python语句执行时间
+    ```
+    a = np.random.randn(100, 100)
+    %timeit np.dot(a, a)
+    ```
+    - `%reset` 删除interactive命名空间中的全部变量/名称 
+    - `%automagic`
+    - `%quickref`
+    - `%magic`
+    - `%degug`
+    - `%hist`
+    - `%pdb`
+    - `%paste`
+    - `%cpaste`
+    - `%page OBJECT`
+10. 基于Qt的富GUI控制台
+11. matplotlib集成与pylab模式
+12. 使用命令历史
+13. 与操作系统交互
+14. 软件开发工具
+15. IPthon HTML Notebook
+16. 
+
 
 
 
