@@ -18,7 +18,12 @@ class RegisterViewController: UIViewController {
             NSLog("点击Save按钮，关闭模态视图")
             
             let dataDict = NSDictionary(object: self.textUsername.text!, forKey: "username")
+            
             // 采用通知机制将参数回传给登录视图控制器
+            // postNotificationName的三个参数分别对应 NSNotification 的三个属性:
+            //name 通知的名字
+            //object 投送通知时传递过来的对象
+            //userInfo 投送通知时定义的字典对象
             NSNotificationCenter.defaultCenter().postNotificationName("RegisterCompletionNotification", object: nil, userInfo: dataDict as [NSObject : AnyObject])
         }
 

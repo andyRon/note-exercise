@@ -85,9 +85,18 @@ iOS开发指南(从Hello World到App Store上架)(第4版)
     + 在软件系统中，一个对象状态的改变也会连带影响其他很多对象的状态发生改变。能够实现这一需求的设计方案有很多，但能够做到复用性强且对象之间匿名通信的，观察者模式是其中最合适的一个。
     + 实现原理
     + 在Cocoa Touch框架中，观察者模式具体应用 —— 通知（notification）机制和KVO(Key-Value Observing)机制
-    + 通知机制 
+    + 通知机制 （**通过一个通知中心通知所有观察者对象**）
         * 广播通知(broadcast notification)、本地通知(local notification)、推送通知(push notification)
-        * 
+        * `NSNotificationCenter` `NSNotification`
+        * NSNotification 的三个属性:
+            + name 通知的名字
+            + object 投送通知时传递过来的对象
+            + userInfo 投送通知时定义的字典对象
+        * `UIApplication` 定义几个系统通知 `UIApplicationDidEnterBackgroundNotification` `UIApplicationWillEnterForegroundNotification`
+    + KVO机制 （**在对象属性变化时将通知直接发送给观察者对象**）
+
+- 10.4 再谈MVC模式
+
 
 
 

@@ -24,6 +24,8 @@ def crawling_sitemap(url):
     for link in links:
         html = download(link)
 
+    return 'over'
+
 
 
 # crawling_sitemap("http://example.webscraping.com/sitemap.xml")
