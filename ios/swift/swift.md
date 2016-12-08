@@ -27,7 +27,8 @@
    		* 反引号包围来使用保留关键字		 
    + 输出常量和变量
        * `println`与`print` 只是最后换不换行的差别。类似Cocoa中得`NSLog`
-       * `print(_:separator:terminator:) `
+       * `print(_:separator:terminator:) `  完整第一形式：`public func print(_ items: Any..., separator: String = default, terminator: String = default)`  
+         有三个字段items：一个或多个打印项
        * 字符串插值（**string interpolation**） `\()` 可以包含常量、变量、字面量和表达式。 括号中不能包含非转义双引号（"）和反斜杠(\\),回车或换行符
    + 注释	可以嵌套注释
    + 分号	在一行写多条独立语句时需要分号，其它情况不是必须的
@@ -306,23 +307,79 @@
 - 枚举（Enumerations）	一等类型（first-class）
 	+ 枚举语法
 		- 类型名以大写开头
+		- 给枚举类型起一个单数名字而不是复数名字，以便于读起来更加容易理解
 		
 				enum Planet{
 					case Mercury, Venus, Earth, Mars,Jupiter, Saturn, Uranus,Neptune
 				}
+	+ 一旦被声明为枚举类型，就可以用简短的点语法
 	+ 匹配枚举值和switch语句
 	+ 相关值（Associated values）
 	+ 原始值（Raw Values）
+		* 原始值和关联值是不同的。原始值是在定义枚举时被预先填充的值，像上述三个 ASCII 码。对于一个特定的枚 举成员，它的原始值始终不变。关联值是创建一个基于枚举成员的常量或变量时才设置的值，枚举成员的关联值 可以变化。
+		* 使用原始值初始化枚举实例(Initializing from a Raw Value)
+	+ 递归枚举(Recursive Enumerations)
+		* `indirect`
 
-- 类和结构体
+	```
+	/**
+	“定义一个名为 Barcode 的枚举类型，它的一个成员值是具有 (Int，Int，Int，Int) 类型关联值的 UPCA ，另一 个成员值是具有 String 类型关联值的 QRCode 。”
+	*/
+	enum Barcode {
+	     case UPCA(Int, Int, Int, Int)
+	     case QRCode(String)
+	}
+	
+
+	var productBarcode = Barcode.UPCA(8, 85909, 51226, 3)
+	productBarcode = .QRCode("ABCDEFGHIJKLMNOP")
+	switch productBarcode {
+	 case .UPCA(let numberSystem, let manufacturer, let product, let check):
+	     print("UPC-A: \(numberSystem), \(manufacturer), \(product), \(check).")
+	 case .QRCode(let productCode):
+	     print("QR code: \(productCode).")
+	 }
+	```
+
+- 类和结构体(Classes and Structures)
+	+ 共同处
+		* 定义属性用于存储值
+ 		* 定义方法用于提供功能
+		* 定义下标操作使得可以通过下标语法来访问实例所包含的值 
+		* 定义构造器用于生成初始化值
+		* 通过扩展以增加默认实现的功能 
+		* 实现协议以提供某种标准功能
+	+ 类相对于结构体的附加功能
+		* 继承允许一个类继承另一个类的特征
+		* 类型转换允许在运行时检查和解释一个类实例的类型 
+		* 析构器允许一个类实例释放任何其所被分配的资源
+		* 引用计数允许对一个类的多次引用（**结构体总是通过被复制的方式在代码中传递，不使用引用计数。**）
+	+ 类名和结构名用**UpperCamelCase**, 属性和方法名用**lowerCameCase**
+	+ 类和结构体实例
+	+ 属性访问
+	+ 结构体类型的成员逐一构造器(Memberwise Initializers for Structure Types)
+		* `let vga = Resolution(width:640, height: 480)`
+	+ 结构体和枚举是值类型
+		* 在 Swift 中，所有的基本类型:整数(Integer)、浮 点数(floating-point)、布尔值(Boolean)、字符串(string)、数组(array)和字典(dictionary)，都是 值类型，并且在底层都是以结构体的形式所实现。
+	+ 类是引用类型
+		* 对象变量被设置成常量是，其的属性是可以变化的。因为对象变量时类实例的一个引用，属性给变这个引用并没有变化
+		* 恒等运算符（用于引用类型判断两个变量或常量是否引用同一个类实例）
+		* 指针
+	+ 类和结构体的选择
+		* 选用结构体
+			- 该数据结构的主要目的是用来封装少量相关简单数据值。
+			- 有理由预计该数据结构的实例在被赋值或传递时，封装的数据将会被拷贝而不是被引用。 - 该数据结构中储存的值类型属性，也应该被拷贝，而不是被引用。
+			- 该数据结构不需要去继承另一个既有类型的属性或者行为。
+	+ **Objective-C 中 NSString ， NSArray 和 NSDictionary 类型均以类的形式实现，而并非结构体。**
 
 - 属性
-	+ Stored Properties
-	+ 常量结构体的存储属性
-	+ 延迟存储属性  `lazy var`
-		* 必须将延迟存储属性声明成变量（使用var关键字），因为属性的初始值可能在实例构造完成之后才会得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
-		* 如果一个被标记为lazy的属性在没有初始化时就同时被多个线程访问，则无法保证该属性只会被初始
-	+ 计算属性  getter (setter, `newValue`)
+	+ 存储属性 Stored Properties （只能用于类和结构体）
+		* 常量结构体的存储属性（常量结构的属性不能修改）
+		* 延迟存储属性  `lazy var`
+			- 必须将延迟存储属性声明成变量（使用var关键字），因为属性的初始值可能在实例构造完成之后才会得到。而**常量属性在构造过程完成之前必须要有初始值**，因此无法声明成延迟属性。
+			- 如果一个被标记为lazy的属性在没有初始化时就同时被多个线程访问，则无法保证该属性只会被初始
+		* 存储属性和实例变量 ??
+	+ 计算属性  getter (setter, `newValue`) （用于类、结构体和枚举）
 		* 只读计算属性
 		* 必须使用var关键字定义计算属性
 	+ 属性观察器(property observer)
@@ -335,12 +392,32 @@
 	+ 全局变量和局部变量   
 	全局的常量或变量都是延迟计算的（不需要`lazy`），局部范围的常量或变量不会延迟计算。
 	+ 类型属性（类似于静态属性）
-	
+		* 存储型类型属性是延迟初始化的
+		* `static` `class`	
 - 方法 
+	+ 结构体和枚举能够定义方法是 Swift 与 C/Objective-C 的主要区别之一
+	+ 实例方法 (Instance Methods)
+		* 实例方法不能脱离于现存的实例而被调用。
+		* 方法的局部参数名称和外部参数名称 (Local and External Parameter Names for Methods)
+		* 像在 Objective-C 中一样，Swift 中方法的名称通常用一 个介词指向方法的第一个参数，比如:  with, for, by   等等。介词的使用让方法在被调用时能像一个句子一样被解读。
+		* self 属性 
+			- self完全等同于该实例本身（可省略）
+		* 在实例方法中修改值类型(Modifying Value Types from Within Instance Methods)
+			- `mutating`
+		* 在可变方法中给 self 赋值(Assigning to self Within a Mutating Method)
+	+ 类型方法 (Type Methods)
+		* `static`  `class`
+		* 在类型方法的方法体(body)中， `self`指向这个类型本身，而不是类型的某个实例。
+		* 在类型方法的方法体中，任何未限定的方法和属性名称，可以被本类中其他的类型方法和类型属性引
+用。（可以省略self或类型名称）
 
 	
 - 下标脚本(subscripts)
-
+	+ 下标 (subscripts)可以定义在类(class)、结构体(structure)和枚举(enumeration)中，是访问集合(c ollection)，列表(list)或序列(sequence)中元素的快捷方式。
+	+ 下标语法
+	+ 下标选项
+		* 下标可以接受任意数量的入参，并且这些入参可以是任意类型。下标的返回值也可以是任意类型。下标可以使用
+变量参数和可变参数，但不能使用输入输出参数，也不能给参数设置默认值。
 - 继承(inheritance) 
 	+ base class
 	+ subclassing

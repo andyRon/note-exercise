@@ -12,3 +12,7 @@ Alamofire.request("https://api.500px.com/v1/photos", method: .get, parameters: [
 }
 ````
 
+
+### 杂项知识 
+
+
