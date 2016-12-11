@@ -3,7 +3,7 @@
 - python文件名不要以数字开头，不然import会失效
 
 
-### 网络爬虫简介
+### 1 网络爬虫简介
 
 - 1.3 背景调查
     + robots.txt  http://www.robotstxt.org/
@@ -23,6 +23,17 @@
     + 链接爬虫
         * `urlparse`
         * 避免重复
+        * 解析robots.txt  `robotparser`
+        * 支持代理
+        * 下载限速  延迟固定时间
+        * 爬虫陷阱  深度
+
+### 2 数据抓取
+- 三种网页抓取方法
+    + 正则
+    + BeautifulSoup
+    + Lxml
+
 
 
 

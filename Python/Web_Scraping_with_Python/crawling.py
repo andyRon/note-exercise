@@ -3,6 +3,7 @@ import re
 import urllib2 
 import urlparse
 import datetime
+import time
 
 def download(url, user_agent = 'wswp', num_re = 2):
     print "Downloading:", url 
