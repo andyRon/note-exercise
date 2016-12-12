@@ -455,6 +455,12 @@
 		- 不带外部名的构造器参数  
 			`init(_ celsius: Double)`    => 	`Celsius(37.0)`
 		- 可选属性类型
+
+
+
+
+
+
 		
 - Protocols
 	+ 属性的语法  

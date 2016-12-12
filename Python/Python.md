@@ -6,6 +6,7 @@ Python学习
 
 ### https://github.com/lanbing510/DouBanSpider
 
+http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/overview.html
 -------
 
 ### 模块安装
