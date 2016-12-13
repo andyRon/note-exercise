@@ -12,6 +12,7 @@ class DmozSpider(scrapy.Spider):
         # filename = response.url.split("/")[-2]
         # with open(filename, 'wb') as f:
         #     f.write(response.body)
+        print 123;
         for sel in response.xpath('//ul/li'):
             item = DmozItem()
             item['title'] = sel.xpath('a/text()').extract()
@@ -32,3 +33,5 @@ class BaiduSpider(scrapy.Spider):
         filename = "baidu"
         with open(filename, 'wb') as f:
             f.write(response.body)
+
+ # scrapy parse --spider=dmoz  -d 3 "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"
