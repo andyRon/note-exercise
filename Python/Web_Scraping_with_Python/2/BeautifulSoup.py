@@ -15,14 +15,14 @@ def download(url, user_agent = 'wswp', num_re = 2):
     return html;
 
 
-url = 'http://example.webscraping.com/view/Anguilla-8'
-html = download(url)
-soup = BeautifulSoup(html, 'html.parser')
+# url = 'http://example.webscraping.com/view/Anguilla-8'
+# html = download(url)
+# soup = BeautifulSoup(html, 'html.parser')
 
-tr = soup.find('tr', {'id':'places_area__row'})
+# tr = soup.find('tr', {'id':'places_area__row'})
 
-# print tr
-td = tr.find('td', {'class':'w2p_fw'})
-area = td.text
-print area
+# # print tr
+# td = tr.find('td', {'class':'w2p_fw'})
+# area = td.text
+# print area
 
