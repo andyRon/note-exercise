@@ -54,7 +54,23 @@ Out[8]:
     - 默认不显示下划线开头的方法和属性，输入_后再按tab就会显示（主要是避免显示太多东西）
     - 自动完成文件路径，在字符串中也是可以
 3. 对象内省 (object introspection)
-    - `?`
+    - `?` 这个功能对于初学者太好用了，对python中任何东西不清怎么使用时只用在后面加一个`?`就可以获得一些简单的介绍和使用方法，不需要再去查文档，很方便
+    ```
+    sys?
+    sys.path?
+    In [309]: dict?
+    Docstring:
+    dict() -> new empty dictionary
+    dict(mapping) -> new dictionary initialized from a mapping object's
+        (key, value) pairs
+    dict(iterable) -> new dictionary initialized as if via:
+        d = {}
+        for k, v in iterable:
+            d[k] = v
+    dict(**kwargs) -> new dictionary initialized with the name=value pairs
+        in the keyword argument list.  For example:  dict(one=1, two=2)
+    Type:      type
+    ```
     - 函数或方法的`docstring`
     - `??` 显示函数的源代码（如果可能）
     - `np.*load*?` 通配符（*）与？一起用
