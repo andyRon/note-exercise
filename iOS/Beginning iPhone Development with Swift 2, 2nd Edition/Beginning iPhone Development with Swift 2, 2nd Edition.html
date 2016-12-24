@@ -1,0 +1,1832 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Beginning iPhone Development with Swift 2, 2nd Edition</title></head><body><article class="markdown-body"><h2 id="beginning-iphone-development-with-swift"><a name="user-content-beginning-iphone-development-with-swift" href="#beginning-iphone-development-with-swift" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Beginning iPhone Development with Swift</h2>
+<h3 id="1-swift"><a name="user-content-1-swift" href="#1-swift" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1 欢迎到swift丛林</h3>
+<ul>
+<li><em>沙盒</em>  应用用于存储文档、首选项等任何必要数据的地方</li>
+</ul>
+<h3 id="2-hello-world"><a name="user-content-2-hello-world" href="#2-hello-world" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2 Hello World</h3>
+<ol>
+<li>新建项目：<strong>New &gt; Project</strong>(command+shift+N)</li>
+<li>选择 <strong>iOS &gt; Application &gt; Single View Application</strong><br />
+<img alt="Single View Application" src="/Users/andyron/myfield/github/note-exercise/iOS/Beginning%20iPhone%20Development%20with%20Swift%202%2C%202nd%20Edition/img/2016-09-27-14-18-42.png" /></li>
+<li>填写相关参数<br />
+    Product Name <br />
+    Team <br />
+    Organization Name <br />
+    Organization Identifier<br />
+    Bundle Identifier <br />
+    Language Devices  </li>
+<li>创建项目   (img)<br />
+    Source Control </li>
+<li>
+<p>xcode介绍</p>
+<ol>
+<li>toolbar<ul>
+<li>活动视图(activity view)   中间</li>
+<li>右侧(左边三个)  用于切换<ul>
+<li>standard editor</li>
+<li>assistant editor</li>
+<li>version editor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>navigator<ul>
+<li>project navigator(源代码文件、图片文件、数据模型、属性列表等)</li>
+<li>symbol navigator(编译器能识别的：OC类、枚举类型、结构体、全局变量)</li>
+<li>find navigator</li>
+<li>issues navigator</li>
+<li>test navigator</li>
+<li>debug navigator</li>
+<li>breakpoint navigator</li>
+<li>log navigator</li>
+</ul>
+</li>
+<li>jump bar(跳转栏)<br />
+    Recent Files, Unsaved Files, Counterparts(关联文件), Superclasses(父类), Subclasses, Siblings(兄弟类), Categories(类别), Include（引用文件)&hellip;</li>
+<li>The Utility Area(实用工具面板，右侧)<ul>
+<li>Attributes Inspector(属性检查器)</li>
+<li>Library<ul>
+<li>file template</li>
+<li>code snippet</li>
+<li>object</li>
+<li>media</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Interface Builder(界面构建器)</li>
+<li>New Compiler and Debugger<ul>
+<li>LLVM(Low Level Virtual Machine, 底层虚拟机)</li>
+<li>static analyzer(静态分析器)Xcode</li>
+</ul>
+</li>
+</ol>
+<p>The Jump Bar   counterparts<br />
+floader     logical grouping<br />
++ nib文件<br />
++ storyboard头部<br />
+    - View Controller   The task of the view controller is to manage what the user sees on the screen.<br />
+    - First Responder   the object with which the user is currently interacting<br />
+    - Exit</p>
+</li>
+<li>
+<p>构建</p>
+<ul>
+<li>AppIcon </li>
+<li>图片用png</li>
+<li>launch file   LaunchScreen.storyboard</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<p>界面构建器</p>
+<ul>
+<li>文件格式的演变<ul>
+<li>nib(二进制)</li>
+<li>xib(xml)</li>
+<li>storyboard(分镜，xml,“元nib文件”)：可以包含多个视图和控制器，以及如何在应用运行时相互连接的配置信息</li>
+</ul>
+</li>
+<li>分镜<ul>
+<li>屏幕上显示的所有用户界面元素(包括按钮、文本框、标签等)都继承自UIView</li>
+</ul>
+</li>
+<li>库</li>
+<li>按钮和其他很多控件都不包含子视图</li>
+<li>界面构建器不会生成任何需要手动维护的代码</li>
+<li>把对象序列化到分镜或nib文件中</li>
+</ul>
+</li>
+<li>
+<p>美化应用</p>
+<ul>
+<li>像素(ppt, pixels per inch), 点(pt, point)</li>
+<li>58 80 120 </li>
+</ul>
+</li>
+<li>Xcode快捷键和常用菜单<ul>
+<li><code>command + 0  ~  command + 8</code> 分别对应navigator</li>
+<li><code>command + option + 0  ~  command + option + 6</code> 对应 Attributes Inspector</li>
+<li><code>command + option + control + 0  ~  command + option + control + 4</code>  对应 Library</li>
+<li><code>Command + Shift + o</code>  切换至某个文件或者找到特定的代码行</li>
+<li><code>option + command + return</code>(View&gt;Assistant Editor&gt;Show Assistant Editor) 打开辅助编辑器</li>
+<li><code>Editor&gt;Canvas&gt;Show Bounds Rectangles</code>   显示控件边框</li>
+<li><code>Editor&gt;Resovle Auto layout issues&gt;Add Missing Constraints</code>  添加限制</li>
+<li><code>Command+Shift+C</code> 打开控制台</li>
+<li><code>command＋shift＋O</code> 打开（搜索）头文件</li>
+<li><code>control+command+Up</code> 对应文件的切换</li>
+<li><code>Command + Shift + 0</code>  文档界面</li>
+<li><code>command+B</code> build app</li>
+</ul>
+</li>
+<li>专有名词、概念等<ul>
+<li>iOS Human Interface Guidelines(HIG)</li>
+<li><strong>第一响应者</strong> ：当前正在与用户进行交互的控件</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-handling-basic-interaction"><a name="user-content-3-handling-basic-interaction" href="#3-handling-basic-interaction" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3 Handling Basic Interaction 实现基本交互</h3>
+<p><code>NSMutableAttributedString</code> &lt; <code>NSAttributedString</code><br />
+<code>NSRange</code><br />
+1. MVC 范例<br />
+2. 理解 <strong>Outlets</strong>, <strong>Actions</strong> <br />
+    - xcode中创建outlets和actions的方法： Assistant View<br />
+    - Outlets<br />
+        + @IBOutlet 的作用：<br />
+            * swift编译不做任何特殊处理<br />
+            * 告诉Xcode，这个属性会与nib文件中的对象关联<br />
+        + weak这个区分符：弱引用<br />
+    - Actions<br />
+        + 没有参数<br />
+        + 只接受一个参数(指向触发该方法的对象的指针，sender)<br />
+3. 创建项目<strong>Button Fun</strong> <br />
+    1. 创建 <strong>Single View Application</strong> <br />
+    2. 清理 <code>ViewController</code><br />
+    3. 设计 the User Interface<br />
+        + Xcode 对按钮和操作方法等的关联信息存储在分镜文件中。<br />
+        + 添加buttons和action<br />
+        + 添加label和Outlet<br />
+        + 写完Action Method<br />
+        + 调整视图布局(最新的xcode版本已经优化过，一般的视图都兼容了)<br />
+            * <strong>Update Frames</strong>  <strong>Size to Fit Content</strong><br />
+            * <em>correct runtime locations</em> <strong>Resolve Auto Layout Issues</strong></p>
+<pre><code>4. 预览布局
+    + 编辑区左上角 **Preview**， 结合左下角的设备选择
+5. 添加样式
+</code></pre>
+<ol>
+<li>应用程序委托<ul>
+<li><strong>委托(delegate)</strong>：负责为其他对象处理特定任务的对象</li>
+<li>每个iOS应用程序都有且仅有一个UIApplication实例，它负责应用程序的运行循环，以及处理应用程序级的功能(比如把输入信息分发给恰当的控制器类)。</li>
+<li>在应用程序执行过程中的某些特定时间点，UIApplication将会调用特定的委托方法(如果委托对象存在，并且实现了相应的委托方法)。</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-more-user-interface-fun"><a name="user-content-4-more-user-interface-fun" href="#4-more-user-interface-fun" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4 More User Interface Fun</h3>
+<ul>
+<li>Active, Static, Passive<ul>
+<li>界面的控制有三个基本的模式：活动，静止，被动</li>
+<li>大多数控件都支持被动模式，并且所有控件都支持静态或者不可见模式。</li>
+<li>所有iOS控制都是<code>UIControl</code>的子类</li>
+<li>如果一个控件可以触发多个操作方法，可能会导致应用出现意料之外的行为。</li>
+<li>iOS和Mac中控制的不同</li>
+</ul>
+</li>
+<li>创建应用<strong>Control Fun</strong><ol>
+<li>添加 <code>Image View</code></li>
+<li>改变<code>Image View</code>的<strong>Content Model</strong>属性从<em>Scale To Fill</em>到<em>Center</em>，用图片的原始尺寸（不要压缩或拉伸）</li>
+<li>选中<code>Image View</code>，<strong>Command+=</strong>（<strong>Editor -&gt; Size to Fit Content</strong> ）;使<code>Image View</code>的大小适应于图片的大小</li>
+<li>重新拖动<code>Image View</code>到合适位置</li>
+<li>选中<code>Image View</code>，添加<strong>Horizontal Center in Container</strong></li>
+<li>设置<code>Image View</code>的<code>View</code>节的属性（由于<code>UIImageView</code>是<code>UIView</code>的子类，这边的<code>View</code>节属性是共有的）<ul>
+<li><strong>Content Mode</strong>  建议用原图尺寸，不要拉伸等？？</li>
+<li><strong>Semantic</strong> 语法属性就是文字开始的方向 <code>semanticContentAttribute</code></li>
+<li><strong>Tag</strong> 整数，运行时不能改变，方便写程序是区分调用</li>
+<li><strong>Interaction</strong> <br />
+<strong>Interaction</strong><br />
+<strong>Interaction</strong>  </li>
+<li><strong>Alpha</strong></li>
+<li><strong>Background</strong></li>
+<li><strong>Tint</strong></li>
+<li><strong>Drawing</strong></li>
+</ul>
+</li>
+<li>添加两个<code>Text Fields</code>和两个<code>Label</code><ul>
+<li><code>Text Fields</code>的属性<ul>
+<li><strong>Clear Button</strong> 是右边的删除标志<br />
+*</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>添加Constraints</li>
+<li>创建链接接口</li>
+<li>关闭键盘<ul>
+<li>当按键盘return或done时,<code>Text Field</code>注销掉FirstResponder(键盘就会隐藏)，<code>Text Field</code>的<code>Did End On Exit</code>事件。添加完@IBAction后，到<code>Text Field</code>的<strong> the connections inspector</strong>中拖到<code>Did End On Exit</code>事件到<strong>View Controller</strong>上，并选择<code>textFieldDoneEditing</code>，就关联起来了<br />
+<pre><code>@IBAction func textFieldDoneEditing(sender: UITextField) {
+    sender.resignFirstResponder()
+}
+</code></pre></li>
+<li>触摸背景关闭键盘<ul>
+<li>拖动<code>Tap Gesture Recognizer</code>进入container view</li>
+<li>Control-drag <code>Tap Gesture Recognizer</code> 到 ViewController.swift得到Action，同时注销两个Text Field的FirstResponder</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>添加<code>Slider</code>和<code>Label</code> <ul>
+<li>Actions Outlets</li>
+</ul>
+</li>
+<li>Switches, Button, and Segmented Control<ul>
+<li>添加<code>Segmented Control</code></li>
+<li>添加两个<code>Switch</code>, Actions Outlets</li>
+<li>添加 <strong>Segmented Control</strong> 按钮</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-rotation-and-adaptive-layout"><a name="user-content-5-rotation-and-adaptive-layout" href="#5-rotation-and-adaptive-layout" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5 Rotation and Adaptive Layout</h3>
+<ul>
+<li>The Mechanics of Rotation<ul>
+<li>immersive apps</li>
+<li>landscape orientation   portrait orientation</li>
+</ul>
+</li>
+<li>两种视图自动旋转的支持方式<ul>
+<li>Supported Orientations at the App Level<ul>
+<li>interface orientation   device orientation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Designing an Interface Using Constraints<ul>
+<li><strong>trailing space</strong>  尾部(一般右边)</li>
+<li><strong>leading space</strong>   头部(一般左边)</li>
+<li><code>Editor ➤ Resolve Auto Layout Issues ➤ Add Missing Constraints</code>  <em>ALl Views</em> and <em>Selected Views</em> ?</li>
+<li>missing constraint  可以理解为必要的、不可缺少的限制</li>
+<li>orange lines   means not match(the current postion and at runtime) constraint导致</li>
+</ul>
+</li>
+<li>Creating Adaptive Layouts<ul>
+<li><strong>Size Classes</strong></li>
+<li>Create the iPhone Landscape Layout**<br />
+&hellip;</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-multiview-applications"><a name="user-content-6-multiview-applications" href="#6-multiview-applications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6 Multiview Applications</h3>
+<ul>
+<li>Common Types of Multiview Apps<ul>
+<li><strong>tab bar</strong>   the bottom of the Phone or Music application</li>
+<li><strong>toolbar</strong>   main Safari view</li>
+<li><strong>navigation bar</strong>  the top of Music application(MY Music)</li>
+<li><code>UIKit</code>  <code>UITabBarController</code>  <code>UINavigationController</code></li>
+</ul>
+</li>
+<li>The Architecture of a Multiview Application <ul>
+<li><strong>The Root Controller</strong></li>
+</ul>
+</li>
+<li>Building View Switcher<ul>
+<li><code>ViewController.swift</code> > <code>Switching ViewController.swift</code></li>
+<li>把view controller 的<strong>Class</strong>改为<strong>Switching ViewController</strong></li>
+<li>添加<code>BlueViewController.swift</code>和<code>YellowViewController.swift</code></li>
+<li>Building a View with a Toolbar</li>
+<li>Linking the Toolbar Button to the View Controller</li>
+<li>Writing the Root View Controller<ul>
+<li><strong>Lazy loading</strong></li>
+</ul>
+</li>
+<li>Implementing the Content Views<ol>
+<li>从Object Library 拖出 <strong>View Controller</strong>. 在<em>Identity Inspector</em>中修改class为<em>BlueViewController</em>,并填写<em>Storyboard ID</em>为<strong>Blue</strong>(与代码中对应).<br />
+<em>storyboard中的箭头是指默认scene，当然这个箭头是可以移动的</em>   </li>
+<li>在<em>Attributes Inspector</em>中修改<em>background</em>为蓝色(随意).</li>
+<li>添加button在正中央  Press Me ，添加constraints,Touch Up Inside  blueButtonPressed</li>
+<li>改变button的 <strong>Text Color</strong></li>
+<li>重复</li>
+</ol>
+</li>
+<li>Animating the Transition</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-tab-bars-and-pickers"><a name="user-content-7-tab-bars-and-pickers" href="#7-tab-bars-and-pickers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7 Tab Bars and Pickers</h3>
+<ul>
+<li>The Pickers Application<ol>
+<li>Date picker</li>
+<li>Single-component picker</li>
+<li>Multicomponent picker</li>
+<li>Picker with dependent components</li>
+<li>Custom picker with images</li>
+</ol>
+</li>
+<li>Delegates and Data Sources<ul>
+<li>date picker 不能只是从对象库中拖出，还要有代理和数据源</li>
+</ul>
+</li>
+<li>Creating the Pickers Application <ol>
+<li>create Pickers</li>
+<li>在Pickers文件夹中创建五个新view控制器<br />
+    DatePickerViewController<br />
+    SingleComponentPickerViewController  DoubleComponentPickerViewController   DependentComponentPickerViewController  CustomPickerViewController</li>
+<li>Creating the Tab Bar Controller<ul>
+<li>修改viewController的基类为<code>UITabBarController</code> </li>
+<li>删除storyboard原本的view controller，添加<strong>Tab Bar Controller</strong></li>
+<li>选择roo controller： <strong>Tab Bar Controller</strong> 勾上 <strong>Is Initial View Controller</strong> ；class 改为 ViewController</li>
+<li>添加图片</li>
+<li>修改child view controllers 的 tab bar item 的 title和Image</li>
+<li>adding three more view controllers;<br />
+    并关联：Control-drag from the tab bar controller to your new view controller(注意是从tab bar controller向新的托)  view controllers from the <strong>Relationship Segue</strong><br />
+分别修改title和image</li>
+<li>链接五个scene到对应的viewController</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Implementing the Date Picker</p>
+</li>
+<li>
+<p>Implementing the Single-Component Picker</p>
+</li>
+<li>
+<p>Implementing a Multicomponent Picker</p>
+</li>
+<li>
+<p>Implementing Dependent Components </p>
+<ul>
+<li>添加数据源和代理</li>
+<li>添加一些属性</li>
+<li>build the content view  与之前的类似<br />
+    dependentPicker  onButtonPressed  Auto Layout constraints</li>
+<li>statedictionary.plist</li>
+</ul>
+</li>
+<li>
+<p>Creating a Simple Game with a Custom Picker </p>
+<ul>
+<li>消除<strong>User Interaction Enabled</strong>这个选项使用户不能控制picker</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-introduction-to-table-views"><a name="user-content-8-introduction-to-table-views" href="#8-introduction-to-table-views" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8 Introduction to Table Views</h3>
+<ul>
+<li>Tabel View Basics<ul>
+<li><code>UITableView</code>, <code>UITableViewCell</code>, <code>UITableViewDelegate</code>, <code>UITableViewDataSource</code>   </li>
+<li>一个<code>UITableViewCell</code>中可以放许多数据    </li>
+<li>Grouped and Plain Tables</li>
+<li>Implementing a Simple Table<ul>
+<li>create new project </li>
+<li>drag a Table View to View window</li>
+<li>add Constraints</li>
+<li>makes controller class both the data source and delegate</li>
+<li>writing the controller</li>
+<li>adding the image</li>
+<li>using table view  cell styles<ul>
+<li><code>UITableViewCellStyle</code></li>
+<li><code>Image</code>  <code>Text label</code> <code>Detail text label</code></li>
+</ul>
+</li>
+<li>Setting the Indent Level (设置缩进风格)</li>
+<li>Handling row selection （操作row的选择）</li>
+<li>Changing the Font Size and Row Height</li>
+</ul>
+</li>
+<li>Customizing Table View Cells （改造Table View Cells）<ul>
+<li>三个方法<ul>
+<li>加载一个子UITableViewCell</li>
+<li>载入一个 nib 文件</li>
+<li>载入一个 storyboard </li>
+</ul>
+</li>
+<li>Adding Subviews to the Table View Cell<ul>
+<li>创建新项目Table Cells</li>
+<li>main.storyboard  添加 <code>Table View</code></li>
+<li><code>dataSource</code> <code>delegate</code> 到 <code>View Controller</code></li>
+<li>constraints</li>
+</ul>
+</li>
+<li>Creating a UITableViewCell Subclass<ul>
+<li>Adding New Cells <ul>
+<li>创建新文件 <code>Cocoa Touch Class</code>, </li>
+<li>在 NameAndColorCell.swift 中添加 两个属性和接口<br />
+        class NameAndColorCell: UITableViewCell {<br />
+        var name: String = &ldquo;&rdquo;<br />
+        var color: String = &ldquo;&rdquo;<br />
+        var nameLabel: UILabel!<br />
+        var colorLabel: UILabel!</li>
+<li>init</li>
+</ul>
+</li>
+<li>Implementing the Controller&rsquo;s Code ??</li>
+</ul>
+</li>
+<li>Loading a UITableViewCell from a Nib</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-navigation-controllers-and-table-views"><a name="user-content-9-navigation-controllers-and-table-views" href="#9-navigation-controllers-and-table-views" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>9 Navigation Controllers and Table Views</h3>
+<ul>
+<li>
+<p>Navigation Controller Basics<br />
+    &gt; the child view controllers of a <code>UINavigationController are organized in a stack</code> </p>
+<ul>
+<li>Stacky Goodness<br />
+<strong>last in, first out.</strong> </li>
+<li>A Stack of Controllers</li>
+<li>
+<p>Fonts: A Simple Font Browser</p>
+<ul>
+<li>Meet the Subcontrollers<ul>
+<li>The Font List Controller  </li>
+<li>The Font Sizes View Controller</li>
+<li>The Font Info View Controller</li>
+</ul>
+</li>
+<li>
+<p>The Fonts Application’s Skeleton</p>
+<ul>
+<li>
+<p>Setting up the Navigation Controller<br />
+<code>UINavigationController</code>:管理 view controllers 的 stack</p>
+<ul>
+<li>选择 Main.storyboard</li>
+<li>删除 basic view controller ，使storyboard为空</li>
+<li>拖动 <code>UINavigation Controller</code> 到编辑区（实际得到两个：UINavigation Controller, Root View Controller）</li>
+<li>选中左边的<code>UINavigation Controller</code>, 打开<strong>the Attributes Inspector</strong> 勾选 <strong>Is Initial View Controller</strong>, 让应用启动时调用这个控制器</li>
+<li>修改 <code>Root View Controller</code> 的 title 为 <code>Fonts</code>.<br />
+也要修改<code>Navigation Item</code>的 Title为<code>Fonts</code>?<br />
+            - Keeping Track of Favorites</li>
+<li>建立新文件 &ldquo;FavoritesList.swift&rdquo;<ul>
+<li>Creating the Root View Controller</li>
+<li>Initial Storyboard Setup</li>
+<li>First Subcontroller: The Font List View<ul>
+<li>Storyboarding the Font List<ul>
+<li>添加一个新的 <code>Table View Controller</code> 到 <code>Main.storyboard</code>的编辑区</li>
+<li>选择这个新的table view controller,通过身份检查器设置<strong>class</strong>为<strong>FontListViewController</strong></li>
+<li>选择新的table view controller下的<code>Table View Cell</code>, 修改<strong>Style</strong>为<em>Subtitle</em>, <strong>Identifier</strong>为<em>FontName</em>, <strong>Accessory</strong>为<em>Detail Disclosure</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="-control-dragging-cell-fontlistviewcontroller"><a name="user-content--control-dragging-cell-fontlistviewcontroller" href="#-control-dragging-cell-fontlistviewcontroller" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>- Control-dragging 两个cell到 <code>FontListViewController</code></h2>
+<pre><code>    * Making the Root View Controller Prepare for Segues
++ Creating the Font Sizes View Controller
+    * Storyboarding the Font Sizes View Controller
+</code></pre>
+<ul>
+<li>Control-drag <code>FontListViewController</code>中的cell到 <code>FontListViewController</code>, 弹出菜单选择 <strong>Selection Segue</strong> 的 <strong>show</strong><br />
+        * Making the Font List View Controller Prepare for Segues<ul>
+<li>Creating the Font Info View Controller</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Storyboarding the Font Info View Controller</p>
+<ul>
+<li>添加 <code>View Controller</code> <strong>class</strong> 为 <code>FontInfoViewController</code></li>
+<li>添加 3个<code>label</code>, 1个<code>swithc</code>, 1个<code>slider</code></li>
+<li>修改上面的<code>label</code>的 <strong>Lines</strong> 为 0;修改另外两个<code>label</code>为 <code>right-align</code>;修改<code>slider</code>的<strong>Minimum</strong>为1, <strong>Maximum</strong>为200</li>
+<li>选中<code>FontInfoViewController</code>，打开连接检查器。</li>
+<li>关联 <code>Outlets</code><br />
+    拖动<code>fontSampleLabel</code>到上面的<code>label</code><br />
+    拖动<code>fontSizeLabel</code>到下面右边<code>label</code><br />
+    拖动<code>favoriteSwitch</code><br />
+    拖动<code>fontSizeSlider</code></li>
+<li>关联 <code>Actions</code><br />
+    拖动<code>slideFontSize</code> 弹出菜单选中<strong>Value Changed</strong><br />
+    拖动<code>toggleFavorite</code> 弹出菜单选中<strong>Value Changed</strong> </li>
+<li>创建过渡或&rdquo;转场&rdquo;(segue) <br />
+    Control-drag <code>Font List View Controller</code>里的table cell 到 <code>FontSizesViewController</code>, 弹出菜单选择 <strong>Accessory Action</strong> 的 <strong>show</strong><br />
+    修改<code>Font List View Controller</code>到<code>Font Sizes View Controller</code>的segue的<strong>Identifier</strong>为<strong>f</strong> <br />
+    修改<code>Font List View Controller</code>到<code>Font Info View Controller</code>的segue的<strong>Identifier</strong>为<strong>ShowFontInfo</strong> </li>
+</ul>
+</li>
+<li>
+<p>Setting Up Constraints</p>
+<ul>
+<li>给上面的label增加3 Constraints</li>
+</ul>
+</li>
+<li>
+<p>Adapting the Font List View Controller for Multiple Segues</p>
+</li>
+<li>My Favorite Fonts<br />
+    ?? 运行报错 the Font Info View Controller 应该是这个问题<ul>
+<li>Table View Niceties</li>
+</ul>
+</li>
+<li>Implementing Swipe-to-Delete</li>
+<li>Implementing Drag-to-Reorder</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-collection-view-and-stack-view"><a name="user-content-10-collection-view-and-stack-view" href="#10-collection-view-and-stack-view" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10 Collection View and Stack View</h3>
+<ul>
+<li>Creating the DialogViewer Project <ul>
+<li>建立单页项目 <strong>DialogViewer</strong></li>
+<li>修改 <code>ViewController</code> 的父类为 <code>UICollectionViewController</code></li>
+<li>选中<code>Main.storyboard</code>, 删除 <code>View Controller</code>, 添加 <code>Collection View Controller</code></li>
+<li>修改<code>Collection View Controller</code>的 <strong>Class</strong> 为 <strong>ViewController</strong> </li>
+<li>勾选<strong> Is Initial View Controller </strong></li>
+</ul>
+</li>
+<li>
+<p>Defining Custom Cells </p>
+</li>
+<li>
+<p>Configuring the View Controller </p>
+</li>
+<li>
+<p>Providing Contetnt Cells</p>
+</li>
+<li>
+<p>Making the Layout Flow</p>
+</li>
+<li>
+<p>Providing Header Views </p>
+</li>
+<li>
+<p>Working with UIStackView </p>
+</li>
+</ul>
+<h3 id="11-using-split-views-and-popovers"><a name="user-content-11-using-split-views-and-popovers" href="#11-using-split-views-and-popovers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11 Using Split Views and Popovers</h3>
+<h3 id="12-applicatoin-settings-and-user-defaults"><a name="user-content-12-applicatoin-settings-and-user-defaults" href="#12-applicatoin-settings-and-user-defaults" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>12 Applicatoin Settings and User Defaults</h3>
+<h3 id="13-basic-data-persistence"><a name="user-content-13-basic-data-persistence" href="#13-basic-data-persistence" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>13 Basic Data Persistence</h3>
+<ul>
+<li>
+<p>应用的沙盒</p>
+<ul>
+<li><code>~/Library/Developer/CoreSimulator/Devices/</code></li>
+<li><code>data/Containers/Data/Application</code></li>
+<li>
+<p><code>~/Library/Developer/CoreSimulator/Devices/*guid*/data/Containers/Data/Application/*guid*/</code>  </p>
+<ul>
+<li><code>Documents/</code> 用户能看到，iTunes文件传到这里</li>
+<li><code>Library/</code></li>
+<li><code>tmp/</code></li>
+</ul>
+</li>
+<li>
+<p>得到<code>Documents/</code>和<code>Library/</code>目录: <code>NSFileManager</code>类的<code>URLsForDirectory(_:inDomains:)</code>方法获得 <code>[NSURL]</code><br />
+    两个参数都是枚举值：<code>NSSearchPathDirectory</code>, <code>NSSearchPathDomainMask</code></p>
+<pre><code>```
+let urls = NSFileManager.defaultManager().URLsForDirectory(
+                .DocumentDirectory, inDomains: .UserDomainMask)
+```
+</code></pre>
+</li>
+<li>
+<p>得到<code>tmp/</code>目录</p>
+<pre><code>let tempDirPath = NSTemporaryDirectory()
+let tempDirUrl = NSURL(fileURLWithPath: tempDirPath)
+let tempFileUrl = tempDirUrl.URLByAppendingPathComponent(&quot;tempFile.txt&quot;)
+</code></pre>
+
+</li>
+</ul>
+</li>
+<li>
+<p>文件存储策略</p>
+<ul>
+<li>单文件 每一次改动，都需要把所有数据读取到内存中</li>
+<li>多文件 增加了应用的复杂度</li>
+</ul>
+</li>
+<li>
+<p>Property Lists<br />
+    属性列表方便构建，并且可以swift和OC相互使用</p>
+<ul>
+<li>Property List 序列化 <ul>
+<li>虽然任何对象都可以序列化，但一般只是序列化集合类型的对象：  <ul>
+<li>Array or NSArray</li>
+<li>NSMutableArray</li>
+<li>Dictionary or NSDictionary</li>
+<li>NSMutableDictionary</li>
+<li>NSData </li>
+<li>NSMutableData</li>
+<li>String or NSString </li>
+<li>NSMutableString </li>
+<li>NSNumber </li>
+<li>NSDate </li>
+</ul>
+</li>
+<li><code>writeToURL(_:atomically:)</code>  <code>writeToFile(_:atomically:)</code></li>
+</ul>
+</li>
+<li>The First Version of the Persistence Application<ul>
+<li>当应用退到后台时，调用applicationWillResignActive:把textFiled中的数据保存下来</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Archiving Model Objects</p>
+<ul>
+<li>easily write complex objects to a file and then read them back in</li>
+<li>archive objects completely</li>
+<li>实现 <code>NSCoding protocol</code> 的类，获得基本的归档——把对象和数据存储在磁盘上，和分配——在不同进程和线程之间复制对象和其他数据</li>
+<li>与propertylist的一点区别 <ul>
+<li>plist存的是XMl文件，一般以.plist结尾。archiving存的是二进制文件，一般以.archive结尾 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>SQLite3</p>
+<ul>
+<li>连接到SQLite3库 <ul>
+<li>SQLite Persistence target  &gt;  Build Phases  &gt;  Link Binary With Libraries</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Core Data</p>
+</li>
+</ul>
+<h3 id="14-documents-and-icloud"><a name="user-content-14-documents-and-icloud" href="#14-documents-and-icloud" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>14 Documents and iCloud</h3>
+<h3 id="15-grand-central-dispatch-background-processing-and-you"><a name="user-content-15-grand-central-dispatch-background-processing-and-you" href="#15-grand-central-dispatch-background-processing-and-you" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>15 Grand Central Dispatch, Background Processing, and You</h3>
+<p>???<br />
+- Threading Basics <br />
+<strong>critical section</strong> <br />
+<strong>mutex</strong>(mutual exclusion)<br />
+- Units of Work <br />
+- </p>
+<h3 id="16-drawing-with-core-graphics"><a name="user-content-16-drawing-with-core-graphics" href="#16-drawing-with-core-graphics" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16 Drawing with Core Graphics</h3>
+<p><strong>Core Graphics</strong>  <strong>Quartz</strong> <br />
+<a href="https://developer.apple.com/library/mac/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007533-SW1">官方文档</a></p>
+<ul>
+<li>
+<p>The Quartz 2D Approach to Drawing</p>
+<ul>
+<li>
+<p>Quartz 2D’s Graphics Contexts</p>
+<ul>
+<li><strong>stroke color</strong>  <strong>fill color</strong> </li>
+</ul>
+</li>
+<li>
+<p>The Coordinate System 坐标系</p>
+</li>
+<li>Specifying Colors 不同的颜色模式</li>
+<li>Drawing Images in Context</li>
+<li>Drawing Shapes: Polygons, Lines, and Curves</li>
+<li>Quartz 2D Tool Sampler: Patterns, Gradients, and Dash Patterns</li>
+</ul>
+</li>
+<li>
+<p>The QuartzFun Application</p>
+<ul>
+<li>Setting Up the QuartzFun Application</li>
+<li>Adding Quartz 2D Drawing Code</li>
+<li>Optimizing the QuartzFun Application ??</li>
+</ul>
+</li>
+</ul>
+<h3 id="17-getting-started-with-spritekit"><a name="user-content-17-getting-started-with-spritekit" href="#17-getting-started-with-spritekit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>17 Getting Started with SpriteKit</h3>
+<p><strong>Core Graphics</strong> focused on drawing graphics using a painter’s model<br />
+<strong>Core Animation</strong> focused on animating attributes of GUI elements<br />
+<strong>SpriteKit</strong> video games</p>
+<ul>
+<li>Player Movement<br />
+<code>SKNode</code>  <code>SKLabelNode</code>  <code>SKSpriteNode</code></li>
+<li>Creating Your Enemies</li>
+<li>让敌人进入画面</li>
+<li>
+<p>开始射击<br />
+<strong>physics engine</strong>: a software components that keeps track of multiple physical objects<br />
+<strong>graphics engine</strong>  <br />
+<strong>physics categories</strong> </p>
+</li>
+<li>
+<p>A Sound Is Worth a Thousand Pictures </p>
+</li>
+</ul>
+<h3 id="18-taps-touches-and-gestures"><a name="user-content-18-taps-touches-and-gestures" href="#18-taps-touches-and-gestures" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>18 Taps, Touches, and Gestures(点击，触摸，手势)</h3>
+<ul>
+<li></li>
+<li>The Swipes Application</li>
+<li>Detecting Multiple Taps  </li>
+<li>Detecting Pinch and Rotation  </li>
+<li>Defining Custom Gestures（自定义手势）<br />
+<strong>CheckPlease</strong></li>
+</ul>
+<p><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/index.html">3D touch</a></p>
+<h3 id="19-where-am-i-finding-your-way-with-core-location-and-map-kit"><a name="user-content-19-where-am-i-finding-your-way-with-core-location-and-map-kit" href="#19-where-am-i-finding-your-way-with-core-location-and-map-kit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>19 Where Am I? Finding Your Way with Core Location and Map Kit</h3>
+<p>GPS是英文Global Positioning System（全球定位系统）<br />
+A-GPS（Assisted GPS）即辅助GPS技术，它可以提高 GPS 卫星定位系统的性能。通过移动通信运营基站它可以快速地定位，广泛用于含有GPS功能的手机上</p>
+<blockquote>
+<p>GPS<br />
+ID Location<br />
+Wi-Fi Positioning Service(WPS)</p>
+</blockquote>
+<p>项目 <strong>WhereAmI</strong> 的视图有问题???</p>
+<h3 id="20-whee-gyro-and-accelerometer"><a name="user-content-20-whee-gyro-and-accelerometer" href="#20-whee-gyro-and-accelerometer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>20 Whee! Gyro and Accelerometer!</h3>
+<ul>
+<li>
+<p>Gyroscope and Attitude Results</p>
+<ul>
+<li><strong>yaw</strong> 代表手机绕z轴转动的弧度（-3.14 ~ +3.14）</li>
+<li><strong>Pitch</strong> 代表手机绕x轴的转动的弧度，手机头向上为正，向下为负(-1.5 ~ +1.5)</li>
+<li><strong>Roll</strong> y轴</li>
+</ul>
+</li>
+<li>
+<p>Accelerometer Results</p>
+</li>
+</ul>
+<h3 id="21-the-camera-and-photo-library"><a name="user-content-21-the-camera-and-photo-library" href="#21-the-camera-and-photo-library" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>21 The Camera and Photo Library</h3>
+<p>iPhone, iPad, iPod都有内置的相机和<strong>Photos</strong>应用用来管理照片和视频，应用也可访问和存储这些媒体到我们的设备中。<br />
+- <strong>Image Picker</strong>  和  <strong>UIImagePickerController</strong><br />
+图片采集器现在既可以管理图片也可以管理视频，当然也可以使用照相机。图片采集器也可以让用户做一些基础<br />
+的编辑操作，如缩放、剪辑、修饰视频等。这些行为都在 <code>UIImagePickerController</code>中实现。<br />
+    * <code>UIImagePickerController.isSourceTypeAvailable(.Camera)</code> 用来, <br />
+        + <code>UIImagePickerControllerSourceType.Camera</code>  是表示资源来自照相机<br />
+<code>.photoLibrary</code><br />
+<code>.SavedPhotosAlbum</code><br />
+    * <code>UIImagePickerControllerCameraDevice</code> 选择摄像头<br />
+    * <code>UIImagePickerControllerDelegate</code>协议的两个方法<br />
+        + <code>imagePickerController(_:didFinishPickingMediaWithInfo:)</code>: 当用户成功拍摄照片、视频，或者在媒体库选择后调用<br />
+            - 第二个参数是个字典，字典中包括已经选择的图片和视频，可能包括编辑信息，编辑前的媒体和编辑后的媒体。可能的key值：  </p>
+<pre><code>        // info dictionary keys
+        public let UIImagePickerControllerMediaType: String // an NSString (UTI, i.e. kUTTypeImage)
+        public let UIImagePickerControllerOriginalImage: String // a UIImage
+        public let UIImagePickerControllerEditedImage: String // a UIImage
+        public let UIImagePickerControllerCropRect: String // an NSValue (CGRect)
+        public let UIImagePickerControllerMediaURL: String // an NSURL
+
+
+    +  `imagePickerControllerDidCancel(:)` 取消选择时调用
+
+* 构建项目
+    + sva **Camera**
+    + 添加协议、接口
+</code></pre>
+<hr />
+<h3 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>问题</h3>
+<ul>
+<li>could not find developer disk image</li>
+<li>Xcode 8 兼容 swift 2.3<br />
+<em>Build Setting</em> &gt; <em>Use Legacy Swift Language Version</em> 改成 Yes</li>
+<li>xcode #MARK </li>
+</ul>
+<h1 id="pragma-mark-"><a name="user-content-pragma-mark-" href="#pragma-mark-" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>pragma mark -</h1>
+<h1 id="import"><a name="user-content-import" href="#import" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>import</h1>
+<h1 id="pragma-mark-_1"><a name="user-content-pragma-mark-_1" href="#pragma-mark-_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>pragma mark – 的“-”后面不能有空格。</h1>
+<p>如果你的标志没有出现在弹出菜单中，比如没有分隔线出现，请在Xcode菜单 “Preferences..”中的 “Code Sense”选项取消选中”Sort list alphabetically”即可。</p>
+<h1 id="pragma-markxcode"><a name="user-content-pragma-markxcode" href="#pragma-markxcode" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>pragma mark纯粹是Xcode的工具，对程式一点影响都没有，是为了提高程序员阅读代码的格式。</h1>
+<ul>
+<li>
+<p>optional <br />
+<pre><code>public protocol UIImagePickerControllerDelegate : NSObjectProtocol {
+
+    @available(iOS 2.0, *)
+    optional public func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    @available(iOS 2.0, *)
+    optional public func imagePickerControllerDidCancel(picker: UIImagePickerController)
+}
+</code></pre><br />
+表示这个方法不是必须实现</p>
+</li>
+<li>
+<p>E enum<br />
+Ex  extension<br />
+P property<br />
+Pr protocol<br />
+S strut<br />
+f function<br />
+M method<br />
+<img alt="" src="/Users/andyron/myfield/github/note-exercise/iOS/Beginning%20iPhone%20Development%20with%20Swift%202%2C%202nd%20Edition/img/2016-09-23-1.png" /></p>
+</li>
+<li>
+<p>xcode 中使用git (<a href="http://www.cocoachina.com/ios/20140524/8536.html">http://www.cocoachina.com/ios/20140524/8536.html</a>)<br />
+svn</p>
+</li>
+<li>
+<p>XCode 项目配置说明<br />
+选择项目时，中间编辑区叫做<strong>Project editor</strong><br />
+<a href="https://help.apple.com/xcode/mac/8.0/index.html?localePath=en.lproj#/devb3575be3e">https://help.apple.com/xcode/mac/8.0/index.html?localePath=en.lproj#/devb3575be3e</a></p>
+</li>
+</ul>
+<p>info.plist 就是<strong>Project editor</strong>中所有修改信息的总和？？</p>
+<ul>
+<li>
+<p>Xcode8 Previewing Layout ??</p>
+</li>
+<li>
+<p>xcode工程目录里面，有时你会发现2个不同颜色的文件夹，一种是蓝色的(叫folder)，一种是黄色的(叫group)，最常见的是黄色的。group一般只在你的工程中是文件夹的形式，但是在本地的目录中还是以散乱的形式放在一起的，除非你是从外部以整个文件夹的形式引用进来的。folder只能作为资源，整个引用进项目，不能编译代码，也就是说，以folder形式引用进来的文件，是不会被放入编译文件列表里面的。</p>
+</li>
+<li>
+<p>xcode interface builder 不同线的意义</p>
+</li>
+</ul></article></body></html>

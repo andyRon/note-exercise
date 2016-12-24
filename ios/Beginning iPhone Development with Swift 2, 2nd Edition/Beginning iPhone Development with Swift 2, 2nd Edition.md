@@ -1,30 +1,142 @@
+Beginning iPhone Development with Swift
+----------------
+
 ### 1 欢迎到swift丛林
+- *沙盒*  应用用于存储文档、首选项等任何必要数据的地方
 
 ### 2 Hello World
 1. 新建项目：**New > Project**(command+shift+N)
 2. 选择 **iOS > Application > Single View Application**
     ![Single View Application](./img/2016-09-27-14-18-42.png)
 3. 填写相关参数
+    Product Name 
+    Team 
+    Organization Name 
+    Organization Identifier
+    Bundle Identifier 
+    Language Devices  
+4. 创建项目   (img)
+    Source Control 
+5. xcode介绍
+    1. toolbar
+        * 活动视图(activity view)   中间
+        * 右侧(左边三个)  用于切换
+            + standard editor
+            + assistant editor
+            + version editor
+    2. navigator
+        * project navigator(源代码文件、图片文件、数据模型、属性列表等)
+        * symbol navigator(编译器能识别的：OC类、枚举类型、结构体、全局变量)
+        * find navigator
+        * issues navigator
+        * test navigator
+        * debug navigator
+        * breakpoint navigator
+        * log navigator
+    3. jump bar(跳转栏)  
+        Recent Files, Unsaved Files, Counterparts(关联文件), Superclasses(父类), Subclasses, Siblings(兄弟类), Categories(类别), Include（引用文件)...
+    4. The Utility Area(实用工具面板，右侧)
+        * Attributes Inspector(属性检查器)
+        * Library
+            + file template
+            + code snippet
+            + object
+            + media
+    5. Interface Builder(界面构建器)
+    6. New Compiler and Debugger
+        - LLVM(Low Level Virtual Machine, 底层虚拟机)
+        - static analyzer(静态分析器)Xcode
 
-### 3 Handling Basic Interaction
-`NSAttributedString`
-- MVC 范例
-- 理解**Outlets**, **Actions** 
-- 创建项目**Button Fun** 
+    The Jump Bar   counterparts
+    floader     logical grouping
+    + nib文件
+    + storyboard头部
+        - View Controller   The task of the view controller is to manage what the user sees on the screen.
+        - First Responder   the object with which the user is currently interacting
+        - Exit
+
+
+6. 构建
+    - AppIcon 
+    - 图片用png
+    - launch file   LaunchScreen.storyboard
+
+- 界面构建器
+    + 文件格式的演变
+        * nib(二进制)
+        * xib(xml)
+        * storyboard(分镜，xml,“元nib文件”)：可以包含多个视图和控制器，以及如何在应用运行时相互连接的配置信息
+    + 分镜
+        * 屏幕上显示的所有用户界面元素(包括按钮、文本框、标签等)都继承自UIView
+    + 库
+    + 按钮和其他很多控件都不包含子视图
+    + 界面构建器不会生成任何需要手动维护的代码
+    + 把对象序列化到分镜或nib文件中
+
+- 美化应用
+    - 像素(ppt, pixels per inch), 点(pt, point)
+    - 58 80 120 
+- Xcode快捷键和常用菜单
+    + `command + 0  ~  command + 8` 分别对应navigator
+    + `command + option + 0  ~  command + option + 6` 对应 Attributes Inspector
+    + `command + option + control + 0  ~  command + option + control + 4`  对应 Library
+    + `Command + Shift + o`  切换至某个文件或者找到特定的代码行
+    + `option + command + return`(View>Assistant Editor>Show Assistant Editor) 打开辅助编辑器
+    + `Editor>Canvas>Show Bounds Rectangles`   显示控件边框
+    + `Editor>Resovle Auto layout issues>Add Missing Constraints`  添加限制
+    + `Command+Shift+C` 打开控制台
+    + `command＋shift＋O` 打开（搜索）头文件
+    + `control+command+Up` 对应文件的切换
+    + `Command + Shift + 0`  文档界面
+    + `command+B` build app
+- 专有名词、概念等
+    - iOS Human Interface Guidelines(HIG)
+    - **第一响应者** ：当前正在与用户进行交互的控件
+
+
+
+### 3 Handling Basic Interaction 实现基本交互
+`NSMutableAttributedString` < `NSAttributedString`
+`NSRange`
+1. MVC 范例
+2. 理解 **Outlets**, **Actions** 
+    - xcode中创建outlets和actions的方法： Assistant View
+    - Outlets
+        + @IBOutlet 的作用：
+            * swift编译不做任何特殊处理
+            * 告诉Xcode，这个属性会与nib文件中的对象关联
+        + weak这个区分符：弱引用
+    - Actions
+        + 没有参数
+        + 只接受一个参数(指向触发该方法的对象的指针，sender)
+3. 创建项目**Button Fun** 
     1. 创建 **Single View Application** 
     2. 清理 `ViewController`
+    3. 设计 the User Interface
+        + Xcode 对按钮和操作方法等的关联信息存储在分镜文件中。
+        + 添加buttons和action
+        + 添加label和Outlet
+        + 写完Action Method
+        + 调整视图布局(最新的xcode版本已经优化过，一般的视图都兼容了)
+            * **Update Frames**  **Size to Fit Content**
+            * *correct runtime locations* **Resolve Auto Layout Issues**
 
-- **Update Frames**  **Size to Fit Content**
-- *correct runtime locations* **Resolve Auto Layout Issues**
-- Simulator  Window\>Scale
-- Previewing Layout   **Preview Assistant**
+    4. 预览布局
+        + 编辑区左上角 **Preview**， 结合左下角的设备选择
+    5. 添加样式
+4. 应用程序委托
+    - **委托(delegate)**：负责为其他对象处理特定任务的对象
+    - 每个iOS应用程序都有且仅有一个UIApplication实例，它负责应用程序的运行循环，以及处理应用程序级的功能(比如把输入信息分发给恰当的控制器类)。
+    - 在应用程序执行过程中的某些特定时间点，UIApplication将会调用特定的委托方法(如果委托对象存在，并且实现了相应的委托方法)。
+
 
 ### 4 More User Interface Fun
 - Active, Static, Passive
     + 界面的控制有三个基本的模式：活动，静止，被动
-    + `UIControl`
+    + 大多数控件都支持被动模式，并且所有控件都支持静态或者不可见模式。
+    + 所有iOS控制都是`UIControl`的子类
+    + 如果一个控件可以触发多个操作方法，可能会导致应用出现意料之外的行为。
     + iOS和Mac中控制的不同
-
 - 创建应用**Control Fun**
     1. 添加 `Image View`
     2. 改变`Image View`的**Content Model**属性从*Scale To Fill*到*Center*，用图片的原始尺寸（不要压缩或拉伸）
@@ -32,7 +144,7 @@
     4. 重新拖动`Image View`到合适位置
     5. 选中`Image View`，添加**Horizontal Center in Container**
     6. 设置`Image View`的`View`节的属性（由于`UIImageView`是`UIView`的子类，这边的`View`节属性是共有的）
-        + **Content Mode**
+        + **Content Mode**  建议用原图尺寸，不要拉伸等？？
         + **Semantic** 语法属性就是文字开始的方向 `semanticContentAttribute `
         + **Tag** 整数，运行时不能改变，方便写程序是区分调用
         + **Interaction**   
@@ -43,15 +155,18 @@
         + **Tint**
         + **Drawing**
     7. 添加两个`Text Fields`和两个`Label`
+        + `Text Fields`的属性
+            * **Clear Button** 是右边的删除标志
+            *
     8. 添加Constraints
     9. 创建链接接口
     10. 关闭键盘
-        + 当按键盘return或done时,`Text Field`注销掉FirstResponder(键盘就会隐藏)，`Text Field`的`Did End On Exit`事件
-            
-                @IBAction func textFieldDoneEditing(sender: UITextField) {
-                    sender.resignFirstResponder()
-                }
-
+        + 当按键盘return或done时,`Text Field`注销掉FirstResponder(键盘就会隐藏)，`Text Field`的`Did End On Exit`事件。添加完@IBAction后，到`Text Field`的** the connections inspector**中拖到` Did End On Exit`事件到**View Controller**上，并选择`textFieldDoneEditing`，就关联起来了
+        ```    
+        @IBAction func textFieldDoneEditing(sender: UITextField) {
+            sender.resignFirstResponder()
+        }
+        ```
         + 触摸背景关闭键盘
             * 拖动`Tap Gesture Recognizer`进入container view
             * Control-drag `Tap Gesture Recognizer` 到 ViewController.swift得到Action，同时注销两个Text Field的FirstResponder

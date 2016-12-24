@@ -1,0 +1,11 @@
+area,population,iso,country,capital,continent,tld,currency_code,currency_name,phone,postal_code_format,postal_code_regex,languages,neighbours
+443 square kilometres,"86,754",AG,Antigua and Barbuda,St. John's,NA,.ag,XCD,Dollar,+1-268,,,en-AG, 
+"14,000,000 square kilometres",0,AQ,Antarctica,,AN,.aq,,,,,,, 
+102 square kilometres,"13,254",AI,Anguilla,The Valley,NA,.ai,XCD,Dollar,+1-264,,,en-AI, 
+"1,246,700 square kilometres","13,068,161",AO,Angola,Luanda,AF,.ao,AOA,Kwanza,244,,,pt-AO,CD NA ZM CG 
+468 square kilometres,"84,000",AD,Andorra,Andorra la Vella,EU,.ad,EUR,Euro,376,AD###,^(?:AD)*(\d{3})$,ca,ES FR 
+199 square kilometres,"57,881",AS,American Samoa,Pago Pago,OC,.as,USD,Dollar,+1-684,,,"en-AS,sm,to", 
+"2,381,740 square kilometres","34,586,184",DZ,Algeria,Algiers,AF,.dz,DZD,Dinar,213,#####,^(\d{5})$,ar-DZ,NE EH LY MR TN MA ML 
+"28,748 square kilometres","2,986,952",AL,Albania,Tirana,EU,.al,ALL,Lek,355,,,"sq,el",MK GR CS ME RS XK 
+"1,580 square kilometres","26,711",AX,Aland Islands,Mariehamn,EU,.ax,EUR,Euro,+358-18,#####,^(?:FI)*(\d{5})$,sv-AX, 
+"647,500 square kilometres","29,121,286",AF,Afghanistan,Kabul,AS,.af,AFN,Afghani,93,,,"fa-AF,ps,uz-AF,tk",TM CN IR TJ PK UZ 

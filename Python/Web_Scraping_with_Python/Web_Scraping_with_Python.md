@@ -40,6 +40,11 @@
 - 磁盘缓存
 - 压缩  
 - 设置过期时间 ？？
+- 3.3 数据库缓存
+    + 安装MongoDB
+    + 安装MongoDB的Python封装包 `pip install pymongo`
+    + 本地启动MongoDB `mongod -dbpath .`（在当前目录生成一些文件）
+    + 
 
 
 
