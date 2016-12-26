@@ -61,7 +61,12 @@ git commit -m "wrote a readme file"
         * 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
     + `git reset HEAD file` 可以把暂存区的修改撤销掉（unstage），重新放回工作区
         * `git reset`命令既可以回退版本，也可以把暂存区的修改回退到工作区。
+- 删除文件
+    + `git rm file`   有点类似把文件添加到暂存区，然后 `git commit` 
+    + `git checkout -- test.txt` : 没有commit之前用checkout撤销删除
+    + `git checkout`其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
+### 远程库
 
 
 
