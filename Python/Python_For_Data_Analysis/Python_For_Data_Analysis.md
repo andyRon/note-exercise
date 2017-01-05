@@ -1,3 +1,5 @@
+Python_For_Data_Analysis
+---------
 
 ### 2 引言
 ```
@@ -54,7 +56,7 @@ Out[8]:
     - 默认不显示下划线开头的方法和属性，输入_后再按tab就会显示（主要是避免显示太多东西）
     - 自动完成文件路径，在字符串中也是可以
 3. 对象内省 (object introspection)
-    - `?` 这个功能对于初学者太好用了，对python中任何东西不清怎么使用时只用在后面加一个`?`就可以获得一些简单的介绍和使用方法，不需要再去查文档，很方便
+    - `?` 这个功能对于初学者太好用了，对python中任何东西不清怎么使用时只用在后面加一个`?`就可以获得一些简单的介绍和使用方法，不需要再去查文档，很方便。如`%magic?`
     ```
     sys?
     sys.path?
@@ -93,6 +95,44 @@ if x >= 5:
 6. IPython与编辑器和IDE之间的交互
 7. 键盘快捷键
 8. 异常和跟踪
+    - ipyhon输出调用栈跟踪，拥有额外的上下文参考呢
+    ```
+    # Ipython
+    In [1]: %run ch03/ipython_bug.py
+    ---------------------------------------------------------------------------
+    AssertionError                            Traceback (most recent call last)
+    /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in <module>()
+         13     throws_an_exception()
+         14
+    ---> 15 calling_things()
+
+    /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in calling_things()
+         11 def calling_things():
+         12     works_fine()
+    ---> 13     throws_an_exception()
+         14
+         15 calling_things()
+
+    /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in throws_an_exception()
+          7     a = 5
+          8     b = 6
+    ----> 9     assert(a + b == 10)
+         10
+         11 def calling_things():
+
+    AssertionError:
+
+    # 标准Python解释器
+    $ python ch03/ipython_bug.py
+    Traceback (most recent call last):
+      File "ch03/ipython_bug.py", line 15, in <module>
+        calling_things()
+      File "ch03/ipython_bug.py", line 13, in calling_things
+        throws_an_exception()
+      File "ch03/ipython_bug.py", line 9, in throws_an_exception
+        assert(a + b == 10)
+    AssertionError
+    ```
     - `%xmode`
 9. 魔术命令 (以%为前缀)
     - 魔术命令可以看做是IPython中的命令行程序，它们也有“命令行选项”，可通过`?`查看
@@ -101,19 +141,36 @@ if x >= 5:
     a = np.random.randn(100, 100)
     %timeit np.dot(a, a)
     ```
-    - `%reset` 删除interactive命名空间中的全部变量/名称 
+    - `%reset`      删除interactive命名空间中的全部变量/名称 
     - `%automagic`
-    - `%quickref`
-    - `%magic`
+    - `%quickref`   显示IPython的快速参考
+    - `%magic`      显示所有魔术命令的详细文档
     - `%degug`
-    - `%hist`
+    - `%hist`       显示命令历史
     - `%pdb`
     - `%paste`
     - `%cpaste`
-    - `%page OBJECT`
-10. 基于Qt的富GUI控制台
+    - `%page OBJECT` 通过分页输出Object
+    - `%run scripty.py`
+    - `%prun statement`
+    - `%time statement`
+    - `%timeit statement`   多次执行statement以计算系统评价执行时间。（适用于执行时间非常小的程序）
+    - `%who` `%who_ls` `%whos`  显示interactive命名空间中定义的变量相关信息
+    - `%xdel variable`      
+10. 基于Qt的富GUI控制台  
+`ipython qtconsole --pylab=inline`
 11. matplotlib集成与pylab模式
+    - IPython广泛用于科学计算的部分原因：IPython能跟matplotlib这样的库以及其他GUI工具默契配合
+    - `ipython --pylab` 集成matplotlib
+    ```
+    img = plt.imread("ch03/stinkbug.png")
+    imshow(img)
+
+    plot(randn(1000).cumsum())
+    ```
 12. 使用命令历史
+    - 给出命令的一部分，上下箭头（ctrl-p, ctrl-n）,查看历史命令
+    - *ctrl-r* 更加大的搜索
 13. 与操作系统交互
 14. 软件开发工具
 15. IPthon HTML Notebook
