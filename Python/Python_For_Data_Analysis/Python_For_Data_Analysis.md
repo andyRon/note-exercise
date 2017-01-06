@@ -171,10 +171,120 @@ if x >= 5:
 12. 使用命令历史
     - 给出命令的一部分，上下箭头（ctrl-p, ctrl-n）,查看历史命令
     - *ctrl-r* 更加大的搜索
+    - IPython会将输入和输出的应用保存在一些特殊变量中。
+        + 最近两次输出Out[]是 `_` `__`
+        + 输入In[X]: `_iX`
+    - 记录输入和输出
+        + `%logstart` `%logoff` `%logon` `logstate` `%logstop`
 13. 与操作系统交互
+    - 与系统相关的魔术命令
+        + `%dirs`
+        + `%dhist`
+        + `%env`
 14. 软件开发工具
+    - 交互式调试器 ⭐
+        + `%debug` 
+        ```
+        In [35]: %run ch03/ipython_bug.py
+        ---------------------------------------------------------------------------
+        AssertionError                            Traceback (most recent call last)
+        /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in <module>()
+             13     throws_an_exception()
+             14
+        ---> 15 calling_things()
+
+        /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in calling_things()
+             11 def calling_things():
+             12     works_fine()
+        ---> 13     throws_an_exception()
+             14
+             15 calling_things()
+
+        /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py in throws_an_exception()
+              7     a = 5
+              8     b = 6
+        ----> 9     assert(a + b == 10)
+             10
+             11 def calling_things():
+
+        AssertionError:
+        In [36]: %debug
+        > /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py(9)throws_an_exception()
+              7     a = 5
+              8     b = 6
+        ----> 9     assert(a + b == 10)
+             10
+             11 def calling_things():
+
+        ipdb> u
+        > /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py(13)calling_things()
+             11 def calling_things():
+             12     works_fine()
+        ---> 13     throws_an_exception()
+             14
+             15 calling_things()
+
+        ipdb> d
+        > /Users/andyron/myfield/github/note-exercise/Python/Python_For_Data_Analysis/ch03/ipython_bug.py(9)throws_an_exception()
+              7     a = 5
+              8     b = 6
+        ----> 9     assert(a + b == 10)
+             10
+             11 def calling_things():
+
+        ipdb> q
+        ```
+
+        + `%run -d ch03/ipython_bug.py`
+    - 测试代码的执行时间： `%time` `%timeit`
+        ```
+        strings = ['foo', 'foobar', 'baz', 'qux', 'python', 'Guido Van Rossum'] * 100000
+        method1 = [x for x in strings if x.startswith('foo')]
+        method2 = [x for x in strings if x[:3] == 'foo']
+        ```
+
+        ```
+        In [49]: %time method1 = [x for x in strings if x.startswith('foo')]
+        CPU times: user 251 ms, sys: 33.6 ms, total: 284 ms
+        Wall time: 261 ms
+
+        In [50]: %time method2 = [x for x in strings if x[:3] == 'foo']
+        CPU times: user 163 ms, sys: 9.43 ms, total: 173 ms
+        Wall time: 171 ms
+
+        In [54]: %timeit method1 = [x for x in strings if x.startswith('foo')]
+        1 loop, best of 3: 206 ms per loop
+
+        In [55]: %timeit method2 = [x for x in strings if x[:3] == 'foo']
+        10 loops, best of 3: 144 ms per loop
+
+        In [57]: x = 'foobar'
+
+        In [58]: y = 'foo'
+
+        In [59]: %timeit x.startswith(y)
+        The slowest run took 5.53 times longer than the fastest. This could mean that an intermediate result is being cached.
+        1000000 loops, best of 3: 345 ns per loop
+
+        In [60]: %timeit x[:3] == y
+        The slowest run took 7.72 times longer than the fastest. This could mean that an intermediate result is being cached.
+        1000000 loops, best of 3: 247 ns per loop
+
+        ```
+    - 基本性能分析 ⭐ 
+        + 性能分析关注耗费时间的位置。
+        + `python -m cProfile cProfile.py`
+        + `python -m cProfile -s cumulative cProfile.py`
+        + `%prun` `%run -p`
 15. IPthon HTML Notebook
-16. 
+    - `mkdir %pylab` 预先建立一个目录
+    - `ipython notebook %pylab inline` 
+
+16. 其他
+    - 重新加载模块依赖项
+
+### 4 NumPy基础：数组和矢量计算
+- ndarray
 
 
 
