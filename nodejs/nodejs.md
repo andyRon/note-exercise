@@ -27,9 +27,51 @@
 ![](img/url.jpg)
 
 
+
+- 模块
 # 再次学习
+### [2](https://nqdeng.github.io/7-days-nodejs/#1)  
+- 运行
+    + `node` 直接进入命令交互模式
+    ```
+    $ node
+    > console.log('Hello World!');
+    ```
+    + `node hello.js`运行js文件
+- 权限问题
+    + 在Linux系统下，使用NodeJS监听80或443端口提供HTTP(S)服务时需要root权限
+        * `sudo node server.js`
+        * 使用chmod +s命令让NodeJS总是以root权限运行(让任何JS脚本都有了root权限，不安全)
+        ```
+        $ sudo chown root /usr/local/bin/node
+        $ sudo chmod +s /usr/local/bin/node
+        ```
+- 模块
+    + 每一个JS文件就是一个模块，而文件路径就是模块名。
+    + 在编写每个模块时，都有require、exports、module三个预先定义好的变量可供使用。
+    + `require`
+        * 函数用于在当前模块中加载和使用别的模块，传入一个模块名，返回一个模块导出对象。模块名可使用相对路径（以./开头），或者是绝对路径（以/或C:之类的盘符开头）。
+        * 模块名中的.js扩展名可以省略。
+        * 加载使用一个JSON文件
+        ```
+        var h = require('./hello')
+        h.hello()
+
+        var man = require('./data.json')
+        console.log(man.name)
+        ```
+    + `exports` 对象是当前模块的导出对象，用于导出模块公有方法和属性。别的模块通过require函数使用当前模块时得到的就是当前模块的exports对象.
+    ```
+    exports.hello = function () {
+        console.log('Hello nodejs!');
+    };
+    ```
+    + 模块初始化
+    + 主模块
+
+
+
 [1](http://www.runoob.com/nodejs/nodejs-tutorial.html)  
-[2](https://nqdeng.github.io/7-days-nodejs/#1)  
 [3](http://www.nodebeginner.org/index-zh-cn.html)
 
 
