@@ -1,4 +1,5 @@
-Scrapy学习 http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/overview.html
+Scrapy学习 
+http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/overview.html
 ------------
 
 ### Scrapy入门教程
@@ -36,5 +37,7 @@ Scrapy学习 http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/overview.html
 
 ### Telnet终端(Telnet Console)
 
-
+scrapy使用记录
+-----------
+- 新建爬虫 `scrapy startproject spidername` 
 

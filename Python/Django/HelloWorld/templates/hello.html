@@ -1,0 +1,20 @@
+<h1>{{ hello }}</h1>
+
+{% if condition1 %}
+    <h3> condition1 </h3>
+{% endif %}
+
+{% if condition2 %}
+    <h3> condition2 </h3>
+{% elif condition1 %}
+    <h3> condition1 </h3>
+{% else %}
+    <h3> other </h3>
+{% endif %}
+
+{% if condition1 and condition3 %}
+    <h3> condition1 和 condition3</h3>
+
+{% endif %}
+
+{# 这是一个注释 #}

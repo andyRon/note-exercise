@@ -15,3 +15,12 @@ class DoubanmoiveItem(scrapy.Item):
     director=Field()#导演 
     classification=Field()#分类 
     actor=Field()#演员
+
+class DoubanbookItem(scrapy.Item):
+    name=Field()    #书名
+    author=Field()  #作者
+    # year=Field()    #出版年
+    score=Field()   #评分
+    rating_people=Field()   #评分人数
+    # pages=Field()   #页数
+    # ISBN=Field()    #ISBN
