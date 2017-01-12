@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+</head>
+<body ng-app="myApp">
+
+<runoob-directive></runoob-directive>
+
+<div runoob-directive></div>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("runoobDirective", function() {
+    return {
+        restrict : "A",
+        template : "<h1>自定义指令!</h1>"
+    };
+});
+</script>
+
+<p><strong>注意：</strong> 通过设置 <strong>restrict</strong> 属性值为 "A" 来设置指令只能通过 HTML 元素的属性来调用。</p>
+
+</body>
+</html>

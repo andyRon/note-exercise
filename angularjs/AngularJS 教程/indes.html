@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="">
+    <p>名字 : <input type="text" ng-model="name"></p>
+    <h1>Hello {{name}}</h1>
+</div>
+
+</body>
+</html>
+
+<!--
+实例讲解：
+当网页加载完毕，AngularJS 自动开启。
+ng-app 指令告诉 AngularJS，<div> 元素是 AngularJS 应用程序 的"所有者"。
+ng-model 指令把输入域的值绑定到应用程序变量 name。
+ng-bind 指令把应用程序变量 name 绑定到某个段落的 innerHTML。
+
+-->
