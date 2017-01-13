@@ -38,3 +38,5 @@ Icon
 # Ulysses 
 .Ulysses-Group.plist
 .UlyssesRoot
+
+.pyc
