@@ -16,3 +16,9 @@ class Website(Item):
     name = Field()
     description = Field()
     url = Field()
+
+
+class TestItem(Item):
+    id = Field()
+    name = Field()
+    description = Field()

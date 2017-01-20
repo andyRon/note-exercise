@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import scrapy
 from tutorial2.items import DmozItem
 from tutorial2.items import Website
@@ -57,3 +58,46 @@ class DirbotSpider(scrapy.spiders.Spider):
             items.append(item)
 
         return items
+
+
+# 传递参数测试
+class MySpider(scrapy.spiders.Spider):
+    name = 'myspider1'
+
+    def __init__(self, category=None, *args, **kwargs):
+        super(MySpider, self).__init__(*args, **kwargs)
+        self.start_urls = ['http://www.example.com/categories/%s' % category]
+        # ...
+
+
+class MySpider2(scrapy.Spider):
+    name = 'myspider2'
+    allowed_domains = ["dmoz.org"]
+    start_urls = [
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"
+    ]
+
+    def parse(self, response):
+        self.log('A response from %s just arrived!' % response.url)
+
+# 在单个回调函数中返回多个Request以及Item的例子
+class MySpider3(scrapy.Spider):
+    name = 'myspider3'
+    allowed_domains = ["dmoz.org"]
+    start_urls = [
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",
+        "http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"
+    ]
+
+    def parse(self, response):
+        sel = scrapy.Selector(response)
+        for h3 in response.xpath('//h3').extract():
+            yield DmozItem(title=h3)
+
+        for url in response.xpath('//a/@href').extract():
+            yield scrapy.Request(url, callback=self.parse)
+
+
+
+
