@@ -288,6 +288,76 @@ if x >= 5:
 
 
 
+### 5 pandas入门
+from pandas import Series, DataFrame
+import pandas as pd
+- pandas的数据结构   
+    + Series
+        * Numpy数组运算（如根据布尔型数组进行过滤、标量乘法、应用数学函数等）都会保留索引和值之间的链接
+    
+    ```
+    In [5]: from pandas import Series, DataFrame
+    In [6]: import pandas as pd
+    In [7]: obj = Series([2,9, -3, 5])
+    In [8]: obj
+    Out[8]:
+    0    2
+    1    9
+    2   -3
+    3    5
+    dtype: int64
+    In [9]: obj.values
+    Out[9]: array([ 2,  9, -3,  5])
+    In [10]: obj.index
+    Out[10]: RangeIndex(start=0, stop=4, step=1)
+    In [11]: obj2 = Series([2,3,4,-6],index=['v','b','c','f'])
+    In [12]: obj2
+    Out[12]:
+    v    2
+    b    3
+    c    4
+    f   -6
+    dtype: int64
+    In [13]: obj2.index
+    Out[13]: Index([u'v', u'b', u'c', u'f'], dtype='object')
+    n [16]: obj2[obj2>0]
+    Out[16]:
+    v    2
+    b    3
+    c    4
+    dtype: int64
+
+    In [17]: obj2 * 2
+    Out[17]:
+    v     4
+    b     6
+    c     8
+    f   -12
+    dtype: int64
+    In [20]: np.exp(obj2)
+    Out[20]:
+    v     7.389056
+    b    20.085537
+    c    54.598150
+    f     0.002479
+    ```
+
+    + DataFrame
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 In [46]: tz_counts[:10].plot(kind="barh", rot=0)
