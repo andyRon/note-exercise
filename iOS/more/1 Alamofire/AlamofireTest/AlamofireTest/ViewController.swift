@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Alamofire.request("https://api.500px.com/v1/photos", method: .get).responseJSON {
+            response in
+            guard let JSON = response.result.value else { return }
+            
+            print("JSON: \(JSON)")
+            NSLog("\(JSON)")
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }

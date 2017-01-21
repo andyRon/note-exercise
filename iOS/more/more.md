@@ -1,6 +1,6 @@
 ios 没有特定记录
 
-### 1 Alamofire 使用  **
+### 1 Alamofire 使用 **
 [参考](http://www.jianshu.com/p/f1208b5e42d9)
 -------
 1. 基础请求
