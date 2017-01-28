@@ -177,6 +177,17 @@ class SpecificProduct(Product):
 - 通过特定的 XPath 或者 CSS 表达式来“选择” HTML文件中的某个部分。
 - Scrapy选择器构建于 lxml 库之上，这意味着它们在速度和解析准确性上非常相似。
 
+- 使用选择器(selectors)
+    + 构造选择器(selectors)
+        * 以文字构造
+        ```
+        body = '<html><body><span>good</span></body></html>'
+        Selector(text=body).xpath('//span/text()').extract()
+        ```
+        * 以response构造
+        * 为了方便起见，response对象以 .selector 属性提供了一个selector
+    + 使用选择器(selectors)
+
 ### Item Loaders
 -  Items 提供保存抓取数据的 容器 ， 而 Item Loaders提供的是 填充 容器的机制。
 
