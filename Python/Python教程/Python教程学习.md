@@ -165,7 +165,14 @@
         + `[x * x for x in range(1, 11) if x % 2 == 0]`  =>  `[4, 16, 36, 64, 100]`
         + `m + n for m in 'ABC' for n in 'XYZ']`  =>   `['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']`
         + `[d for d in os.listdir('.')]` 列出当前目录下文件和目录
+        ```
+        L1 = ['Hello', 'World', 18, 'Apple', None]
+        [s.lower() for s in L2 if isinstance(s, str)]
+        ```
     - 生成器Generator(保存的是算法)
+        + 一边循环一边计算的机制
+        + 创建generator的方法
+            * 把一个列表生成式的[]改成()
         + 例子
         ```python
         g = (x*x for x in range(10))
@@ -444,7 +451,8 @@
     - PIL   ？？
 
 ### 14 图形界面
-    - Tk（Tkinter）
+    - Tk（Tkinter）: 内置的， 调用操作系统提供的本地GUI接口
+
     - wxWidgets
     - Qt
     - GTK
