@@ -393,6 +393,7 @@
 	+ 类型属性（类似于静态属性）
 		* 存储型类型属性是延迟初始化的
 		* `static` `class`	
+		
 - 方法 
 	+ 结构体和枚举能够定义方法是 Swift 与 C/Objective-C 的主要区别之一
 	+ 实例方法 (Instance Methods)

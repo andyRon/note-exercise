@@ -173,6 +173,15 @@
         + 一边循环一边计算的机制
         + 创建generator的方法
             * 把一个列表生成式的[]改成()
+            ```
+            >>> L = [x * x for x in range(10)]
+            >>> L
+            [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+            >>> g = (x * x for x in range(10))
+            >>> g
+            <generator object <genexpr> at 0x1022ef630>
+            ```
+        + generator保存的是算法，每次调用next(g)，就计算出g的下一个元素的值，直到计算到最后一个元素，没有更多的元素时，抛出`StopIteration`的错误。(也可直接用for in，就没有`StopIteration`的错误)    
         + 例子
         ```python
         g = (x*x for x in range(10))
