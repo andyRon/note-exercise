@@ -6,6 +6,7 @@ Part 1 Views
 > 一个是视图就是一个UIView类的对象或者其子类，
 
 
+instantiate
 
 
 

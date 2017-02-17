@@ -25,3 +25,4 @@ class MoiveSpider2015(CrawlSpider):
         return item
 
 # scrapy crawl doubanmoive2015 -o items-2015.json
+# scrapy crawl doubanmoive2015 -o items-2015.csv
