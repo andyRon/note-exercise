@@ -96,8 +96,25 @@ let result1 = f(object)(1)
 
 //arc4random()
 
+// Foundation框架
 import Foundation
 let string = "/var/controller_driver/secret_photo.png" as NSString
 let components = string.pathComponents
+
+// 获取对象类型
+let date = NSDate()
+let name = NSStringFromClass(type(of: date))
+print(name)
+
+// 
+class ClassA: NSObject { }
+class ClassB: ClassA { }
+let obj1: NSObject = ClassB()
+let obj2: NSObject = ClassB()
+obj1.isKind(of: ClassA.self)        // true
+obj2.isMember(of: ClassA.self)      // false
+
+
+
 
 

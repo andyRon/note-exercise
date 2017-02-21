@@ -175,7 +175,7 @@ class Tiger: Cat {
 
 ### 值类型和引用类型
 
-### Foundation 框架
+### Foundation框架
 - Swift 与 Foundation 之间的类型转换是可以自动完成的，而且是双向的。 ??
 - 对应关系
     + String - NSString
@@ -185,5 +185,131 @@ class Tiger: Cat {
 
 ### String 还是 NSString
 - 尽可能的话还是使用原生的 String 类型
+
+### UnsafePointer
+- 在 Swift 的思想中，所有的引用或者变 量的类型都是确定并且正确对应它们的实际类型的，你应当无法进行任意的类型转换， 也不能直接通过指针做出一些出格的事情。
+- 为了与庞大的 C 系帝国进行合作，Swift 定义了一套指针的访问和转换方法，那就是 UnsafePointer 和它的一系列变体。
+
+### C 指针内存管理
+
+### COpaquePointer 和 CFunctionPointer
+
+### GCD 和延时调用
+
+### ... 和..<
+
+### 获取对象类型
+- `type(of: )`
+
+### AnyClass，元类型和.self
+
+### 接口和类方法中的 Self
+
+### 自省 Introspection ??
+- 程序设计和人类哲学所面临的同一个很重大的课题就是解决 “我是谁” 这个问题。
+- 向一个对象发出询问，以确定它是不是属于某个类，这种操作就称为自省。
+
+### 类型转换
+
+### 动态类型和多方法
+
+### 属性观察
+
+### KVO
+
+### 局部 scope
+
+### Printable 和 DebugPrintable
+
+### 判等
+
+### 哈希
+
+### 错误处理
+
+### 断言
+
+### fatalError
+
+### final
+
+### 类簇
+
+### 代码组织和 Framework
+
+### Playground 延时运行
+
+### Playground 可视化
+
+### Playground 与项目协作
+
+### Playground 限制
+
+### Swizzle
+
+### lazy 修饰符和 lazy 方法
+
+### find
+
+### 数学和数字
+
+### JSON
+
+### NSNull
+
+### 调用 C 动态库
+
+### Reflection 和 MirrorType
+
+### 输出格式化
+
+### 文档注释
+
+### Options
+
+### 性能考虑
+
+### 数组 enumerate
+
+### 类型编码 @encode
+
+### Log 输出
+
+### C 代码调用和 @asmname
+
+### sizeof 和 sizeofValue
+
+### 多重 Optional
+
+### Optional Map
+
+### 溢出
+
+### 宏定义 define
+
+### delegate
+
+### Associated Object
+
+### Lock
+
+### 属性访问控制
+
+### Swift 中的测试
+
+### Core Data
+
+### Toll-Free Bridging 和 Unmanaged
+
+### 闭包歧义
+
+### 泛型扩展
+
+### 兼容性
+
+### 列举 enum 类型
+
+
+
 
 
