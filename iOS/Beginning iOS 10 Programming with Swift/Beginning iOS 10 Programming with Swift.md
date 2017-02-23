@@ -20,3 +20,15 @@ Be patient.
 ### Chapter 2 Swift Playgrounds
 
 ### Chapter 3 Hello World!Build Your First App in Swift
+familiarize
+workspace
+rightmost
+utility area
+Quick Help
+walkthrough
+A scene in storyboard represents a view controller and its views.
+A view controller is designed to manage its associated view and subviews.
+versus   vs
+
+### Chapter 4 Hello World App Explained
+
