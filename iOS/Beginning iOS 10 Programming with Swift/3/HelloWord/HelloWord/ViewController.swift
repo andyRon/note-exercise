@@ -21,11 +21,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showMessage(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "欢迎到我的第一个App", message: "Hello World", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "欢迎到我的第一个App", message: "Hello World, I am Andy Ron", preferredStyle: UIAlertControllerStyle.alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             
-        present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 
 }

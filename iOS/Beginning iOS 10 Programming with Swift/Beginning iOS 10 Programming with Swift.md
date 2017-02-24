@@ -31,4 +31,33 @@ A view controller is designed to manage its associated view and subviews.
 versus   vs
 
 ### Chapter 4 Hello World App Explained
+Encapsulation
+In iOS, apps are based on event-driven programming.
+UI Object
+illustration
+empty pair of parentheses
+curly brace
+tons of built-in functions
+pop-over
+other than
+- three phases:
+    + **Compile**   code into machine code
+    + **Package**("build")  packeage resource files(such as images, text files, sound files, etc.) 
+
+### Chapter 5 Introduction to Auto Layout
+adaptive UI
+different screen dimensions
+formula
+live preview
+- Auto layout bar
+
+ambiguous or conflicting constraints
+布局错误时 the Document Outline view dislays a disclosure arrow(red/orange)
+resolve layout issues easily and quickly
+
+- press and hold *option* key, the click *Main.storyboard(Preview)*     另外打开一个预览窗口，用户不同手机UI查看
+
+trackpad
+
+
 
