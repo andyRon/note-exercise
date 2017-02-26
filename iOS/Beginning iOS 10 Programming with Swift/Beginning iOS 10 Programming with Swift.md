@@ -59,5 +59,14 @@ resolve layout issues easily and quickly
 
 trackpad
 
+### Chapter 6 Designing UI Using Stack Views
+> To the user, the interface is the product.
+
+comprehensive
+embed
+crucial skill
+sidenote 
+
+选择困难时，the shift key and right click the stack view
 
 
