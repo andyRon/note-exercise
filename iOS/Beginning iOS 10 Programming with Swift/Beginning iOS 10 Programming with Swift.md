@@ -68,5 +68,23 @@ crucial skill
 sidenote 
 
 选择困难时，the shift key and right click the stack view
+- stack view 的属性
+    + *alignment* *Leading*
+    + *distribution* *Fill Equally*
+
+At the very beginning of this tutorial
+issue indicator in the document outline view
+- an automatic way to adjust the font size on the fly. 自动调节字体大小
+    + **Label** *Autoshrink* *Minimum Font Size*
+- 图片尺寸限制 *Aspect Ratio*
+
+*Need help with your coding problems? We'll find you the right developer who can help you in 15 minutes.*
+
+To achieve adaptive layout, Apple introduced a new concept, called **Size Classes**
+
+- Exercise??
+
+
+
 
 
