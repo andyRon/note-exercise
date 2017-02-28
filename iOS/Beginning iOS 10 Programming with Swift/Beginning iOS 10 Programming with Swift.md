@@ -84,6 +84,17 @@ To achieve adaptive layout, Apple introduced a new concept, called **Size Classe
 
 - Exercise??
 
+### Chapter 7 Introduction to Prototyping
+indie developer
+
+https://designcode.io
+
+### Chapter 8 Creating a Simple Table Based App
+analogy
+delegation pattern
+
+### Chapter 9 Customise Table Views Using Prototype Cell
+
 
 
 
