@@ -94,6 +94,19 @@ analogy
 delegation pattern
 
 ### Chapter 9 Customise Table Views Using Prototype Cell
+stylish
+- delete
+designate
+- `RestaurantTableViewController`
+
+customize
+
+- UI in storyboard and code are separated.
+FoodPin2 视图需要调整
+
+
+### Chapter 10 
+
 
 
 
