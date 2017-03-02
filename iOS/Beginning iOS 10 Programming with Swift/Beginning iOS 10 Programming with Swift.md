@@ -130,6 +130,16 @@ https://color.adobe.com/zh/create/color-wheel/
 http://www.flatuicolorpicker.com/
 
 ### Chapter 12 Introduction to Navigation Controller and Segue
+drill-down interface
+elegant interface
+- Navigation controllers can work with any types of view controller.
+- can break a large storyboard into multiple storyboards and link them up using storyboard references
+
+//?? UILabel的长度自适应
+
+### Chapter 13 Introduction to Object Oriented Programming
+
+
 
 
 
