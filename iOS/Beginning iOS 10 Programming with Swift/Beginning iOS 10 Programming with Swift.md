@@ -112,7 +112,24 @@ UIAlertControllerStyle
 UITableViewCellAccessoryType
 
 ### Chapter 11 Table Row Deletion, Custom Action Buttons, Social Sharing and MVC
+Separation of Concerns(SoC)     MVC
 
+`tableView(_:commit:forRowAt:)`  删除或添加行
+
+`deleteRows(at:with:)`
+
+swipe-for-more
+`UIActivityViewController`  分享
+`UITableViewRowAction`  类似于 `UIAlertAction`
+`tableView(_:editActionsForRowAt:)`
+
+- Customize `UITableViewRowAction`
+
+颜色
+https://color.adobe.com/zh/create/color-wheel/
+http://www.flatuicolorpicker.com/
+
+### Chapter 12 Introduction to Navigation Controller and Segue
 
 
 
