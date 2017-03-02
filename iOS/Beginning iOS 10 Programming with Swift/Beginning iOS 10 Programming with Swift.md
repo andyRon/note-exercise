@@ -105,8 +105,13 @@ customize
 FoodPin2 视图需要调整
 
 
-### Chapter 10 
+### Chapter 10 Interacting with Tabel Views and Using UIAlertController
 
+UIAlertControllerStyle
+
+UITableViewCellAccessoryType
+
+### Chapter 11 Table Row Deletion, Custom Action Buttons, Social Sharing and MVC
 
 
 
