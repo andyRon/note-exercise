@@ -138,6 +138,11 @@ elegant interface
 //?? UILabel的长度自适应
 
 ### Chapter 13 Introduction to Object Oriented Programming
+> Most good programmers do programming not because they expect to get paid or adulation by the public, but because it is fun to program.
+
+conceptually
+blueprint or prototype
+
 
 
 
