@@ -143,6 +143,13 @@ elegant interface
 conceptually
 blueprint or prototype
 
+### Chapter 14 Detail View Enhancement and Navigation Bar Customization
+bit primitive
+- `UIImageView`的 `Content Mode`属性
+    + `Scale To Fill` 图片完全填满view（会缩放）
+    + `Aspect Fit` 保持图片原来的尺寸（不缩放）
+    + `Aspect Fill` `Clip to Bounds`勾选，图片会被剪辑
+
 
 
 
