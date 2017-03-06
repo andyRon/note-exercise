@@ -154,6 +154,15 @@ preferredStatusBarStyle: UIStatusBarStyle
 View controller-based status bar appearance
 // ?? statusBarStyle修改有问题
 
+### Chapter 15 Self Sizing Cells and Dynamic Type
+// ?? UILabel 行数自动
+// ??
+
+### Chapter 16 Basic Animations, Visual Effects and Unwind Segues
+
+`UIVisualEffectView`
+
+ Spring animation
 
 
 
