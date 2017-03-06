@@ -150,7 +150,9 @@ bit primitive
     + `Aspect Fit` 保持图片原来的尺寸（不缩放）
     + `Aspect Fill` `Clip to Bounds`勾选，图片会被剪辑
 
-
+preferredStatusBarStyle: UIStatusBarStyle 
+View controller-based status bar appearance
+// ?? statusBarStyle修改有问题
 
 
 

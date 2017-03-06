@@ -73,6 +73,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YWo-1A-1rS" id="WPH-tq-Q95"/>
+                                    <outlet property="delegate" destination="YWo-1A-1rS" id="jed-eX-RRp"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="svX-vV-Orn" id="0WM-9V-3Gw"/>
+                        <outlet property="tableView" destination="Zls-Ze-oVN" id="KsK-eK-z35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fb6-nV-MiH" userLabel="First Responder" sceneMemberID="firstResponder"/>

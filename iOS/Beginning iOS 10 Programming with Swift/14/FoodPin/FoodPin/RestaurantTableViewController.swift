@@ -33,12 +33,22 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "Royal Oak", type: "British", location: "London", image: "royaloak.jpg", isVisited: false),
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", image: "caskpubkitchen.jpg", isVisited: false)
     ]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // navigationItem是UIViewController的扩展属性
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -116,4 +126,9 @@ class RestaurantTableViewController: UITableViewController {
             }
         }
     }
+    // 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+   
 }
