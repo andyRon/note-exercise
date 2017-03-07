@@ -164,6 +164,12 @@ View controller-based status bar appearance
 
  Spring animation
 
+- 步骤
+    + 在详情页右上角加*check-in*按钮
+    + 添加一个*Review*视图控制器
+    + 在*Review*内添加一些视图
+    + 在*check-in*按钮 和 *Review*视图之间添加一个**Present modally**类型的**Segue**
+    + 在*Review*中添加一个关闭按钮
 
 
 

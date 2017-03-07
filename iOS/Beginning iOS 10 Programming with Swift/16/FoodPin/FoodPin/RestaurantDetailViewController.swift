@@ -69,8 +69,12 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
         return cell
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
+    
+    @IBAction func close(segue:UIStoryboardSegue) {
+        print("acd")
     }
 
 }
