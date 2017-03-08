@@ -104,7 +104,7 @@ customize
 - UI in storyboard and code are separated.
 FoodPin2 视图需要调整
 
-
+图片圆
 ### Chapter 10 Interacting with Tabel Views and Using UIAlertController
 
 UIAlertControllerStyle
@@ -171,5 +171,22 @@ View controller-based status bar appearance
     + 在*check-in*按钮 和 *Review*视图之间添加一个**Present modally**类型的**Segue**
     + 在*Review*中添加一个关闭按钮
 
+//?? Unwind segues不成功
+//?? 练习
+
+### Chapter 17 Working with Maps
+
+annotation
+
+Both table view header and footer are not selectable. 所以就在两个*View Controller*之间设置segue.
+
+`UITapGestureRecognizer`
+`Geocoder`
+placemark
+`CLGeocoder`
+`CLPlacemark`
+- annotation的两个组成
+    + an annotation object.  继承自`MKAnnotation`协议
+    + an annotation view.   
 
 

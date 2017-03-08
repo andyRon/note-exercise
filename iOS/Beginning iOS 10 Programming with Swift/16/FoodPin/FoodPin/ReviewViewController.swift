@@ -23,7 +23,7 @@ class ReviewViewController: UIViewController {
         
         // View animation
         let scaleTransform = CGAffineTransform.init(scaleX: 0, y: 0)
-        let translateTransform = CGAffineTransform.init(translationX: 0, y: -1000)
+//        let translateTransform = CGAffineTransform.init(translationX: 0, y: -1000)
 //        let combineTransform = scaleTransform.concatenating(translateTransform)
         containerView.transform = scaleTransform
     }
@@ -34,14 +34,14 @@ class ReviewViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        UIView.animate(withDuration: 0.7, animations: {
-//            self.containerView.transform = CGAffineTransform.identity
-//        })
-        
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
-            
+        UIView.animate(withDuration: 0.4, animations: {
             self.containerView.transform = CGAffineTransform.identity
-        }, completion: nil)
+        })
+        
+//        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: .curveEaseInOut, animations: {
+//            
+//            self.containerView.transform = CGAffineTransform.identity
+//        }, completion: nil)
         
         
     }
@@ -55,11 +55,7 @@ class ReviewViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-//    @IBAction func close(segue: UIStoryboardSegue) {
-//        if let reviewViewController = segue.source as? ReviewViewController {
-//            print("Coming from BLUE")
-//        }
-//    }
+
     
     
 }
