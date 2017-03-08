@@ -187,6 +187,12 @@ placemark
 `CLPlacemark`
 - annotation的两个组成
     + an annotation object.  继承自`MKAnnotation`协议
-    + an annotation view.   
+    + an annotation view.  
 
+
+### Chapter 18 Introduction to Static Table Views, UIImagePickerController and NSLayoutConstraint
+添加数据
+UIImagePickerController
+
+NSPhotoLibraryUsageDescription
 
