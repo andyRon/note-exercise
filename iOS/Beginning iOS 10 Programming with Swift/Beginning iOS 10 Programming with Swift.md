@@ -200,6 +200,12 @@ A layout constraint actually defines a relationship between two user interface o
 
 //??    练习
 
+### Chapter 19 Working with Core Data
+volatile
+
+`NSPersistentContainer`
+
+*managed object model*   *managed objects*
 
 
 
