@@ -195,4 +195,11 @@ placemark
 UIImagePickerController
 
 NSPhotoLibraryUsageDescription
+`NSLayoutConstraint`
+A layout constraint actually defines a relationship between two user interface objects.
+
+//??    练习
+
+
+
 

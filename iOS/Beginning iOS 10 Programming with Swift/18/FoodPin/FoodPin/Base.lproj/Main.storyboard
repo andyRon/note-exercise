@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" title="Food Pin" id="pn4-Zb-Dsl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nEb-bs-tzr">
                             <connections>
-                                <segue destination="Qe0-fu-4FN" kind="presentation" identifier="addRestaurant" id="An0-zf-WR6"/>
+                                <segue destination="OV9-zG-wg6" kind="presentation" identifier="addRestaurant" id="Atz-xD-uIg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -238,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="2118" y="870"/>
         </scene>
-        <!--Add Restaurant Controller-->
+        <!--New Restaurant-->
         <scene sceneID="3Ud-of-TIy">
             <objects>
-                <tableViewController id="Qe0-fu-4FN" customClass="addRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="New Restaurant" id="Qe0-fu-4FN" customClass="addRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="SVV-Qb-8sE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,6 +360,9 @@
                                                     <state key="normal" title="YES">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="toggleBeenHereButtonWithSender:" destination="Qe0-fu-4FN" eventType="touchUpInside" id="UrK-Pg-QHe"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daU-Rb-IrM">
                                                     <rect key="frame" x="69" y="33" width="30" height="30"/>
@@ -368,6 +371,9 @@
                                                     <state key="normal" title="NO">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="toggleBeenHereButtonWithSender:" destination="Qe0-fu-4FN" eventType="touchUpInside" id="0Lk-LL-wmf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -386,15 +392,26 @@
                                 <segue destination="8MZ-gB-7ME" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="v9S-Xy-jV2"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Ewb-ZI-0sM">
+                            <connections>
+                                <action selector="saveWithSender:" destination="Qe0-fu-4FN" id="ZLZ-dc-5sn"/>
+                                <segue destination="8MZ-gB-7ME" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="ONy-JL-vaw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="locationTextField" destination="3GQ-6o-V0r" id="YGq-tg-gpI"/>
+                        <outlet property="nameTextField" destination="wrc-hb-sbG" id="in8-e5-bKL"/>
+                        <outlet property="noButton" destination="daU-Rb-IrM" id="U4i-jM-JK3"/>
                         <outlet property="photoaImageView" destination="SN8-a1-emJ" id="INx-B2-oCP"/>
+                        <outlet property="typeTextField" destination="fqG-tw-C5a" id="GoU-BJ-wdo"/>
+                        <outlet property="yesButton" destination="Edz-ak-l9n" id="gak-G5-QU9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRh-DR-1PY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8MZ-gB-7ME" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="-732"/>
+            <point key="canvasLocation" x="2142" y="-710"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="rmq-K1-npT">
@@ -549,7 +566,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ef8-Kj-0kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="353" y="-731"/>
+            <point key="canvasLocation" x="1454" y="-710"/>
         </scene>
     </scenes>
     <resources>
@@ -559,7 +576,4 @@
         <image name="cross" width="24" height="24"/>
         <image name="photoalbum" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="zQk-eg-UYE"/>
-    </inferredMetricsTieBreakers>
 </document>
