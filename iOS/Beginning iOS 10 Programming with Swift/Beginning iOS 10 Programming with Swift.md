@@ -214,5 +214,12 @@ volatile
 
 // ?? 搜索结果有问题
 
+### Chapter 21 Building Walkthrough Screens with UIPageViewController
+`UIPageViewController`  引导页
+container controller
+
+`UIPageViewController`
+`UIPageControll`
+
 
 
