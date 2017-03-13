@@ -223,3 +223,7 @@ container controller
 
 ### Chapter 22 Exploring Tab Bar Controller and Storyboard References
 
+[UITabBar](https://developer.apple.com/reference/uikit/uitabbar#//apple_ref/doc/uid/TP40007521-CH3-SW4)
+
+Xcode 7  *storyboard references*  把大的storyboard分开便于多人合作开发
+
