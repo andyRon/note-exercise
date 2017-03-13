@@ -12,6 +12,8 @@
 		EFD787061E712B2700E8FFEE /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFD787041E712B2700E8FFEE /* FoodPin.xcdatamodeld */; };
 		EFD93E301E7640E200C6030E /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD93E2E1E7640E200C6030E /* about.storyboard */; };
 		EFD93E321E76411700C6030E /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD93E311E76411700C6030E /* discover.storyboard */; };
+		EFD93E341E7644F600C6030E /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD93E331E7644F600C6030E /* AboutTableViewController.swift */; };
+		EFD93E361E76494000C6030E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD93E351E76494000C6030E /* WebViewController.swift */; };
 		F405E4C81D5C09500042A934 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F405E4C71D5C09500042A934 /* MapKit.framework */; };
 		F405E4CA1D5C6EB20042A934 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405E4C91D5C6EB20042A934 /* MapViewController.swift */; };
 		F4177B581D586F3700822293 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4177B571D586F3700822293 /* ReviewViewController.swift */; };
@@ -33,6 +35,8 @@
 		EFD787051E712B2700E8FFEE /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		EFD93E2F1E7640E200C6030E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/about.storyboard; sourceTree = "<group>"; };
 		EFD93E311E76411700C6030E /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
+		EFD93E331E7644F600C6030E /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		EFD93E351E76494000C6030E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F405E4C71D5C09500042A934 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F405E4C91D5C6EB20042A934 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F4177B571D586F3700822293 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				EFD787041E712B2700E8FFEE /* FoodPin.xcdatamodeld */,
 				EFBA87561E728E1D00D48C74 /* WalkthroughContentViewController.swift */,
 				EFBA87581E72920500D48C74 /* WalkthroughPageViewController.swift */,
+				EFD93E331E7644F600C6030E /* AboutTableViewController.swift */,
+				EFD93E351E76494000C6030E /* WebViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41DE0641D5DA1F900267A53 /* AddRestaurantController.swift in Sources */,
+				EFD93E341E7644F600C6030E /* AboutTableViewController.swift in Sources */,
 				F4ACF3ED1D40C4150026FC1A /* Restaurant.swift in Sources */,
 				F4D336D41D2E45AB003010DD /* RestaurantTableViewController.swift in Sources */,
 				F4177B581D586F3700822293 /* ReviewViewController.swift in Sources */,
@@ -202,6 +209,7 @@
 				EFD787061E712B2700E8FFEE /* FoodPin.xcdatamodeld in Sources */,
 				F464A2F21D49A8C40023E159 /* RestaurantDetailTableViewCell.swift in Sources */,
 				F440CDD21D3F4DB2000FB65E /* RestaurantDetailViewController.swift in Sources */,
+				EFD93E361E76494000C6030E /* WebViewController.swift in Sources */,
 				F4D336C21D2E4309003010DD /* AppDelegate.swift in Sources */,
 				F405E4CA1D5C6EB20042A934 /* MapViewController.swift in Sources */,
 			);
