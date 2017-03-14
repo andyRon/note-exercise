@@ -231,3 +231,13 @@ Xcode 7  *storyboard references*  把大的storyboard分开便于多人合作开
 
 //?? 反馈链接不可跳转
 
+### Chapter 24 Exploring CloudKit
+
+
+### Chapter 25 Localizing Your App to Reach More Users 
+`NSLocalizedString`
+*Localizable.strings*
+.xliff
+The export feature automatically examines the storyboard and extracts all the localizable strings, including labels and button titles.
+//?? 
+
