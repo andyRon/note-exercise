@@ -241,3 +241,10 @@ Xcode 7  *storyboard references*  把大的storyboard分开便于多人合作开
 The export feature automatically examines the storyboard and extracts all the localizable strings, including labels and button titles.
 //?? 
 
+### Chapter 26 Deploying and Testing Your App on Real iOS Device
+
+### Chapter 27 Beta Testing with TestFlight
+**iTunes Connect**
+
+
+
