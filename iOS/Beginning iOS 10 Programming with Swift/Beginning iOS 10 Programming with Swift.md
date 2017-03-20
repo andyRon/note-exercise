@@ -232,7 +232,18 @@ Xcode 7  *storyboard references*  把大的storyboard分开便于多人合作开
 //?? 反馈链接不可跳转
 
 ### Chapter 24 Exploring CloudKit
+- CloudKit doesn't provide any local persistence and it only provides minimal offline caching support.
+- containers  databases
+- `CKContainer`
+- the public database    the private database
+- `CKDatabase`  
+- `CKRecordZone`  `CKRecord`  `CKAsset`
 
+- `try? ` is particularly useful if you do not care about the error message.
+
+- `OperationQueue.main.addOperation {}` 添加到主线程
+
+-  `CKQueryOperation`
 
 ### Chapter 25 Localizing Your App to Reach More Users 
 `NSLocalizedString`
@@ -246,5 +257,10 @@ The export feature automatically examines the storyboard and extracts all the lo
 ### Chapter 27 Beta Testing with TestFlight
 **iTunes Connect**
 
+
+
+
+
+[中级教程简版](http://www.appcoda.com/intermediate-swift-tips/index.html)
 
 
