@@ -33,8 +33,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Discover" id="MZT-wI-VfH"/>
+                    <connections>
+                        <outlet property="spinner" destination="lcw-fC-E1G" id="Wes-eF-V84"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCT-h6-7dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="lcw-fC-E1G">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </objects>
             <point key="canvasLocation" x="1174" y="836"/>
         </scene>

@@ -245,6 +245,28 @@ Xcode 7  *storyboard references*  把大的storyboard分开便于多人合作开
 
 -  `CKQueryOperation`
 
+- **Activity Indicator**
+    + *Extra Views*
+    + `UIActivityIndicatorView`
+- Lazy Loading Images
+    + `CKFetchRecordsOperation`
+
+- `NSCache`  caching images
+
+- Pull to Refresh
+
+- saving data uing CloudKit
+    + `NSTemporaryDirectory`
+    + `UIImageJPEGRepresentation`
+    + // ?? 保存成功但iCloud中没有
+
+//?? Exercise
+
+
+
+
+
+
 ### Chapter 25 Localizing Your App to Reach More Users 
 `NSLocalizedString`
 *Localizable.strings*

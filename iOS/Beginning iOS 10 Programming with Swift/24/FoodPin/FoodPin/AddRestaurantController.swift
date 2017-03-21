@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 class AddRestaurantController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -110,7 +111,7 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
             appDelegate.saveContext()
         }
         
-        
+        saveRecordToCloud(restaurant: restaurant)
         
         dismiss(animated: true, completion: nil)
     }
@@ -136,5 +137,40 @@ class AddRestaurantController: UITableViewController, UIImagePickerControllerDel
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func saveRecordToCloud(restaurant: RestaurantMO!) -> Void{
+        //
+        let record = CKRecord(recordType: "Restaurant")
+        record.setValue(restaurant.name, forKey: "name")
+        record.setValue(restaurant.type, forKey: "type")
+        record.setValue(restaurant.location, forKey: "location")
+        record.setValue(restaurant.phone, forKey: "phone")
+        
+        let imageData = restaurant.image as! Data
+        // 缩放图片
+        let originImage = UIImage(data: imageData)!
+        let scalingFactor = (originImage.size.width > 1024) ? 1024/originImage.size.width : 1.0
+        let scaledImage = UIImage(data: imageData, scale: scalingFactor)!
+        //
+        let imageFilePath = NSTemporaryDirectory() + restaurant.name!
+        let imageFileURL = URL(fileURLWithPath: imageFilePath)
+        try? UIImageJPEGRepresentation(scaledImage, 0.8)?.write(to: imageFileURL)
+        //
+        let imageAsset = CKAsset(fileURL: imageFileURL)
+        record.setValue(imageAsset, forKey: "image")
+        
+        let publicDatabase = CKContainer.default().publicCloudDatabase
+        
+        publicDatabase.save(record, completionHandler: {
+            (record, error) -> Void in
+            print("保存数据到iCloud")
+            try? FileManager.default.removeItem(at: imageFileURL)
+        })
+        
+        
+    }
+    
+    
+    
 
 }

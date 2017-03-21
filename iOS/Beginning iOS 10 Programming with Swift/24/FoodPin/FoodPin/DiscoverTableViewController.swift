@@ -13,10 +13,24 @@ class DiscoverTableViewController: UITableViewController {
 
     var restaurants: [CKRecord] = []
     
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    
+    var imageCache = NSCache<CKRecordID, NSURL>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchRecordsFromCloud()
+        spinner.hidesWhenStopped = true  // 当动画停止时消失
+        spinner.center = view.center
+        tableView.addSubview(spinner)
+        spinner.startAnimating()
+        
+        fetchRecordsFromCloud2()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.white
+        refreshControl?.tintColor = UIColor.gray
+        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud2), for: UIControlEvents.valueChanged)
     }
 
 
@@ -39,61 +53,63 @@ class DiscoverTableViewController: UITableViewController {
         let restaurant = restaurants[indexPath.row]
         cell.textLabel?.text = restaurant.object(forKey: "name") as? String
         
-        if let image = restaurant.object(forKey: "image") {
-            let imageAsset = image as! CKAsset
-            // try? 代替 do-catch
-            if let imageData = try? Data.init(contentsOf: imageAsset.fileURL) {
+//        if let image = restaurant.object(forKey: "image") {
+//            let imageAsset = image as! CKAsset
+//            // try? 代替 do-catch
+//            if let imageData = try? Data.init(contentsOf: imageAsset.fileURL) {
+//                cell.imageView?.image = UIImage(data: imageData)
+//            }
+//        }
+        // lazy loading images
+        cell.imageView?.image = UIImage(named: "photoalbum")
+        
+        if let imageFileURL = imageCache.object(forKey: restaurant.recordID) { // 从缓存中获取
+            print("从缓存中获取图片")
+            if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
                 cell.imageView?.image = UIImage(data: imageData)
             }
+            
+        } else { // 在后台从iCloud中获取
+            
+            let publicDatabase = CKContainer.default().publicCloudDatabase
+            // CKFetchRecordsOperation用来 fetch specific record
+            let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
+            fetchRecordsImageOperation.desiredKeys = ["image"]
+            fetchRecordsImageOperation.queuePriority = .veryHigh
+            
+            fetchRecordsImageOperation.perRecordCompletionBlock =  { 
+                (record, recoreId, error) -> Void in
+                if let error = error  {
+                    print("失败加载图片:\(error.localizedDescription)")
+                    return
+                }
+                
+                if let restaurantRecord = record {
+                    OperationQueue.main.addOperation {
+                        if let image = restaurantRecord.object(forKey: "image") {
+                            let imageAsset = image as! CKAsset
+                            
+                            if let imageData = try? Data.init(contentsOf: imageAsset.fileURL) {
+                                cell.imageView?.image = UIImage(data: imageData)
+                            }
+                            // 添加图片url到缓存中
+                            self.imageCache.setObject(imageAsset.fileURL as NSURL , forKey: restaurant.recordID)
+                        }
+                        
+                    }
+                }
+            }
+            
+            publicDatabase.add(fetchRecordsImageOperation)
         }
+        
+        
+        
         return cell
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
     // convenience API
     func fetchRecordsFromCloud() {
         
@@ -122,15 +138,21 @@ class DiscoverTableViewController: UITableViewController {
     }
     // operational API
     func fetchRecordsFromCloud2() {
+        // 防止重复
+        restaurants.removeAll()
+        tableView.reloadData()
+        
         
         let cloudContainer = CKContainer.default()
         let publicDatabase = cloudContainer.publicCloudDatabase
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
+        // 排序
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
         
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name", "image"]
+        queryOperation.desiredKeys = ["name"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = {
@@ -146,9 +168,15 @@ class DiscoverTableViewController: UITableViewController {
             }
             print("sucess")
             OperationQueue.main.addOperation {
+                self.spinner.stopAnimating()
                 self.tableView.reloadData()
+                // 隐藏刷新
+                if let refreshControl = self.refreshControl {
+                    if refreshControl.isRefreshing  {
+                        refreshControl.endRefreshing()
+                    }
+                }
             }
-            
         }
         
         publicDatabase.add(queryOperation)
