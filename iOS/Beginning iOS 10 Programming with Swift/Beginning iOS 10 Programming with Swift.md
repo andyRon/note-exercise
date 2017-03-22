@@ -278,6 +278,15 @@ The export feature automatically examines the storyboard and extracts all the lo
 
 ### Chapter 27 Beta Testing with TestFlight
 **iTunes Connect**
+FoodPin lets every foodie create their own food guide. You can save your favorite restaurant and discover new dining options from other foodies.
+
+food,restaurant,recipe
+
+
+- App Store Optimization(ASO)
+
+
+### Chapter 29 Adopting 3D Touch
 
 
 
