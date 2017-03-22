@@ -287,7 +287,13 @@ food,restaurant,recipe
 
 
 ### Chapter 29 Adopting 3D Touch
+- Quick Actions, Peek, Pop
 
+- 静态  动态 
+- 最多四个Quick Actions
+
+traitCollection.forceTouchCapability
+//?? Peek pop
 
 
 
