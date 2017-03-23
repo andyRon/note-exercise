@@ -293,9 +293,20 @@ food,restaurant,recipe
 - 最多四个Quick Actions
 
 traitCollection.forceTouchCapability
-//?? Peek pop
 
-
+### Chapter 30 Developing User Notifications in iOS 10
+lock screen   home screen
+Notification Center
+pending notifications
+rich content:  static images, animated GIFs, videos, audios
+*local notifications*  *remote notifications*
+Apple Push Notification Service(APNS)
+`UNUserNotificationCenter`
+`UNMutableNotificationContent`
+`UNNotificationSound`
+`UNNotificationAttachment`
+- `NSTemporaryDirectory()` 的目录样式
+file:///private/var/mobile/Containers/Data/Application/A18A8F6E-A662-4F06-AA36-607D5BBD3583/tmp/
 
 
 [中级教程简版](http://www.appcoda.com/intermediate-swift-tips/index.html)
