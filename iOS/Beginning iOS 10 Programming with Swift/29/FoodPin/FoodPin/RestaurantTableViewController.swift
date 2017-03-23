@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, UIViewControllerPreviewingDelegate {
 
     var restaurants: [RestaurantMO] = []
     
@@ -58,6 +58,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         searchController.searchBar.placeholder = "输入饭馆名字"
         searchController.searchBar.barTintColor = UIColor.gray // 搜索栏背景颜色
         searchController.searchBar.searchBarStyle = .prominent
+        
+        // 检测是否支持3D Touch
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self as! UIViewControllerPreviewingDelegate, sourceView: view)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -240,6 +245,34 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             filterContent(for: searchText)
             tableView.reloadData()
         }
+    }
+    
+    //MARK: - UIViewControllerPreviewingDelegate
+    // tableView被touch时调用，参数中有被Touch的CGPoint
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        // indexPathForRow(at:)根据touch的点位置返回IndexPath
+        guard let indexPath = tableView.indexPathForRow(at: location) else {
+            return nil
+        }
+        guard let cell = tableView.cellForRow(at: indexPath) else {
+            return nil
+        }
+        // 要在storyboard中添加对应storyboardid
+        guard let restaurantDetailViewController = storyboard?.instantiateViewController(withIdentifier: "RestaurantDetailViewController") as? RestaurantDetailViewController else {
+            return nil
+        }
+        
+        let selectedRestaurant = restaurants[indexPath.row]
+        restaurantDetailViewController.restaurant = selectedRestaurant
+        restaurantDetailViewController.preferredContentSize = CGSize(width: 0.0, height: 450.0)
+        
+        previewingContext.sourceRect = cell.frame
+        
+        return restaurantDetailViewController
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
     }
     
 }
