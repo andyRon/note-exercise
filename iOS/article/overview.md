@@ -22,4 +22,11 @@ MyFramework.framework/
 
 ### iOS中的URL Scheme
 
-
+### Unwind Segue  
+https://stackoverflow.com/questions/12561735/what-are-unwind-segues-for-and-how-do-you-use-them
+- **unwind segue** (**exit segue**)
+- **unwind segue**时需要一个特殊的action
+```
+@IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+}
+```
