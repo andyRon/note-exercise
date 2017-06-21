@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         v.backgroundColor = .red
         self.view.addSubview(v)
         
+//        self.view.window
+        
     }
 
     override func didReceiveMemoryWarning() {

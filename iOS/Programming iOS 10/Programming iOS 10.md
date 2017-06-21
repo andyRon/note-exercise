@@ -43,11 +43,36 @@ UIResponder
         6. `UIApplicationMain`调用`makeKeyAndVisible`使视图可见
     + 如果没有a main storyboard，就要在`application(_:didFinishLaunchingWithOptions:)`中，代码完成上述动作
     ```
-    self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    self.window?.rootViewController = ViewController()
-    self.window?.backgroundColor = UIColor.whiteColor()
-    self.window?.makeKeyAndVisible(
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    self.window?.rootViewController = MyViewController()
+    self.window?.backgroundColor = UIColor.white
+    self.window?.makeKeyAndVisible()
     ```
 
+    ```
+    let w = UIApplication.shared.delegate!.window
+    let w = (UIApplication.shared.delegate as! AppDelegate).window!
+    let w = UIApplication.shared.keyWindow!
+    ```
 
+- Subview and Superview
+    + 操作视图（添加、删除视图等）时可以使用一些事件方法，这些方法都在`UIView`中
+    ```
+    • willRemoveSubview(_:),didAddSubview(_:) 
+    • willMove(toSuperview:),didMoveToSuperview 
+    • willMove(toWindow:),didMoveToWindow
 
+    • insertSubview(at:)
+    • insertSubview(belowSubview:),insertSubview(aboveSubview:) 
+    • exchangeSubview(at:withSubviewAt:)
+    • bringSubview(toFront:),sendSubview(toBack:)
+    ```
+
+- Visibility and Opacity
+
+- Frame
+    + view的`frame`, a CGRect, is the position of its rectangle within its super‐ view, in the superview’s coordinate system.
+    + `UIView.sizeToFit()`
+
+- Bounds and Center
+    + bounds是以own coordinates为标准

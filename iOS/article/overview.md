@@ -54,4 +54,6 @@ var labelText = "人生若只如初见，何事秋风悲画扇。\n等闲变却�
 
 ###  iOS 读取图片的各种方法
 
+### iOS中Info.plist文件的常见配置
+
 

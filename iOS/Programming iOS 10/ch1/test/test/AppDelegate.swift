@@ -23,7 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 //        self.window?.rootViewController = ViewController()
 //        self.window?.backgroundColor = UIColor.whiteColor()
-//        self.window?.makeKeyAndVisible(
+//        self.window?.makeKeyAndVisible()
+        
+//        let w = UIApplication.shared.delegate!.window
+//        let w = (UIApplication.shared.delegate as! AppDelegate).window!
+//        let w = UIApplication.shared.keyWindow!
         
         return true
     }
