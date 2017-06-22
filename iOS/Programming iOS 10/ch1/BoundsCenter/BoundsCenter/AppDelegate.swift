@@ -14,7 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+        // iOS9后，可以简写
+        self.window = UIWindow()
         self.window?.rootViewController = ViewController()
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()

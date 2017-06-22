@@ -74,5 +74,16 @@ UIResponder
     + view的`frame`, a CGRect, is the position of its rectangle within its super‐ view, in the superview’s coordinate system.
     + `UIView.sizeToFit()`
 
-- Bounds and Center
+- Bounds and Center ??
     + bounds是以own coordinates为标准
+    + center是frame的中心
+    + increased the superview’s origin in the positive direction, but the subview moved in the negative direction
+    + changing a view’s frame size affects its bounds size
+    + Changing a view’s bounds does not change its center; changing a view’s center does not change its bounds. view的bounds和center是相互独立的
+    + frame改变，bounds和center会相应变化以适应；bounds或center改变，frame会相应改变以适应
+    + `convert` ??
+
+- Window Coordinates and Screen Coordinates
+    + The device screen has no frame, but it has bounds.
+
+
