@@ -16,7 +16,7 @@ extension CGRect {
 
 class ViewController: UIViewController {
 
-    let which = 4
+    let which = 6
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +73,36 @@ class ViewController: UIViewController {
             // 先转到45度后，再移动距离时，移动方向也变成45度的方向
 //            v2.transform = CGAffineTransform(rotationAngle: 45/180 * .pi).translatedBy(x: 100, y: 0)
             
-            
+            // 用concatenating的另外一种写法
             let r = CGAffineTransform(rotationAngle:45 * .pi/180)
             let t = CGAffineTransform(translationX:100, y:0)
             v2.transform = t.concatenating(r) // not r.concatenating(t)
+        case 5:
+            let v1 = UIView(frame:CGRect(20, 111, 132, 194))
+            v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
+            let v2 = UIView(frame:v1.bounds)
+            v2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0, alpha: 1)
+            mainview.addSubview(v1)
+            v1.addSubview(v2)
+            
+            let r = CGAffineTransform(rotationAngle:45 * .pi/180)
+            let t = CGAffineTransform(translationX:100, y:0)
+            v2.transform = t.concatenating(r)
+            
+            v2.transform = r.inverted().concatenating(v2.transform)
+        case 6:
+            let v1 = UIView(frame:CGRect(20, 111, 132, 194))
+            v1.backgroundColor = UIColor(red: 1, green: 0.4, blue: 1, alpha: 1)
+            let v2 = UIView(frame:v1.bounds.insetBy(dx: 10, dy: 10))
+            v2.backgroundColor = UIColor(red: 0.5, green: 1, blue: 0, alpha: 1)
+            mainview.addSubview(v1)
+            v1.addSubview(v2)
+            
+            print(v1.frame, v1.center, v1.bounds)
+
+            v1.transform = CGAffineTransform(a: 1, b: 0, c: -0.2, d: 1, tx: 0, ty: 0)
+            print(v1.frame, v1.center, v1.bounds)
+
         default:
             break
         }

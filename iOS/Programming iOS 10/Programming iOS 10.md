@@ -87,6 +87,9 @@ UIResponder
     + The device screen has no frame, but it has bounds.
 
 - Transform
-    + view's `transform` change the view’s apparent size and orientation — without affecting its bounds and center.
+    + view's `transform`(CGAffineTransform) change the view’s apparent size and orientation — without affecting its bounds and center.
+
+
+- Trait Collections and Size Classes
 
 
