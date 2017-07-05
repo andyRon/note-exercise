@@ -1,1 +1,0 @@
-Car *car = [[Car alloc] init];

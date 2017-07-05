@@ -4,8 +4,11 @@ Beginning iOS 10 Programming with Swift(by Simon Ng)
 [电子书的一个简版](http://www.appcoda.com/learnswift/index.html)
 
 
+### 0 前言
+- 这是我学习http://www.appcoda.com网站出的一本书[《Beginning iOS 10 Programming with Swift》](http://www.appcoda.com/swift/)的记录
 ### Preface
 solidified
+mature 
 from scratch: 白手起家；从头做起
 a couple years ago
 Brick walls are there for a reason: they let us prove how badly we want things. 
@@ -18,6 +21,8 @@ Be patient.
 ### Chapter 1 Getting Started with Xcode 8 Developement
 
 ### Chapter 2 Swift Playgrounds
+- It's an interactive development environment for developers to experiment Swift programming and allows you to see the result of your code in real-time。
+
 
 ### Chapter 3 Hello World!Build Your First App in Swift
 familiarize
