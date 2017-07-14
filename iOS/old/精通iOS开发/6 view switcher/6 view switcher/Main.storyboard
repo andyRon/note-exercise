@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Switch View Controller-->
+        <scene sceneID="c5T-TB-L7z">
+            <objects>
+                <viewController id="CKZ-B2-ZMf" customClass="SwitchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AsI-Ph-IKS"/>
+                        <viewControllerLayoutGuide type="bottom" id="guO-zc-y4r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVb-XG-Ld9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxw-Gm-fXo">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem title="Switch Views" id="rBq-Dp-vI2">
+                                        <connections>
+                                            <action selector="switchViews:" destination="CKZ-B2-ZMf" id="eru-ud-po4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cxw-Gm-fXo" firstAttribute="bottom" secondItem="guO-zc-y4r" secondAttribute="top" id="5sh-5i-yR5"/>
+                            <constraint firstItem="Cxw-Gm-fXo" firstAttribute="leading" secondItem="hVb-XG-Ld9" secondAttribute="leading" id="T9Y-ME-LgR"/>
+                            <constraint firstAttribute="trailing" secondItem="Cxw-Gm-fXo" secondAttribute="trailing" id="aCn-Kx-FKD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYO-dM-Xjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="343"/>
+        </scene>
+    </scenes>
+</document>
