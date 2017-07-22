@@ -156,3 +156,4 @@ int main(int argc, const char * argv[]) {
 @interface test : NSTableView
 
 @end
+

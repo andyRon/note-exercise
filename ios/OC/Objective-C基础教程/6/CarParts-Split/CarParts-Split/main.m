@@ -27,7 +27,5 @@ int main(int argc, const char * argv[]) {
     
     [car print];
     
-//    [NSDictionary ]
-    
     return 0;
 }

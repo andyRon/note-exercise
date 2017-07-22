@@ -78,6 +78,7 @@ NSString *colorName(ShapeColor fillColor)
 - (void) draw;
 
 @end  //Rectangle
+
 @implementation Rectangle
 - (void) setFillColor:(ShapeColor) c
 {
@@ -107,6 +108,7 @@ NSString *colorName(ShapeColor fillColor)
 - (void) draw;
 
 @end  //Egg
+
 @implementation Egg
 - (void) setFillColor:(ShapeColor) c
 {
@@ -137,6 +139,7 @@ NSString *colorName(ShapeColor fillColor)
 - (void) draw;
 
 @end  //Triangle
+
 @implementation Triangle
 - (void) setFillColor:(ShapeColor) c
 {
@@ -153,6 +156,7 @@ NSString *colorName(ShapeColor fillColor)
     NSLog(@"drawing a Triangle at (%d %d %d %d) in %@", bounds.x, bounds.y, bounds.width, bounds.height, colorName(fillColor));
 }
 @end
+
 
 void drawShapes(id shapes[], int count)
 {

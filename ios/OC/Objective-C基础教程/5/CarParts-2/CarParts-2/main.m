@@ -24,18 +24,18 @@
 } //description
 @end
 
-@interface Slant6 : Tire
-@end
+@interface Slant6 : Engine
+@end //slant-6型号的发动机
 @implementation Slant6
 
 - (NSString *)description {
-    return (@"I am a slant-6.VROOM!");
+    return (@"I am a slant-6型号的发动机.VROOM!");
 }
 
 @end
 
 @interface AllWeatherRadial : Tire
-@end
+@end // 新型轮胎
 @implementation AllWeatherRadial
 
 -(NSString *)description
@@ -107,8 +107,6 @@
 
 int main(int argc, const char * argv[]) {
     
-    
-    
     Car *car = [Car new];
     
     Engine *engine = [Slant6 new];
@@ -119,7 +117,6 @@ int main(int argc, const char * argv[]) {
     }
     
     [car print];
-    
     
     return 0;
 }
