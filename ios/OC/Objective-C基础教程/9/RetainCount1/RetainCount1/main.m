@@ -31,30 +31,30 @@
 
 
 int main(int argc, const char * argv[]) {
-//    RetainTracker *a = [RetainTracker new];
-//    
-//    [a retain];
-//    NSLog(@"%lu", [a retainCount]);
-//    
-//    [a retain];
-//    NSLog(@"%lu", [a retainCount]);
-//    
-//    [a release];
-//    NSLog(@"%lu", [a retainCount]);
-//    
-//    [a release];
-//    NSLog(@"%lu", [a retainCount]);
-//    
-//    [a release];
-//    NSLog(@"%lu", [a retainCount]);  // 为什么此处是  1 不是 0吗？
+    RetainTracker *a = [RetainTracker new];
     
-    NSError *error = nil;
-    NSString *string = [[NSString alloc] initWithContentsOfFile:@"/tmp/word1.txt" encoding:NSUTF8StringEncoding error:&error];
-    if (error != nil) {
-        NSLog(@"Unable read data from file, %@", [error localizedDescription]);
-    } else {
-        NSLog(@"%@",string);
-    }
+    [a retain];
+    NSLog(@"%lu", [a retainCount]);
+    
+    [a retain];
+    NSLog(@"%lu", [a retainCount]);
+    
+    [a release];
+    NSLog(@"%lu", [a retainCount]);
+    
+    [a release];
+    NSLog(@"%lu", [a retainCount]);
+    
+    [a release];
+    NSLog(@"%lu", [a retainCount]);  // 为什么此处是  1 不是 0吗？
+    
+//    NSError *error = nil;
+//    NSString *string = [[NSString alloc] initWithContentsOfFile:@"/tmp/word1.txt" encoding:NSUTF8StringEncoding error:&error];
+//    if (error != nil) {
+//        NSLog(@"Unable read data from file, %@", [error localizedDescription]);
+//    } else {
+//        NSLog(@"%@",string);
+//    }
     
     return 0;
 }
