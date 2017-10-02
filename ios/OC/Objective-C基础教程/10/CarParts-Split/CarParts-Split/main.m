@@ -43,5 +43,16 @@ int main(int argc, const char * argv[]) {
         [car release];
     }
     
+    
+    
+    NSString *emptyString = [[NSString alloc] init];
+    NSString *string = [[NSString alloc] initWithFormat:@"%d or %d", 1, 2];
+    NSError *error = nil;
+    NSString *string1 = [[NSString alloc] initWithContentsOfFile:@"/tmp/words.txt" encoding:NSUTF8StringEncoding error:&error];
+    if (nil != error) {
+        NSLog(@"未能读取文件数据：%@", [error localizedDescription]);
+    }
+    
+    
     return 0;
 }
