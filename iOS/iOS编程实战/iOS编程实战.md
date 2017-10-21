@@ -16,3 +16,16 @@ UIMotionEffect
 
 - 自定义过渡效果
 UIStoryboardSegue
+UIViewControllerAnimatedTransitioning
+
+- 新的多任务模式
+
+- Text Kit
+NSTextStorage;
+NSLayoutManager;
+NSTextContainer;
+NSAttributedString
+
+
+### 2
+
