@@ -29,6 +29,10 @@
 //    NSLayoutManager;
 //    NSTextContainer;
 //    NSAttributedString;
+    UIDynamicAnimator;
+//    UIDynamicItem;
+    UICollectionViewLayoutAttributes;
+    CAAnimation;
 }
 
 
