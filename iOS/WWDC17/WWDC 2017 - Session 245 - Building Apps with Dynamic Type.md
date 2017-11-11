@@ -1,3 +1,5 @@
+WWDC 2017 - Session 245 - Building Apps with Dynamic Type
+---------------------------------
 iOS 11 中Dynamic Type的改进：
 
 Text is large enough for the user to read.
