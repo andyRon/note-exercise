@@ -11,3 +11,23 @@ Parallelism
 
 情境切换  不易太多
 
+
+DispatchQueue.concurrentPerform   循环平行
+
+引入OC  
+
+辅助线程
+
+WWDC16 深度追踪
+
+
+Dispatch Source 调度员
+
+
+Quality of Service
+优先级
+
+Single Mutual Exclusion Context
+
+
+
