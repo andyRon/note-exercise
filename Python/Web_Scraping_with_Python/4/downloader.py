@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 import urlparse
 import urllib2
 import random
@@ -6,6 +8,9 @@ from datetime import datetime, timedelta
 import socket
 
 class Downloader:
+    '''
+    user_agent: 用户代理,(wswp: Web Scraping with Python)
+    '''
     def __init__(self, delay=5, user_agent='wswp', proxies=None, num_retries=1, opener=None, cache=None):
         self.throttle = Throttle(delay)
         self.user_agent = user_agent

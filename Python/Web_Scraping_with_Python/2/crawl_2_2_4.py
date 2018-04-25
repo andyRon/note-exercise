@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*- 
 
+# 性能比对
+
 import urllib2 
 def download(url, user_agent = 'wswp', num_re = 2):
     print "Downloading:", url 
@@ -45,7 +47,7 @@ def lxml_scraper(html):
 # 三种方法的性能对比
 import time 
 NUM_ITERATIONS = 1000
-html = download('http://example.webscraping.com/places/view/United-Kingdom-239')
+html = download('http://example.webscraping.com/places/default/view/United-Kingdom-239')
 for name, scraper in [('正则', re_scraper), ('BeautifulSoup', bs_scraper), ('lxml', lxml_scraper)]:
     start = time.time()
     for i in range(NUM_ITERATIONS):

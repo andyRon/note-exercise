@@ -7,6 +7,7 @@ except ImportError:
     import pickle
 import zlib
 from datetime import datetime, timedelta
+from link_crawler import link_crawler
 
 class DiskCache:
     def __init__(self, cache_dir='cache', expires=timedelta(days=30)):
@@ -53,5 +54,7 @@ class DiskCache:
         return datetime.utcnow() > timestamp + self.expires
 
 
+if __name__ == '__main__':
+    link_crawler('http://example.webscraping.com/', '/(index|view)', cache=DiskCache())
         
 

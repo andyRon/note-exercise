@@ -15,7 +15,10 @@ def download(url, user_agent = 'wswp', num_re = 2):
     return html;
 
 
-
+'''
+网站地图爬虫
+一般从robots文件获取Sitmap文件地址
+'''
 def crawling_sitemap(url):
     sitemap = download(url)
 

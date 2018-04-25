@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*- 
+
+
 import re
 import urlparse
 import urllib2
@@ -12,7 +15,7 @@ def link_crawler(seed_url, link_regex=None, delay=5, max_depth=-1, max_urls=-1, 
     """
     # the queue of URL's that still need to be crawled
     crawl_queue = [seed_url]
-    # the URL's that have been seen and at what depth
+    # 避免爬虫陷阱，通过控制访问到当前网页经过了的链接数（深度）
     seen = {seed_url: 0}
     # track how many URL's have been downloaded
     num_urls = 0
@@ -57,10 +60,12 @@ def link_crawler(seed_url, link_regex=None, delay=5, max_depth=-1, max_urls=-1, 
         else:
             print 'Blocked by robots.txt:', url
 
-
+"""
+下载限速
+Throttle(节流阀) 通过在连续访问同一个网站添加睡眠
+"""
 class Throttle:
-    """Throttle downloading by sleeping between requests to same domain
-    """
+
     def __init__(self, delay):
         # amount of delay between downloads for each domain
         self.delay = delay
@@ -100,13 +105,12 @@ def get_robots(url):
     rp.read()
     return rp
         
-
+"""
+从html字符串中获取所有网址 
+"""
 def get_links(html):
-    """Return a list of links from html 
-    """
-    # a regular expression to extract all links from the webpage
+    # 网页中网址的正则表达式
     webpage_regex = re.compile('<a[^>]+href=["\'](.*?)["\']', re.IGNORECASE)
-    # list of all links from the webpage
     return webpage_regex.findall(html)
 
 
