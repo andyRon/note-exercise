@@ -71,5 +71,14 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 
 ### Chapter 2: Springs
 
+- Spring animations
+
+`animate(withDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion) `
+
+`usingSpringWithDamping` 阻尼参数 0.0 ~ 1.0 ,  1.0看上去很僵硬(回弹效果不明显,bounce)，可以理解回弹的幅度 
+`initialSpringVelocity`  初始速率， 可以理解回弹的速率
+
+- Animating user interactions
+
    
 
