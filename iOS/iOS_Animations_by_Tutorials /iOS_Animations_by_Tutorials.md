@@ -87,5 +87,12 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 
 **Debug/Toggle Slow Animations**   方便调试
 
+
+![4]()
+
+### Chapter 4: View Animations in Practice
+
+
+
    
 
