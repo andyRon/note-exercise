@@ -80,5 +80,12 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 
 - Animating user interactions
 
+
+### Chapter 3: Transitions  过渡动画
+
+`transition(with:duration: options:animations:completion:) `
+
+**Debug/Toggle Slow Animations**   方便调试
+
    
 
