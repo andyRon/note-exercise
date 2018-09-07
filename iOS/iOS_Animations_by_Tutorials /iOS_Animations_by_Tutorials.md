@@ -92,7 +92,11 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 
 ### Chapter 4: View Animations in Practice
 
+Crossfade Animation  			同时淡出淡入
+Cube transition animation  		立体转换
+Fade and bounce transition
 
+假装3d转换时文字背景颜色
 
 
    

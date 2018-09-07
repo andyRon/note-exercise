@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF6D96D921368CB80030E0E9 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D96D821368CB80030E0E9 /* SnowView.swift */; };
+		EF6D96DB213694870030E0E9 /* FlightData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6D96DA213694870030E0E9 /* FlightData.swift */; };
 		EFCC4440212A95C800058F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC443F212A95C800058F86 /* AppDelegate.swift */; };
 		EFCC4442212A95C800058F86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCC4441212A95C800058F86 /* ViewController.swift */; };
 		EFCC4445212A95C800058F86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC4443212A95C800058F86 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF6D96D821368CB80030E0E9 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
+		EF6D96DA213694870030E0E9 /* FlightData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightData.swift; sourceTree = "<group>"; };
 		EFCC443C212A95C800058F86 /* Flight Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flight Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC443F212A95C800058F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFCC4441212A95C800058F86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				EFCC443F212A95C800058F86 /* AppDelegate.swift */,
 				EFCC4441212A95C800058F86 /* ViewController.swift */,
+				EF6D96D821368CB80030E0E9 /* SnowView.swift */,
+				EF6D96DA213694870030E0E9 /* FlightData.swift */,
 				EFCC4443212A95C800058F86 /* Main.storyboard */,
 				EFCC4446212A95C900058F86 /* Assets.xcassets */,
 				EFCC4448212A95C900058F86 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			files = (
 				EFCC4442212A95C800058F86 /* ViewController.swift in Sources */,
 				EFCC4440212A95C800058F86 /* AppDelegate.swift in Sources */,
+				EF6D96D921368CB80030E0E9 /* SnowView.swift in Sources */,
+				EF6D96DB213694870030E0E9 /* FlightData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
