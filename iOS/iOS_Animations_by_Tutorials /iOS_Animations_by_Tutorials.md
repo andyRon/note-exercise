@@ -7,43 +7,54 @@
 
 ### Chapter 1: Getting Started with View Animations
 
-![1]()
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6k7jrgdmg30900fuwhz.gif)
+
 - Animatable properties
-	* Position and size
-	`bounds`  `frame` `center`
-	* Appearance  
-	`backgroundColor`  `alpha`
-	* Transformation  
-	`transform`
+  * Position and size
+  `bounds`  `frame` `center`
+  * Appearance  
+  `backgroundColor`  `alpha`
+  * Transformation  
+  `transform`
 
 - Animation options
-`UIViewAnimationOptions`
-	* Repeating  
+  `UIViewAnimationOptions`
 
-	`repeat`  `autoreverse`
-	![2]()
+  * Repeating  
 
-	* Animation easing  
-	`.curveLinear`
-	`.curveEaseIn`	  动画开始时加速
+  `repeat`  `autoreverse`
 
-	```
-	UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseIn], animations: {
+  ![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw6k7ynuqlg30k40ga0ut.gif)
+
+  * Animation easing  
+  `.curveLinear`
+  	`.curveEaseIn`	  动画开始时加速
+
+  ```
+  UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseIn], animations: {
             self.password.center.x += self.view.bounds.width
         }, completion: nil)
-    ```
+  ```
 
-	`.curveEaseOut`   动画结束之前减速 
+  `.curveEaseOut`   动画结束之前减速 
 
-	```
-	UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+  ```
+  UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
             self.password.center.x += self.view.bounds.width
         }, completion: nil)
-    ```
+  ```
 
-     ![3]()
+     
 
-	`.curveEaseInOut`  动画开始时加速结束时减速
+  ![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw6k8dv4rhg30k40gago8.gif)
+
+
+
+
+
+  `.curveEaseInOut`  动画开始时加速结束时减速
 
 - 添加云的动画
 ```
@@ -67,7 +78,7 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
     self.cloud4.alpha = 1.0
 }, completion: nil)
 ```
-	
+
 
 ### Chapter 2: Springs
 
@@ -88,16 +99,54 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 **Debug/Toggle Slow Animations**   方便调试
 
 
-![4]()
+![整体效果](https://ws1.sinaimg.cn/large/006tNbRwgy1fw6f5gckt8g30900fytpt.gif)
 
 ### Chapter 4: View Animations in Practice
+
+`CAEmitterCell`
 
 Crossfade Animation  			同时淡出淡入
 Cube transition animation  		立体转换
 Fade and bounce transition
 
+
+
+
+
+#### Crossfading animations
+
+- `UIView.AnimationOptions`:  
+- `UIView.KeyframeAnimationOptions`
+
+
+
+#### Cube transitions
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6g60qxyuj30oe06mgmf.jpg)
+
 假装3d转换时文字背景颜色
 
 
-   
+
+faux-perspective effect(远景的效果)：
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw6jejb346j30ew04wmx3.jpg)
+
+
+
+#### Fade and bounce transitions
+
+
+
+
+
+#### 缺少 Challenges
+
+
+
+
+
+### Chapter 5：Keyframe Animations
+
+
 

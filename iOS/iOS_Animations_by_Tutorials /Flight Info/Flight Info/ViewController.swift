@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         changeFlight(to: londonToParis)
     }
-
+    /// 更新航班数据
     func changeFlight(to data: FlightData, animated: Bool = false) {
         summary.text = data.summary
         flightNR.text = data.flightNr
@@ -62,6 +62,25 @@ class ViewController: UIViewController {
             let direction: AnimationDirection = data.isTakingOff ? .positive : .negative
             cubeTransition(label: flightNR, text: data.flightNr, direction: direction)
             cubeTransition(label: gateNr, text: data.gateNr, direction: direction)
+            
+            
+            
+            let offsetDeparting = CGPoint(
+                x: CGFloat(direction.rawValue * 80),
+                y: 0.0)
+            
+            moveLabel(label: departingFrom, text: data.departingFrom,
+                      offset: offsetDeparting)
+            
+            let offsetArriving = CGPoint(
+                x: 0.0,
+                y: CGFloat(direction.rawValue * 50))
+            
+            moveLabel(label: arrivingTo, text: data.arrivingTo,
+                offset: offsetArriving)
+            
+            
+            
             
         } else {
             bgImageView.image = UIImage(named: data.weatherImageName)
@@ -81,7 +100,7 @@ class ViewController: UIViewController {
         }
         
     }
-
+    /// 背景图片的变化
     func fade(imageView: UIImageView, toImage: UIImage, showEffects: Bool) {
         UIView.transition(with: imageView, duration: 1.0, options: .transitionFlipFromLeft, animations: {
             imageView.image = toImage
@@ -91,7 +110,9 @@ class ViewController: UIViewController {
             self.snowView.alpha = showEffects ? 1.0 : 0.0
         }, completion: nil)
     }
-    
+    /// 假装3D效果
+    /// text: The new text to display on the label.
+    /// direction: The location from where you animate the new text label; this is either the top or the bottom of the view.
     func cubeTransition(label: UILabel, text: String, direction: AnimationDirection) {
         let auxLabel = UILabel(frame: label.frame)
         auxLabel.text = text
@@ -100,10 +121,8 @@ class ViewController: UIViewController {
         auxLabel.textColor = label.textColor
         auxLabel.backgroundColor = UIColor.clear
         
-        let auxLabelOffset = CGFloat(direction.rawValue) * label.frame.size.height/2
-        
+        let auxLabelOffset = CGFloat(direction.rawValue) * label.frame.size.height/2.0
         auxLabel.transform = CGAffineTransform(translationX: 0.0, y: auxLabelOffset).scaledBy(x: 1.0, y: 0.1)
-        
         label.superview?.addSubview(auxLabel)
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut,
@@ -122,6 +141,34 @@ class ViewController: UIViewController {
             }
         )
         
+    }
+    
+    func moveLabel(label: UILabel, text: String, offset: CGPoint) {
+        let auxLabel = UILabel(frame: label.frame)
+        auxLabel.text = text
+        auxLabel.font = label.font
+        auxLabel.textAlignment = label.textAlignment
+        auxLabel.textColor = label.textColor
+        auxLabel.backgroundColor = .clear
+        
+        auxLabel.transform = CGAffineTransform(translationX: offset.x, y: offset.y)
+        auxLabel.alpha = 0
+        view.addSubview(auxLabel)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+            label.transform = CGAffineTransform(translationX: offset.x, y: offset.y)
+            label.alpha = 0.0
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.25, delay: 0.1, options: .curveEaseIn, animations: {
+            auxLabel.transform = .identity
+            auxLabel.alpha = 1.0
+        }, completion: { _ in
+            auxLabel.removeFromSuperview()
+            label.text = text
+            label.alpha = 1.0
+            label.transform = .identity
+        })
     }
 
 }
