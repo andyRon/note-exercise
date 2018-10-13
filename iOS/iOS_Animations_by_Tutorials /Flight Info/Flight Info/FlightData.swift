@@ -22,7 +22,7 @@ struct FlightData {
 }
 
 let londonToParis = FlightData(
-    summary: "01 Apr 2015 09:42",
+    summary: "01 Apr 2018 09:42",
     flightNr: "ZY 2014",
     gateNr: "T1 A33",
     departingFrom: "LGW",
@@ -33,7 +33,7 @@ let londonToParis = FlightData(
     flightStatus: "Boarding")
 
 let parisToRome = FlightData(
-    summary: "01 Apr 2015 17:05",
+    summary: "01 Apr 2018 17:05",
     flightNr: "AE 1107",
     gateNr: "045",
     departingFrom: "CDG",

@@ -148,5 +148,106 @@ faux-perspective effect(远景的效果)：
 
 ### Chapter 5：Keyframe Animations
 
+如果要实现如下效果：
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6pom0519j30ai05kgll.jpg)
+
+大概代码：
+
+```swift
+UIView.animate(withDuration: 0.5, 
+  animations: {
+    view.center.x += 200.0
+  }, 
+  completion: { _ in
+    UIView.animate(withDuration: 0.5, 
+      animations: {
+        view.center.y += 100.0
+      }, 
+      completion: { _ in
+        UIView.animate(withDuration: 0.5, 
+          animations: {
+            view.center.x -= 200.0
+          }, 
+          completion: { _ in
+            UIView.animate(withDuration: 0.5, 
+              animations: {
+                view.center.y -= 100.0
+              }
+            )
+          }
+        )
+      }
+    )
+  }
+)
+​```
+```
+
+
+
+使用Keyframe Animations就可以代替上面繁琐的嵌套动画
+
+
+
+#### Keyframe Animations
+
+![image-20181013172100870](/Users/andyron/Library/Application Support/typora-user-images/image-20181013172100870.png)
+
+让飞机✈️有四个不同阶段的动画：
+
+1. 直接跑到加速飞行
+2. 一点向上倾斜飞行
+3. 比较大向上倾斜加速飞行
+4. 最后10%时飞机渐渐淡出视图
+
+
+
+效果就是每次切换航班时，飞机都重新飞一圈，如下图：
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6q1i7cigj30ef04jweh.jpg)
+
+
+
+
+
+
+
+The options for keyframes are different; they come from the `UIViewKeyFrameAnimationOptions` enumeration instead of `UIViewAnimationOptions`. 
+
+
+
+第一步的时间和相对值占比
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw6qeea0w6j30ep04ra9y.jpg)
+
+
+
+第二步的时间：
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6qmmpyn4j30ea04eglj.jpg)
+
+
+
+#### 关键帧动画中的计算模式
+
+
+
+关键帧动画不支持标准视图动画中可用的内置缓动曲线。 这是设计的; 关键帧应该在特定时间开始和结束并相互流动。
+
+如果上面动画的每个阶段都有一个缓动曲线，那么飞机就会抖动，而不是从一个动画平稳地移动到下一个动画。 如果你可以对整个动画应用缓动，那么会导致你的动画持续时间被忽略 - 这不是你想要的。
+相反，您有几种计算模式可供选择; 每种模式提供了一种不同的方法来计算动画的中间帧以及不同的优化器，以实现平滑移动甚至起搏。 有关更多详细信息，请通过搜索UIViewKeyframeAnimationOptions来查看文档。
+
+现在您已经知道如何使用关键帧动画将任意数量的简单动画组合在一起，您可以构建几乎任何想到的序列。 如果您想测试关键帧和关键帧动画的知识，请先尝试下面的挑战，然后再继续下一部分。
+
+
+
+#### 航班出发时间动画
+
+
+
+
+
+
+
 
 
