@@ -247,7 +247,30 @@ The options for keyframes are different; they come from the `UIViewKeyFrameAnima
 
 
 
+## Sction II: Auto Layout
+
+
+
+**Packing List**
+
+
+
+### Chapter 6: Intorduction to Auto Layout 
+
+
+
+Once you place your app in the hands of Auto Layout, you no longer set the bounds, frame or center properties of a view. If you were to try, UIKit will force a layout pass on your UI using Auto Layout, which will set everything back to the positions and sizes determined by your constraints.
+
+
+
+##### 创建项目Packing List
+
+- 添加一个UIView当作navigation bar，高度为60，背景色选择**Group Table View Background Color **；添加一个UILabel作为title，添加一个UIButton。
+- 添加一个UITableView和一个UITableViewCell
+- 
 
 
 
 
+
+### Chapter 7: Animating Constraints
