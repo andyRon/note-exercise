@@ -274,3 +274,150 @@ Once you place your app in the hands of Auto Layout, you no longer set the bound
 
 
 ### Chapter 7: Animating Constraints
+
+Animating constraints is no more difficult than animating properties; it’s just a little different. 
+
+`NSLayoutConstraint`
+
+
+
+#### Animating layout changes
+
+ By calling `layoutIfNeeded()` from within the animation closure, you set the center and bounds of every view involved in the layout. 
+
+
+
+#### Rotating view animations
+
+
+
+#### Insecting and animating constraints
+
+有时不能通过IB来实现outlets之间的约束，不想使用**Control-drag**方式添加大量的约束outlets。
+
+`UIView`提供了`constraints`属性，a list of all constraints that affect the given view.
+
+
+
+```swift
+        titleLabel.superview?.constraints.forEach { constraint in
+            print("-> \(constraint.description)\n")
+        }
+```
+
+
+
+打印结果：
+
+```swift
+-> <NSLayoutConstraint:0x600002d04320 UIView:0x7ff7df530c00.height == 200   (active)>
+
+-> <NSLayoutConstraint:0x600002d02210 UILabel:0x7ff7df525350'Select Item'.centerX == UIView:0x7ff7df530c00.centerX   (active)>
+
+-> <NSLayoutConstraint:0x600002d02a30 UILabel:0x7ff7df525350'Select Item'.centerY == UIView:0x7ff7df530c00.centerY + 5   (active)>
+
+-> <NSLayoutConstraint:0x600002d02d00 H:[UIButton:0x7ff7df715d20'+']-(8)-|   (active, names: '|':UIView:0x7ff7df530c00 )>
+
+-> <NSLayoutConstraint:0x600002d030c0 UIButton:0x7ff7df715d20'+'.centerY == UILabel:0x7ff7df525350'Select Item'.centerY   (active)>
+```
+
+五个约束对应
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw8o6ki0mtj30lm0g6q37.jpg)
+
+
+
+#### Animating UILabel constraints
+
+ `NSLayoutConstraint` properties map 
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw8oc6w8ynj30eq053t8s.jpg)
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw8ok05sq2g308q0frafs.gif)
+
+
+
+#### 替代约束 
+
+给约束添加 `Identifier`
+
+
+
+![image-20181015101142175](/Users/andyron/Library/Application Support/typora-user-images/image-20181015101142175.png)
+
+
+
+#### Adding constraints programmatically
+
+
+
+![image-20181015101900852](/Users/andyron/Library/Application Support/typora-user-images/image-20181015101900852.png)
+
+
+
+```
+Title.CenterY = Menu.CenterY * 0.67 + 0.0
+```
+
+
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw8p3arxskg308s0fntcl.gif)
+
+
+
+#### Adding menu content
+
+
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw8pe0psf2g308s0fn4lk.gif)
+
+#### Animating dynamically created views
+
+`NSLayoutAnchor`
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw8pr61md8j308s0fr747.jpg)
+
+
+
+
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw8pwyg73og308s0fnjw3.gif)
+
+
+
+
+
+在动画前添加
+
+```swift
+view.layoutIfNeeded()
+```
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw8q0dbfjcg308s0fndid.gif)
+
+
+
+#### 去除
+
+```swift
+UIView.animate(withDuration: 0.8, delay: 1.0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.0, animations: {
+            conBottom.constant = imageView.frame.size.height
+            conWidth.constant = -50.0
+            self.view.layoutIfNeeded()
+        }) { (_) in
+            imageView.removeFromSuperview()
+        }
+```
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw8qbtmmeag308s0fnafk.gif)
+
+
+
