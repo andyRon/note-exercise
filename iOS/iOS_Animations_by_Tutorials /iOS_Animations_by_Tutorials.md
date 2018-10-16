@@ -3,52 +3,108 @@
 
 
 
+## Introduction
+
+When  used properly, animations can convey information to your users and draw their attention to important parts of the interface.
+
+
+
+
+
 ## Section I: View Animations
+
+introduce you to the animation API of UIKit.This API is specifically designed to help you animate your views with ease while avoiding the complexity of Core Animation, which runs the animations under the hood.
+
+
 
 ### Chapter 1: Getting Started with View Animations
 
-
+最终效果
 
 ![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw6k7jrgdmg30900fuwhz.gif)
 
-- Animatable properties
-  * Position and size
+#### 开始
+
+- 开始创建一个静的登录页面，有两个TextField，一个Label，一个Button，4个云图片和一个背景图片
+
+- 在`viewWillAppear()`中添加，如下代码，让heading和两个TextField开始时在屏幕外:
+
+  ```swift
+          heading.center.x    -=  view.bounds.width
+          username.center.x   -=  view.bounds.width
+          password.center.x   -=  view.bounds.width
+  ```
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw8zt5x34nj30cm05na9x.jpg)
+
+- 添加heading和两个TextField进入屏幕动画
+
+```swift
+UIView.animate(withDuration: 0.5) {
+	self.heading.center.x += self.view.bounds.width
+}
+
+UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
+            self.username.center.x += self.view.bounds.width
+        }, completion: nil)
+
+UIView.animate(withDuration: 1, delay: 0.6, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: [], animations: {
+            self.password.center.x += self.view.bounds.width
+        }, completion: nil)
+
+```
+
+  
+
+`completion`:  some final cleanup tasks or chain animations one after the other.
+
+
+
+#### Animatable properties
+
+* Position and size
   `bounds`  `frame` `center`
-  * Appearance  
+* Appearance  
   `backgroundColor`  `alpha`
-  * Transformation  
+* Transformation  
   `transform`
 
-- Animation options
-  `UIViewAnimationOptions`
 
-  * Repeating  
 
-  `repeat`  `autoreverse`
 
-  ![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw6k7ynuqlg30k40ga0ut.gif)
 
-  * Animation easing  
-  `.curveLinear`
-  	`.curveEaseIn`	  动画开始时加速
+#### Animation options
+`UIViewAnimationOptions`
 
-  ```
-  UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseIn], animations: {
-            self.password.center.x += self.view.bounds.width
-        }, completion: nil)
-  ```
 
-  `.curveEaseOut`   动画结束之前减速 
 
-  ```
-  UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
-            self.password.center.x += self.view.bounds.width
-        }, completion: nil)
-  ```
+* Repeating  
 
-     
+`repeat`  `autoreverse`
 
-  ![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw6k8dv4rhg30k40gago8.gif)
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fw6k7ynuqlg30k40ga0ut.gif)
+
+* Animation easing  
+
+`.curveLinear`  
+`.curveEaseIn`	  动画开始时加速
+
+```
+UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseIn], animations: {
+          self.password.center.x += self.view.bounds.width
+      }, completion: nil)
+```
+
+`.curveEaseOut`   动画结束之前减速 
+
+```
+UIView.animate(withDuration: 1, delay: 0.6, options: [.repeat, .autoreverse, .curveEaseOut], animations: {
+          self.password.center.x += self.view.bounds.width
+      }, completion: nil)
+```
+
+   
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw6k8dv4rhg30k40gago8.gif)
 
 
 
@@ -56,7 +112,7 @@
 
   `.curveEaseInOut`  动画开始时加速结束时减速
 
-- 添加云的动画
+- 添加云的渐变动画
 ```
 cloud1.alpha = 0.0
 cloud2.alpha = 0.0
@@ -79,27 +135,75 @@ UIView.animate(withDuration: 0.5, delay: 1.1, options: [], animations: {
 }, completion: nil)
 ```
 
+### Chapter 2: Springs（弹簧动画）
 
-### Chapter 2: Springs
 
-- Spring animations
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw90biqpzjj306x057a9x.jpg)
+
+用点变化描述弹簧动画：
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw90cubqxvj307u04smx2.jpg)
+
+
+
+
+
+#### Spring animations
 
 `animate(withDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion) `
 
 `usingSpringWithDamping` 阻尼参数 0.0 ~ 1.0 ,  1.0看上去很僵硬(回弹效果不明显,bounce)，可以理解回弹的幅度 
 `initialSpringVelocity`  初始速率， 可以理解回弹的速率
 
-- Animating user interactions
+
+
+#### Animating user interactions
+
+。。。
+
 
 
 ### Chapter 3: Transitions  过渡动画
 
+
+
+**Transitions** are predefined animations you can apply to views. 
+
 `transition(with:duration: options:animations:completion:) `
+
+
+
+#### 过渡动画的例子
+
+
+
+预定义过渡动画的选项：
+
+```
+.transitionFlipFromLeft
+.transitionFlipFromRight
+.transitionCurlUp
+.transitionCurlDown
+.transitionCrossDissolve
+.transitionFlipFromTop
+.transitionFlipFromBottom
+```
+
+
+
+#### 组合过渡动画
+
+
 
 **Debug/Toggle Slow Animations**   方便调试
 
 
 ![整体效果](https://ws1.sinaimg.cn/large/006tNbRwgy1fw6f5gckt8g30900fytpt.gif)
+
+
+
+
 
 ### Chapter 4: View Animations in Practice
 
@@ -418,6 +522,205 @@ UIView.animate(withDuration: 0.8, delay: 1.0, usingSpringWithDamping: 0.4, initi
 
 
 ![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw8qbtmmeag308s0fnafk.gif)
+
+
+
+
+
+## Section III: Layer Animations
+
+由于以下原因，图层与视图（相对于动画）不同：
+
+- 图层是一个模型对象 - 它公开数据属性并且不实现任何逻辑。 它没有复杂的自动布局依赖关系，也没有处理用户交互。
+- 它具有预定义的可见特征 - 这些特征是许多影响内容在屏幕上呈现的数据属性，例如边框线，边框颜色，位置和阴影。
+- 最后，Core Animation优化了图层内容的缓存并直接在GPU上快速绘图。
+
+
+
+视图：
+
+- 复杂视图层次结构布局，自动布局等
+- 用户互动。
+- 通常具有在CPU上的主线程上执行的自定义逻辑或自定义绘图代码。
+- 非常灵活，功能强大，子类很多类。
+
+
+
+图层：
+
+- 更简单的层次结构，更快地解决布局，绘制速度更快。
+- 没有响应者链开销。
+- 默认情况下没有自定义逻辑 并直接在GPU上绘制。
+- 不那么灵活，子类的类更少。
+
+
+
+视图和图层的选择技巧：
+
+任何时候你都可以选择视图动画; 当您将知道何时需要更高的性能或灵活性，而不得不转而使用图层动画。
+
+### Chapter 8: Getting Started with Layer Animations 
+
+
+
+#### Animatable properties
+
+
+
+- Postion and size 
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw8y8bkr03j30do05qglq.jpg)
+
+
+
+- Border
+
+`borderColor`, `borderWidth`, `cornerRadius`
+
+
+
+
+
+![image-20181015154228090](https://ws4.sinaimg.cn/large/006tNbRwgy1fw8ybp1rc8j30dx05o754.jpg)
+
+
+
+- Shadow
+
+  `shadowOffset`, `shadowOpacity`, `shadowPath`, `shadowRadius`
+
+  ![image-20181015154548338](/Users/andyron/Library/Application Support/typora-user-images/image-20181015154548338.png)
+
+- Contents
+
+`contents`
+
+`mask`    
+
+`opacity`
+
+
+
+#### 第一个Layer动画
+
+- 删除之前的一些动画
+- 添加`CABasicAnimation`
+
+```swift
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.toValue = view.bounds.size.width/2
+    flyRight.duration = 0.5	
+```
+
+
+
+Animation objects in Core Animation are **simply data models**; you create an instance of the model and set its data properties accordingly.
+An instance of CABasicAnimation describes **a potential layer animation**(之后可能运行也有可能不运行)
+
+each layer will run a copy of the animation independently.
+
+- 运行添加的核心动画对象
+
+```swift
+heading.layer.add(flyRight, forKey: nil)
+```
+
+
+
+#### More elaborate layer animations
+
+
+```swift
+    flyRight.beginTime = CACurrentMediaTime() + 0.3
+    username.layer.add(flyRight, forKey: nil)
+```
+
+
+
+`CACurrentMediaTime` 是系统的一个绝对时间，机器开启时间，单位为s
+
+`CACurrentMediaTime` 取自机器时间 `mach_absolute_time()`
+
+
+
+
+
+- Using `fillMode`
+
+The `fillMode` property lets you control the behavior of your animation at the beginning and end of its sequence.
+
+`CAMediaTimingFillMode.both`  与`kCAFillModeBoth`的区别
+
+`kCAFillModeRemoved`  
+
+`kCAFillModeBackwards`  
+
+`kCAFillModeForwards`  
+
+`kCAFillModeBoth`  
+
+
+
+#### Debugging basic animations
+
+```swift
+username.layer.position.x -= view.bounds.width
+password.layer.position.x -= view.bounds.width
+```
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw9uakzv3kg308s0fo0v1.gif)
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fw9v6cjqdmj30xa0meacn.jpg)
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fw9v6q3kc4j30uq0iadj0.jpg)
+
+
+
+
+
+
+UI hierarchy 模式下可以查看当前runtime个UI布局情况，包括已经hidden或transparent和在屏幕外的视图。还可以3D查看。
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fw9vjxwr0dg31140oz1hp.gif)
+
+
+
+#### Animations vs. real content ??
+
+
+
+**presentation layer**
+
+
+
+```swift
+    flyRight.isRemovedOnCompletion = false
+```
+
+
+
+- Updating the layer model
+
+
+
+虽然你知道当设置为false时isRemovedOnCompletion是如何工作的，但尽可能避免使用它。 在屏幕上保留动画会影响性能，因此您可以自动删除它们并更新原始图层的位置。
+
+
+
+#### Challenges
+
+
+
+### Chapter 9: Animation Keys and Delegates
+
+
+
+
 
 
 

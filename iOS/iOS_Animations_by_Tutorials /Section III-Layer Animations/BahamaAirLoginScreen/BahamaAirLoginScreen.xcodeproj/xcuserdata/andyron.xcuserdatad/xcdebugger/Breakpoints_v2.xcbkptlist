@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BahamaAirLoginScreen/ViewController.swift"
+            timestampString = "561352179.482531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BahamaAirLoginScreen.ViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "BahamaAirLoginScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andyron/myfield/github/note-exercise/iOS/iOS_Animations_by_Tutorials%20/Section%20III-Layer%20Animations/BahamaAirLoginScreen/BahamaAirLoginScreen/ViewController.swift"
+                  timestampString = "561349356.201738"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "5702">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in BahamaAirLoginScreen.ViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "BahamaAirLoginScreen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andyron/myfield/github/note-exercise/iOS/iOS_Animations_by_Tutorials%20/Section%20III-Layer%20Animations/BahamaAirLoginScreen/BahamaAirLoginScreen/ViewController.swift"
+                  timestampString = "561349356.207337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BahamaAirLoginScreen/ViewController.swift"
+            timestampString = "561352179.483204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
