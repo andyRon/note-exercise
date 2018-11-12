@@ -720,6 +720,111 @@ UI hierarchy 模式下可以查看当前runtime个UI布局情况，包括已经h
 
 
 
+关于UIKit动画和相应的闭包语法的一个棘手部分是，一旦您创建并运行视图动画，您就无法暂停，停止或以任何方式访问它。
+
+但是，使用Core Animation，您可以轻松检查在图层上运行的动画，并在需要时停止它们。 此外，您甚至可以在动画上设置委托对象并对动画事件做出反应。
+
+
+
+#### 介绍animation delegates
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx4io22vm1j30de06qjre.jpg)
+
+
+
+`CAAnimationDelegate`的两个代理方法：
+
+```swift
+func animationDidStart(_ anim: CAAnimation)
+func animationDidStop(_ anim: CAAnimation, finished flag: Bool)
+```
+
+```swift
+func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    print(anim.description, "动画完成")
+}
+```
+
+
+
+三个不同的layer
+
+```swift
+<CABasicAnimation: 0x6000032376e0> 动画完成
+<CABasicAnimation: 0x600003237460> 动画完成
+<CABasicAnimation: 0x600003237480> 动画完成
+```
+
+
+
+#### Key-value coding compliance
+
+CAAnimation类及其子类是用Objective-C编写的，并且符合键值编码(KVO)，这意味着您可以将它们视为字典，并在运行时向它们添加新属性。
+您将使用此机制为flyRight动画指定名称，以便您可以从其他活动动画中识别它。
+
+
+
+
+
+
+
+#### Switching on key values
+
+```swift
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        // print(anim.description, "动画完成")
+        guard let name = anim.value(forKey: "name") as? String else {
+            return
+        }
+    
+        if name == "form" {
+            // `value(forKey:)`的结果总是`Any`，因此需要转换为所需类型
+            let layer = anim.value(forKey: "layer") as? CALayer
+            anim.setValue(nil, forKey: "layer")
+            // 简单的脉动动画
+            let pulse = CABasicAnimation(keyPath: "transform.scale")
+            pulse.fromValue = 1.25
+            pulse.toValue = 1.0
+            pulse.duration = 0.25
+            layer?.add(pulse, forKey: nil)
+        }
+    }	
+```
+
+
+
+请注意，您在这里使用可选的链接层？ - 这意味着如果动画中没有存储图层，则会跳过add（_：forKey :)调用。 由于您将图层设置为nil，因此此脉冲动画仅在表单字段从右侧飞入时才会发生。
+
+
+
+移动动画结束后有一个变大的动画效果：
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx4zbw6nt9g308q060q4l.gif)
+
+
+
+这照顾已经停止的动画; 但是你如何使用仍在运行的动画呢？ 这就是**animation keys**的用武之地。
+
+
+
+#### Animation Keys
+
+在这部分中，您将创建另一个图层动画，学习如何一次运行多个动画，并了解如何使用Animation Keys控制正在运行的动画。
+
+
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx524dojubg308q0600vk.gif)
+
+
+
+`animationKeys()`获得不到动画??
+
+
+
+#### 完善云的动画
+
 
 
 
