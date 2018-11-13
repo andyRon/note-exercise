@@ -1182,3 +1182,102 @@ CALayer有许多可动画的属性，它们包含struct值，包括CGPoint类型
 
 
 
+??
+
+
+
+
+
+### Chapter 14: Gradient Animations
+
+
+
+
+
+```swift
+let gradientLayer = CAGradientLayer()
+        
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        let colors = [
+            UIColor.black.cgColor,
+            UIColor.white.cgColor,
+            UIColor.black.cgColor
+        ]
+        gradientLayer.colors = colors
+        let locations: [NSNumber] = [0.25, 0.5, 0.75]
+        gradientLayer.locations = locations
+        
+        return gradientLayer
+```
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx6k8b06x9j30b403udfp.jpg)
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx6kb2e2fjj308v0fp3yc.jpg)
+
+
+
+
+
+#### Animating gradients
+
+
+
+```swift
+        let gradientAnimation = CABasicAnimation(keyPath: "locations")
+        gradientAnimation.fromValue = [0.0, 0.0, 0.25]
+        gradientAnimation.toValue = [0.75, 1.0, 1.0]
+        gradientAnimation.duration = 3.0
+        gradientAnimation.repeatCount = .infinity
+        gradientLayer.add(gradientAnimation, forKey: nil)
+```
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx6kjtzpg0g308k08r3za.gif)
+
+在这一层动画中，首先将三个颜色里程碑推到渐变框架的左边缘，然后结束动画，将所有三个里程碑推向右边缘：
+
+
+
+
+
+```swift
+        gradientLayer.frame = CGRect(x: -bounds.size.width, y: bounds.origin.y, width: 3 * bounds.size.width, height: bounds.size.height)
+```
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx6kqy3tycg308k060gna.gif)
+
+
+
+#### Creating a text mask
+
+
+
+
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx6l41g457g308k0600t0.gif)
+
+
+
+
+
+#### 滑动手势动画
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx6l9mrd4sg308k0fmaf4.gif)
+
+
+
+
+
+### 彩色渐变动画
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx6lgtu9xhg308k0600ss.gif)
