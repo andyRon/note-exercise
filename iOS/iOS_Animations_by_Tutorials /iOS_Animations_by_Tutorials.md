@@ -1088,9 +1088,97 @@ UIKit以动态方式调整所有其他变量，使系统在给定的持续时间
 
 
 
+### Chapter 12: Layer KeyFrame Animations and Struct Properties
+
+Layer上的关键帧动画与UIView上的关键帧动画略有不同。 查看关键帧动画是将独立简单动画组合在一起的简单方法; 它们可以为不同的视图和属性设置动画，动画可以重叠或在两者之间存在间隙。
+相比之下，`CAKeyframeAnimation`允许您为给定图层上的单个属性设置动画。 您可以定义动画的不同关键点，但动画中不能有任何间隙或重叠。 尽管起初听起来有些限制，但你可以使用CAKeyframeAnimation创建一些非常引人注目的效果。
 
 
 
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx690o3li9g308m060dho.gif)
+
+
+
+眼睛敏锐的读者可能已经注意到我还没有介绍过结构属性的动画。 大多数情况下，你可以放弃动画结构的单个组件，例如CGPoint的x组件，或CATransformation3D的旋转组件，但是接下来你会发现动态结构值的动画比 你可能会先考虑一下。
+
+
+
+#### Animating struct values
+
+结构实例是Swift中的一等公民。 实际上，在使用类和结构之间语法上几乎没有区别。
+但是，Core Animation是一个基于C构建的Objective-C框架，这意味着结构的处理方式截然不同。 Objective-C API喜欢处理对象，因此结构需要一些特殊的处理。
+这就是为什么对图层属性（如颜色或数字）进行动画制作相对容易的原因，但是为CGPoint等结构属性设置动画并不容易。
+CALayer有许多可动画的属性，它们包含struct值，包括CGPoint类型的位置，CATransform3D类型的转换和CGRect类型的边界。 为了帮助管理这个问题，Cocoa包含了NSValue类，它将一个struct值“包装”或“包装”为一个对象。
+
+
+
+
+
+#### Intermediate keyframe animations
+
+如果您需要在屏幕上显示图像但不需要使用UIView的所有好处（例如自动布局约束，附加手势识别器等），您可以简单地使用上面的代码示例中的CALayer。
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx69jdo8zrj30d606zglk.jpg)
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx69ltw09dg308s0avwtn.gif)
+
+
+
+### Chapter 13: Shapes and Masks
+
+本章标志着本书这一部分的一个转变：你不仅要开始使用不同的示例项目，而且还要使用多层效果，创建看起来与物理交互的图层动画。 彼此在动画运行时在形状之间变换。
+
+`CAShapeLayer`
+
+
+
+本章中的形状将由CAShapeLayer处理，这是一个CALayer子类，可以让您在屏幕上绘制各种形状，从非常简单到非常复杂：
+
+您可以在屏幕上绘制CALayer CGPath，而不是接受绘图说明。 这很方便，因为Core Graphics已经为构建CGPath形状定义了非常广泛的绘图指令API。
+如果您更熟悉UIBezierPath，可以使用它来定义形状，然后使用其cgPath属性来获取其Core Graphics表示。 你将在本章稍后再试一试。
+
+
+
+#### 开始项目
+
+
+
+#### avatar view
+
+`photoLayer`：头像的图像层。
+`circleLayer`：用于绘制圆的形状图层。
+`maskLayer`：另一个用于绘制蒙版的形状图层。
+`label`：显示玩家姓名的标签。
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx6ami0kayj30e405r74e.jpg)
+
+
+
+#### Creating the bounce-off animation
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx6g7btqrug308s08u77g.gif)
+
+
+
+#### Morphing shapes(变形图形)
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx6gl8vr2tg308s08uwhy.gif)
+
+
+
+```swift
+        maskLayer.add(morphAnimation, forKey: nil)
+```
 
 
 

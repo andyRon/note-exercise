@@ -2,8 +2,8 @@
 //  FlightData.swift
 //  Flight Info
 //
-//  Created by Andy Ron on 2018/8/29.
-//  Copyright © 2018年 Andy Ron. All rights reserved.
+//  Created by [Andy Ron](https://github.com/andyRon)  on 2018/8/29.
+//  Copyright © 2018年 [Andy Ron](https://github.com/andyRon) . All rights reserved.
 //
 
 import Foundation
