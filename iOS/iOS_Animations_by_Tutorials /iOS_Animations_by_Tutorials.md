@@ -827,5 +827,270 @@ CAAnimation类及其子类是用Objective-C编写的，并且符合键值编码(
 
 
 
+### Chapter 10: Groups and Advaced Timing
+
+在上一章中，您学习了如何向单个图层添加多个独立动画。 但是，如果您希望您的动画同步工作并保持彼此一致，该怎么办？ 不必分别掌握所有动画的数学和时间，这没什么好玩的。 这就是**animation groups**进来的地方。
+
+本章介绍如何使用`CAAnimationGroup`对动画进行分组，该动画允许您向组中添加多个动画并同时调整持续时间，委托和`timingFunction`等属性。
+对动画进行分组会产生简化的代码，并确保您的所有动画将作为一个实体单元同步。
+
+
+
+#### CAAnimationGroup
+
+```swift
+    let groupAnimation = CAAnimationGroup()
+    groupAnimation.beginTime = CACurrentMediaTime() + 0.5
+    groupAnimation.duration = 0.5
+    groupAnimation.fillMode = kCAFillModeBackwards
+    
+    let scaleDown = CABasicAnimation(keyPath: "transform.scale")
+    scaleDown.fromValue = 3.5
+    scaleDown.toValue = 1.0
+    
+    let rotate = CABasicAnimation(keyPath: "transform.rotation")
+    rotate.fromValue = .pi / 4.0
+    rotate.toValue = 0.0
+    
+    let fade = CABasicAnimation(keyPath: "opacity")
+    fade.fromValue = 0.0
+    fade.toValue = 1.0
+    
+    groupAnimation.animations = [scaleDown, rotate, fade]
+    loginButton.layer.add(groupAnimation, forKey: nil)
+```
+
+
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx5fkh3qgjg308q0bjjwx.gif)
+
+
+
+
+
+#### Animation easing 
+
+对应Chapter1中的，层次动画中的easing在概念上是相同的 - 只有语法不同。
+
+`CAMediaTimingFunction`   `CAMediaTimingFunction(controlPoints: _: _: _:)`
+
+
+
+
+
+#### More timing options
+
+
+
+这很容易看起来很酷，但你的动画还是有点不完美。 指令动画四次，但标签然后直接跳到屏幕的中心。
+这是因为单个动画循环将标签移动到屏幕中心然后再次移出。 因此，当您运行动画四次时，最后一个循环以标签离开屏幕结束。 这就是标签似乎跳到屏幕中心的原因。 你不能跑半个动画周期 - 或者你可以吗？
+
+
+
+
+
+只是为了好玩，你可以通过调整顶层视图控制器层的速度属性来使屏幕上的所有内容都超级快速地运行。
+
+
+
+玩动画speeds, reversing and repeating很有趣，但你的用户可能不会喜欢这样的UI元素！
+但如果您确实需要在本地调整动画速度，现在可以在动画级别以及整个图层上执行此操作。
+
+
+
+#### 利用组动画修改三个form元素的动画
+
+
+
+```swift
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.toValue = view.bounds.size.width/2
+    flyRight.duration = 0.5
+    flyRight.fillMode = kCAFillModeBoth
+    flyRight.delegate = self
+    flyRight.setValue("form", forKey: "name")
+    flyRight.setValue(heading.layer, forKey: "layer")
+    
+    heading.layer.add(flyRight, forKey: nil)
+    
+    flyRight.setValue(username.layer, forKey: "layer")
+    
+    flyRight.beginTime = CACurrentMediaTime() + 0.3
+    username.layer.add(flyRight, forKey: nil)
+    
+    flyRight.setValue(password.layer, forKey: "layer")
+    
+    flyRight.beginTime = CACurrentMediaTime() + 0.4
+    password.layer.add(flyRight, forKey: nil)
+```
+
+修改为：
+
+```swift
+    let formGroup = CAAnimationGroup()
+    formGroup.duration = 0.5
+    formGroup.fillMode = kCAFillModeBackwards
+    
+    let flyRight = CABasicAnimation(keyPath: "position.x")
+    flyRight.fromValue = -view.bounds.size.width/2
+    flyRight.toValue = view.bounds.size.width/2
+    
+    let fadeFieldIn = CABasicAnimation(keyPath: "opacity")
+    fadeFieldIn.fromValue = 0.25
+    fadeFieldIn.toValue = 1.0
+    
+    formGroup.animations = [flyRight, fadeFieldIn]
+    heading.layer.add(formGroup, forKey: nil)
+    
+    formGroup.delegate = self
+    formGroup.setValue("form", forKey: "name")
+    formGroup.setValue(username.layer, forKey: "layer")
+    
+    formGroup.beginTime = CACurrentMediaTime() + 0.3
+    username.layer.add(formGroup, forKey: nil)
+    
+    formGroup.setValue(password.layer, forKey: "layer")
+    formGroup.beginTime = CACurrentMediaTime() + 0.4
+    password.layer.add(formGroup, forKey: nil)
+```
+
+
+
+
+
+### Chapter 11: Layer Springs
+
+UIKit的Layer Springs可以让你创建一个有点过于简单的弹簧式动画，但核心动画Layer Springs对应物会呈现一个看起来和感觉更自然的正确物理模拟。
+
+
+
+#### Damped harmonic oscillators（阻尼谐振子，逐渐衰减的振动）
+
+UIKit API简化了弹簧动画的制作; 你不需要了解他们如何在引擎盖下工作。 但是，由于您现在是核心动画专家，因此您需要深入研究细节。
+
+钟摆。理想状况下钟摆是不停的摆动，像下面的一样：
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx5ndd6e2wj308106kaa0.jpg)
+
+对应的运动轨迹图就像：
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx5ne165xmj30a5048wed.jpg)
+
+但现实中由于能力的损耗，钟摆的摇摆的幅度在逐渐减小：
+
+![image-20181112222946546](https://ws4.sinaimg.cn/large/006tNbRwgy1fx5nf8yf71j30a206saap.jpg)
+
+![image-20181112223028487](https://ws3.sinaimg.cn/large/006tNbRwgy1fx5nfxvbhij30c204kt8s.jpg)
+
+
+
+#### UIKit vs Core Animation springs
+
+UIKit以动态方式调整所有其他变量，使系统在给定的持续时间内稳定下来。 这就是为什么UIKit弹簧动画有时感觉有点 - 好吧，被迫。 UIKit动画只是有点过于兴奋，而且训练有素的眼睛，有点不自然。
+
+
+
+幸运的是，Core Animation允许您通过CASpringAnimation类为图层属性创建适当的弹簧动画。 `CASpringAnimation`在幕后为UIKit创建弹簧动画，但是当你直接调用它时，你可以设置系统的各种变量，让动画自行安定下来。 这种方法的缺点是你不能告诉动画它的持续时间应该是多少; 这取决于您提供的变量，由系统本身决定。
+
+`damping`    阻尼系数，阻止弹簧伸缩的系数，阻尼系数越大，停止越快
+
+`mass`   质量，影响图层运动时的弹簧惯性，质量越大，弹簧拉伸和压缩的幅度越大
+
+`stiffness `    刚度系数(劲度系数/弹性系数)，刚度系数越大，形变产生的力就越大，运动越快
+
+`initialVelocity`   初始速率，动画视图的初始速度大小
+速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
+
+
+
+#### first layer spring animation
+
+这个小缩放动画让用户知道该字段处于活动状态并可以使用。 然而，动画有些突然结束。 通过用适当的弹簧动画替换现有的动画，你可以让它看起来更漂亮。
+
+
+
+把基础动画代码：
+
+```swift
+			// 简单的脉动动画
+            let pulse = CABasicAnimation(keyPath: "transform.scale")
+            pulse.fromValue = 1.25
+            pulse.toValue = 1.0
+            pulse.duration = 0.25
+            layer?.add(pulse, forKey: nil)
+```
+
+
+
+转变为：
+
+```swift
+			let pulse = CASpringAnimation(keyPath: "transform.scale")
+            pulse.damping = 2.0
+            pulse.fromValue = 1.25
+            pulse.toValue = 1.0
+            pulse.duration = pulse.settlingDuration
+            layer?.add(pulse, forKey: nil)
+```
+
+效果图对比：
+
+![CABasicAnimation](https://ws2.sinaimg.cn/large/006tNbRwgy1fx4zbw6nt9g308q060q4l.gif)
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx647m132mg308o060464.gif)
+
+
+
+这边要注意`duration`。要使用系统根据当前参数估算的弹簧动画从开始到结束的时间`pulse.settlingDuration`。
+
+这是你的代码完全按照你的要求做的事情：
+
+  您使用自定义阻尼值和所有其他系统变量的默认值创建了弹簧动画
+  但你也通过设置其持续时间属性告诉它运行0.25秒。
+
+弹簧系统不能在0.25秒内稳定下来; 你提供的变量意味着动画应该在它停止前运行几秒钟。
+这是一个关于如何切断弹簧动画的视觉演示：
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx64fgnaecj30bw03sq2u.jpg)
+
+
+
+`settlingDuration`是怎么计算的呢？！
+
+
+
+`pulse.damping = 7.5`
+
+
+
+
+
+- Spring animation propertiers
+
+
+
+#### Specific layer properties
+
+
+
+验证动画现在可能有点过于微妙和流畅。 您将在包含无效输入的文本字段周围添加一个不那么微妙的闪烁红色边框。
+
+
+
+文本框颜色边的动画
+
+
+
+#### Challenges??
+
+
+
+
+
+
+
 
 
