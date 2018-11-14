@@ -1281,3 +1281,89 @@ let gradientLayer = CAGradientLayer()
 
 
 ![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx6lgtu9xhg308k0600ss.gif)
+
+
+
+
+
+### Chapter 15: Stroke and Path Animations
+
+
+
+Pull-to-refresh animation
+
+
+
+#### Animating both stroke ends
+
+
+
+```swift
+        let strokeStartAnimation = CABasicAnimation(keyPath: "strokeStart")
+        strokeStartAnimation.fromValue = -0.5
+        strokeStartAnimation.toValue = 1.0
+        
+        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeEndAnimation.fromValue = 0.0
+        strokeEndAnimation.toValue = 1.0
+        
+        let strokeAnimationGroup = CAAnimationGroup()
+        strokeAnimationGroup.duration = 1.5
+        strokeAnimationGroup.repeatDuration = 5.0
+        strokeAnimationGroup.animations = [strokeEndAnimation, strokeEndAnimation]
+        ovalShapeLayer.add(strokeAnimationGroup, forKey: nil)
+```
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx7ioqqx88g308q08rjw3.gif)
+
+
+
+#### Creating path keyframe animations
+
+
+
+```swift
+ 		// 飞机动画
+        let flightAnimation = CAKeyframeAnimation(keyPath: "position")
+        flightAnimation.path = ovalShapeLayer.path
+        flightAnimation.calculationMode = CAAnimationCalculationMode.paced
+        
+        let flightAnimationGroup = CAAnimationGroup()
+        flightAnimationGroup.duration = 1.5
+        flightAnimationGroup.repeatDuration = 5.0
+        flightAnimationGroup.animations = [flightAnimation]
+        airplaneLayer.add(flightAnimationGroup, forKey: nil)
+```
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx7ixtawarg308q08r0y7.gif)
+
+
+
+
+
+调整飞机移动时角度
+
+```swift
+        let airplaneOrientationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        airplaneOrientationAnimation.fromValue = 0
+        airplaneOrientationAnimation.toValue = 2.0 * .pi
+```
+
+
+
+最终效果
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx7j42np9ig308q08r0w0.gif)
+
+
+
+?? 飞机线太长？
+
+
+
+
+
