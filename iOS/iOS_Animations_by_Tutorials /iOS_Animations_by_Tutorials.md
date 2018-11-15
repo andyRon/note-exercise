@@ -1365,5 +1365,215 @@ Pull-to-refresh animation
 
 
 
+### Chapter 16: Replicating Animations(复制动画)
+
+`CAReplicatorLayer`
+
+
+
+“CAReplicatorLayer背后的想法很简单。 你创建了一些内容 - 它可以是一个形状，一个图像或任何你可以用图层绘制的东西 - 而CAReplicatorLayer会在屏幕上复制它，如下所示：
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx7m9wkg4dj30bb05g74a.jpg)
+
+“为什么我需要克隆形状或图像？”你会问。 你这样问是对的; 通常情况下，你不需要克隆任何东西的确切外观。“
+
+
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx7maaq340j30a2043a9u.jpg)
+
+![image-20181114152157889](https://ws4.sinaimg.cn/large/006tNbRwgy1fx7maqjd0yj309i050weq.jpg)
+
+
+
+但最好的功能是能够设置动画延迟以跟随每个副本。 当您设置0.2秒的`instanceDelay`并为原始内容添加动画时，第一个副本将以0.2秒的延迟动画，第二个副本将在0.4秒内动画，第三个副本将在0.6秒内动画，依此类推。
+您可以使用它来创建引人入胜且复杂的动画，您可以以同步方式为多个元素设置动画。
+
+
+
+一个迷幻的正弦波
+
+plist文件中添加
+
+
+
+#### Replicating like rabbits
+
+
+
+
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx7onwmyoeg308q08rdkr.gif)
+
+
+
+
+
+#### Replicating multiple animations
+
+注意按钮事件
+
+- Scale animation
+
+```swift
+        let scale = CABasicAnimation(keyPath: "transform")
+        scale.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
+        scale.toValue = NSValue(caTransform3D: CATransform3DMakeScale(1.4, 15, 1.0))
+        scale.duration = 0.33
+        scale.repeatCount = .infinity
+        scale.autoreverses = true
+        scale.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        dot.add(scale, forKey: "dotScale")
+```
+
+
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx7p9fze8bg308o0cxgqy.gif)
+
+
+
+- Opacity animation
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx7pc183k6j308x02jwec.jpg)
+
+```swift
+        let fade = CABasicAnimation(keyPath: "opacity")
+        fade.fromValue = 1.0
+        fade.toValue = 0.2
+        fade.duration = 0.33
+        fade.beginTime = CACurrentMediaTime() + 0.33
+        fade.repeatCount = .infinity
+        fade.autoreverses = true
+        fade.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        dot.add(fade, forKey: "dotOpacity")
+```
+
+
+
+
+
+
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx7pj4kg1hg308o0cxtcg.gif)
+
+
+
+- Tint animation
+
+```swift
+        let tint = CABasicAnimation(keyPath: "backgroundColor")
+        tint.fromValue = UIColor.magenta.cgColor
+        tint.toValue = UIColor.cyan.cgColor
+        tint.duration = 0.66
+        tint.beginTime = CACurrentMediaTime() + 0.28
+        tint.fillMode = CAMediaTimingFillMode.backwards
+        tint.repeatCount = .infinity
+        tint.autoreverses = true
+        tint.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        dot.add(tint, forKey: "dotColor")
+```
+
+
+
+
+
+![](https://ws4.sinaimg.cn/large/006tNbRwgy1fx7pqcu6p9g308o0cx0zm.gif)
+
+
+
+#### Animation CAReplicatorLayer properties
+
+```swift
+        let initialRotation = CABasicAnimation(keyPath:
+            "instanceTransform.rotation")
+        initialRotation.fromValue = 0.0
+        initialRotation.toValue   = 0.01
+        initialRotation.duration = 0.33
+        initialRotation.isRemovedOnCompletion = false
+        initialRotation.fillMode = CAMediaTimingFillMode.forwards
+        initialRotation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeOut)
+        replicator.add(initialRotation, forKey: "initialRotation")
+```
+
+
+
+![](https://ws3.sinaimg.cn/large/006tNbRwgy1fx7pvr18n8g308o0cxtjy.gif)
+
+
+
+??这一章暂停到p248
+
+
+
+## Section IV: View Controller Transition Animations
+
+
+
+现在是时候学习如何在更广泛的应用程序导航和布局环境中使用这些动画技术。 您已经为多个视图和图层设置了动画，但现在可以采用更大的视角，并考虑制作整个视图控制器的动画！
+
+iOS中最容易识别的动画之一是将新视图控制器推入导航堆栈，如下所示：
+
+在iOS 7中，Apple在旧导航控制器开始在新的导航控制器移动之前增加了一点延迟，为该动画添加了一些天赋。 这是一个很好的效果 - 但是当你想要建立自己的品牌形象时，自定义过渡动画可能会有很大的帮助。
+
+在本节中，您将学习如何使用动画创建自己的自定义视图控制器转换。
+
+### Chapter 17: Presentation Controller & Orientation Animations
+
+
+
+#### 初始项目
+
+![](https://ws2.sinaimg.cn/large/006tNbRwgy1fx8i1nv0jdg308o0fq1ky.gif)
+
+问题？？：
+
+scrollview 第一个
+
+container view 透明但这个视图的子视图不透明
+
+
+
+#### Behind the scences of custom transitions 
+
+`animationController(forPresented:presenting:source:) `
+
+` animateTransition(using:)`
+
+
+
+#### Implementing transition delegates
+
+协议： `UIViewControllerAnimatedTransitioning`  
+
+
+
+#### Creating your transition animator
+
+
+
+- Adding a pop transition
+
+![](https://ws1.sinaimg.cn/large/006tNbRwgy1fx8l5p1abdg308o0fqni0.gif)
+
+
+
+
+
+
+
+- Adding a dismiss transition
+
+
+
+#### Device orientation transition
+
+您可以将设备方向更改视为从视图控制器到其自身的演示过渡，只是在不同的大小。
+
+
+
+#### Challenges ??
+
 
 
