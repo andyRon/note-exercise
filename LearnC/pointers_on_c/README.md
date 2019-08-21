@@ -363,6 +363,7 @@ int **c = &b;
 - 数组名
 - 下标
 - 指向数组的指针
+	
 	+ `int	(*p)[10];	int matrix[3][10]; p = matrix;`
 - 作为函数参数的多维数组
 		
@@ -375,9 +376,9 @@ int **c = &b;
 	+ 对于不完整的初始化列表，花括号就相当有用（内部的花括号非必需）
 
 			int two_dim[3][5] = {
-    		{ 9,1,2,3,4},
-    		{2,3,6},
-    		{3,42,12,3}
+      		{ 9,1,2,3,4},
+      		{2,3,6},
+      		{3,42,12,3}
 			};
 - 数组长度自动计算  
 	**在多维数组中，只有第1维才能根据初始化列表缺省地提供。剩余的几个维必须显示地写出**
@@ -606,7 +607,7 @@ int **c = &b;
 			#include <stdio.h>
 
 			#define PRINT(FORMAT,VALUE)     printf( "The value of " #VALUE " is " FORMAT "\n", VALUE)
-
+	
 			void main(){
 				int x = 3;
 				PRINT("%d", x + 3);
@@ -625,9 +626,10 @@ int **c = &b;
 		
 				#define MALLOC(n, type) \
     				( (type *)malloc( (n) * sizeof(type) ) )
-
+	
 				pi = MALLOC(25, int);	// type是一个类型，不能作为函数参数
 	+ 宏的劣势
+		
 		* 宏长时，会增加程序的长度
 - 带副作用的宏参数
 	+ 副作用就是在表达式求值时出现的永久性效果
@@ -635,6 +637,7 @@ int **c = &b;
 		*　getchar()将“消耗”输入的一个字符
 
 	
+
 ![](https://ws4.sinaimg.cn/large/006tNbRwgy1fyqawesptfj30oa0a2wfx.jpg)
 
 
@@ -650,7 +653,7 @@ int **c = &b;
 ```
 > 1. 正常编译还是完全忽略  
 > 2. 编译时选择不同的代码
-	
+
 - 是否被定义
 ```
 	#if		defined(symbol)
@@ -675,7 +678,7 @@ int **c = &b;
 #define		_HEADERNAME_H	1
 
 #endif
-```	
+```
 
 ### 14.5 其他指令
 
@@ -842,6 +845,16 @@ void clearerr(FILE *stream);
 
 
 
+## 16 标准函数库
 
 
-	
+
+## 17 经典抽象数据类型
+
+
+
+## 18 运行时环境
+
+
+
+​	
