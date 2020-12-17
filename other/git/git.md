@@ -49,7 +49,7 @@ git commit -m "wrote a readme file"
         * 分支：第一次自动创建一个`mater`分支，以及指向master的一个指针叫HEAD。`git commit`就提交到分支
         ![](http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0)
 - 管理修改
-    + Git优秀之处：Git跟踪并管理的是修改，而非文件。
+    + Git优秀之处：Git跟踪并管理的是**修改**，而非文件。
     + 什么是修改？比如你新增了一行，这就是一个修改，删除了一行，也是一个修改，更改了某些字符，也是一个修改，删了一些又加了一些，也是一个修改，甚至创建一个新文件，也算一个修改。
     + `git diff HEAD -- readme.txt` 查看工作区和版本库里面最新版本的区别
     + 每次修改，如果不add到暂存区，那就不会加入到commit中。
@@ -70,7 +70,7 @@ git commit -m "wrote a readme file"
     + `git remote add origin git@github.com:andyRon/learngit.git` 关联本地库与远程库，`origin`是默认的远程库名
     + `git push -u origin master` 把本地库推送到远程库
         * 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
-    + 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
+    + 分布式版本系统的最大好处之一是**在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作**，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
 - 从远程库克隆
     + `git clone git@github.com:andyRon/gitskills.git`
     + `git clone https://github.com/andyRon/gitskills.git`
@@ -177,4 +177,31 @@ git commit -m "wrote a readme file"
 
 
 
+
+
+
+
+--------------------
+
+
+
+### git config
+
+查看系统配置
+
+```shell
+git config --system --list
+```
+
+查看当前用户配置
+
+```shell
+git config --global  --list
+```
+
+查看当前仓库配置信息
+
+```shell
+git config --local  --list
+```
 
